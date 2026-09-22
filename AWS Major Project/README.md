@@ -64,7 +64,6 @@ ShopEase is a real-time serverless e-commerce application developed as an AWS ma
 | API | Amazon API Gateway |
 | Compute | AWS Lambda |
 | Database | Amazon DynamoDB |
-| Email | Amazon SES |
 | Monitoring | Amazon CloudWatch |
 | Security | AWS IAM |
 | Development | Visual Studio Code |
@@ -183,10 +182,10 @@ Amazon API Gateway
 AWS Lambda
 (Python Backend)
      |
-     +----------------------+
-     |                      |
-     v                      v
-Amazon DynamoDB        Amazon SES
+     +
+     |                      
+     v                      
+Amazon DynamoDB        
      |
      v
 CloudWatch Logs
@@ -263,9 +262,6 @@ shopease-frontend-2026-ishant
 http://shopease-frontend-2026-ishant.s3-website-us-east-1.amazonaws.com
 ```
 
-## 📧 Amazon SES
-
-Amazon SES is used for password-reset email functionality when configured.
 
 ## 📊 CloudWatch
 
@@ -304,7 +300,6 @@ Sensitive credentials and admin allowlists should be configured through environm
 - Amazon API Gateway
 - Amazon DynamoDB
 - Amazon S3
-- Amazon SES
 - Amazon CloudWatch
 - AWS IAM
 - Web Crypto API
@@ -462,7 +457,6 @@ SHOPEASE_ADMIN_EMAILS
 
 - Payment is a sandbox/test implementation.
 - No real money is charged.
-- SES password-reset email requires configuration.
 - Guest persistence uses browser storage.
 - AWS functionality depends on correct AWS configuration.
 - The S3 website endpoint uses HTTP static website hosting.
@@ -511,7 +505,6 @@ https://aws.amazon.com/free/
 | API | Amazon API Gateway |
 | Compute | AWS Lambda |
 | Database | Amazon DynamoDB |
-| Email | Amazon SES |
 | Monitoring | Amazon CloudWatch |
 | Security | AWS IAM |
 | Development | Visual Studio Code |
