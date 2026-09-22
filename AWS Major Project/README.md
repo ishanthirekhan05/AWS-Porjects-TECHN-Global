@@ -285,7 +285,6 @@ The IAM policy allows Lambda to:
 - Query and scan DynamoDB tables and indexes.
 - Perform transactional DynamoDB writes.
 - Create/write CloudWatch Logs.
-- Send password-reset emails through SES.
 
 Sensitive credentials and admin allowlists should be configured through environment variables and should not be committed to GitHub.
 
