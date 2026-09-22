@@ -1,0 +1,1592 @@
+[
+  {
+    "id": "prod-apple-macbook-air-m2",
+    "name": "Apple MacBook Air M2",
+    "brand": "Apple",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-apple-iphone-15",
+    "name": "Apple iPhone 15",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-sony-wh-1000xm5",
+    "name": "Sony WH-1000XM5",
+    "brand": "Sony",
+    "category": "audio"
+  },
+  {
+    "id": "prod-nike-air-max-270",
+    "name": "Nike Air Max 270",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-apple-watch-series-10",
+    "name": "Apple Watch Series 10",
+    "brand": "Apple",
+    "category": "watches"
+  },
+  {
+    "id": "prod-dyson-v15-detect",
+    "name": "Dyson V15 Detect Cordless Vacuum",
+    "brand": "Dyson",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-apple-macbook-air-m3",
+    "name": "Apple MacBook Air M3",
+    "brand": "Apple",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-apple-macbook-pro-14-m3",
+    "name": "Apple MacBook Pro 14\" M3 Pro",
+    "brand": "Apple",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-apple-macbook-pro-16-m3",
+    "name": "Apple MacBook Pro 16\" M3 Max",
+    "brand": "Apple",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-dell-xps-13-9340",
+    "name": "Dell XPS 13 (9340)",
+    "brand": "Dell",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-dell-xps-14-9440",
+    "name": "Dell XPS 14 (9440)",
+    "brand": "Dell",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-dell-xps-16-9640",
+    "name": "Dell XPS 16 (9640)",
+    "brand": "Dell",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-dell-alienware-m16-r2",
+    "name": "Dell Alienware m16 R2",
+    "brand": "Dell",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-dell-inspiron-15-3520",
+    "name": "Dell Inspiron 15 3520",
+    "brand": "Dell",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-dell-g15-5530",
+    "name": "Dell G15 5530 Gaming Laptop",
+    "brand": "Dell",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-hp-spectre-x360-14",
+    "name": "HP Spectre x360 14 2-in-1",
+    "brand": "HP",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-hp-envy-16-oled",
+    "name": "HP Envy 16 OLED",
+    "brand": "HP",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-hp-pavilion-15",
+    "name": "HP Pavilion 15 (13th Gen)",
+    "brand": "HP",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-hp-omen-transcend-16",
+    "name": "HP Omen Transcend 16",
+    "brand": "HP",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-hp-victus-16",
+    "name": "HP Victus 16 Gaming Laptop",
+    "brand": "HP",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-lenovo-thinkpad-x1-carbon-gen-12",
+    "name": "Lenovo ThinkPad X1 Carbon Gen 12",
+    "brand": "Lenovo",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-lenovo-legion-pro-7i-gen-9",
+    "name": "Lenovo Legion Pro 7i Gen 9",
+    "brand": "Lenovo",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-lenovo-yoga-9i-dual-screen",
+    "name": "Lenovo Yoga Book 9i Dual Screen",
+    "brand": "Lenovo",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-lenovo-ideapad-slim-5",
+    "name": "Lenovo IdeaPad Slim 5 (14\")",
+    "brand": "Lenovo",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-lenovo-thinkpad-e14-gen-5",
+    "name": "Lenovo ThinkPad E14 Gen 5",
+    "brand": "Lenovo",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-asus-rog-zephyrus-g16",
+    "name": "ASUS ROG Zephyrus G16 (2024)",
+    "brand": "ASUS",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-asus-zenbook-14-oled",
+    "name": "ASUS Zenbook 14 OLED",
+    "brand": "ASUS",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-asus-tuf-gaming-f15",
+    "name": "ASUS TUF Gaming F15",
+    "brand": "ASUS",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-acer-predator-helios-16",
+    "name": "Acer Predator Helios 16",
+    "brand": "Acer",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-acer-swift-go-14",
+    "name": "Acer Swift Go 14 OLED",
+    "brand": "Acer",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-microsoft-surface-laptop-7",
+    "name": "Microsoft Surface Laptop 7 Copilot+ PC",
+    "brand": "Microsoft",
+    "category": "laptops"
+  },
+  {
+    "id": "prod-apple-iphone-15-plus",
+    "name": "Apple iPhone 15 Plus",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-apple-iphone-15-pro",
+    "name": "Apple iPhone 15 Pro",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-apple-iphone-15-pro-max",
+    "name": "Apple iPhone 15 Pro Max",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-apple-iphone-16",
+    "name": "Apple iPhone 16",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-apple-iphone-16-plus",
+    "name": "Apple iPhone 16 Plus",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-apple-iphone-16-pro",
+    "name": "Apple iPhone 16 Pro",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-apple-iphone-16-pro-max",
+    "name": "Apple iPhone 16 Pro Max",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-apple-iphone-14",
+    "name": "Apple iPhone 14",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-apple-iphone-13",
+    "name": "Apple iPhone 13",
+    "brand": "Apple",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-s25-ultra",
+    "name": "Samsung Galaxy S25 Ultra 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-s25-plus",
+    "name": "Samsung Galaxy S25+ 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-s25",
+    "name": "Samsung Galaxy S25 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-s24-ultra",
+    "name": "Samsung Galaxy S24 Ultra 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-s24-plus",
+    "name": "Samsung Galaxy S24+ 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-s24",
+    "name": "Samsung Galaxy S24 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-z-fold6",
+    "name": "Samsung Galaxy Z Fold6 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-z-flip6",
+    "name": "Samsung Galaxy Z Flip6 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-a55-5g",
+    "name": "Samsung Galaxy A55 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-a35-5g",
+    "name": "Samsung Galaxy A35 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-samsung-galaxy-m34-5g",
+    "name": "Samsung Galaxy M34 5G",
+    "brand": "Samsung",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-google-pixel-9-pro-xl",
+    "name": "Google Pixel 9 Pro XL 5G",
+    "brand": "Google",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-google-pixel-9-pro",
+    "name": "Google Pixel 9 Pro 5G",
+    "brand": "Google",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-google-pixel-9",
+    "name": "Google Pixel 9 5G",
+    "brand": "Google",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-google-pixel-8a",
+    "name": "Google Pixel 8a 5G",
+    "brand": "Google",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-oneplus-12-5g",
+    "name": "OnePlus 12 5G",
+    "brand": "OnePlus",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-oneplus-12r",
+    "name": "OnePlus 12R 5G",
+    "brand": "OnePlus",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-oneplus-open",
+    "name": "OnePlus Open Foldable 5G",
+    "brand": "OnePlus",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-oneplus-nord-4",
+    "name": "OnePlus Nord 4 5G",
+    "brand": "OnePlus",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-xiaomi-14-ultra",
+    "name": "Xiaomi 14 Ultra 5G",
+    "brand": "Xiaomi",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-xiaomi-14",
+    "name": "Xiaomi 14 5G",
+    "brand": "Xiaomi",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-redmi-note-13-pro-plus",
+    "name": "Redmi Note 13 Pro+ 5G",
+    "brand": "Xiaomi",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-motorola-edge-50-ultra",
+    "name": "Motorola Edge 50 Ultra",
+    "brand": "Motorola",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-motorola-razr-50-ultra",
+    "name": "Motorola Razr 50 Ultra",
+    "brand": "Motorola",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-nothing-phone-2",
+    "name": "Nothing Phone (2) 5G",
+    "brand": "Nothing",
+    "category": "smartphones"
+  },
+  {
+    "id": "prod-sony-wh-1000xm4",
+    "name": "Sony WH-1000XM4",
+    "brand": "Sony",
+    "category": "audio"
+  },
+  {
+    "id": "prod-sony-wf-1000xm5",
+    "name": "Sony WF-1000XM5 Wireless Earbuds",
+    "brand": "Sony",
+    "category": "audio"
+  },
+  {
+    "id": "prod-sony-wf-1000xm4",
+    "name": "Sony WF-1000XM4 Wireless Earbuds",
+    "brand": "Sony",
+    "category": "audio"
+  },
+  {
+    "id": "prod-sony-linkbuds-s",
+    "name": "Sony LinkBuds S Noise-Canceling Earbuds",
+    "brand": "Sony",
+    "category": "audio"
+  },
+  {
+    "id": "prod-sony-wh-ch720n",
+    "name": "Sony WH-CH720N Wireless ANC Headphones",
+    "brand": "Sony",
+    "category": "audio"
+  },
+  {
+    "id": "prod-apple-airpods-pro-2",
+    "name": "Apple AirPods Pro (2nd Gen, USB-C)",
+    "brand": "Apple",
+    "category": "audio"
+  },
+  {
+    "id": "prod-apple-airpods-max",
+    "name": "Apple AirPods Max",
+    "brand": "Apple",
+    "category": "audio"
+  },
+  {
+    "id": "prod-apple-airpods-3",
+    "name": "Apple AirPods (3rd Generation)",
+    "brand": "Apple",
+    "category": "audio"
+  },
+  {
+    "id": "prod-apple-airpods-4-anc",
+    "name": "Apple AirPods 4 with Active Noise Cancellation",
+    "brand": "Apple",
+    "category": "audio"
+  },
+  {
+    "id": "prod-bose-quietcomfort-ultra-headphones",
+    "name": "Bose QuietComfort Ultra Wireless Headphones",
+    "brand": "Bose",
+    "category": "audio"
+  },
+  {
+    "id": "prod-bose-quietcomfort-headphones",
+    "name": "Bose QuietComfort Wireless Headphones",
+    "brand": "Bose",
+    "category": "audio"
+  },
+  {
+    "id": "prod-bose-quietcomfort-ultra-earbuds",
+    "name": "Bose QuietComfort Ultra Earbuds",
+    "brand": "Bose",
+    "category": "audio"
+  },
+  {
+    "id": "prod-bose-soundlink-max",
+    "name": "Bose SoundLink Max Portable Bluetooth Speaker",
+    "brand": "Bose",
+    "category": "audio"
+  },
+  {
+    "id": "prod-bose-soundlink-flex-2",
+    "name": "Bose SoundLink Flex Portable Speaker (Gen 2)",
+    "brand": "Bose",
+    "category": "audio"
+  },
+  {
+    "id": "prod-jbl-tour-one-m2",
+    "name": "JBL Tour One M2 Wireless Over-Ear",
+    "brand": "JBL",
+    "category": "audio"
+  },
+  {
+    "id": "prod-jbl-live-670nc",
+    "name": "JBL Live 670NC On-Ear Wireless ANC",
+    "brand": "JBL",
+    "category": "audio"
+  },
+  {
+    "id": "prod-jbl-tune-770nc",
+    "name": "JBL Tune 770NC Wireless Headphones",
+    "brand": "JBL",
+    "category": "audio"
+  },
+  {
+    "id": "prod-jbl-flip-6",
+    "name": "JBL Flip 6 Waterproof Portable Speaker",
+    "brand": "JBL",
+    "category": "audio"
+  },
+  {
+    "id": "prod-jbl-charge-5",
+    "name": "JBL Charge 5 Bluetooth Speaker with Powerbank",
+    "brand": "JBL",
+    "category": "audio"
+  },
+  {
+    "id": "prod-jbl-xtreme-4",
+    "name": "JBL Xtreme 4 Portable Bluetooth Speaker",
+    "brand": "JBL",
+    "category": "audio"
+  },
+  {
+    "id": "prod-sennheiser-momentum-4",
+    "name": "Sennheiser Momentum 4 Wireless",
+    "brand": "Sennheiser",
+    "category": "audio"
+  },
+  {
+    "id": "prod-sennheiser-momentum-tw-4",
+    "name": "Sennheiser Momentum True Wireless 4",
+    "brand": "Sennheiser",
+    "category": "audio"
+  },
+  {
+    "id": "prod-samsung-galaxy-buds3-pro",
+    "name": "Samsung Galaxy Buds3 Pro",
+    "brand": "Samsung",
+    "category": "audio"
+  },
+  {
+    "id": "prod-samsung-galaxy-buds-fe",
+    "name": "Samsung Galaxy Buds FE",
+    "brand": "Samsung",
+    "category": "audio"
+  },
+  {
+    "id": "prod-marshall-stanmore-iii",
+    "name": "Marshall Stanmore III Bluetooth Speaker",
+    "brand": "Marshall",
+    "category": "audio"
+  },
+  {
+    "id": "prod-marshall-emberton-ii",
+    "name": "Marshall Emberton II Portable Speaker",
+    "brand": "Marshall",
+    "category": "audio"
+  },
+  {
+    "id": "prod-sony-ht-a7000",
+    "name": "Sony HT-A7000 7.1.2ch Dolby Atmos Soundbar",
+    "brand": "Sony",
+    "category": "audio"
+  },
+  {
+    "id": "prod-bose-smart-ultra-soundbar",
+    "name": "Bose Smart Ultra Soundbar with Dolby Atmos",
+    "brand": "Bose",
+    "category": "audio"
+  },
+  {
+    "id": "prod-jbl-bar-500-pro",
+    "name": "JBL Bar 500 Pro 5.1ch Dolby Atmos Soundbar",
+    "brand": "JBL",
+    "category": "audio"
+  },
+  {
+    "id": "prod-nike-air-force-1-07",
+    "name": "Nike Air Force 1 '07",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-air-max-90",
+    "name": "Nike Air Max 90",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-air-max-1",
+    "name": "Nike Air Max 1 '87",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-air-max-dn",
+    "name": "Nike Air Max Dn",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-pegasus-41",
+    "name": "Nike Pegasus 41 Road Running Shoes",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-pegasus-40",
+    "name": "Nike Pegasus 40 Road Running Shoes",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-revolution-7",
+    "name": "Nike Revolution 7 Road Running",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-dunk-low-retro",
+    "name": "Nike Dunk Low Retro",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-court-vision-low",
+    "name": "Nike Court Vision Low Next Nature",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-invincible-3",
+    "name": "Nike Invincible 3 Road Running",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-metcon-9",
+    "name": "Nike Metcon 9 Training Shoes",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-vaporfly-3",
+    "name": "Nike Vaporfly 3 Road Racing Shoes",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-nike-blazer-mid-77",
+    "name": "Nike Blazer Mid '77 Vintage",
+    "brand": "Nike",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-ultraboost-5",
+    "name": "Adidas Ultraboost 5 Running Shoes",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-ultraboost-light",
+    "name": "Adidas Ultraboost Light Running",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-duramo-sl",
+    "name": "Adidas Duramo SL Running Shoes",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-superstar",
+    "name": "Adidas Originals Superstar Shoes",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-stan-smith",
+    "name": "Adidas Originals Stan Smith",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-samba-og",
+    "name": "Adidas Originals Samba OG",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-gazelle",
+    "name": "Adidas Originals Gazelle",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-forum-low",
+    "name": "Adidas Originals Forum Low",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-adizero-adios-pro-3",
+    "name": "Adidas Adizero Adios Pro 3 Racing",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-adidas-terrex-free-hiker-2",
+    "name": "Adidas Terrex Free Hiker 2 Gore-Tex",
+    "brand": "Adidas",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-puma-suede-classic-xxi",
+    "name": "Puma Suede Classic XXI",
+    "brand": "Puma",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-puma-velocity-nitro-3",
+    "name": "Puma Velocity NITRO 3 Running",
+    "brand": "Puma",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-puma-rs-x-efekt",
+    "name": "Puma RS-X Efekt Reflective",
+    "brand": "Puma",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-puma-palermo-leather",
+    "name": "Puma Palermo Leather Sneakers",
+    "brand": "Puma",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-asics-gel-kayano-30",
+    "name": "ASICS GEL-Kayano 30 Stability Running",
+    "brand": "ASICS",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-asics-gel-nimbus-26",
+    "name": "ASICS GEL-Nimbus 26 Max Cushion",
+    "brand": "ASICS",
+    "category": "footwear"
+  },
+  {
+    "id": "prod-apple-watch-ultra-2",
+    "name": "Apple Watch Ultra 2 (GPS + Cellular)",
+    "brand": "Apple",
+    "category": "watches"
+  },
+  {
+    "id": "prod-apple-watch-se-2",
+    "name": "Apple Watch SE (2nd Gen)",
+    "brand": "Apple",
+    "category": "watches"
+  },
+  {
+    "id": "prod-samsung-galaxy-watch-ultra",
+    "name": "Samsung Galaxy Watch Ultra (LTE)",
+    "brand": "Samsung",
+    "category": "watches"
+  },
+  {
+    "id": "prod-samsung-galaxy-watch-7",
+    "name": "Samsung Galaxy Watch 7 (Bluetooth)",
+    "brand": "Samsung",
+    "category": "watches"
+  },
+  {
+    "id": "prod-samsung-galaxy-watch-6-classic",
+    "name": "Samsung Galaxy Watch 6 Classic",
+    "brand": "Samsung",
+    "category": "watches"
+  },
+  {
+    "id": "prod-casio-g-shock-casiOak",
+    "name": "Casio G-Shock GA-2100-1A1 'CasiOak'",
+    "brand": "Casio",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-casio-g-shock-dw5600",
+    "name": "Casio G-Shock DW-5600E-1V Classic",
+    "brand": "Casio",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-casio-vintage-a168wa",
+    "name": "Casio Vintage A168WA-1YES Digital",
+    "brand": "Casio",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-casio-edifice-solar",
+    "name": "Casio Edifice Solar Chronograph",
+    "brand": "Casio",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-fossil-gen-6-smartwatch",
+    "name": "Fossil Gen 6 Smartwatch 44mm",
+    "brand": "Fossil",
+    "category": "watches"
+  },
+  {
+    "id": "prod-fossil-grant-chronograph",
+    "name": "Fossil Grant Chronograph Leather Watch",
+    "brand": "Fossil",
+    "category": "watches"
+  },
+  {
+    "id": "prod-fossil-machine-black",
+    "name": "Fossil Machine Stainless Steel Watch",
+    "brand": "Fossil",
+    "category": "watches"
+  },
+  {
+    "id": "prod-fossil-derrick-bifold",
+    "name": "Fossil Derrick RFID Leather Bifold Wallet",
+    "brand": "Fossil",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-dell-pro-backpack-15",
+    "name": "Dell Pro Laptop Backpack 15",
+    "brand": "Dell",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-the-north-face-borealis",
+    "name": "The North Face Borealis Backpack 28L",
+    "brand": "The North Face",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-the-north-face-jester",
+    "name": "The North Face Jester Backpack 28L",
+    "brand": "The North Face",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-nike-heritage-backpack",
+    "name": "Nike Heritage Backpack 25L",
+    "brand": "Nike",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-nike-brasilia-duffel",
+    "name": "Nike Brasilia 9.5 Training Duffel 41L",
+    "brand": "Nike",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-adidas-linear-backpack",
+    "name": "Adidas Linear Classic Backpack",
+    "brand": "Adidas",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-levis-511-slim-jeans",
+    "name": "Levi's 511 Slim Fit Stretch Jeans",
+    "brand": "Levi's",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-levis-501-original-jeans",
+    "name": "Levi's 501 Original Fit Jeans",
+    "brand": "Levi's",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-levis-trucker-jacket",
+    "name": "Levi's Relaxed Denim Trucker Jacket",
+    "brand": "Levi's",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-nike-club-fleece-hoodie",
+    "name": "Nike Sportswear Club Fleece Hoodie",
+    "brand": "Nike",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-nike-everyday-socks-6pack",
+    "name": "Nike Everyday Cushioned Crew Socks (6-Pack)",
+    "brand": "Nike",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-adidas-firebird-track-top",
+    "name": "Adidas Adicolor Classics Firebird Track Jacket",
+    "brand": "Adidas",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-anker-737-power-bank",
+    "name": "Anker 737 Power Bank (PowerCore 24K)",
+    "brand": "Anker",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-anker-prime-100w-charger",
+    "name": "Anker Prime 100W GaN Wall Charger (3-Port)",
+    "brand": "Anker",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-anker-maggo-3in1-station",
+    "name": "Anker MagGo 3-in-1 Foldable Charging Station",
+    "brand": "Anker",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-logitech-mx-master-3s",
+    "name": "Logitech MX Master 3S Wireless Performance Mouse",
+    "brand": "Logitech",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-logitech-mx-mechanical",
+    "name": "Logitech MX Mechanical Wireless Keyboard",
+    "brand": "Logitech",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-logitech-brio-4k",
+    "name": "Logitech Brio 4K Ultra HD Pro Webcam",
+    "brand": "Logitech",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-apple-magic-keyboard-touchid",
+    "name": "Apple Magic Keyboard with Touch ID and Numeric Keypad",
+    "brand": "Apple",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-apple-magic-mouse-black",
+    "name": "Apple Magic Mouse (USB-C) - Black",
+    "brand": "Apple",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-samsung-portable-ssd-t7",
+    "name": "Samsung Portable SSD T7 Shield 1TB",
+    "brand": "Samsung",
+    "category": "accessories"
+  },
+  {
+    "id": "prod-dyson-purifier-cool-tp07",
+    "name": "Dyson Purifier Cool TP07 Smart Air Purifier",
+    "brand": "Dyson",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-dyson-supersonic",
+    "name": "Dyson Supersonic Hair Dryer",
+    "brand": "Dyson",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-dyson-airwrap-complete",
+    "name": "Dyson Airwrap Multi-Styler Complete Long",
+    "brand": "Dyson",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-philips-hue-starter-kit",
+    "name": "Philips Hue White and Color Ambiance Starter Kit",
+    "brand": "Philips",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-philips-hue-play-bars",
+    "name": "Philips Hue Play Light Bar Double Pack",
+    "brand": "Philips",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-philips-air-fryer-xxl",
+    "name": "Philips Air Fryer XXL 7000 Series (7.2L)",
+    "brand": "Philips",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-philips-series-7000-shaver",
+    "name": "Philips Series 7000 Wet & Dry Electric Shaver",
+    "brand": "Philips",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-philips-diamondclean-9000",
+    "name": "Philips Sonicare DiamondClean 9000 Toothbrush",
+    "brand": "Philips",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-nespresso-vertuo-pop",
+    "name": "Nespresso Vertuo Pop Coffee Machine",
+    "brand": "Nespresso",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-nespresso-essenza-mini",
+    "name": "Nespresso Essenza Mini Espresso Machine",
+    "brand": "Nespresso",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-instant-pot-duo-7in1",
+    "name": "Instant Pot Duo 7-in-1 Smart Cooker (6 Qt)",
+    "brand": "Instant Pot",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-prestige-iris-750w",
+    "name": "Prestige Iris 750W Mixer Grinder (3 Jars)",
+    "brand": "Prestige",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-wonderchef-nutri-blend",
+    "name": "Wonderchef Nutri-Blend 400W Mixer Grinder",
+    "brand": "Wonderchef",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-philips-handheld-steamer",
+    "name": "Philips Series 3000 Handheld Garment Steamer",
+    "brand": "Philips",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-xiaomi-robot-vacuum-2-pro",
+    "name": "Xiaomi Robot Vacuum-Mop 2 Pro",
+    "brand": "Xiaomi",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-dyson-solarcycle-morph",
+    "name": "Dyson Solarcycle Morph Desk Light",
+    "brand": "Dyson",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-ikea-markus-chair",
+    "name": "IKEA MARKUS Ergonomic Office Chair",
+    "brand": "IKEA",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-ikea-bekant-desk",
+    "name": "IKEA BEKANT Sit-Stand Desk 160x80cm",
+    "brand": "IKEA",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-fellow-stagg-ekg-kettle",
+    "name": "Fellow Stagg EKG Electric Pour-Over Kettle",
+    "brand": "Fellow",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-ember-mug-2",
+    "name": "Ember Temperature Control Smart Mug 2 (295ml)",
+    "brand": "Ember",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-aeropress-coffee-maker",
+    "name": "AeroPress Original Coffee and Espresso Maker",
+    "brand": "AeroPress",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-hario-v60-ceramic",
+    "name": "Hario V60 Ceramic Coffee Dripper Size 02",
+    "brand": "Hario",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-le-creuset-round-dutch-oven",
+    "name": "Le Creuset Signature Enamelled Cast Iron Dutch Oven (24cm)",
+    "brand": "Le Creuset",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-zwilling-pro-chef-knife",
+    "name": "ZWILLING Pro 8-Inch Chef's Knife",
+    "brand": "ZWILLING",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-wusthof-classic-paring",
+    "name": "W\u00fcsthof Classic 3.5-Inch Paring Knife",
+    "brand": "W\u00fcsthof",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-kitchenaid-artisan-mixer",
+    "name": "KitchenAid Artisan Series 4.8L Stand Mixer",
+    "brand": "KitchenAid",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-vitamix-e310-blender",
+    "name": "Vitamix Explorian E310 Professional Blender",
+    "brand": "Vitamix",
+    "category": "home-living"
+  },
+  {
+    "id": "prod-sony-ps5-slim",
+    "name": "Sony PlayStation 5 Slim Console",
+    "brand": "Sony",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-sony-ps5-digital",
+    "name": "Sony PlayStation 5 Digital Edition (Slim)",
+    "brand": "Sony",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-sony-dualsense-edge",
+    "name": "Sony DualSense Edge Wireless Controller",
+    "brand": "Sony",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-sony-playstation-portal",
+    "name": "Sony PlayStation Portal Remote Player",
+    "brand": "Sony",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-microsoft-xbox-series-x",
+    "name": "Microsoft Xbox Series X 1TB Console",
+    "brand": "Microsoft",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-microsoft-xbox-series-s",
+    "name": "Microsoft Xbox Series S 512GB",
+    "brand": "Microsoft",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-microsoft-xbox-controller",
+    "name": "Microsoft Xbox Wireless Controller (Carbon Black)",
+    "brand": "Microsoft",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-microsoft-xbox-elite-2",
+    "name": "Microsoft Xbox Elite Wireless Controller Series 2",
+    "brand": "Microsoft",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-nintendo-switch-oled",
+    "name": "Nintendo Switch - OLED Model",
+    "brand": "Nintendo",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-asus-rog-ally-x",
+    "name": "ASUS ROG Ally X Handheld Gaming Console",
+    "brand": "ASUS",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-valve-steam-deck-oled",
+    "name": "Valve Steam Deck OLED 512GB",
+    "brand": "Valve",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-razer-deathadder-v3-pro",
+    "name": "Razer DeathAdder V3 Pro Wireless Gaming Mouse",
+    "brand": "Razer",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-razer-blackwidow-v4-pro",
+    "name": "Razer BlackWidow V4 Pro Mechanical Keyboard",
+    "brand": "Razer",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-razer-viper-v3-pro",
+    "name": "Razer Viper V3 Pro Ultra-Lightweight Mouse",
+    "brand": "Razer",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-razer-huntsman-v3-tkl",
+    "name": "Razer Huntsman V3 Pro Tenkeyless Keyboard",
+    "brand": "Razer",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-razer-blackshark-v2-pro",
+    "name": "Razer BlackShark V2 Pro Wireless Headset (2023)",
+    "brand": "Razer",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-logitech-g-pro-x-superlight-2",
+    "name": "Logitech G PRO X SUPERLIGHT 2 Wireless Mouse",
+    "brand": "Logitech",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-logitech-g915-lightspeed",
+    "name": "Logitech G915 LIGHTSPEED Wireless RGB Keyboard",
+    "brand": "Logitech",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-logitech-g502-x-plus",
+    "name": "Logitech G502 X PLUS Wireless Gaming Mouse",
+    "brand": "Logitech",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-asus-rog-strix-scope-ii",
+    "name": "ASUS ROG Strix Scope II 96 Wireless Keyboard",
+    "brand": "ASUS",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-asus-rog-harpe-ace",
+    "name": "ASUS ROG Harpe Ace Aim Lab Edition Mouse",
+    "brand": "ASUS",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-steelseries-apex-pro-tkl",
+    "name": "SteelSeries Apex Pro TKL Wireless (2023)",
+    "brand": "SteelSeries",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-steelseries-arctis-nova-pro",
+    "name": "SteelSeries Arctis Nova Pro Wireless Headset",
+    "brand": "SteelSeries",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-hyperx-cloud-iii-wireless",
+    "name": "HyperX Cloud III Wireless Gaming Headset",
+    "brand": "HyperX",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-corsair-k70-max",
+    "name": "Corsair K70 MAX RGB Magnetic-Mechanical Keyboard",
+    "brand": "Corsair",
+    "category": "gaming"
+  },
+  {
+    "id": "prod-apple-ipad-pro-13-m4",
+    "name": "Apple iPad Pro 13\" M4 (Wi-Fi)",
+    "brand": "Apple",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-apple-ipad-pro-11-m4",
+    "name": "Apple iPad Pro 11\" M4 (Wi-Fi)",
+    "brand": "Apple",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-apple-ipad-air-13-m2",
+    "name": "Apple iPad Air 13\" M2 (Wi-Fi)",
+    "brand": "Apple",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-apple-ipad-air-11-m2",
+    "name": "Apple iPad Air 11\" M2 (Wi-Fi)",
+    "brand": "Apple",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-apple-ipad-10th-gen",
+    "name": "Apple iPad 10.9\" (10th Generation)",
+    "brand": "Apple",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-apple-ipad-mini-6",
+    "name": "Apple iPad mini (6th Generation)",
+    "brand": "Apple",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-samsung-galaxy-tab-s9-ultra",
+    "name": "Samsung Galaxy Tab S9 Ultra (Wi-Fi)",
+    "brand": "Samsung",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-samsung-galaxy-tab-s9-plus",
+    "name": "Samsung Galaxy Tab S9+ (Wi-Fi)",
+    "brand": "Samsung",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-samsung-galaxy-tab-s9",
+    "name": "Samsung Galaxy Tab S9 (Wi-Fi)",
+    "brand": "Samsung",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-samsung-galaxy-tab-s9-fe",
+    "name": "Samsung Galaxy Tab S9 FE",
+    "brand": "Samsung",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-samsung-galaxy-tab-a9-plus",
+    "name": "Samsung Galaxy Tab A9+",
+    "brand": "Samsung",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-microsoft-surface-pro-11",
+    "name": "Microsoft Surface Pro 11 Copilot+ PC",
+    "brand": "Microsoft",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-lenovo-tab-p12-pro",
+    "name": "Lenovo Tab P12 Pro 12.6\"",
+    "brand": "Lenovo",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-xiaomi-pad-6",
+    "name": "Xiaomi Pad 6 11\"",
+    "brand": "Xiaomi",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-oneplus-pad-2",
+    "name": "OnePlus Pad 2 12.1\"",
+    "brand": "OnePlus",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-google-pixel-tablet",
+    "name": "Google Pixel Tablet with Speaker Dock",
+    "brand": "Google",
+    "category": "tablets"
+  },
+  {
+    "id": "prod-garmin-forerunner-265",
+    "name": "Garmin Forerunner 265 GPS Running Watch",
+    "brand": "Garmin",
+    "category": "watches"
+  },
+  {
+    "id": "prod-garmin-fenix-7-pro",
+    "name": "Garmin Fenix 7 Pro Sapphire Solar",
+    "brand": "Garmin",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-garmin-hrm-pro-plus",
+    "name": "Garmin HRM-Pro Plus Heart Rate Monitor Strap",
+    "brand": "Garmin",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-coleman-sundome-4p",
+    "name": "Coleman Sundome 4-Person Camping Tent",
+    "brand": "Coleman",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-coleman-cooler-2gallon",
+    "name": "Coleman 2-Gallon Party Stacker Insulated Cooler",
+    "brand": "Coleman",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-camelbak-chute-mag-1l",
+    "name": "CamelBak Chute Mag 1L Vacuum Insulated Bottle",
+    "brand": "CamelBak",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-camelbak-classic-light",
+    "name": "CamelBak Classic Light 2L Hydration Pack",
+    "brand": "CamelBak",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-victorinox-huntsman",
+    "name": "Victorinox Swiss Army Huntsman Pocket Knife",
+    "brand": "Victorinox",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-nike-pro-dri-fit-tights",
+    "name": "Nike Pro Dri-FIT Men's Compression Tights",
+    "brand": "Nike",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-nike-challenger-shorts",
+    "name": "Nike Dri-FIT Challenger 7\" Running Shorts",
+    "brand": "Nike",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-nike-aerobill-cap",
+    "name": "Nike AeroBill Featherlight Running Cap",
+    "brand": "Nike",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-adidas-yoga-mat-5mm",
+    "name": "Adidas Premium 5mm Non-Slip Yoga Mat",
+    "brand": "Adidas",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-adidas-superlite-hat",
+    "name": "Adidas Superlite 6-Panel Performance Hat",
+    "brand": "Adidas",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-adidas-tiro-duffel",
+    "name": "Adidas Tiro League Large Duffel Bag",
+    "brand": "Adidas",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-puma-cat-training-tee",
+    "name": "Puma Train All Day Heather Cat Tee",
+    "brand": "Puma",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-black-diamond-headlamp",
+    "name": "Black Diamond Storm 500-R Rechargeable Headlamp",
+    "brand": "Black Diamond",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-hydro-flask-wide-mouth",
+    "name": "Hydro Flask 32 oz Wide Mouth Bottle with Flex Cap",
+    "brand": "Hydro Flask",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-sea-to-summit-dry-bag",
+    "name": "Sea to Summit Lightweight Dry Sack 20L",
+    "brand": "Sea to Summit",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-theragun-mini-2",
+    "name": "Therabody Theragun mini (2nd Generation)",
+    "brand": "Therabody",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-bowflex-selecttech-552",
+    "name": "Bowflex SelectTech 552 Adjustable Dumbbells (Pair)",
+    "brand": "Bowflex",
+    "category": "sports-outdoor"
+  },
+  {
+    "id": "prod-sony-alpha-7-iv",
+    "name": "Sony Alpha 7 IV Full-Frame Mirrorless Camera",
+    "brand": "Sony",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-sony-alpha-7r-v",
+    "name": "Sony Alpha 7R V Full-Frame High-Res Camera",
+    "brand": "Sony",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-sony-zv-e10",
+    "name": "Sony ZV-E10 Mirrorless Vlog Camera",
+    "brand": "Sony",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-canon-eos-r6-ii",
+    "name": "Canon EOS R6 Mark II Mirrorless Camera",
+    "brand": "Canon",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-canon-eos-r50",
+    "name": "Canon EOS R50 Content Creator Kit",
+    "brand": "Canon",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-nikon-z6-iii",
+    "name": "Nikon Z6 III Full-Frame Mirrorless Camera",
+    "brand": "Nikon",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-nikon-z8",
+    "name": "Nikon Z8 Professional Mirrorless Camera",
+    "brand": "Nikon",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-sony-bravia-xr-55-a80l",
+    "name": "Sony BRAVIA XR 55\" OLED 4K Google TV (A80L)",
+    "brand": "Sony",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-sony-bravia-65-x90l",
+    "name": "Sony BRAVIA 65\" Full Array LED 4K TV (X90L)",
+    "brand": "Sony",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-lg-oled-c3-55",
+    "name": "LG OLED evo C3 55\" 4K Smart TV",
+    "brand": "LG",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-lg-oled-g3-65",
+    "name": "LG OLED evo G3 65\" Gallery Edition 4K TV",
+    "brand": "LG",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-samsung-neo-qled-65-qn90c",
+    "name": "Samsung Neo QLED 65\" 4K Smart TV (QN90C)",
+    "brand": "Samsung",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-samsung-crystal-uhd-55",
+    "name": "Samsung 55\" Crystal 4K UHD Smart TV",
+    "brand": "Samsung",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-lg-ultragear-27-oled",
+    "name": "LG UltraGear 27\" QHD OLED Gaming Monitor (27GR95QE)",
+    "brand": "LG",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-samsung-odyssey-oled-g9",
+    "name": "Samsung Odyssey OLED G9 49\" Curved Gaming Monitor",
+    "brand": "Samsung",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-dell-ultrasharp-27-4k",
+    "name": "Dell UltraSharp 27 4K USB-C Hub Monitor (U2723QE)",
+    "brand": "Dell",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-asus-proart-pa278cv",
+    "name": "ASUS ProArt PA278CV 27\" Professional Monitor",
+    "brand": "ASUS",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-apple-studio-display",
+    "name": "Apple Studio Display 27\" 5K Retina (Standard Glass)",
+    "brand": "Apple",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-samsung-smart-monitor-m8",
+    "name": "Samsung 32\" Smart Monitor M8 (4K UHD)",
+    "brand": "Samsung",
+    "category": "cameras-tv"
+  },
+  {
+    "id": "prod-gopro-hero-12-black",
+    "name": "GoPro HERO12 Black Action Camera",
+    "brand": "GoPro",
+    "category": "cameras-tv"
+  }
+]

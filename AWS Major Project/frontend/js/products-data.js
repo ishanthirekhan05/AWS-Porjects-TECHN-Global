@@ -1,0 +1,4636 @@
+(function () {
+  'use strict';
+
+  const CATEGORIES = [
+    { id: 'laptops', name: 'Laptops', count: 15, icon: 'laptop' },
+    { id: 'smartphones', name: 'Smartphones', count: 15, icon: 'smartphone' },
+    { id: 'audio', name: 'Audio', count: 15, icon: 'headphones' },
+    { id: 'footwear', name: 'Footwear', count: 15, icon: 'footwear' },
+    { id: 'accessories', name: 'Accessories', count: 15, icon: 'accessories' },
+    { id: 'watches', name: 'Watches & Wearables', count: 15, icon: 'watch' },
+  ];
+
+  const PRODUCTS = [
+  {
+    "id": "prod-apple-macbook-air-m2",
+    "name": "Apple MacBook Air M2",
+    "brand": "Apple",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Ultrabooks",
+    "price": 89990,
+    "originalPrice": 99900,
+    "rating": 4.8,
+    "reviewsCount": 240,
+    "image": "assets/products/prod-apple-macbook-air-m2_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-macbook-air-m2_1.jpg",
+      "assets/products/prod-apple-macbook-air-m2_2.jpg",
+      "assets/products/prod-apple-macbook-air-m2_3.jpg",
+      "assets/products/prod-apple-macbook-air-m2_4.jpg"
+    ],
+    "description": "Apple MacBook Air M2 featuring the powerful 8-core CPU and 8-core GPU. Ultra-thin fanless design with brilliant 13.6-inch Liquid Retina display.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Bestseller",
+    "specifications": [
+      "Processor: Apple M2 chip (8-core CPU)",
+      "Memory: 8GB unified memory",
+      "Storage: 256GB ultrafast SSD",
+      "Display: 13.6-inch Liquid Retina (2560x1664)",
+      "Ports: MagSafe 3, 2x Thunderbolt / USB 4, 3.5mm jack"
+    ],
+    "images": [
+      "assets/products/prod-apple-macbook-air-m2_1.jpg",
+      "assets/products/prod-apple-macbook-air-m2_2.jpg",
+      "assets/products/prod-apple-macbook-air-m2_3.jpg",
+      "assets/products/prod-apple-macbook-air-m2_4.jpg"
+    ],
+    "shortDescription": "Apple MacBook Air M2 featuring the powerful 8-core CPU and 8-core GPU. Ultra-thin fanless design with brilliant 13.6-inch Liquid Retina display.",
+    "fullDescription": "Apple MacBook Air M2 featuring the powerful 8-core CPU and 8-core GPU. Ultra-thin fanless design with brilliant 13.6-inch Liquid Retina display. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Apple M2 chip with 8-core CPU and 8-core GPU",
+      "13.6-inch Liquid Retina display with True Tone",
+      "Up to 18 hours all-day battery life",
+      "1080p FaceTime HD camera with three-mic array"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-apple-macbook-air-m3",
+    "name": "Apple MacBook Air M3",
+    "brand": "Apple",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Ultrabooks",
+    "price": 104990,
+    "originalPrice": 114900,
+    "rating": 4.9,
+    "reviewsCount": 160,
+    "image": "assets/products/prod-apple-macbook-air-m3_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-macbook-air-m3_1.jpg",
+      "assets/products/prod-apple-macbook-air-m3_2.jpg",
+      "assets/products/prod-apple-macbook-air-m3_3.jpg",
+      "assets/products/prod-apple-macbook-air-m3_4.jpg"
+    ],
+    "description": "Apple MacBook Air M3 delivers blazing-fast performance with hardware-accelerated ray tracing and dual external display support.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "New Arrival",
+    "specifications": [
+      "Processor: Apple M3 chip (8-core CPU, 10-core GPU)",
+      "Memory: 16GB unified memory",
+      "Storage: 512GB SSD storage",
+      "Display: 13.6-inch Liquid Retina with 500 nits brightness",
+      "Battery: 52.6-watt-hour lithium-polymer battery"
+    ],
+    "images": [
+      "assets/products/prod-apple-macbook-air-m3_1.jpg",
+      "assets/products/prod-apple-macbook-air-m3_2.jpg",
+      "assets/products/prod-apple-macbook-air-m3_3.jpg",
+      "assets/products/prod-apple-macbook-air-m3_4.jpg"
+    ],
+    "shortDescription": "Apple MacBook Air M3 delivers blazing-fast performance with hardware-accelerated ray tracing and dual external display support.",
+    "fullDescription": "Apple MacBook Air M3 delivers blazing-fast performance with hardware-accelerated ray tracing and dual external display support. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Apple M3 chip with next-generation GPU architecture",
+      "Support for up to two external displays with laptop lid closed",
+      "Wi-Fi 6E connectivity with up to 2x faster download speeds",
+      "Durable recycled aluminum unibody enclosure"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "9% OFF"
+  },
+  {
+    "id": "prod-apple-macbook-pro-14-m3",
+    "name": "Apple MacBook Pro 14\" M3 Pro",
+    "brand": "Apple",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Pro Laptops",
+    "price": 189900,
+    "originalPrice": 199900,
+    "rating": 4.9,
+    "reviewsCount": 95,
+    "image": "assets/products/prod-apple-macbook-pro-14-m3_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-macbook-pro-14-m3_1.jpg",
+      "assets/products/prod-apple-macbook-pro-14-m3_2.jpg",
+      "assets/products/prod-apple-macbook-pro-14-m3_3.jpg",
+      "assets/products/prod-apple-macbook-pro-14-m3_4.jpg"
+    ],
+    "description": "Apple MacBook Pro 14-inch with M3 Pro chip. Extreme performance for developers, creative professionals, and demanding workflows.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Pro Choice",
+    "specifications": [
+      "Processor: Apple M3 Pro (11-core CPU, 14-core GPU)",
+      "Memory: 18GB unified memory",
+      "Storage: 512GB high-speed SSD",
+      "Display: 14.2-inch Liquid Retina XDR (3024x1964)",
+      "Audio: Six-speaker sound system with force-cancelling woofers"
+    ],
+    "images": [
+      "assets/products/prod-apple-macbook-pro-14-m3_1.jpg",
+      "assets/products/prod-apple-macbook-pro-14-m3_2.jpg",
+      "assets/products/prod-apple-macbook-pro-14-m3_3.jpg",
+      "assets/products/prod-apple-macbook-pro-14-m3_4.jpg"
+    ],
+    "shortDescription": "Apple MacBook Pro 14-inch with M3 Pro chip. Extreme performance for developers, creative professionals, and demanding workflows.",
+    "fullDescription": "Apple MacBook Pro 14-inch with M3 Pro chip. Extreme performance for developers, creative professionals, and demanding workflows. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "M3 Pro chip with up to 12-core CPU and 18-core GPU",
+      "14.2-inch Liquid Retina XDR display with 120Hz ProMotion",
+      "Up to 22 hours of battery life",
+      "HDMI port, SDXC card slot, and three Thunderbolt 4 ports"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "5% OFF"
+  },
+  {
+    "id": "prod-apple-macbook-pro-16-m3",
+    "name": "Apple MacBook Pro 16\" M3 Max",
+    "brand": "Apple",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Pro Laptops",
+    "price": 249900,
+    "originalPrice": 269900,
+    "rating": 5.0,
+    "reviewsCount": 82,
+    "image": "assets/products/prod-apple-macbook-pro-16-m3_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-macbook-pro-16-m3_1.jpg",
+      "assets/products/prod-apple-macbook-pro-16-m3_2.jpg",
+      "assets/products/prod-apple-macbook-pro-16-m3_3.jpg",
+      "assets/products/prod-apple-macbook-pro-16-m3_4.jpg"
+    ],
+    "description": "Apple MacBook Pro 16-inch with M3 Max chip. Unrivaled computing power for 3D animation, machine learning models, and cinematic video editing.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Flagship",
+    "specifications": [
+      "Processor: Apple M3 Max (14-core CPU, 30-core GPU)",
+      "Memory: 36GB unified memory",
+      "Storage: 1TB NVMe SSD",
+      "Display: 16.2-inch Liquid Retina XDR (3456x2234)",
+      "Weight: 2.16 kg Space Black enclosure"
+    ],
+    "images": [
+      "assets/products/prod-apple-macbook-pro-16-m3_1.jpg",
+      "assets/products/prod-apple-macbook-pro-16-m3_2.jpg",
+      "assets/products/prod-apple-macbook-pro-16-m3_3.jpg",
+      "assets/products/prod-apple-macbook-pro-16-m3_4.jpg"
+    ],
+    "shortDescription": "Apple MacBook Pro 16-inch with M3 Max chip. Unrivaled computing power for 3D animation, machine learning models, and cinematic video editing.",
+    "fullDescription": "Apple MacBook Pro 16-inch with M3 Max chip. Unrivaled computing power for 3D animation, machine learning models, and cinematic video editing. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "M3 Max chip with 14-core CPU and 30-core GPU",
+      "16.2-inch Liquid Retina XDR display with 1600 nits peak HDR",
+      "Up to 22 hours battery endurance",
+      "Studio-quality three-mic array with directional beamforming"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "7% OFF"
+  },
+  {
+    "id": "prod-asus-rog-strix-g16",
+    "name": "ASUS ROG Strix G16 (2024)",
+    "brand": "ASUS",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Gaming Laptops",
+    "price": 149990,
+    "originalPrice": 169990,
+    "rating": 4.8,
+    "reviewsCount": 115,
+    "image": "assets/products/prod-asus-rog-strix-g16_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-asus-rog-strix-g16_1.jpg",
+      "assets/products/prod-asus-rog-strix-g16_2.jpg",
+      "assets/products/prod-asus-rog-strix-g16_3.jpg",
+      "assets/products/prod-asus-rog-strix-g16_4.jpg"
+    ],
+    "description": "ASUS ROG Strix G16 gaming laptop powered by 14th Gen Intel Core i9-14900HX and NVIDIA GeForce RTX 4070. High-refresh ROG Nebula display for competitive esports.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Top Rated Gaming",
+    "specifications": [
+      "Processor: Intel Core i9-14900HX (2.2 GHz up to 5.8 GHz)",
+      "Graphics: NVIDIA GeForce RTX 4070 with MUX Switch + Advanced Optimus",
+      "Memory: 16GB DDR5 5600MHz (expandable to 32GB)",
+      "Storage: 1TB PCIe 4.0 NVMe M.2 Performance SSD",
+      "Keyboard: 4-Zone RGB Backlit Chiclet Keyboard"
+    ],
+    "images": [
+      "assets/products/prod-asus-rog-strix-g16_1.jpg",
+      "assets/products/prod-asus-rog-strix-g16_2.jpg",
+      "assets/products/prod-asus-rog-strix-g16_3.jpg",
+      "assets/products/prod-asus-rog-strix-g16_4.jpg"
+    ],
+    "shortDescription": "ASUS ROG Strix G16 gaming laptop powered by 14th Gen Intel Core i9-14900HX and NVIDIA GeForce RTX 4070. High-refresh ROG Nebula display for competitive esports.",
+    "fullDescription": "ASUS ROG Strix G16 gaming laptop powered by 14th Gen Intel Core i9-14900HX and NVIDIA GeForce RTX 4070. High-refresh ROG Nebula display for competitive esports. Certified original hardware engineered by ASUS for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core i9-14900HX 24-core flagship processor",
+      "NVIDIA GeForce RTX 4070 8GB GDDR6 Laptop GPU (140W TGP)",
+      "16-inch ROG Nebula 2.5K 240Hz 3ms 16:10 display",
+      "Tri-Fan technology with Conductonaut Extreme liquid metal cooling"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-asus-zenbook-14-oled",
+    "name": "ASUS Zenbook 14 OLED",
+    "brand": "ASUS",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Ultrabooks",
+    "price": 96990,
+    "originalPrice": 109990,
+    "rating": 4.7,
+    "reviewsCount": 78,
+    "image": "assets/products/prod-asus-zenbook-14-oled_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-asus-zenbook-14-oled_1.jpg",
+      "assets/products/prod-asus-zenbook-14-oled_2.jpg",
+      "assets/products/prod-asus-zenbook-14-oled_3.jpg",
+      "assets/products/prod-asus-zenbook-14-oled_4.jpg"
+    ],
+    "description": "ASUS Zenbook 14 OLED featuring Intel Core Ultra 7 processor with dedicated AI NPU. Ultra-portable 1.2 kg all-metal chassis with stunning 3K 120Hz OLED display.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Slim & Light",
+    "specifications": [
+      "Processor: Intel Core Ultra 7 155H (16 cores, up to 4.8 GHz)",
+      "Graphics: Intel Arc Graphics",
+      "Memory: 16GB LPDDR5X on board",
+      "Storage: 1TB M.2 NVMe PCIe 4.0 SSD",
+      "Audio: Harman Kardon certified Dolby Atmos sound system"
+    ],
+    "images": [
+      "assets/products/prod-asus-zenbook-14-oled_1.jpg",
+      "assets/products/prod-asus-zenbook-14-oled_2.jpg",
+      "assets/products/prod-asus-zenbook-14-oled_3.jpg",
+      "assets/products/prod-asus-zenbook-14-oled_4.jpg"
+    ],
+    "shortDescription": "ASUS Zenbook 14 OLED featuring Intel Core Ultra 7 processor with dedicated AI NPU. Ultra-portable 1.2 kg all-metal chassis with stunning 3K 120Hz OLED display.",
+    "fullDescription": "ASUS Zenbook 14 OLED featuring Intel Core Ultra 7 processor with dedicated AI NPU. Ultra-portable 1.2 kg all-metal chassis with stunning 3K 120Hz OLED display. Certified original hardware engineered by ASUS for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core Ultra 7 155H processor with Intel AI Boost NPU",
+      "14.0-inch 3K (2880 x 1800) 120Hz ASUS Lumina OLED display",
+      "Super-slim 14.9 mm profile and featherlight 1.2 kg body",
+      "75Wh high-capacity battery delivering up to 15 hours runtime"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-lenovo-thinkpad-x1-carbon-gen-12",
+    "name": "Lenovo ThinkPad X1 Carbon Gen 12",
+    "brand": "Lenovo",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Business Laptops",
+    "price": 174990,
+    "originalPrice": 194990,
+    "rating": 4.9,
+    "reviewsCount": 92,
+    "image": "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_1.jpg",
+      "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_2.jpg",
+      "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_3.jpg",
+      "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_4.jpg"
+    ],
+    "description": "Lenovo ThinkPad X1 Carbon Gen 12 ultralight business laptop with carbon fiber reinforced chassis, iconic TrackPoint keyboard, and Intel Core Ultra vPro performance.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Enterprise Benchmark",
+    "specifications": [
+      "Processor: Intel Core Ultra 7 165U (12 cores, up to 4.9 GHz)",
+      "Memory: 32GB LPDDR5X 6400MHz",
+      "Storage: 1TB PCIe Gen 4 Performance SSD",
+      "Display: 14\" 2.8K (2880 x 1800) OLED 120Hz 400 nits",
+      "Security: Discrete TPM 2.0, Fingerprint reader, IR camera with privacy shutter"
+    ],
+    "images": [
+      "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_1.jpg",
+      "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_2.jpg",
+      "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_3.jpg",
+      "assets/products/prod-lenovo-thinkpad-x1-carbon-gen-12_4.jpg"
+    ],
+    "shortDescription": "Lenovo ThinkPad X1 Carbon Gen 12 ultralight business laptop with carbon fiber reinforced chassis, iconic TrackPoint keyboard, and Intel Core Ultra vPro performance.",
+    "fullDescription": "Lenovo ThinkPad X1 Carbon Gen 12 ultralight business laptop with carbon fiber reinforced chassis, iconic TrackPoint keyboard, and Intel Core Ultra vPro performance. Certified original hardware engineered by Lenovo for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core Ultra 7 165U vPro processor with built-in AI acceleration",
+      "Military-grade MIL-STD 810H tested carbon-fiber and magnesium chassis",
+      "Legendary spill-resistant ThinkPad keyboard with TrackPoint and haptic glass pad",
+      "14.0-inch 2.8K OLED antiglare display with 100% DCI-P3 color gamut"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-lenovo-legion-pro-7i-gen-9",
+    "name": "Lenovo Legion Pro 7i Gen 9",
+    "brand": "Lenovo",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Gaming Laptops",
+    "price": 199990,
+    "originalPrice": 224990,
+    "rating": 4.9,
+    "reviewsCount": 64,
+    "image": "assets/products/prod-lenovo-legion-pro-7i-gen-9_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-lenovo-legion-pro-7i-gen-9_1.jpg",
+      "assets/products/prod-lenovo-legion-pro-7i-gen-9_2.jpg",
+      "assets/products/prod-lenovo-legion-pro-7i-gen-9_3.jpg",
+      "assets/products/prod-lenovo-legion-pro-7i-gen-9_4.jpg"
+    ],
+    "description": "Lenovo Legion Pro 7i Gen 9 AI-tuned competitive gaming laptop with Intel Core i9-14900HX, RTX 4080 graphics, and Coldfront Vapor cooling technology.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Extreme Gaming",
+    "specifications": [
+      "Processor: Intel Core i9-14900HX (24 cores, 32 threads, up to 5.8 GHz)",
+      "Graphics: NVIDIA GeForce RTX 4080 12GB GDDR6",
+      "Memory: 32GB (2x 16GB) DDR5-5600MHz",
+      "Storage: 1TB M.2 2280 PCIe Gen 4 SSD",
+      "Battery: 99.9Whr with Super Rapid Charge Pro"
+    ],
+    "images": [
+      "assets/products/prod-lenovo-legion-pro-7i-gen-9_1.jpg",
+      "assets/products/prod-lenovo-legion-pro-7i-gen-9_2.jpg",
+      "assets/products/prod-lenovo-legion-pro-7i-gen-9_3.jpg",
+      "assets/products/prod-lenovo-legion-pro-7i-gen-9_4.jpg"
+    ],
+    "shortDescription": "Lenovo Legion Pro 7i Gen 9 AI-tuned competitive gaming laptop with Intel Core i9-14900HX, RTX 4080 graphics, and Coldfront Vapor cooling technology.",
+    "fullDescription": "Lenovo Legion Pro 7i Gen 9 AI-tuned competitive gaming laptop with Intel Core i9-14900HX, RTX 4080 graphics, and Coldfront Vapor cooling technology. Certified original hardware engineered by Lenovo for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core i9-14900HX processor with Lenovo LA-2 AI tuning chip",
+      "NVIDIA GeForce RTX 4080 12GB GDDR6 (175W maximum TGP)",
+      "16-inch WQXGA (2560x1600) 240Hz PureSight Gaming display",
+      "Legion Coldfront 5.0 vapor chamber thermal architecture"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-hp-spectre-x360-14",
+    "name": "HP Spectre x360 14 2-in-1",
+    "brand": "HP",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Convertible Laptops",
+    "price": 139990,
+    "originalPrice": 154990,
+    "rating": 4.7,
+    "reviewsCount": 73,
+    "image": "assets/products/prod-hp-spectre-x360-14_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-hp-spectre-x360-14_1.jpg",
+      "assets/products/prod-hp-spectre-x360-14_2.jpg",
+      "assets/products/prod-hp-spectre-x360-14_3.jpg",
+      "assets/products/prod-hp-spectre-x360-14_4.jpg"
+    ],
+    "description": "HP Spectre x360 14 convertible laptop with 360-degree gem-cut hinge, 2.8K OLED touchscreen, Intel Core Ultra 7 processor, and bundled rechargeable tilt pen.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "2-in-1 Touch",
+    "specifications": [
+      "Processor: Intel Core Ultra 7 155H (16 cores, up to 4.8 GHz)",
+      "Memory: 16GB LPDDR5x 7467 MHz",
+      "Storage: 1TB PCIe Gen4 NVMe M.2 SSD",
+      "Display: 14.0\" 2.8K OLED touch with Corning Gorilla Glass NBT",
+      "Stylus: HP Rechargeable MPP2.0 Tilt Pen included in box"
+    ],
+    "images": [
+      "assets/products/prod-hp-spectre-x360-14_1.jpg",
+      "assets/products/prod-hp-spectre-x360-14_2.jpg",
+      "assets/products/prod-hp-spectre-x360-14_3.jpg",
+      "assets/products/prod-hp-spectre-x360-14_4.jpg"
+    ],
+    "shortDescription": "HP Spectre x360 14 convertible laptop with 360-degree gem-cut hinge, 2.8K OLED touchscreen, Intel Core Ultra 7 processor, and bundled rechargeable tilt pen.",
+    "fullDescription": "HP Spectre x360 14 convertible laptop with 360-degree gem-cut hinge, 2.8K OLED touchscreen, Intel Core Ultra 7 processor, and bundled rechargeable tilt pen. Certified original hardware engineered by HP for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core Ultra 7 155H processor with Intel Arc Graphics",
+      "14-inch 2.8K (2880 x 1800) OLED 120Hz IMAX Enhanced touchscreen",
+      "9MP IR AI camera with auto-framing and walk-away lock",
+      "360-degree precision geared hinge with laptop, tent, stand, and tablet modes"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-hp-omen-transcend-16",
+    "name": "HP Omen Transcend 16",
+    "brand": "HP",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Gaming Laptops",
+    "price": 164990,
+    "originalPrice": 184990,
+    "rating": 4.8,
+    "reviewsCount": 58,
+    "image": "assets/products/prod-hp-omen-transcend-16_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-hp-omen-transcend-16_1.jpg",
+      "assets/products/prod-hp-omen-transcend-16_2.jpg",
+      "assets/products/prod-hp-omen-transcend-16_3.jpg",
+      "assets/products/prod-hp-omen-transcend-16_4.jpg"
+    ],
+    "description": "HP Omen Transcend 16 lightweight gaming laptop with magnesium-aluminum chassis, Mini-LED display, Intel Core i7-14700HX, and NVIDIA GeForce RTX 4070 graphics.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "OLED Gaming",
+    "specifications": [
+      "Processor: Intel Core i7-14700HX (up to 5.5 GHz)",
+      "Graphics: NVIDIA GeForce RTX 4070 (8GB GDDR6 dedicated)",
+      "Memory: 16GB DDR5-5600 MHz RAM (2 x 8GB)",
+      "Storage: 1TB PCIe Gen4 NVMe TLC M.2 SSD",
+      "Audio: HyperX audio tuning with dual speakers and DTS:X Ultra"
+    ],
+    "images": [
+      "assets/products/prod-hp-omen-transcend-16_1.jpg",
+      "assets/products/prod-hp-omen-transcend-16_2.jpg",
+      "assets/products/prod-hp-omen-transcend-16_3.jpg",
+      "assets/products/prod-hp-omen-transcend-16_4.jpg"
+    ],
+    "shortDescription": "HP Omen Transcend 16 lightweight gaming laptop with magnesium-aluminum chassis, Mini-LED display, Intel Core i7-14700HX, and NVIDIA GeForce RTX 4070 graphics.",
+    "fullDescription": "HP Omen Transcend 16 lightweight gaming laptop with magnesium-aluminum chassis, Mini-LED display, Intel Core i7-14700HX, and NVIDIA GeForce RTX 4070 graphics. Certified original hardware engineered by HP for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core i7-14700HX processor with 20 cores",
+      "NVIDIA GeForce RTX 4070 8GB GDDR6 Laptop GPU",
+      "16-inch WQXGA (2560x1600) 240Hz OLED display with HDR 1000",
+      "Omen Tempest Cooling with three-sided venting and 5-way airflow"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-hp-pavilion-15",
+    "name": "HP Pavilion 15 Laptop",
+    "brand": "HP",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Everyday Laptops",
+    "price": 64990,
+    "originalPrice": 74990,
+    "rating": 4.6,
+    "reviewsCount": 185,
+    "image": "assets/products/prod-hp-pavilion-15_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-hp-pavilion-15_1.jpg",
+      "assets/products/prod-hp-pavilion-15_2.jpg",
+      "assets/products/prod-hp-pavilion-15_3.jpg",
+      "assets/products/prod-hp-pavilion-15_4.jpg"
+    ],
+    "description": "HP Pavilion 15 reliable everyday computing laptop with 13th Gen Intel Core i5 processor, micro-edge Full HD IPS display, and fast charging.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Value Pick",
+    "specifications": [
+      "Processor: Intel Core i5-1335U (up to 4.6 GHz with Intel Turbo Boost)",
+      "Graphics: Intel Iris Xe Graphics",
+      "Memory: 16GB DDR4-3200 MHz RAM",
+      "Storage: 512GB PCIe NVMe M.2 SSD",
+      "Weight: 1.75 kg Natural Silver finish"
+    ],
+    "images": [
+      "assets/products/prod-hp-pavilion-15_1.jpg",
+      "assets/products/prod-hp-pavilion-15_2.jpg",
+      "assets/products/prod-hp-pavilion-15_3.jpg",
+      "assets/products/prod-hp-pavilion-15_4.jpg"
+    ],
+    "shortDescription": "HP Pavilion 15 reliable everyday computing laptop with 13th Gen Intel Core i5 processor, micro-edge Full HD IPS display, and fast charging.",
+    "fullDescription": "HP Pavilion 15 reliable everyday computing laptop with 13th Gen Intel Core i5 processor, micro-edge Full HD IPS display, and fast charging. Certified original hardware engineered by HP for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "13th Gen Intel Core i5-1335U 10-core processor",
+      "15.6-inch Full HD (1920 x 1080) IPS micro-edge antiglare screen",
+      "HP Fast Charge charges 0 to 50% in approximately 45 minutes",
+      "Audio by B&O with dual stereo speakers"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "13% OFF"
+  },
+  {
+    "id": "prod-dell-xps-13-9340",
+    "name": "Dell XPS 13 (9340)",
+    "brand": "Dell",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Ultrabooks",
+    "price": 129990,
+    "originalPrice": 144990,
+    "rating": 4.8,
+    "reviewsCount": 110,
+    "image": "assets/products/prod-dell-xps-13-9340_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-dell-xps-13-9340_1.jpg",
+      "assets/products/prod-dell-xps-13-9340_2.jpg",
+      "assets/products/prod-dell-xps-13-9340_3.jpg",
+      "assets/products/prod-dell-xps-13-9340_4.jpg"
+    ],
+    "description": "Dell XPS 13 crafted from CNC machined aluminum and Gorilla Glass. Features zero-lattice keyboard, capacitive touch function row, and seamless glass touchpad.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Iconic Design",
+    "specifications": [
+      "Processor: Intel Core Ultra 7 155H (16 cores, up to 4.8 GHz)",
+      "Memory: 16GB LPDDR5X 7467MHz Dual Channel",
+      "Storage: 512GB M.2 PCIe NVMe Solid State Drive",
+      "Display: 13.4\" FHD+ InfinityEdge Non-Touch (500 nits)",
+      "Battery: 3-cell 55 Whr integrated battery"
+    ],
+    "images": [
+      "assets/products/prod-dell-xps-13-9340_1.jpg",
+      "assets/products/prod-dell-xps-13-9340_2.jpg",
+      "assets/products/prod-dell-xps-13-9340_3.jpg",
+      "assets/products/prod-dell-xps-13-9340_4.jpg"
+    ],
+    "shortDescription": "Dell XPS 13 crafted from CNC machined aluminum and Gorilla Glass. Features zero-lattice keyboard, capacitive touch function row, and seamless glass touchpad.",
+    "fullDescription": "Dell XPS 13 crafted from CNC machined aluminum and Gorilla Glass. Features zero-lattice keyboard, capacitive touch function row, and seamless glass touchpad. Certified original hardware engineered by Dell for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core Ultra 7 155H processor with Intel Arc Graphics",
+      "13.4-inch FHD+ (1920 x 1200) InfinityEdge display with 120Hz refresh",
+      "Seamless glass haptic touchpad and capacitive touch function row",
+      "Machined aluminum chassis weighing just 1.19 kg"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-dell-xps-14-9440",
+    "name": "Dell XPS 14 (9440)",
+    "brand": "Dell",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Ultrabooks",
+    "price": 169990,
+    "originalPrice": 189990,
+    "rating": 4.8,
+    "reviewsCount": 68,
+    "image": "assets/products/prod-dell-xps-14-9440_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-dell-xps-14-9440_1.jpg",
+      "assets/products/prod-dell-xps-14-9440_2.jpg",
+      "assets/products/prod-dell-xps-14-9440_3.jpg",
+      "assets/products/prod-dell-xps-14-9440_4.jpg"
+    ],
+    "description": "Dell XPS 14 balancing compact portability with dedicated NVIDIA GeForce RTX 4050 graphics and stunning 3.2K OLED InfinityEdge touch screen.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Creator Ready",
+    "specifications": [
+      "Processor: Intel Core Ultra 7 155H (up to 4.8 GHz)",
+      "Graphics: NVIDIA GeForce RTX 4050 6GB GDDR6 (30W)",
+      "Memory: 32GB LPDDR5x 7467MT/s",
+      "Storage: 1TB M.2 PCIe NVMe SSD",
+      "Ports: 3x Thunderbolt 4 with Power Delivery & DisplayPort, MicroSD card reader"
+    ],
+    "images": [
+      "assets/products/prod-dell-xps-14-9440_1.jpg",
+      "assets/products/prod-dell-xps-14-9440_2.jpg",
+      "assets/products/prod-dell-xps-14-9440_3.jpg",
+      "assets/products/prod-dell-xps-14-9440_4.jpg"
+    ],
+    "shortDescription": "Dell XPS 14 balancing compact portability with dedicated NVIDIA GeForce RTX 4050 graphics and stunning 3.2K OLED InfinityEdge touch screen.",
+    "fullDescription": "Dell XPS 14 balancing compact portability with dedicated NVIDIA GeForce RTX 4050 graphics and stunning 3.2K OLED InfinityEdge touch screen. Certified original hardware engineered by Dell for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core Ultra 7 155H processor with dedicated NVIDIA RTX 4050 graphics",
+      "14.5-inch 3.2K (3200 x 2000) OLED InfinityEdge touch display",
+      "Quad-speaker design with 8W total output and Waves MaxxAudio",
+      "Precision crafted CNC aluminum chassis in Platinum finish"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-dell-xps-16-9640",
+    "name": "Dell XPS 16 (9640)",
+    "brand": "Dell",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "Pro Laptops",
+    "price": 219990,
+    "originalPrice": 239990,
+    "rating": 4.9,
+    "reviewsCount": 54,
+    "image": "assets/products/prod-dell-xps-16-9640_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-dell-xps-16-9640_1.jpg",
+      "assets/products/prod-dell-xps-16-9640_2.jpg",
+      "assets/products/prod-dell-xps-16-9640_3.jpg",
+      "assets/products/prod-dell-xps-16-9640_4.jpg"
+    ],
+    "description": "Dell XPS 16 flagship power workstation with Intel Core Ultra 9, NVIDIA GeForce RTX 4070 graphics, and massive 16.3-inch 4K+ OLED InfinityEdge display.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Workstation Class",
+    "specifications": [
+      "Processor: Intel Core Ultra 9 185H (16 cores, up to 5.1 GHz)",
+      "Graphics: NVIDIA GeForce RTX 4070 8GB GDDR6",
+      "Memory: 32GB LPDDR5x 7467MT/s",
+      "Storage: 1TB M.2 PCIe NVMe Solid State Drive",
+      "Weight: 2.2 kg Graphite CNC aluminum"
+    ],
+    "images": [
+      "assets/products/prod-dell-xps-16-9640_1.jpg",
+      "assets/products/prod-dell-xps-16-9640_2.jpg",
+      "assets/products/prod-dell-xps-16-9640_3.jpg",
+      "assets/products/prod-dell-xps-16-9640_4.jpg"
+    ],
+    "shortDescription": "Dell XPS 16 flagship power workstation with Intel Core Ultra 9, NVIDIA GeForce RTX 4070 graphics, and massive 16.3-inch 4K+ OLED InfinityEdge display.",
+    "fullDescription": "Dell XPS 16 flagship power workstation with Intel Core Ultra 9, NVIDIA GeForce RTX 4070 graphics, and massive 16.3-inch 4K+ OLED InfinityEdge display. Certified original hardware engineered by Dell for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Intel Core Ultra 9 185H processor with up to 5.1 GHz clock",
+      "NVIDIA GeForce RTX 4070 8GB GDDR6 (60W)",
+      "16.3-inch 4K+ (3840 x 2400) OLED Touch display with Gorilla Glass Victus",
+      "99.5Whr high-capacity battery for extended on-the-go creative sessions"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-microsoft-surface-laptop-7",
+    "name": "Microsoft Surface Laptop 7 Copilot+ PC",
+    "brand": "Microsoft",
+    "category": "Laptops",
+    "categoryId": "laptops",
+    "subcategory": "AI Ultrabooks",
+    "price": 116990,
+    "originalPrice": 129990,
+    "rating": 4.8,
+    "reviewsCount": 89,
+    "image": "assets/products/prod-microsoft-surface-laptop-7_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-microsoft-surface-laptop-7_1.jpg",
+      "assets/products/prod-microsoft-surface-laptop-7_2.jpg",
+      "assets/products/prod-microsoft-surface-laptop-7_3.jpg",
+      "assets/products/prod-microsoft-surface-laptop-7_4.jpg"
+    ],
+    "description": "Microsoft Surface Laptop 7 powered by Snapdragon X Elite processor with industry-leading 45 TOPS NPU. Incredible battery life and PixelSense Flow touchscreen.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Copilot+ AI",
+    "specifications": [
+      "Processor: Snapdragon X Elite (12 cores, 3.4 GHz up to 4.0 GHz)",
+      "NPU: Qualcomm Hexagon 45 TOPS",
+      "Memory: 16GB LPDDR5x RAM",
+      "Storage: 512GB Gen 4 SSD",
+      "Display: 13.8\" PixelSense Flow (2304 x 1536) 120Hz Touch"
+    ],
+    "images": [
+      "assets/products/prod-microsoft-surface-laptop-7_1.jpg",
+      "assets/products/prod-microsoft-surface-laptop-7_2.jpg",
+      "assets/products/prod-microsoft-surface-laptop-7_3.jpg",
+      "assets/products/prod-microsoft-surface-laptop-7_4.jpg"
+    ],
+    "shortDescription": "Microsoft Surface Laptop 7 powered by Snapdragon X Elite processor with industry-leading 45 TOPS NPU. Incredible battery life and PixelSense Flow touchscreen.",
+    "fullDescription": "Microsoft Surface Laptop 7 powered by Snapdragon X Elite processor with industry-leading 45 TOPS NPU. Incredible battery life and PixelSense Flow touchscreen. Certified original hardware engineered by Microsoft for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Snapdragon X Elite processor with 45 TOPS Qualcomm Hexagon NPU",
+      "Up to 22 hours of continuous video playback on a single charge",
+      "13.8-inch PixelSense Flow touchscreen with 120Hz dynamic refresh",
+      "Dedicated Copilot key and Studio camera with AI Voice Focus"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-apple-iphone-15",
+    "name": "Apple iPhone 15",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Flagship Phones",
+    "price": 69990,
+    "originalPrice": 79900,
+    "rating": 4.8,
+    "reviewsCount": 310,
+    "image": "assets/products/prod-apple-iphone-15_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-iphone-15_1.jpg",
+      "assets/products/prod-apple-iphone-15_2.jpg",
+      "assets/products/prod-apple-iphone-15_3.jpg",
+      "assets/products/prod-apple-iphone-15_4.jpg"
+    ],
+    "description": "Apple iPhone 15 featuring Dynamic Island, 48MP main camera with 2x Telephoto, color-infused back glass design, and universal USB-C charging.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Bestseller",
+    "specifications": [
+      "Display: 6.1-inch Super Retina XDR OLED (2556x1179)",
+      "Chip: A16 Bionic chip with 5-core GPU",
+      "Camera: 48MP Main + 12MP Ultra Wide with Photonic Engine",
+      "Storage: 128GB internal storage",
+      "Biometrics: Face ID enabled by TrueDepth camera"
+    ],
+    "images": [
+      "assets/products/prod-apple-iphone-15_1.jpg",
+      "assets/products/prod-apple-iphone-15_2.jpg",
+      "assets/products/prod-apple-iphone-15_3.jpg",
+      "assets/products/prod-apple-iphone-15_4.jpg"
+    ],
+    "shortDescription": "Apple iPhone 15 featuring Dynamic Island, 48MP main camera with 2x Telephoto, color-infused back glass design, and universal USB-C charging.",
+    "fullDescription": "Apple iPhone 15 featuring Dynamic Island, 48MP main camera with 2x Telephoto, color-infused back glass design, and universal USB-C charging. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Dynamic Island bubbles up alerts and Live Activities",
+      "48MP Main camera with 2x optical-quality Telephoto",
+      "Durable color-infused glass and aerospace-grade aluminum design",
+      "USB-C connector with versatile charging and data transfer"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-apple-iphone-15-plus",
+    "name": "Apple iPhone 15 Plus",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Flagship Phones",
+    "price": 79990,
+    "originalPrice": 89900,
+    "rating": 4.8,
+    "reviewsCount": 180,
+    "image": "assets/products/prod-apple-iphone-15-plus_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-iphone-15-plus_1.jpg",
+      "assets/products/prod-apple-iphone-15-plus_2.jpg",
+      "assets/products/prod-apple-iphone-15-plus_3.jpg",
+      "assets/products/prod-apple-iphone-15-plus_4.jpg"
+    ],
+    "description": "Apple iPhone 15 Plus combines expansive 6.7-inch Super Retina XDR display with class-leading multi-day battery life and 48MP dual-camera system.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Big Battery",
+    "specifications": [
+      "Display: 6.7-inch Super Retina XDR (2796x1290)",
+      "Chip: A16 Bionic (6-core CPU, 5-core GPU)",
+      "Camera: 48MP Main + 12MP Ultra Wide",
+      "Storage: 128GB capacity",
+      "Charging: USB-C port with MagSafe wireless support"
+    ],
+    "images": [
+      "assets/products/prod-apple-iphone-15-plus_1.jpg",
+      "assets/products/prod-apple-iphone-15-plus_2.jpg",
+      "assets/products/prod-apple-iphone-15-plus_3.jpg",
+      "assets/products/prod-apple-iphone-15-plus_4.jpg"
+    ],
+    "shortDescription": "Apple iPhone 15 Plus combines expansive 6.7-inch Super Retina XDR display with class-leading multi-day battery life and 48MP dual-camera system.",
+    "fullDescription": "Apple iPhone 15 Plus combines expansive 6.7-inch Super Retina XDR display with class-leading multi-day battery life and 48MP dual-camera system. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Expansive 6.7-inch Super Retina XDR OLED display",
+      "All-day battery life with up to 26 hours video playback",
+      "A16 Bionic chip delivers proven pro-grade speed",
+      "Roadside Assistance via satellite and Crash Detection safety"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-apple-iphone-15-pro",
+    "name": "Apple iPhone 15 Pro",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Pro Flagships",
+    "price": 119900,
+    "originalPrice": 134900,
+    "rating": 4.9,
+    "reviewsCount": 215,
+    "image": "assets/products/prod-apple-iphone-15-pro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-iphone-15-pro_1.jpg",
+      "assets/products/prod-apple-iphone-15-pro_2.jpg",
+      "assets/products/prod-apple-iphone-15-pro_3.jpg",
+      "assets/products/prod-apple-iphone-15-pro_4.jpg"
+    ],
+    "description": "Apple iPhone 15 Pro forged in strong and lightweight aerospace-grade titanium with customizable Action button and revolutionary A17 Pro chip.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Pro Choice",
+    "specifications": [
+      "Display: 6.1-inch Super Retina XDR with ProMotion 120Hz",
+      "Chip: A17 Pro chip (6-core CPU, 6-core GPU)",
+      "Camera: 48MP Main, 12MP Ultra Wide, 12MP 3x Telephoto",
+      "Storage: 128GB capacity",
+      "Connector: USB-C with USB 3 speeds up to 10Gbps"
+    ],
+    "images": [
+      "assets/products/prod-apple-iphone-15-pro_1.jpg",
+      "assets/products/prod-apple-iphone-15-pro_2.jpg",
+      "assets/products/prod-apple-iphone-15-pro_3.jpg",
+      "assets/products/prod-apple-iphone-15-pro_4.jpg"
+    ],
+    "shortDescription": "Apple iPhone 15 Pro forged in strong and lightweight aerospace-grade titanium with customizable Action button and revolutionary A17 Pro chip.",
+    "fullDescription": "Apple iPhone 15 Pro forged in strong and lightweight aerospace-grade titanium with customizable Action button and revolutionary A17 Pro chip. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Aerospace-grade titanium design with textured matte glass back",
+      "A17 Pro chip with console-class GPU and hardware ray tracing",
+      "Pro camera system with 48MP main and 3x optical Telephoto",
+      "Customizable Action button to launch your favorite shortcut"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-apple-iphone-15-pro-max",
+    "name": "Apple iPhone 15 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Pro Flagships",
+    "price": 144900,
+    "originalPrice": 159900,
+    "rating": 4.9,
+    "reviewsCount": 280,
+    "image": "assets/products/prod-apple-iphone-15-pro-max_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-iphone-15-pro-max_1.jpg",
+      "assets/products/prod-apple-iphone-15-pro-max_2.jpg",
+      "assets/products/prod-apple-iphone-15-pro-max_3.jpg",
+      "assets/products/prod-apple-iphone-15-pro-max_4.jpg"
+    ],
+    "description": "Apple iPhone 15 Pro Max featuring grade 5 titanium enclosure, 5x optical zoom tetraprism Telephoto lens, and the blazing A17 Pro chip.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Ultimate Pro",
+    "specifications": [
+      "Display: 6.7-inch Super Retina XDR Always-On ProMotion 120Hz",
+      "Chip: A17 Pro (6-core CPU, 6-core GPU, 16-core Neural Engine)",
+      "Camera: 48MP Main + 12MP Ultra Wide + 12MP 5x Telephoto",
+      "Storage: 256GB base storage",
+      "Durability: Ceramic Shield front, IP68 water resistance"
+    ],
+    "images": [
+      "assets/products/prod-apple-iphone-15-pro-max_1.jpg",
+      "assets/products/prod-apple-iphone-15-pro-max_2.jpg",
+      "assets/products/prod-apple-iphone-15-pro-max_3.jpg",
+      "assets/products/prod-apple-iphone-15-pro-max_4.jpg"
+    ],
+    "shortDescription": "Apple iPhone 15 Pro Max featuring grade 5 titanium enclosure, 5x optical zoom tetraprism Telephoto lens, and the blazing A17 Pro chip.",
+    "fullDescription": "Apple iPhone 15 Pro Max featuring grade 5 titanium enclosure, 5x optical zoom tetraprism Telephoto lens, and the blazing A17 Pro chip. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Grade 5 titanium design with contoured edges",
+      "5x optical zoom with 120mm focal length Telephoto lens",
+      "A17 Pro processor enabling console gaming on iOS",
+      "Up to 29 hours video playback battery life"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "9% OFF"
+  },
+  {
+    "id": "prod-apple-iphone-16",
+    "name": "Apple iPhone 16",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Flagship Phones",
+    "price": 79900,
+    "originalPrice": 84900,
+    "rating": 4.9,
+    "reviewsCount": 140,
+    "image": "assets/products/prod-apple-iphone-16_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-iphone-16_1.jpg",
+      "assets/products/prod-apple-iphone-16_2.jpg",
+      "assets/products/prod-apple-iphone-16_3.jpg",
+      "assets/products/prod-apple-iphone-16_4.jpg"
+    ],
+    "description": "Apple iPhone 16 built for Apple Intelligence. Features Camera Control button, 48MP Fusion camera with macro capability, and ultra-fast A18 chip.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Latest Flagship",
+    "specifications": [
+      "Display: 6.1-inch Super Retina XDR OLED (2000 nits outdoor peak)",
+      "Chip: A18 chip with 6-core CPU and 5-core GPU",
+      "Camera: 48MP Fusion + 12MP Ultra Wide with autofocus macro",
+      "Battery: Up to 22 hours video playback",
+      "Durability: Latest-generation Ceramic Shield (2x tougher than any glass)"
+    ],
+    "images": [
+      "assets/products/prod-apple-iphone-16_1.jpg",
+      "assets/products/prod-apple-iphone-16_2.jpg",
+      "assets/products/prod-apple-iphone-16_3.jpg",
+      "assets/products/prod-apple-iphone-16_4.jpg"
+    ],
+    "shortDescription": "Apple iPhone 16 built for Apple Intelligence. Features Camera Control button, 48MP Fusion camera with macro capability, and ultra-fast A18 chip.",
+    "fullDescription": "Apple iPhone 16 built for Apple Intelligence. Features Camera Control button, 48MP Fusion camera with macro capability, and ultra-fast A18 chip. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "All-new Camera Control button for instant photo and zoom capture",
+      "Apple Intelligence personal AI system built right in",
+      "A18 chip engineered two generations ahead of A16",
+      "48MP Fusion camera with optical-quality 2x Telephoto"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "6% OFF"
+  },
+  {
+    "id": "prod-apple-iphone-16-pro",
+    "name": "Apple iPhone 16 Pro",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Pro Flagships",
+    "price": 119900,
+    "originalPrice": 129900,
+    "rating": 4.9,
+    "reviewsCount": 105,
+    "image": "assets/products/prod-apple-iphone-16-pro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-iphone-16-pro_1.jpg",
+      "assets/products/prod-apple-iphone-16-pro_2.jpg",
+      "assets/products/prod-apple-iphone-16-pro_3.jpg",
+      "assets/products/prod-apple-iphone-16-pro_4.jpg"
+    ],
+    "description": "Apple iPhone 16 Pro with Grade 5 Titanium finish, larger 6.3-inch display, 4K 120 fps Dolby Vision recording, and revolutionary A18 Pro silicon.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Pro Intelligence",
+    "specifications": [
+      "Display: 6.3-inch Super Retina XDR with ProMotion 120Hz",
+      "Chip: A18 Pro chip with 16-core Neural Engine",
+      "Camera: 48MP Fusion + 48MP Ultra Wide + 12MP 5x Telephoto",
+      "Storage: 128GB capacity",
+      "Connectivity: Wi-Fi 7, Bluetooth 5.3, Thread networking"
+    ],
+    "images": [
+      "assets/products/prod-apple-iphone-16-pro_1.jpg",
+      "assets/products/prod-apple-iphone-16-pro_2.jpg",
+      "assets/products/prod-apple-iphone-16-pro_3.jpg",
+      "assets/products/prod-apple-iphone-16-pro_4.jpg"
+    ],
+    "shortDescription": "Apple iPhone 16 Pro with Grade 5 Titanium finish, larger 6.3-inch display, 4K 120 fps Dolby Vision recording, and revolutionary A18 Pro silicon.",
+    "fullDescription": "Apple iPhone 16 Pro with Grade 5 Titanium finish, larger 6.3-inch display, 4K 120 fps Dolby Vision recording, and revolutionary A18 Pro silicon. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Larger 6.3-inch Super Retina XDR display with thinner borders",
+      "4K 120 fps Dolby Vision cinematic studio video recording",
+      "A18 Pro chip with 6-core GPU and enhanced neural bandwidth",
+      "Four studio-quality microphones with Audio Mix spatial capture"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-s24",
+    "name": "Samsung Galaxy S24 5G",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "AI Flagships",
+    "price": 64999,
+    "originalPrice": 74999,
+    "rating": 4.8,
+    "reviewsCount": 260,
+    "image": "assets/products/prod-samsung-galaxy-s24_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-s24_1.jpg",
+      "assets/products/prod-samsung-galaxy-s24_2.jpg",
+      "assets/products/prod-samsung-galaxy-s24_3.jpg",
+      "assets/products/prod-samsung-galaxy-s24_4.jpg"
+    ],
+    "description": "Samsung Galaxy S24 5G with integrated Galaxy AI. Features Circle to Search, Live Call Translation, Armor Aluminum frame, and Dynamic AMOLED 2X display.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Galaxy AI",
+    "specifications": [
+      "Display: 6.2\" Dynamic AMOLED 2X FHD+ (1-120Hz Adaptive)",
+      "Processor: Exynos 2400 4nm Deca-core / Snapdragon 8 Gen 3",
+      "Camera: 50MP Wide + 12MP Ultra-Wide + 10MP Telephoto 3x",
+      "Memory: 8GB RAM + 128GB Storage",
+      "Battery: 4000mAh with Super Fast Charging"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-s24_1.jpg",
+      "assets/products/prod-samsung-galaxy-s24_2.jpg",
+      "assets/products/prod-samsung-galaxy-s24_3.jpg",
+      "assets/products/prod-samsung-galaxy-s24_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy S24 5G with integrated Galaxy AI. Features Circle to Search, Live Call Translation, Armor Aluminum frame, and Dynamic AMOLED 2X display.",
+    "fullDescription": "Samsung Galaxy S24 5G with integrated Galaxy AI. Features Circle to Search, Live Call Translation, Armor Aluminum frame, and Dynamic AMOLED 2X display. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Galaxy AI features: Circle to Search, Live Translate, Note Assist",
+      "6.2-inch Dynamic AMOLED 2X 120Hz display (2600 nits peak)",
+      "Enhanced Armor Aluminum frame with IP68 water resistance",
+      "50MP primary camera with ProVisual Engine nightography"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "13% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-s24-plus",
+    "name": "Samsung Galaxy S24+ 5G",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "AI Flagships",
+    "price": 79999,
+    "originalPrice": 89999,
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "image": "assets/products/prod-samsung-galaxy-s24-plus_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-s24-plus_1.jpg",
+      "assets/products/prod-samsung-galaxy-s24-plus_2.jpg",
+      "assets/products/prod-samsung-galaxy-s24-plus_3.jpg",
+      "assets/products/prod-samsung-galaxy-s24-plus_4.jpg"
+    ],
+    "description": "Samsung Galaxy S24+ 5G offers a spacious 6.7-inch QHD+ display, 12GB RAM, 4900mAh battery, and full suite of Galaxy AI productivity tools.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "QHD+ Display",
+    "specifications": [
+      "Display: 6.7\" QHD+ (3120 x 1440) Dynamic AMOLED 2X",
+      "Processor: Exynos 2400 / Snapdragon 8 Gen 3 for Galaxy",
+      "Memory: 12GB LPDDR5X RAM + 256GB UFS 4.0 storage",
+      "Camera: 50MP OIS + 12MP UW + 10MP 3x Telephoto",
+      "Weight: 196g with matte satin glass finish"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-s24-plus_1.jpg",
+      "assets/products/prod-samsung-galaxy-s24-plus_2.jpg",
+      "assets/products/prod-samsung-galaxy-s24-plus_3.jpg",
+      "assets/products/prod-samsung-galaxy-s24-plus_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy S24+ 5G offers a spacious 6.7-inch QHD+ display, 12GB RAM, 4900mAh battery, and full suite of Galaxy AI productivity tools.",
+    "fullDescription": "Samsung Galaxy S24+ 5G offers a spacious 6.7-inch QHD+ display, 12GB RAM, 4900mAh battery, and full suite of Galaxy AI productivity tools. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "6.7-inch QHD+ Dynamic AMOLED 2X display with 2600 nits peak",
+      "12GB RAM for seamless AI multitasking and desktop DeX mode",
+      "Large 4900mAh battery with 45W super-fast wired charging",
+      "7 generations of guaranteed Android OS upgrades and security patches"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-s24-ultra",
+    "name": "Samsung Galaxy S24 Ultra 5G",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Pro Flagships",
+    "price": 129999,
+    "originalPrice": 134999,
+    "rating": 4.9,
+    "reviewsCount": 320,
+    "image": "assets/products/prod-samsung-galaxy-s24-ultra_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-s24-ultra_1.jpg",
+      "assets/products/prod-samsung-galaxy-s24-ultra_2.jpg",
+      "assets/products/prod-samsung-galaxy-s24-ultra_3.jpg",
+      "assets/products/prod-samsung-galaxy-s24-ultra_4.jpg"
+    ],
+    "description": "Samsung Galaxy S24 Ultra 5G with Titanium frame, flat 6.8-inch display with Corning Gorilla Armor anti-reflective glass, built-in S Pen, and 200MP camera.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Ultra Camera",
+    "specifications": [
+      "Display: 6.8\" QHD+ Dynamic AMOLED 2X Flat (1-120Hz)",
+      "Processor: Qualcomm Snapdragon 8 Gen 3 for Galaxy",
+      "Camera: 200MP Main + 50MP 5x + 10MP 3x + 12MP Ultra-Wide",
+      "Memory: 12GB RAM + 256GB Storage",
+      "Battery: 5000mAh with 45W Fast Charging and Wireless PowerShare"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-s24-ultra_1.jpg",
+      "assets/products/prod-samsung-galaxy-s24-ultra_2.jpg",
+      "assets/products/prod-samsung-galaxy-s24-ultra_3.jpg",
+      "assets/products/prod-samsung-galaxy-s24-ultra_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy S24 Ultra 5G with Titanium frame, flat 6.8-inch display with Corning Gorilla Armor anti-reflective glass, built-in S Pen, and 200MP camera.",
+    "fullDescription": "Samsung Galaxy S24 Ultra 5G with Titanium frame, flat 6.8-inch display with Corning Gorilla Armor anti-reflective glass, built-in S Pen, and 200MP camera. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Titanium exterior frame with scratch-resistant Corning Gorilla Armor",
+      "200MP Quad Telephoto camera with 5x 50MP optical sensor (up to 100x Space Zoom)",
+      "Integrated low-latency Bluetooth S Pen stylus",
+      "Snapdragon 8 Gen 3 for Galaxy with enlarged vapor cooling chamber"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "4% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-z-fold6",
+    "name": "Samsung Galaxy Z Fold6 5G",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Foldables",
+    "price": 164999,
+    "originalPrice": 179999,
+    "rating": 4.8,
+    "reviewsCount": 98,
+    "image": "assets/products/prod-samsung-galaxy-z-fold6_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-z-fold6_1.jpg",
+      "assets/products/prod-samsung-galaxy-z-fold6_2.jpg",
+      "assets/products/prod-samsung-galaxy-z-fold6_3.jpg",
+      "assets/products/prod-samsung-galaxy-z-fold6_4.jpg"
+    ],
+    "description": "Samsung Galaxy Z Fold6 5G ultra-slim foldable smartphone. Dual-rail Flex Hinge, wider 6.3-inch cover screen, and immersive 7.6-inch main tablet display.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Next-Gen Foldable",
+    "specifications": [
+      "Main Display: 7.6\" QXGA+ Dynamic AMOLED 2X (2160 x 1856) 120Hz",
+      "Cover Display: 6.3\" HD+ Dynamic AMOLED 2X (2376 x 968) 120Hz",
+      "Memory: 12GB RAM + 256GB Storage",
+      "Camera: 50MP Wide + 12MP Ultra-Wide + 10MP 3x Telephoto",
+      "Battery: 4400mAh dual battery system"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-z-fold6_1.jpg",
+      "assets/products/prod-samsung-galaxy-z-fold6_2.jpg",
+      "assets/products/prod-samsung-galaxy-z-fold6_3.jpg",
+      "assets/products/prod-samsung-galaxy-z-fold6_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy Z Fold6 5G ultra-slim foldable smartphone. Dual-rail Flex Hinge, wider 6.3-inch cover screen, and immersive 7.6-inch main tablet display.",
+    "fullDescription": "Samsung Galaxy Z Fold6 5G ultra-slim foldable smartphone. Dual-rail Flex Hinge, wider 6.3-inch cover screen, and immersive 7.6-inch main tablet display. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "7.6-inch Dynamic AMOLED 2X inner folding display with S Pen support",
+      "Thinner and lighter symmetrical design with Enhanced Armor Aluminum",
+      "Snapdragon 8 Gen 3 for Galaxy processor with Ray Tracing support",
+      "IP48 dust and water resistance certification"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-z-flip6",
+    "name": "Samsung Galaxy Z Flip6 5G",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Foldables",
+    "price": 109999,
+    "originalPrice": 119999,
+    "rating": 4.7,
+    "reviewsCount": 112,
+    "image": "assets/products/prod-samsung-galaxy-z-flip6_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-z-flip6_1.jpg",
+      "assets/products/prod-samsung-galaxy-z-flip6_2.jpg",
+      "assets/products/prod-samsung-galaxy-z-flip6_3.jpg",
+      "assets/products/prod-samsung-galaxy-z-flip6_4.jpg"
+    ],
+    "description": "Samsung Galaxy Z Flip6 5G pocket-sized flip phone with 3.4-inch Super AMOLED FlexWindow, upgraded 50MP main camera, and vapor chamber cooling.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Pocket Foldable",
+    "specifications": [
+      "Main Screen: 6.7\" FHD+ Dynamic AMOLED 2X (120Hz Adaptive)",
+      "Cover Screen: 3.4\" Super AMOLED 60Hz (720 x 748)",
+      "Processor: Snapdragon 8 Gen 3 for Galaxy",
+      "Memory: 12GB RAM + 256GB Storage",
+      "Weight: 187g compact clamshell form factor"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-z-flip6_1.jpg",
+      "assets/products/prod-samsung-galaxy-z-flip6_2.jpg",
+      "assets/products/prod-samsung-galaxy-z-flip6_3.jpg",
+      "assets/products/prod-samsung-galaxy-z-flip6_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy Z Flip6 5G pocket-sized flip phone with 3.4-inch Super AMOLED FlexWindow, upgraded 50MP main camera, and vapor chamber cooling.",
+    "fullDescription": "Samsung Galaxy Z Flip6 5G pocket-sized flip phone with 3.4-inch Super AMOLED FlexWindow, upgraded 50MP main camera, and vapor chamber cooling. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "3.4-inch versatile FlexWindow cover screen for widgets and replies",
+      "Upgraded 50MP wide camera with 2x in-sensor zoom",
+      "First-ever vapor chamber cooling system on a Galaxy Z Flip",
+      "Larger 4000mAh battery with extended endurance"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-google-pixel-9-pro",
+    "name": "Google Pixel 9 Pro 5G",
+    "brand": "Google",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "AI Flagships",
+    "price": 109999,
+    "originalPrice": 119999,
+    "rating": 4.9,
+    "reviewsCount": 130,
+    "image": "assets/products/prod-google-pixel-9-pro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-google-pixel-9-pro_1.jpg",
+      "assets/products/prod-google-pixel-9-pro_2.jpg",
+      "assets/products/prod-google-pixel-9-pro_3.jpg",
+      "assets/products/prod-google-pixel-9-pro_4.jpg"
+    ],
+    "description": "Google Pixel 9 Pro 5G with Google Tensor G4 chip, Gemini Nano AI, pro-tier triple rear cameras with 30x Super Res Zoom, and Super Actua display.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Gemini AI Built-In",
+    "specifications": [
+      "Display: 6.3\" Super Actua LTPO OLED (1280 x 2856) 1-120Hz",
+      "Processor: Google Tensor G4 with Titan M2 security coprocessor",
+      "Memory: 16GB RAM for on-device multimodal AI",
+      "Storage: 128GB UFS 3.1 storage",
+      "Camera: 50MP Wide + 48MP Ultra-Wide + 48MP 5x Telephoto + 42MP Front"
+    ],
+    "images": [
+      "assets/products/prod-google-pixel-9-pro_1.jpg",
+      "assets/products/prod-google-pixel-9-pro_2.jpg",
+      "assets/products/prod-google-pixel-9-pro_3.jpg",
+      "assets/products/prod-google-pixel-9-pro_4.jpg"
+    ],
+    "shortDescription": "Google Pixel 9 Pro 5G with Google Tensor G4 chip, Gemini Nano AI, pro-tier triple rear cameras with 30x Super Res Zoom, and Super Actua display.",
+    "fullDescription": "Google Pixel 9 Pro 5G with Google Tensor G4 chip, Gemini Nano AI, pro-tier triple rear cameras with 30x Super Res Zoom, and Super Actua display. Certified original hardware engineered by Google for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Google Tensor G4 chip engineered for cutting-edge Gemini AI",
+      "Triple rear camera: 50MP main, 48MP ultrawide with Macro, 48MP 5x Telephoto",
+      "Super Actua OLED display with up to 3000 nits peak brightness",
+      "7 years of OS upgrades, security updates, and Pixel Feature Drops"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-google-pixel-9",
+    "name": "Google Pixel 9 5G",
+    "brand": "Google",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "AI Flagships",
+    "price": 79999,
+    "originalPrice": 84999,
+    "rating": 4.8,
+    "reviewsCount": 145,
+    "image": "assets/products/prod-google-pixel-9_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-google-pixel-9_1.jpg",
+      "assets/products/prod-google-pixel-9_2.jpg",
+      "assets/products/prod-google-pixel-9_3.jpg",
+      "assets/products/prod-google-pixel-9_4.jpg"
+    ],
+    "description": "Google Pixel 9 5G delivers stunning photos and Google AI capabilities with Tensor G4 processor, redesigned satin metal camera bar, and Actua display.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Best Camera Value",
+    "specifications": [
+      "Display: 6.3-inch Actua OLED (1080 x 2424) 60-120Hz (2700 nits)",
+      "Processor: Google Tensor G4",
+      "Memory: 12GB RAM + 128GB Storage",
+      "Battery: 4700mAh with fast wireless charging and Battery Share",
+      "Security: Ultrasonic fingerprint sensor and Face Unlock"
+    ],
+    "images": [
+      "assets/products/prod-google-pixel-9_1.jpg",
+      "assets/products/prod-google-pixel-9_2.jpg",
+      "assets/products/prod-google-pixel-9_3.jpg",
+      "assets/products/prod-google-pixel-9_4.jpg"
+    ],
+    "shortDescription": "Google Pixel 9 5G delivers stunning photos and Google AI capabilities with Tensor G4 processor, redesigned satin metal camera bar, and Actua display.",
+    "fullDescription": "Google Pixel 9 5G delivers stunning photos and Google AI capabilities with Tensor G4 processor, redesigned satin metal camera bar, and Actua display. Certified original hardware engineered by Google for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Google Tensor G4 processor with 12GB RAM for fluid multitasking",
+      "Advanced dual camera system: 50MP main and 48MP ultrawide with Macro Focus",
+      "Add Me photo feature ensures the photographer is never left out of group shots",
+      "IP68 dust and water resistance with Corning Gorilla Glass Victus 2"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "6% OFF"
+  },
+  {
+    "id": "prod-oneplus-12-5g",
+    "name": "OnePlus 12 5G",
+    "brand": "OnePlus",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Speed Flagships",
+    "price": 64999,
+    "originalPrice": 69999,
+    "rating": 4.8,
+    "reviewsCount": 220,
+    "image": "assets/products/prod-oneplus-12-5g_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-oneplus-12-5g_1.jpg",
+      "assets/products/prod-oneplus-12-5g_2.jpg",
+      "assets/products/prod-oneplus-12-5g_3.jpg",
+      "assets/products/prod-oneplus-12-5g_4.jpg"
+    ],
+    "description": "OnePlus 12 5G powered by Snapdragon 8 Gen 3, 4th Gen Hasselblad Camera for Mobile, 2K 120Hz ProXDR display, and ultra-fast 100W SUPERVOOC charging.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Fast Charging Leader",
+    "specifications": [
+      "Display: 6.82\" 2K (3168x1440) 120Hz LTPO AMOLED",
+      "Processor: Snapdragon 8 Gen 3 (up to 3.3 GHz)",
+      "Memory: 12GB LPDDR5X RAM + 256GB UFS 4.0 storage",
+      "Camera: 50MP Sony LYT-808 + 64MP Periscope + 48MP Ultra-Wide",
+      "Charging: 100W SUPERVOOC power adapter included in box"
+    ],
+    "images": [
+      "assets/products/prod-oneplus-12-5g_1.jpg",
+      "assets/products/prod-oneplus-12-5g_2.jpg",
+      "assets/products/prod-oneplus-12-5g_3.jpg",
+      "assets/products/prod-oneplus-12-5g_4.jpg"
+    ],
+    "shortDescription": "OnePlus 12 5G powered by Snapdragon 8 Gen 3, 4th Gen Hasselblad Camera for Mobile, 2K 120Hz ProXDR display, and ultra-fast 100W SUPERVOOC charging.",
+    "fullDescription": "OnePlus 12 5G powered by Snapdragon 8 Gen 3, 4th Gen Hasselblad Camera for Mobile, 2K 120Hz ProXDR display, and ultra-fast 100W SUPERVOOC charging. Certified original hardware engineered by OnePlus for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Qualcomm Snapdragon 8 Gen 3 with Dual Cryo-velocity VC cooling",
+      "5400mAh dual-cell battery with 100W SUPERVOOC and 50W AIRVOOC wireless",
+      "4th Gen Hasselblad Camera System with 64MP 3x periscope telephoto",
+      "6.82-inch 2K 120Hz ProXDR display with 4500 nits peak brightness"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "7% OFF"
+  },
+  {
+    "id": "prod-nothing-phone-2",
+    "name": "Nothing Phone (2) 5G",
+    "brand": "Nothing",
+    "category": "Smartphones",
+    "categoryId": "smartphones",
+    "subcategory": "Design Flagships",
+    "price": 36999,
+    "originalPrice": 44999,
+    "rating": 4.7,
+    "reviewsCount": 190,
+    "image": "assets/products/prod-nothing-phone-2_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-nothing-phone-2_1.jpg",
+      "assets/products/prod-nothing-phone-2_2.jpg",
+      "assets/products/prod-nothing-phone-2_3.jpg",
+      "assets/products/prod-nothing-phone-2_4.jpg"
+    ],
+    "description": "Nothing Phone (2) 5G with iconic Glyph Interface transparent design, Snapdragon 8+ Gen 1 flagship silicon, Nothing OS 2.5, and dual 50MP cameras.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Iconic Glyph",
+    "specifications": [
+      "Display: 6.7\" LTPO OLED (1-120Hz Adaptive, 1600 nits peak)",
+      "Processor: Qualcomm Snapdragon 8+ Gen 1 4nm TSMC",
+      "Memory: 12GB RAM + 256GB Storage",
+      "Camera: 50MP OIS Main + 50MP Ultra-Wide + 32MP Front",
+      "Battery: 4700mAh with 45W wired and 15W wireless charging"
+    ],
+    "images": [
+      "assets/products/prod-nothing-phone-2_1.jpg",
+      "assets/products/prod-nothing-phone-2_2.jpg",
+      "assets/products/prod-nothing-phone-2_3.jpg",
+      "assets/products/prod-nothing-phone-2_4.jpg"
+    ],
+    "shortDescription": "Nothing Phone (2) 5G with iconic Glyph Interface transparent design, Snapdragon 8+ Gen 1 flagship silicon, Nothing OS 2.5, and dual 50MP cameras.",
+    "fullDescription": "Nothing Phone (2) 5G with iconic Glyph Interface transparent design, Snapdragon 8+ Gen 1 flagship silicon, Nothing OS 2.5, and dual 50MP cameras. Certified original hardware engineered by Nothing for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Unique Glyph Interface LED lighting system with Essential Notifications",
+      "Snapdragon 8+ Gen 1 flagship processor for smooth gaming and efficiency",
+      "Dual 50MP rear cameras (Sony IMX890 OIS main + Samsung JN1 ultrawide)",
+      "6.7-inch flexible LTPO OLED 120Hz display with symmetrical 1.6mm bezels"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "18% OFF"
+  },
+  {
+    "id": "prod-sony-wh-1000xm5",
+    "name": "Sony WH-1000XM5",
+    "brand": "Sony",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Over-Ear Headphones",
+    "price": 28990,
+    "originalPrice": 34990,
+    "rating": 4.9,
+    "reviewsCount": 240,
+    "image": "assets/products/prod-sony-wh-1000xm5_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-sony-wh-1000xm5_1.jpg",
+      "assets/products/prod-sony-wh-1000xm5_2.jpg",
+      "assets/products/prod-sony-wh-1000xm5_3.jpg",
+      "assets/products/prod-sony-wh-1000xm5_4.jpg"
+    ],
+    "description": "Sony WH-1000XM5 wireless noise canceling headphones with dual Auto NC Optimizer processors, 8 microphones, carbon fiber composite drivers, and 30-hour battery.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Industry Leading ANC",
+    "specifications": [
+      "Driver: 30mm dynamic dome with carbon fiber composite TPU edge",
+      "Frequency Response: 4 Hz - 40,000 Hz (Hi-Res Audio Wireless / LDAC)",
+      "Battery: 30 hours (ANC On), 40 hours (ANC Off)",
+      "Weight: 250g ultra-comfortable soft fit leather headband",
+      "Bluetooth: Version 5.2 with Multipoint Connection (pair 2 devices)"
+    ],
+    "images": [
+      "assets/products/prod-sony-wh-1000xm5_1.jpg",
+      "assets/products/prod-sony-wh-1000xm5_2.jpg",
+      "assets/products/prod-sony-wh-1000xm5_3.jpg",
+      "assets/products/prod-sony-wh-1000xm5_4.jpg"
+    ],
+    "shortDescription": "Sony WH-1000XM5 wireless noise canceling headphones with dual Auto NC Optimizer processors, 8 microphones, carbon fiber composite drivers, and 30-hour battery.",
+    "fullDescription": "Sony WH-1000XM5 wireless noise canceling headphones with dual Auto NC Optimizer processors, 8 microphones, carbon fiber composite drivers, and 30-hour battery. Certified original hardware engineered by Sony for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Industry-leading noise cancellation with two processors and 8 microphones",
+      "Magnificent sound engineered with lightweight 30mm carbon fiber drivers",
+      "Crystal-clear hands-free calling with 4 beamforming mics and AI noise reduction",
+      "Up to 30-hour battery life with 3-minute quick charging for 3 hours playback"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "17% OFF"
+  },
+  {
+    "id": "prod-sony-wh-1000xm4",
+    "name": "Sony WH-1000XM4",
+    "brand": "Sony",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Over-Ear Headphones",
+    "price": 22990,
+    "originalPrice": 29990,
+    "rating": 4.8,
+    "reviewsCount": 420,
+    "image": "assets/products/prod-sony-wh-1000xm4_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-sony-wh-1000xm4_1.jpg",
+      "assets/products/prod-sony-wh-1000xm4_2.jpg",
+      "assets/products/prod-sony-wh-1000xm4_3.jpg",
+      "assets/products/prod-sony-wh-1000xm4_4.jpg"
+    ],
+    "description": "Sony WH-1000XM4 foldable premium wireless noise canceling headphones with HD Noise Canceling Processor QN1, Speak-to-Chat, and fold-flat travel case.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "All-Time Classic",
+    "specifications": [
+      "Driver: 40mm dome type (CCAW Voice coil) with Liquid Crystal Polymer diaphragm",
+      "Frequency Range: 4 Hz - 40,000 Hz",
+      "Battery: 30 hours playback with ANC",
+      "Connectivity: Bluetooth 5.0, NFC, 3.5mm audio cable included",
+      "Weight: 254g ergonomic pressure-relieving earpads"
+    ],
+    "images": [
+      "assets/products/prod-sony-wh-1000xm4_1.jpg",
+      "assets/products/prod-sony-wh-1000xm4_2.jpg",
+      "assets/products/prod-sony-wh-1000xm4_3.jpg",
+      "assets/products/prod-sony-wh-1000xm4_4.jpg"
+    ],
+    "shortDescription": "Sony WH-1000XM4 foldable premium wireless noise canceling headphones with HD Noise Canceling Processor QN1, Speak-to-Chat, and fold-flat travel case.",
+    "fullDescription": "Sony WH-1000XM4 foldable premium wireless noise canceling headphones with HD Noise Canceling Processor QN1, Speak-to-Chat, and fold-flat travel case. Certified original hardware engineered by Sony for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "HD Noise Canceling Processor QN1 and Dual Noise Sensor technology",
+      "Edge-AI co-developed with Sony Music Studios for real-time audio upscaling",
+      "Foldable design with premium compact zippered travel case",
+      "Speak-to-Chat automatically pauses playback when you start speaking"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "23% OFF"
+  },
+  {
+    "id": "prod-sony-wf-1000xm5",
+    "name": "Sony WF-1000XM5 Wireless Earbuds",
+    "brand": "Sony",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Wireless Earbuds",
+    "price": 21990,
+    "originalPrice": 24990,
+    "rating": 4.8,
+    "reviewsCount": 135,
+    "image": "assets/products/prod-sony-wf-1000xm5_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-sony-wf-1000xm5_1.jpg",
+      "assets/products/prod-sony-wf-1000xm5_2.jpg",
+      "assets/products/prod-sony-wf-1000xm5_3.jpg",
+      "assets/products/prod-sony-wf-1000xm5_4.jpg"
+    ],
+    "description": "Sony WF-1000XM5 true wireless noise canceling earbuds with Dynamic Driver X, bone conduction sensors, and AI DNN noise reduction.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Top ANC Earbuds",
+    "specifications": [
+      "Driver: 8.4mm Dynamic Driver X",
+      "Codecs: SBC, AAC, LDAC, LC3",
+      "Battery: 8 hours (earbuds) + 16 hours (case) with ANC on",
+      "Water Resistance: IPX4 splash and sweat resistant",
+      "Charging: Qi Wireless charging and USB-C fast charge"
+    ],
+    "images": [
+      "assets/products/prod-sony-wf-1000xm5_1.jpg",
+      "assets/products/prod-sony-wf-1000xm5_2.jpg",
+      "assets/products/prod-sony-wf-1000xm5_3.jpg",
+      "assets/products/prod-sony-wf-1000xm5_4.jpg"
+    ],
+    "shortDescription": "Sony WF-1000XM5 true wireless noise canceling earbuds with Dynamic Driver X, bone conduction sensors, and AI DNN noise reduction.",
+    "fullDescription": "Sony WF-1000XM5 true wireless noise canceling earbuds with Dynamic Driver X, bone conduction sensors, and AI DNN noise reduction. Certified original hardware engineered by Sony for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Dual processor noise cancellation with Integrated Processor V2 and QN2e",
+      "Specially designed Dynamic Driver X for wide frequency reproduction",
+      "Bone conduction sensors and beamforming mics for crystal-clear calls",
+      "Glossy texture with ergonomic compact shape 25% smaller than predecessor"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-apple-airpods-pro-2",
+    "name": "Apple AirPods Pro (2nd Gen, USB-C)",
+    "brand": "Apple",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Wireless Earbuds",
+    "price": 20990,
+    "originalPrice": 24900,
+    "rating": 4.9,
+    "reviewsCount": 350,
+    "image": "assets/products/prod-apple-airpods-pro-2_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-airpods-pro-2_1.jpg",
+      "assets/products/prod-apple-airpods-pro-2_2.jpg",
+      "assets/products/prod-apple-airpods-pro-2_3.jpg",
+      "assets/products/prod-apple-airpods-pro-2_4.jpg"
+    ],
+    "description": "Apple AirPods Pro (2nd Gen) with H2 chip. Features up to 2x more Active Noise Cancellation, Adaptive Audio, Personalized Spatial Audio, and USB-C MagSafe Case.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Bestseller",
+    "specifications": [
+      "Audio Tech: Custom high-excursion Apple driver and custom high dynamic range amplifier",
+      "Sensors: Dual beamforming mics, inward-facing mic, skin-detect sensor",
+      "Battery: Up to 6 hours listening time (30 hours total with case)",
+      "Case: MagSafe Charging Case (USB-C) with built-in speaker and lanyard loop",
+      "Connectivity: Bluetooth 5.3"
+    ],
+    "images": [
+      "assets/products/prod-apple-airpods-pro-2_1.jpg",
+      "assets/products/prod-apple-airpods-pro-2_2.jpg",
+      "assets/products/prod-apple-airpods-pro-2_3.jpg",
+      "assets/products/prod-apple-airpods-pro-2_4.jpg"
+    ],
+    "shortDescription": "Apple AirPods Pro (2nd Gen) with H2 chip. Features up to 2x more Active Noise Cancellation, Adaptive Audio, Personalized Spatial Audio, and USB-C MagSafe Case.",
+    "fullDescription": "Apple AirPods Pro (2nd Gen) with H2 chip. Features up to 2x more Active Noise Cancellation, Adaptive Audio, Personalized Spatial Audio, and USB-C MagSafe Case. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Apple H2 chip powers smarter noise cancellation and immersive 3D sound",
+      "Adaptive Audio dynamically blends Transparency mode and Active Noise Cancellation",
+      "Conversation Awareness automatically lowers media volume when you speak",
+      "Dust, sweat, and water resistant (IP54) earbuds and MagSafe Case"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "16% OFF"
+  },
+  {
+    "id": "prod-apple-airpods-max",
+    "name": "Apple AirPods Max",
+    "brand": "Apple",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Over-Ear Headphones",
+    "price": 54900,
+    "originalPrice": 59900,
+    "rating": 4.8,
+    "reviewsCount": 110,
+    "image": "assets/products/prod-apple-airpods-max_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-airpods-max_1.jpg",
+      "assets/products/prod-apple-airpods-max_2.jpg",
+      "assets/products/prod-apple-airpods-max_3.jpg",
+      "assets/products/prod-apple-airpods-max_4.jpg"
+    ],
+    "description": "Apple AirPods Max over-ear headphones with custom acoustic design, Apple-designed 40mm dynamic driver, dual H1 chips, and Digital Crown volume control.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Audiophile Luxury",
+    "specifications": [
+      "Driver: 40mm custom Apple dynamic driver with dual neodymium ring magnet motor",
+      "ANC: Active Noise Cancellation with Transparency mode and Spatial Audio",
+      "Battery: Up to 20 hours listening time on a single charge",
+      "Weight: 384.8g anodized aluminum ear cups with stainless steel frame",
+      "Case: Smart Case preserves battery charge in ultra-low-power state"
+    ],
+    "images": [
+      "assets/products/prod-apple-airpods-max_1.jpg",
+      "assets/products/prod-apple-airpods-max_2.jpg",
+      "assets/products/prod-apple-airpods-max_3.jpg",
+      "assets/products/prod-apple-airpods-max_4.jpg"
+    ],
+    "shortDescription": "Apple AirPods Max over-ear headphones with custom acoustic design, Apple-designed 40mm dynamic driver, dual H1 chips, and Digital Crown volume control.",
+    "fullDescription": "Apple AirPods Max over-ear headphones with custom acoustic design, Apple-designed 40mm dynamic driver, dual H1 chips, and Digital Crown volume control. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Apple-designed 40mm dynamic driver delivers high-fidelity audio with ultra-low distortion",
+      "Computational audio with Apple H1 headphone chip in each ear cup",
+      "Knit-mesh canopy and acoustically engineered memory foam ear cushions",
+      "Precision Digital Crown for volume control, track skipping, and Siri activation"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-apple-airpods-4-anc",
+    "name": "Apple AirPods 4 with Active Noise Cancellation",
+    "brand": "Apple",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Wireless Earbuds",
+    "price": 17900,
+    "originalPrice": 17900,
+    "rating": 4.7,
+    "reviewsCount": 85,
+    "image": "assets/products/prod-apple-airpods-4-anc_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-airpods-4-anc_1.jpg",
+      "assets/products/prod-apple-airpods-4-anc_2.jpg",
+      "assets/products/prod-apple-airpods-4-anc_3.jpg",
+      "assets/products/prod-apple-airpods-4-anc_4.jpg"
+    ],
+    "description": "Apple AirPods 4 with Active Noise Cancellation in an open-ear design. Features H2 chip, Voice Isolation, Adaptive Audio, and wireless charging case.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "New Arrival",
+    "specifications": [
+      "Chip: Apple H2 headphone chip",
+      "Audio: Personalized Spatial Audio with dynamic head tracking",
+      "Battery: Up to 5 hours listening time (up to 30 hours with case)",
+      "Case: USB-C and Apple Watch charger compatible MagSafe Case",
+      "Resistance: Rated IP54 dust, sweat, and water resistant"
+    ],
+    "images": [
+      "assets/products/prod-apple-airpods-4-anc_1.jpg",
+      "assets/products/prod-apple-airpods-4-anc_2.jpg",
+      "assets/products/prod-apple-airpods-4-anc_3.jpg",
+      "assets/products/prod-apple-airpods-4-anc_4.jpg"
+    ],
+    "shortDescription": "Apple AirPods 4 with Active Noise Cancellation in an open-ear design. Features H2 chip, Voice Isolation, Adaptive Audio, and wireless charging case.",
+    "fullDescription": "Apple AirPods 4 with Active Noise Cancellation in an open-ear design. Features H2 chip, Voice Isolation, Adaptive Audio, and wireless charging case. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "First open-ear AirPods design to feature Active Noise Cancellation",
+      "Powered by Apple H2 chip for clearer calls and Adaptive Audio",
+      "Redesigned acoustic architecture with lower distortion and richer bass",
+      "Smallest wireless charging case in the industry with built-in speaker"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": ""
+  },
+  {
+    "id": "prod-bose-quietcomfort-ultra-headphones",
+    "name": "Bose QuietComfort Ultra Wireless Headphones",
+    "brand": "Bose",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Over-Ear Headphones",
+    "price": 35900,
+    "originalPrice": 39900,
+    "rating": 4.9,
+    "reviewsCount": 115,
+    "image": "assets/products/prod-bose-quietcomfort-ultra-headphones_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-bose-quietcomfort-ultra-headphones_1.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-headphones_2.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-headphones_3.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-headphones_4.jpg"
+    ],
+    "description": "Bose QuietComfort Ultra Wireless Headphones with Bose Immersive Audio, world-class active noise cancellation, CustomTune technology, and plush protein leather cushions.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Spatial Sound",
+    "specifications": [
+      "Audio Tech: Bose Immersive Audio spatial processing and CustomTune sound calibration",
+      "Microphones: Advanced mic array for clear voice pickup even in windy environments",
+      "Battery: 24 hours playback, USB-C quick charge (15 mins for 2.5 hours)",
+      "Connectivity: Bluetooth 5.3 with multipoint and Qualcomm Snapdragon Sound",
+      "Materials: Cast aluminum arm yokes with plush protein leather cushions"
+    ],
+    "images": [
+      "assets/products/prod-bose-quietcomfort-ultra-headphones_1.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-headphones_2.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-headphones_3.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-headphones_4.jpg"
+    ],
+    "shortDescription": "Bose QuietComfort Ultra Wireless Headphones with Bose Immersive Audio, world-class active noise cancellation, CustomTune technology, and plush protein leather cushions.",
+    "fullDescription": "Bose QuietComfort Ultra Wireless Headphones with Bose Immersive Audio, world-class active noise cancellation, CustomTune technology, and plush protein leather cushions. Certified original hardware engineered by Bose for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Bose Immersive Audio pushes boundaries with spatialized soundstage",
+      "World-class active noise cancellation with Quiet, Aware, and Immersion modes",
+      "CustomTune technology personalizes audio performance to your ear shape",
+      "Up to 24 hours battery life (up to 18 hours with Immersive Audio)"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-bose-quietcomfort-headphones",
+    "name": "Bose QuietComfort Wireless Headphones",
+    "brand": "Bose",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Over-Ear Headphones",
+    "price": 27900,
+    "originalPrice": 32900,
+    "rating": 4.8,
+    "reviewsCount": 160,
+    "image": "assets/products/prod-bose-quietcomfort-headphones_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-bose-quietcomfort-headphones_1.jpg",
+      "assets/products/prod-bose-quietcomfort-headphones_2.jpg",
+      "assets/products/prod-bose-quietcomfort-headphones_3.jpg",
+      "assets/products/prod-bose-quietcomfort-headphones_4.jpg"
+    ],
+    "description": "Bose QuietComfort Wireless Headphones with legendary noise cancellation, adjustable EQ, 24 hours of battery life, and comfortable lightweight design.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Legendary Comfort",
+    "specifications": [
+      "Modes: Quiet Mode and Aware Mode",
+      "Battery: 24-hour battery runtime via USB-C charging",
+      "Audio Cable: 2.5mm to 3.5mm inline audio cable included for wired listening",
+      "Bluetooth: Version 5.1 with up to 30 feet wireless range",
+      "App: Bose Music App compatibility"
+    ],
+    "images": [
+      "assets/products/prod-bose-quietcomfort-headphones_1.jpg",
+      "assets/products/prod-bose-quietcomfort-headphones_2.jpg",
+      "assets/products/prod-bose-quietcomfort-headphones_3.jpg",
+      "assets/products/prod-bose-quietcomfort-headphones_4.jpg"
+    ],
+    "shortDescription": "Bose QuietComfort Wireless Headphones with legendary noise cancellation, adjustable EQ, 24 hours of battery life, and comfortable lightweight design.",
+    "fullDescription": "Bose QuietComfort Wireless Headphones with legendary noise cancellation, adjustable EQ, 24 hours of battery life, and comfortable lightweight design. Certified original hardware engineered by Bose for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Legendary acoustic noise cancelling technology blocks unwanted ambient noise",
+      "Adjustable EQ lets you tune bass, mid-range, and treble to personal taste",
+      "Plush earcup cushions softly hug your ears for marathon listening sessions",
+      "Up to 24 hours of non-stop battery life on a single charge"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "15% OFF"
+  },
+  {
+    "id": "prod-bose-quietcomfort-ultra-earbuds",
+    "name": "Bose QuietComfort Ultra Earbuds",
+    "brand": "Bose",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Wireless Earbuds",
+    "price": 24900,
+    "originalPrice": 27900,
+    "rating": 4.8,
+    "reviewsCount": 98,
+    "image": "assets/products/prod-bose-quietcomfort-ultra-earbuds_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-bose-quietcomfort-ultra-earbuds_1.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-earbuds_2.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-earbuds_3.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-earbuds_4.jpg"
+    ],
+    "description": "Bose QuietComfort Ultra Earbuds with breakthrough spatial audio, world-leading noise cancellation, and nine combinations of ear tips and stability bands.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Ultra ANC",
+    "specifications": [
+      "Technology: CustomTune audio and noise cancellation personalization",
+      "Water Resistance: IPX4 sweat and weather resistant",
+      "Codecs: aptX Adaptive, AAC, SBC",
+      "Touch Controls: Volume swipe, play/pause, ANC toggle",
+      "Microphones: 4 microphones in each earbud"
+    ],
+    "images": [
+      "assets/products/prod-bose-quietcomfort-ultra-earbuds_1.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-earbuds_2.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-earbuds_3.jpg",
+      "assets/products/prod-bose-quietcomfort-ultra-earbuds_4.jpg"
+    ],
+    "shortDescription": "Bose QuietComfort Ultra Earbuds with breakthrough spatial audio, world-leading noise cancellation, and nine combinations of ear tips and stability bands.",
+    "fullDescription": "Bose QuietComfort Ultra Earbuds with breakthrough spatial audio, world-leading noise cancellation, and nine combinations of ear tips and stability bands. Certified original hardware engineered by Bose for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Breakthrough Bose Immersive Audio makes listening feel real and present",
+      "World's best noise cancellation calibrated to each individual ear",
+      "Nine combinations of ear tips and stability bands for tailored secure fit",
+      "Up to 6 hours listening time (24 hours total with charging case)"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-jbl-tour-one-m2",
+    "name": "JBL Tour One M2 Wireless Over-Ear",
+    "brand": "JBL",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Over-Ear Headphones",
+    "price": 19999,
+    "originalPrice": 24999,
+    "rating": 4.7,
+    "reviewsCount": 125,
+    "image": "assets/products/prod-jbl-tour-one-m2_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-jbl-tour-one-m2_1.jpg",
+      "assets/products/prod-jbl-tour-one-m2_2.jpg",
+      "assets/products/prod-jbl-tour-one-m2_3.jpg",
+      "assets/products/prod-jbl-tour-one-m2_4.jpg"
+    ],
+    "description": "JBL Tour One M2 wireless over-ear noise cancelling headphones with True Adaptive Noise Cancelling, Smart Ambient, 4-mic crystal call tech, and 50-hour battery life.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "High Battery",
+    "specifications": [
+      "Driver: 40mm dynamic driver with JBL Pro Sound tuning",
+      "Frequency Response: 10 Hz - 40 kHz (Hi-Res Audio certified)",
+      "Battery: 50 hours (ANC off), 30 hours (ANC on)",
+      "Bluetooth: 5.3 with LE Audio support",
+      "Weight: 268g fold-flat design"
+    ],
+    "images": [
+      "assets/products/prod-jbl-tour-one-m2_1.jpg",
+      "assets/products/prod-jbl-tour-one-m2_2.jpg",
+      "assets/products/prod-jbl-tour-one-m2_3.jpg",
+      "assets/products/prod-jbl-tour-one-m2_4.jpg"
+    ],
+    "shortDescription": "JBL Tour One M2 wireless over-ear noise cancelling headphones with True Adaptive Noise Cancelling, Smart Ambient, 4-mic crystal call tech, and 50-hour battery life.",
+    "fullDescription": "JBL Tour One M2 wireless over-ear noise cancelling headphones with True Adaptive Noise Cancelling, Smart Ambient, 4-mic crystal call tech, and 50-hour battery life. Certified original hardware engineered by JBL for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "True Adaptive Noise Cancelling automatically adjusts to surrounding noise",
+      "Up to 50 hours of maximum playtime (30 hours with ANC activated)",
+      "4-mic crystal clear call technology with VoiceAware sidetone control",
+      "JBL Spatial Sound delivers theater-like immersive audio"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "20% OFF"
+  },
+  {
+    "id": "prod-jbl-live-670nc",
+    "name": "JBL Live 670NC Wireless On-Ear",
+    "brand": "JBL",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "On-Ear Headphones",
+    "price": 9999,
+    "originalPrice": 12999,
+    "rating": 4.6,
+    "reviewsCount": 180,
+    "image": "assets/products/prod-jbl-live-670nc_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-jbl-live-670nc_1.jpg",
+      "assets/products/prod-jbl-live-670nc_2.jpg",
+      "assets/products/prod-jbl-live-670nc_3.jpg",
+      "assets/products/prod-jbl-live-670nc_4.jpg"
+    ],
+    "description": "JBL Live 670NC wireless on-ear headphones with True Adaptive Noise Cancelling, Smart Ambient, JBL Signature Sound, and up to 65 hours of battery life.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "On-Ear Pick",
+    "specifications": [
+      "Driver Size: 40mm dynamic driver",
+      "Battery: 65 hours (Bluetooth only), 50 hours (BT + ANC)",
+      "Connectivity: Bluetooth 5.3 with Multipoint connection",
+      "Microphone: 2 beamforming mics for voice calls",
+      "Weight: 219g lightweight on-ear form factor"
+    ],
+    "images": [
+      "assets/products/prod-jbl-live-670nc_1.jpg",
+      "assets/products/prod-jbl-live-670nc_2.jpg",
+      "assets/products/prod-jbl-live-670nc_3.jpg",
+      "assets/products/prod-jbl-live-670nc_4.jpg"
+    ],
+    "shortDescription": "JBL Live 670NC wireless on-ear headphones with True Adaptive Noise Cancelling, Smart Ambient, JBL Signature Sound, and up to 65 hours of battery life.",
+    "fullDescription": "JBL Live 670NC wireless on-ear headphones with True Adaptive Noise Cancelling, Smart Ambient, JBL Signature Sound, and up to 65 hours of battery life. Certified original hardware engineered by JBL for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "JBL Signature Sound with 40mm drivers and punchy bass",
+      "Massive battery life: up to 65 hours with ANC off and 50 hours with ANC on",
+      "Speed charge: 5 minutes gives 4 hours of instant playback",
+      "Comfort-fit fabric headband and soft ear cushions"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "23% OFF"
+  },
+  {
+    "id": "prod-jbl-flip-6",
+    "name": "JBL Flip 6 Waterproof Portable Speaker",
+    "brand": "JBL",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Portable Speakers",
+    "price": 9999,
+    "originalPrice": 13999,
+    "rating": 4.8,
+    "reviewsCount": 380,
+    "image": "assets/products/prod-jbl-flip-6_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-jbl-flip-6_1.jpg",
+      "assets/products/prod-jbl-flip-6_2.jpg",
+      "assets/products/prod-jbl-flip-6_3.jpg",
+      "assets/products/prod-jbl-flip-6_4.jpg"
+    ],
+    "description": "JBL Flip 6 portable waterproof Bluetooth speaker with 2-way speaker system, racetrack-shaped woofer, separate tweeter, dual passive radiators, and IP67 rating.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Bestseller Speaker",
+    "specifications": [
+      "Output Power: 20W RMS woofer + 10W RMS tweeter",
+      "Frequency Response: 63 Hz - 20 kHz",
+      "Waterproofing: IP67 certified dust and waterproof",
+      "Battery: 4800mAh Li-ion polymer delivering 12 hours playtime",
+      "Dimensions: 17.8 x 6.8 x 7.2 cm, 550g weight"
+    ],
+    "images": [
+      "assets/products/prod-jbl-flip-6_1.jpg",
+      "assets/products/prod-jbl-flip-6_2.jpg",
+      "assets/products/prod-jbl-flip-6_3.jpg",
+      "assets/products/prod-jbl-flip-6_4.jpg"
+    ],
+    "shortDescription": "JBL Flip 6 portable waterproof Bluetooth speaker with 2-way speaker system, racetrack-shaped woofer, separate tweeter, dual passive radiators, and IP67 rating.",
+    "fullDescription": "JBL Flip 6 portable waterproof Bluetooth speaker with 2-way speaker system, racetrack-shaped woofer, separate tweeter, dual passive radiators, and IP67 rating. Certified original hardware engineered by JBL for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Louder, powerful 2-way speaker system with 30W total audio output",
+      "IP67 waterproof and dustproof design built for beach, pool, and trails",
+      "12 hours of playtime on a single charge with USB-C protection",
+      "PartyBoost allows pairing two JBL PartyBoost-compatible speakers for stereo"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "29% OFF"
+  },
+  {
+    "id": "prod-jbl-bar-500-pro",
+    "name": "JBL Bar 500 Pro 5.1 Dolby Atmos Soundbar",
+    "brand": "JBL",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Soundbars",
+    "price": 39999,
+    "originalPrice": 49999,
+    "rating": 4.8,
+    "reviewsCount": 75,
+    "image": "assets/products/prod-jbl-bar-500-pro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-jbl-bar-500-pro_1.jpg",
+      "assets/products/prod-jbl-bar-500-pro_2.jpg",
+      "assets/products/prod-jbl-bar-500-pro_3.jpg",
+      "assets/products/prod-jbl-bar-500-pro_4.jpg"
+    ],
+    "description": "JBL Bar 500 Pro 5.1 channel home theater soundbar with MultiBeam technology, 3D Dolby Atmos surround sound, and 10-inch wireless subwoofer with 590W output.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Home Cinema",
+    "specifications": [
+      "Channel Configuration: 5.1 Channel with 10\" Wireless Subwoofer",
+      "Total Power Output: 590W (Soundbar 290W + Subwoofer 300W)",
+      "Audio Formats: Dolby Atmos, Dolby Digital",
+      "Connectivity: HDMI eARC, Optical, Bluetooth 5.0, Wi-Fi with AirPlay & Chromecast",
+      "HDMI Video Pass-through: 4K Dolby Vision pass-through"
+    ],
+    "images": [
+      "assets/products/prod-jbl-bar-500-pro_1.jpg",
+      "assets/products/prod-jbl-bar-500-pro_2.jpg",
+      "assets/products/prod-jbl-bar-500-pro_3.jpg",
+      "assets/products/prod-jbl-bar-500-pro_4.jpg"
+    ],
+    "shortDescription": "JBL Bar 500 Pro 5.1 channel home theater soundbar with MultiBeam technology, 3D Dolby Atmos surround sound, and 10-inch wireless subwoofer with 590W output.",
+    "fullDescription": "JBL Bar 500 Pro 5.1 channel home theater soundbar with MultiBeam technology, 3D Dolby Atmos surround sound, and 10-inch wireless subwoofer with 590W output. Certified original hardware engineered by JBL for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "590W total system power delivers cinematic theater sound",
+      "Dolby Atmos and MultiBeam 3D surround sound without extra speakers",
+      "10-inch down-firing wireless subwoofer delivers earth-shaking bass",
+      "PureVoice dialogue enhancement technology ensures crystal-clear speech"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "20% OFF"
+  },
+  {
+    "id": "prod-sennheiser-momentum-4",
+    "name": "Sennheiser Momentum 4 Wireless",
+    "brand": "Sennheiser",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Over-Ear Headphones",
+    "price": 24990,
+    "originalPrice": 34990,
+    "rating": 4.9,
+    "reviewsCount": 140,
+    "image": "assets/products/prod-sennheiser-momentum-4_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-sennheiser-momentum-4_1.jpg",
+      "assets/products/prod-sennheiser-momentum-4_2.jpg",
+      "assets/products/prod-sennheiser-momentum-4_3.jpg",
+      "assets/products/prod-sennheiser-momentum-4_4.jpg"
+    ],
+    "description": "Sennheiser Momentum 4 Wireless audiophile-grade headphones with 42mm transducer system, adaptive noise cancellation, and class-leading 60-hour battery life.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "60h Battery",
+    "specifications": [
+      "Transducer: 42mm diameter dynamic driver",
+      "Frequency Response: 6 Hz - 22,000 Hz",
+      "Codecs: aptX Adaptive, aptX, AAC, SBC",
+      "Battery Life: 60 hours with Bluetooth and ANC on",
+      "Weight: 293g with cushioned headband and deep earpads"
+    ],
+    "images": [
+      "assets/products/prod-sennheiser-momentum-4_1.jpg",
+      "assets/products/prod-sennheiser-momentum-4_2.jpg",
+      "assets/products/prod-sennheiser-momentum-4_3.jpg",
+      "assets/products/prod-sennheiser-momentum-4_4.jpg"
+    ],
+    "shortDescription": "Sennheiser Momentum 4 Wireless audiophile-grade headphones with 42mm transducer system, adaptive noise cancellation, and class-leading 60-hour battery life.",
+    "fullDescription": "Sennheiser Momentum 4 Wireless audiophile-grade headphones with 42mm transducer system, adaptive noise cancellation, and class-leading 60-hour battery life. Certified original hardware engineered by Sennheiser for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Sennheiser signature sound with 42mm audiophile transducer system",
+      "Class-leading 60-hour battery life with fast 5-minute charge for 4 hours playback",
+      "Advanced Adaptive Noise Cancellation automatically adjusts to environment",
+      "Customizable sound with built-in EQ, presets, and Sound Personalization modes"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "29% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-buds3-pro",
+    "name": "Samsung Galaxy Buds3 Pro",
+    "brand": "Samsung",
+    "category": "Audio",
+    "categoryId": "audio",
+    "subcategory": "Wireless Earbuds",
+    "price": 19999,
+    "originalPrice": 22999,
+    "rating": 4.8,
+    "reviewsCount": 110,
+    "image": "assets/products/prod-samsung-galaxy-buds3-pro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-buds3-pro_1.jpg",
+      "assets/products/prod-samsung-galaxy-buds3-pro_2.jpg",
+      "assets/products/prod-samsung-galaxy-buds3-pro_3.jpg",
+      "assets/products/prod-samsung-galaxy-buds3-pro_4.jpg"
+    ],
+    "description": "Samsung Galaxy Buds3 Pro featuring Blade design with Blade Lights, 2-way dual-amplified speaker with planar tweeter, and real-time Galaxy AI Interpreter.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Galaxy AI Audio",
+    "specifications": [
+      "Speakers: 2-way (10.5mm Dynamic + 6.1mm Planar Tweeter) with Dual Amps",
+      "Audio Codec: SSC (Samsung Seamless Codec) up to 24bit/96kHz Ultra High Quality",
+      "Battery: Up to 6 hours with ANC on (up to 26 hours total with case)",
+      "Water Resistance: IP57 dust and water resistance",
+      "Bluetooth: 5.4 with Auto Switch between Galaxy ecosystem devices"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-buds3-pro_1.jpg",
+      "assets/products/prod-samsung-galaxy-buds3-pro_2.jpg",
+      "assets/products/prod-samsung-galaxy-buds3-pro_3.jpg",
+      "assets/products/prod-samsung-galaxy-buds3-pro_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy Buds3 Pro featuring Blade design with Blade Lights, 2-way dual-amplified speaker with planar tweeter, and real-time Galaxy AI Interpreter.",
+    "fullDescription": "Samsung Galaxy Buds3 Pro featuring Blade design with Blade Lights, 2-way dual-amplified speaker with planar tweeter, and real-time Galaxy AI Interpreter. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Blade design with interactive Blade Lights and intuitive pinch-and-swipe controls",
+      "Enhanced 2-way speaker with planar tweeter and dynamic woofer",
+      "Adaptive Noise Control with Siren and Voice Detect powered by Galaxy AI",
+      "Real-time language translation with Interpreter mode connected to Galaxy phones"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "13% OFF"
+  },
+  {
+    "id": "prod-nike-air-max-270",
+    "name": "Nike Air Max 270",
+    "brand": "Nike",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Lifestyle Sneakers",
+    "price": 13995,
+    "originalPrice": 14995,
+    "rating": 4.8,
+    "reviewsCount": 290,
+    "image": "assets/products/prod-nike-air-max-270_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-nike-air-max-270_1.jpg",
+      "assets/products/prod-nike-air-max-270_2.jpg",
+      "assets/products/prod-nike-air-max-270_3.jpg",
+      "assets/products/prod-nike-air-max-270_4.jpg"
+    ],
+    "description": "Nike Air Max 270 boasts Nike's biggest heel Max Air unit yet for a super-soft ride that feels as impossible as it looks. Breathable mesh upper with asymmetric lacing.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Bestseller",
+    "specifications": [
+      "Cushioning: Max Air 270 visible heel unit",
+      "Upper Material: Engineered mesh with synthetic no-sew overlays",
+      "Closure: Asymmetrical lacing for secure anatomical fit",
+      "Outsole: Dual-density foam midsole with rubber traction zones",
+      "Colorway: Racer Blue / Vibrant Tour Yellow / Black / White"
+    ],
+    "images": [
+      "assets/products/prod-nike-air-max-270_1.jpg",
+      "assets/products/prod-nike-air-max-270_2.jpg",
+      "assets/products/prod-nike-air-max-270_3.jpg",
+      "assets/products/prod-nike-air-max-270_4.jpg"
+    ],
+    "shortDescription": "Nike Air Max 270 boasts Nike's biggest heel Max Air unit yet for a super-soft ride that feels as impossible as it looks. Breathable mesh upper with asymmetric lacing.",
+    "fullDescription": "Nike Air Max 270 boasts Nike's biggest heel Max Air unit yet for a super-soft ride that feels as impossible as it looks. Breathable mesh upper with asymmetric lacing. Certified original hardware engineered by Nike for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Large 270-degree Max Air unit in the heel delivers unrivaled all-day comfort",
+      "Woven and synthetic mesh upper provides lightweight fit and breathable feel",
+      "Stretchy inner sleeve creates a personalized, sock-like secure fit",
+      "Solid rubber outsole in forefoot with clear rubber on heel for traction and durability"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "7% OFF"
+  },
+  {
+    "id": "prod-nike-air-force-1-07",
+    "name": "Nike Air Force 1 '07",
+    "brand": "Nike",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Classic Sneakers",
+    "price": 8195,
+    "originalPrice": 8995,
+    "rating": 4.9,
+    "reviewsCount": 540,
+    "image": "assets/products/prod-nike-air-force-1-07_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-nike-air-force-1-07_1.jpg",
+      "assets/products/prod-nike-air-force-1-07_2.jpg",
+      "assets/products/prod-nike-air-force-1-07_3.jpg",
+      "assets/products/prod-nike-air-force-1-07_4.jpg"
+    ],
+    "description": "Nike Air Force 1 '07 brings legendary hoops style with stitched leather overlays, crisp clean finishes, and encapsulated Nike Air cushioning.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "All-Time Icon",
+    "specifications": [
+      "Upper: Genuine leather with stitched overlays and toe perforations",
+      "Midsole: Foam midsole with encapsulated Nike Air-Sole unit",
+      "Outsole: Non-marking rubber outsole with pivot points",
+      "Collar: Padded low-cut collar",
+      "Colorway: Triple White / Pure Platinum"
+    ],
+    "images": [
+      "assets/products/prod-nike-air-force-1-07_1.jpg",
+      "assets/products/prod-nike-air-force-1-07_2.jpg",
+      "assets/products/prod-nike-air-force-1-07_3.jpg",
+      "assets/products/prod-nike-air-force-1-07_4.jpg"
+    ],
+    "shortDescription": "Nike Air Force 1 '07 brings legendary hoops style with stitched leather overlays, crisp clean finishes, and encapsulated Nike Air cushioning.",
+    "fullDescription": "Nike Air Force 1 '07 brings legendary hoops style with stitched leather overlays, crisp clean finishes, and encapsulated Nike Air cushioning. Certified original hardware engineered by Nike for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Real and synthetic leather upper softens and gains vintage character with wear",
+      "Originally designed for performance hoops, Nike Air cushioning adds lightweight comfort",
+      "Padded, low-cut collar looks sleek and feels soft against the ankle",
+      "Full-length rubber outsole with heritage hoops pivot circles adds traction"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "9% OFF"
+  },
+  {
+    "id": "prod-nike-air-max-90",
+    "name": "Nike Air Max 90 Classic",
+    "brand": "Nike",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Heritage Sneakers",
+    "price": 10795,
+    "originalPrice": 11995,
+    "rating": 4.8,
+    "reviewsCount": 210,
+    "image": "assets/products/prod-nike-air-max-90_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-nike-air-max-90_1.jpg",
+      "assets/products/prod-nike-air-max-90_2.jpg",
+      "assets/products/prod-nike-air-max-90_3.jpg",
+      "assets/products/prod-nike-air-max-90_4.jpg"
+    ],
+    "description": "Nike Air Max 90 stays true to its OG running roots with iconic Waffle outsole, stitched overlays, and classic TPU ribbed accents on the heel and eyestays.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Heritage Icon",
+    "specifications": [
+      "Upper: Leather and textile mesh with TPU ribbed badge overlays",
+      "Midsole: Polyurethane midsole with visible Air unit",
+      "Outsole: Iconic rubber Waffle sole",
+      "Weight: Approximately 390g per shoe (US size 9)",
+      "Colorway: White / Black / Infrared Accents"
+    ],
+    "images": [
+      "assets/products/prod-nike-air-max-90_1.jpg",
+      "assets/products/prod-nike-air-max-90_2.jpg",
+      "assets/products/prod-nike-air-max-90_3.jpg",
+      "assets/products/prod-nike-air-max-90_4.jpg"
+    ],
+    "shortDescription": "Nike Air Max 90 stays true to its OG running roots with iconic Waffle outsole, stitched overlays, and classic TPU ribbed accents on the heel and eyestays.",
+    "fullDescription": "Nike Air Max 90 stays true to its OG running roots with iconic Waffle outsole, stitched overlays, and classic TPU ribbed accents on the heel and eyestays. Certified original hardware engineered by Nike for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Max Air cushioning in the heel originally designed for performance running",
+      "Rubber Waffle outsole delivers heritage look, traction, and durability",
+      "Stitched overlays and TPU accents highlight the classic '90s aesthetic",
+      "Padded, low-top collar provides sleek silhouette and comfortable fit"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-nike-air-max-1",
+    "name": "Nike Air Max 1 '87",
+    "brand": "Nike",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Heritage Sneakers",
+    "price": 12795,
+    "originalPrice": 13995,
+    "rating": 4.9,
+    "reviewsCount": 160,
+    "image": "assets/products/prod-nike-air-max-1_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-nike-air-max-1_1.jpg",
+      "assets/products/prod-nike-air-max-1_2.jpg",
+      "assets/products/prod-nike-air-max-1_3.jpg",
+      "assets/products/prod-nike-air-max-1_4.jpg"
+    ],
+    "description": "Nike Air Max 1 '87, the pioneer shoe that first revealed Nike Air to the world. Premium suede and mesh construction with timeless wavy mudguard.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Collector's Pick",
+    "specifications": [
+      "Upper: Premium suede, synthetic leather, and mesh",
+      "Cushioning: Visible Air-Sole unit in polyurethane midsole",
+      "Outsole: Solid rubber with waffle traction lugs",
+      "Fit: True to size standard medium D width",
+      "Colorway: White / University Red / Neutral Grey"
+    ],
+    "images": [
+      "assets/products/prod-nike-air-max-1_1.jpg",
+      "assets/products/prod-nike-air-max-1_2.jpg",
+      "assets/products/prod-nike-air-max-1_3.jpg",
+      "assets/products/prod-nike-air-max-1_4.jpg"
+    ],
+    "shortDescription": "Nike Air Max 1 '87, the pioneer shoe that first revealed Nike Air to the world. Premium suede and mesh construction with timeless wavy mudguard.",
+    "fullDescription": "Nike Air Max 1 '87, the pioneer shoe that first revealed Nike Air to the world. Premium suede and mesh construction with timeless wavy mudguard. Certified original hardware engineered by Nike for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "The world's first shoe with visible Nike Air cushioning in the heel",
+      "Wavy mudguard design line inspired by Centre Pompidou architecture",
+      "Premium suede, leather, and breathable mesh layered upper",
+      "Durable rubber outsole with classic waffle traction pattern"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "9% OFF"
+  },
+  {
+    "id": "prod-nike-dunk-low-retro",
+    "name": "Nike Dunk Low Retro",
+    "brand": "Nike",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Skate & Streetwear",
+    "price": 8695,
+    "originalPrice": 9695,
+    "rating": 4.8,
+    "reviewsCount": 380,
+    "image": "assets/products/prod-nike-dunk-low-retro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-nike-dunk-low-retro_1.jpg",
+      "assets/products/prod-nike-dunk-low-retro_2.jpg",
+      "assets/products/prod-nike-dunk-low-retro_3.jpg",
+      "assets/products/prod-nike-dunk-low-retro_4.jpg"
+    ],
+    "description": "Nike Dunk Low Retro basketball icon created for the hardwood and embraced by street and skate culture. Premium leather color-blocked panels.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Streetwear Favorite",
+    "specifications": [
+      "Upper: 100% Genuine leather overlays with perforations on toe box",
+      "Midsole: Lightweight EVA foam midsole",
+      "Outsole: Classic rubber pivot circle outsole",
+      "Lacing: Flat traditional cotton laces",
+      "Colorway: White / Black (Panda Style)"
+    ],
+    "images": [
+      "assets/products/prod-nike-dunk-low-retro_1.jpg",
+      "assets/products/prod-nike-dunk-low-retro_2.jpg",
+      "assets/products/prod-nike-dunk-low-retro_3.jpg",
+      "assets/products/prod-nike-dunk-low-retro_4.jpg"
+    ],
+    "shortDescription": "Nike Dunk Low Retro basketball icon created for the hardwood and embraced by street and skate culture. Premium leather color-blocked panels.",
+    "fullDescription": "Nike Dunk Low Retro basketball icon created for the hardwood and embraced by street and skate culture. Premium leather color-blocked panels. Certified original hardware engineered by Nike for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Crisp leather upper has slight sheen, ages to soft perfection, and features durable overlays",
+      "Foam midsole offers lightweight, responsive cushioning",
+      "Padded, low-cut collar adds a sleek look that feels comfortable",
+      "Bold color-blocking keeps the iconic 1985 collegiate basketball look"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-nike-pegasus-41",
+    "name": "Nike Pegasus 41 Road Running Shoes",
+    "brand": "Nike",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Performance Running",
+    "price": 11895,
+    "originalPrice": 12995,
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "image": "assets/products/prod-nike-pegasus-41_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-nike-pegasus-41_1.jpg",
+      "assets/products/prod-nike-pegasus-41_2.jpg",
+      "assets/products/prod-nike-pegasus-41_3.jpg",
+      "assets/products/prod-nike-pegasus-41_4.jpg"
+    ],
+    "description": "Nike Pegasus 41 delivers energetic daily road running with ReactX foam midsole, dual Air Zoom units in forefoot and heel, and lighter engineered mesh.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Workhorse With Wings",
+    "specifications": [
+      "Weight: Approximately 297g (Men's size 10)",
+      "Heel-to-Toe Drop: 10mm (37mm heel / 27mm forefoot)",
+      "Foam: Nike ReactX foam with lower carbon footprint",
+      "Cushioning: Dual Air Zoom units (heel and forefoot)",
+      "Terrain: Road and paved running paths"
+    ],
+    "images": [
+      "assets/products/prod-nike-pegasus-41_1.jpg",
+      "assets/products/prod-nike-pegasus-41_2.jpg",
+      "assets/products/prod-nike-pegasus-41_3.jpg",
+      "assets/products/prod-nike-pegasus-41_4.jpg"
+    ],
+    "shortDescription": "Nike Pegasus 41 delivers energetic daily road running with ReactX foam midsole, dual Air Zoom units in forefoot and heel, and lighter engineered mesh.",
+    "fullDescription": "Nike Pegasus 41 delivers energetic daily road running with ReactX foam midsole, dual Air Zoom units in forefoot and heel, and lighter engineered mesh. Certified original hardware engineered by Nike for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Upgraded ReactX foam midsole provides 13% more energy return than standard React",
+      "Dual Air Zoom units (forefoot and heel) for smooth, springy transitions",
+      "Engineered mesh upper reduces weight and increases breathability",
+      "Signature waffle-inspired rubber outsole provides durable grip on pavement"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-adidas-ultraboost-5",
+    "name": "Adidas Ultraboost 5 Running Shoes",
+    "brand": "Adidas",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Performance Running",
+    "price": 15999,
+    "originalPrice": 17999,
+    "rating": 4.9,
+    "reviewsCount": 210,
+    "image": "assets/products/prod-adidas-ultraboost-5_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-adidas-ultraboost-5_1.jpg",
+      "assets/products/prod-adidas-ultraboost-5_2.jpg",
+      "assets/products/prod-adidas-ultraboost-5_3.jpg",
+      "assets/products/prod-adidas-ultraboost-5_4.jpg"
+    ],
+    "description": "Adidas Ultraboost 5 running shoes engineered with Light BOOST cushioning, Primeknit adaptive foot-hugging upper, and Continental Rubber outsole.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Energy Return Leader",
+    "specifications": [
+      "Midsole: Light BOOST foam cushioning",
+      "Upper: Primeknit containing at least 50% recycled Parley Ocean Plastic",
+      "Outsole: Continental Better Rubber compound",
+      "Drop: 10mm (heel 30mm / forefoot 20mm)",
+      "Weight: 290g (UK size 8.5)"
+    ],
+    "images": [
+      "assets/products/prod-adidas-ultraboost-5_1.jpg",
+      "assets/products/prod-adidas-ultraboost-5_2.jpg",
+      "assets/products/prod-adidas-ultraboost-5_3.jpg",
+      "assets/products/prod-adidas-ultraboost-5_4.jpg"
+    ],
+    "shortDescription": "Adidas Ultraboost 5 running shoes engineered with Light BOOST cushioning, Primeknit adaptive foot-hugging upper, and Continental Rubber outsole.",
+    "fullDescription": "Adidas Ultraboost 5 running shoes engineered with Light BOOST cushioning, Primeknit adaptive foot-hugging upper, and Continental Rubber outsole. Certified original hardware engineered by Adidas for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Next-generation Light BOOST midsole delivers the highest energy return yet",
+      "Primeknit textile upper provides adaptive, foot-hugging support",
+      "Torsion System between heel and forefoot provides optimized stability",
+      "Continental Better Rubber outsole provides extraordinary wet and dry grip"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-adidas-ultraboost-light",
+    "name": "Adidas Ultraboost Light Running",
+    "brand": "Adidas",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Performance Running",
+    "price": 14999,
+    "originalPrice": 16999,
+    "rating": 4.8,
+    "reviewsCount": 165,
+    "image": "assets/products/prod-adidas-ultraboost-light_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-adidas-ultraboost-light_1.jpg",
+      "assets/products/prod-adidas-ultraboost-light_2.jpg",
+      "assets/products/prod-adidas-ultraboost-light_3.jpg",
+      "assets/products/prod-adidas-ultraboost-light_4.jpg"
+    ],
+    "description": "Adidas Ultraboost Light is the lightest Ultraboost ever made with 30% lighter BOOST material. Epic energy in every stride with Linear Energy Point stability.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "30% Lighter",
+    "specifications": [
+      "Fit: Regular fit with lace closure",
+      "Upper: Adidas PRIMEKNIT+ textile upper",
+      "Midsole: Light BOOST technology",
+      "Midsole drop: 10mm (heel 22mm / forefoot 12mm)",
+      "Weight: 299g (UK 8.5)"
+    ],
+    "images": [
+      "assets/products/prod-adidas-ultraboost-light_1.jpg",
+      "assets/products/prod-adidas-ultraboost-light_2.jpg",
+      "assets/products/prod-adidas-ultraboost-light_3.jpg",
+      "assets/products/prod-adidas-ultraboost-light_4.jpg"
+    ],
+    "shortDescription": "Adidas Ultraboost Light is the lightest Ultraboost ever made with 30% lighter BOOST material. Epic energy in every stride with Linear Energy Point stability.",
+    "fullDescription": "Adidas Ultraboost Light is the lightest Ultraboost ever made with 30% lighter BOOST material. Epic energy in every stride with Linear Energy Point stability. Certified original hardware engineered by Adidas for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Light BOOST material is 30% lighter than standard BOOST foam",
+      "Linear Energy Point (LEP) system pushes you forward with responsive push-off",
+      "Continental Natural Performance Rubber provides all-weather grip",
+      "Lower carbon footprint by 10% compared to previous generation"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-adidas-superstar",
+    "name": "Adidas Originals Superstar Shoes",
+    "brand": "Adidas",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Classic Sneakers",
+    "price": 8999,
+    "originalPrice": 9999,
+    "rating": 4.8,
+    "reviewsCount": 420,
+    "image": "assets/products/prod-adidas-superstar_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-adidas-superstar_1.jpg",
+      "assets/products/prod-adidas-superstar_2.jpg",
+      "assets/products/prod-adidas-superstar_3.jpg",
+      "assets/products/prod-adidas-superstar_4.jpg"
+    ],
+    "description": "Adidas Originals Superstar shoes with iconic ribbed rubber shell toe, smooth full-grain leather upper, serrated 3-Stripes, and herringbone cupsole.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Shell Toe Icon",
+    "specifications": [
+      "Upper: Smooth leather with synthetic overlays",
+      "Toe: Signature protective rubber shell toe cap",
+      "Lining: Breathable textile mesh",
+      "Outsole: Vulcanized rubber cupsole",
+      "Colorway: Cloud White / Core Black / Gold Metallic"
+    ],
+    "images": [
+      "assets/products/prod-adidas-superstar_1.jpg",
+      "assets/products/prod-adidas-superstar_2.jpg",
+      "assets/products/prod-adidas-superstar_3.jpg",
+      "assets/products/prod-adidas-superstar_4.jpg"
+    ],
+    "shortDescription": "Adidas Originals Superstar shoes with iconic ribbed rubber shell toe, smooth full-grain leather upper, serrated 3-Stripes, and herringbone cupsole.",
+    "fullDescription": "Adidas Originals Superstar shoes with iconic ribbed rubber shell toe, smooth full-grain leather upper, serrated 3-Stripes, and herringbone cupsole. Certified original hardware engineered by Adidas for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Instantly recognizable protective rubber shell toe",
+      "Smooth full-grain leather upper with serrated 3-Stripes branding",
+      "Comfortable textile lining with OrthoLite sockliner",
+      "Durable rubber cupsole with herringbone traction pattern"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-adidas-stan-smith",
+    "name": "Adidas Originals Stan Smith",
+    "brand": "Adidas",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Classic Sneakers",
+    "price": 7999,
+    "originalPrice": 8999,
+    "rating": 4.7,
+    "reviewsCount": 310,
+    "image": "assets/products/prod-adidas-stan-smith_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-adidas-stan-smith_1.jpg",
+      "assets/products/prod-adidas-stan-smith_2.jpg",
+      "assets/products/prod-adidas-stan-smith_3.jpg",
+      "assets/products/prod-adidas-stan-smith_4.jpg"
+    ],
+    "description": "Adidas Originals Stan Smith clean court shoe with minimalist silhouette, perforated 3-Stripes, signature green heel tab, and Stan Smith tongue portrait.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Tennis Classic",
+    "specifications": [
+      "Upper: Primegreen high-performance recycled material upper",
+      "Closure: Traditional lace-up closure",
+      "Outsole: Rubber cupsole",
+      "Insole: OrthoLite cushioned sockliner",
+      "Colorway: Cloud White / Fairway Green"
+    ],
+    "images": [
+      "assets/products/prod-adidas-stan-smith_1.jpg",
+      "assets/products/prod-adidas-stan-smith_2.jpg",
+      "assets/products/prod-adidas-stan-smith_3.jpg",
+      "assets/products/prod-adidas-stan-smith_4.jpg"
+    ],
+    "shortDescription": "Adidas Originals Stan Smith clean court shoe with minimalist silhouette, perforated 3-Stripes, signature green heel tab, and Stan Smith tongue portrait.",
+    "fullDescription": "Adidas Originals Stan Smith clean court shoe with minimalist silhouette, perforated 3-Stripes, signature green heel tab, and Stan Smith tongue portrait. Certified original hardware engineered by Adidas for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Clean, minimalist tennis court design that pairs with any outfit",
+      "Perforated 3-Stripes detailing for subtle breathability and branding",
+      "Soft synthetic leather upper made with Primegreen recycled materials",
+      "Durable rubber cupsole designed for all-day city walking comfort"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "11% OFF"
+  },
+  {
+    "id": "prod-adidas-samba-og",
+    "name": "Adidas Originals Samba OG",
+    "brand": "Adidas",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Classic Sneakers",
+    "price": 10999,
+    "originalPrice": 11999,
+    "rating": 4.9,
+    "reviewsCount": 260,
+    "image": "assets/products/prod-adidas-samba-og_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-adidas-samba-og_1.jpg",
+      "assets/products/prod-adidas-samba-og_2.jpg",
+      "assets/products/prod-adidas-samba-og_3.jpg",
+      "assets/products/prod-adidas-samba-og_4.jpg"
+    ],
+    "description": "Adidas Originals Samba OG indoor soccer heritage sneaker with soft leather upper, suede T-toe overlay, contrasting serrated 3-Stripes, and gum rubber outsole.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Trending Globally",
+    "specifications": [
+      "Upper: Full grain leather with suede T-toe reinforcement",
+      "Lining: Synthetic leather and textile",
+      "Outsole: Retro low-profile gum rubber",
+      "Branding: Gold foil SAMBA print on lateral side",
+      "Colorway: Core Black / Cloud White / Gum"
+    ],
+    "images": [
+      "assets/products/prod-adidas-samba-og_1.jpg",
+      "assets/products/prod-adidas-samba-og_2.jpg",
+      "assets/products/prod-adidas-samba-og_3.jpg",
+      "assets/products/prod-adidas-samba-og_4.jpg"
+    ],
+    "shortDescription": "Adidas Originals Samba OG indoor soccer heritage sneaker with soft leather upper, suede T-toe overlay, contrasting serrated 3-Stripes, and gum rubber outsole.",
+    "fullDescription": "Adidas Originals Samba OG indoor soccer heritage sneaker with soft leather upper, suede T-toe overlay, contrasting serrated 3-Stripes, and gum rubber outsole. Certified original hardware engineered by Adidas for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Full-grain leather upper with gritty suede T-toe toe cap overlay",
+      "Low-profile gum rubber outsole offers retro look and vintage traction",
+      "Serrated 3-Stripes with metallic gold foil 'SAMBA' lettering",
+      "Soft leather lining for immediate out-of-the-box comfort"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-puma-suede-classic-xxi",
+    "name": "Puma Suede Classic XXI Sneakers",
+    "brand": "Puma",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Retro Sneakers",
+    "price": 6999,
+    "originalPrice": 7999,
+    "rating": 4.8,
+    "reviewsCount": 220,
+    "image": "assets/products/prod-puma-suede-classic-xxi_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-puma-suede-classic-xxi_1.jpg",
+      "assets/products/prod-puma-suede-classic-xxi_2.jpg",
+      "assets/products/prod-puma-suede-classic-xxi_3.jpg",
+      "assets/products/prod-puma-suede-classic-xxi_4.jpg"
+    ],
+    "description": "Puma Suede Classic XXI sneakers in plush full-suede upper. An icon since 1968 worn by street legends and b-boys, featuring Puma Formstrip and gold foil logo.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Puma Heritage",
+    "specifications": [
+      "Upper: 100% Genuine suede leather",
+      "Midsole: Textured rubber midsole",
+      "Outsole: Grippy textured rubber outsole",
+      "Collar: Padded low-cut collar for comfort",
+      "Colorway: Black / White / Metallic Gold"
+    ],
+    "images": [
+      "assets/products/prod-puma-suede-classic-xxi_1.jpg",
+      "assets/products/prod-puma-suede-classic-xxi_2.jpg",
+      "assets/products/prod-puma-suede-classic-xxi_3.jpg",
+      "assets/products/prod-puma-suede-classic-xxi_4.jpg"
+    ],
+    "shortDescription": "Puma Suede Classic XXI sneakers in plush full-suede upper. An icon since 1968 worn by street legends and b-boys, featuring Puma Formstrip and gold foil logo.",
+    "fullDescription": "Puma Suede Classic XXI sneakers in plush full-suede upper. An icon since 1968 worn by street legends and b-boys, featuring Puma Formstrip and gold foil logo. Certified original hardware engineered by Puma for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Full suede upper with modern design touches and color depth",
+      "Comfort sockliner delivers instant step-in cushioning",
+      "Rubber midsole and grippy rubber outsole for street traction",
+      "Puma Formstrip on medial and lateral sides with gold foil callout"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "13% OFF"
+  },
+  {
+    "id": "prod-new-balance-574-core",
+    "name": "New Balance 574 Core Classic",
+    "brand": "New Balance",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Lifestyle Sneakers",
+    "price": 8999,
+    "originalPrice": 9999,
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "image": "assets/products/prod-new-balance-574-core_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-new-balance-574-core_1.jpg",
+      "assets/products/prod-new-balance-574-core_2.jpg",
+      "assets/products/prod-new-balance-574-core_3.jpg",
+      "assets/products/prod-new-balance-574-core_4.jpg"
+    ],
+    "description": "New Balance 574 Core was built to be a reliable shoe that could do many different things well. Hybrid road/trail design with signature ENCAP midsole cushioning.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Unpretentious Legend",
+    "specifications": [
+      "Midsole: ENCAP technology (EVA core with polyurethane rim)",
+      "Upper: Premium suede leather with breathable mesh panels",
+      "Outsole: Solid carbon rubber with trail-inspired tread",
+      "Drop: 12mm heel-to-toe drop",
+      "Colorway: Iconic Grey / White / Silver N"
+    ],
+    "images": [
+      "assets/products/prod-new-balance-574-core_1.jpg",
+      "assets/products/prod-new-balance-574-core_2.jpg",
+      "assets/products/prod-new-balance-574-core_3.jpg",
+      "assets/products/prod-new-balance-574-core_4.jpg"
+    ],
+    "shortDescription": "New Balance 574 Core was built to be a reliable shoe that could do many different things well. Hybrid road/trail design with signature ENCAP midsole cushioning.",
+    "fullDescription": "New Balance 574 Core was built to be a reliable shoe that could do many different things well. Hybrid road/trail design with signature ENCAP midsole cushioning. Certified original hardware engineered by New Balance for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "ENCAP midsole cushioning combines lightweight foam with durable polyurethane rim",
+      "Suede and mesh upper offers breathable durability and heritage grey aesthetics",
+      "Durable rubber lugged outsole provides traction across mixed terrain",
+      "Spacious toe box and supportive heel cup for all-day walking comfort"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-asics-gel-kayano-30",
+    "name": "ASICS GEL-Kayano 30 Stability Running",
+    "brand": "ASICS",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Stability Running",
+    "price": 14999,
+    "originalPrice": 16999,
+    "rating": 4.9,
+    "reviewsCount": 145,
+    "image": "assets/products/prod-asics-gel-kayano-30_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-asics-gel-kayano-30_1.jpg",
+      "assets/products/prod-asics-gel-kayano-30_2.jpg",
+      "assets/products/prod-asics-gel-kayano-30_3.jpg",
+      "assets/products/prod-asics-gel-kayano-30_4.jpg"
+    ],
+    "description": "ASICS GEL-Kayano 30 stability running shoes with revolutionary 4D GUIDANCE SYSTEM, PureGEL rearfoot cushioning, and lightweight FF BLAST PLUS ECO foam.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Ultimate Stability",
+    "specifications": [
+      "Heel-to-Toe Drop: 10mm (40mm heel / 30mm forefoot)",
+      "Weight: 303g (Men's US 9)",
+      "Pronation: Designed for Neutral and Overpronation runners",
+      "Outsole: AHARPLUS rubber heel plug for 3x greater abrasion resistance",
+      "Upper: Engineered stretch knit with reflective details"
+    ],
+    "images": [
+      "assets/products/prod-asics-gel-kayano-30_1.jpg",
+      "assets/products/prod-asics-gel-kayano-30_2.jpg",
+      "assets/products/prod-asics-gel-kayano-30_3.jpg",
+      "assets/products/prod-asics-gel-kayano-30_4.jpg"
+    ],
+    "shortDescription": "ASICS GEL-Kayano 30 stability running shoes with revolutionary 4D GUIDANCE SYSTEM, PureGEL rearfoot cushioning, and lightweight FF BLAST PLUS ECO foam.",
+    "fullDescription": "ASICS GEL-Kayano 30 stability running shoes with revolutionary 4D GUIDANCE SYSTEM, PureGEL rearfoot cushioning, and lightweight FF BLAST PLUS ECO foam. Certified original hardware engineered by ASICS for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "4D GUIDANCE SYSTEM provides adaptive stability for overpronation control",
+      "Rearfoot PureGEL technology creates softer landings and smoother transitions",
+      "FF BLAST PLUS ECO cushioning made with approximately 20% bio-based content",
+      "Engineered stretch knit upper improves breathability and step-in comfort"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-reebok-club-c-85",
+    "name": "Reebok Club C 85 Vintage Court Sneakers",
+    "brand": "Reebok",
+    "category": "Footwear",
+    "categoryId": "footwear",
+    "subcategory": "Retro Sneakers",
+    "price": 6999,
+    "originalPrice": 7999,
+    "rating": 4.8,
+    "reviewsCount": 190,
+    "image": "assets/products/prod-reebok-club-c-85_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-reebok-club-c-85_1.jpg",
+      "assets/products/prod-reebok-club-c-85_2.jpg",
+      "assets/products/prod-reebok-club-c-85_3.jpg",
+      "assets/products/prod-reebok-club-c-85_4.jpg"
+    ],
+    "description": "Reebok Club C 85 vintage tennis court shoe in soft garment leather. Clean low-profile heritage design with terry cloth lining and retro Union Jack window box.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Vintage Court",
+    "specifications": [
+      "Upper: Premium soft garment leather",
+      "Insole: Removable die-cut EVA foam sockliner",
+      "Outsole: High-abrasion rubber cupsole",
+      "Branding: Heritage woven label with Union Jack flag",
+      "Colorway: Chalk White / Glen Green / Paperwhite"
+    ],
+    "images": [
+      "assets/products/prod-reebok-club-c-85_1.jpg",
+      "assets/products/prod-reebok-club-c-85_2.jpg",
+      "assets/products/prod-reebok-club-c-85_3.jpg",
+      "assets/products/prod-reebok-club-c-85_4.jpg"
+    ],
+    "shortDescription": "Reebok Club C 85 vintage tennis court shoe in soft garment leather. Clean low-profile heritage design with terry cloth lining and retro Union Jack window box.",
+    "fullDescription": "Reebok Club C 85 vintage tennis court shoe in soft garment leather. Clean low-profile heritage design with terry cloth lining and retro Union Jack window box. Certified original hardware engineered by Reebok for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Soft garment leather upper gives comfortable support and vintage charm",
+      "Molded EVA midsole provides lightweight, long-lasting cushioning",
+      "Cozy terry cloth lining on collar and tongue creates authentic heritage feel",
+      "High-abrasion rubber outsole delivers time-tested court traction"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "13% OFF"
+  },
+  {
+    "id": "prod-logitech-g-pro-x-superlight-2",
+    "name": "Logitech G PRO X SUPERLIGHT 2 Wireless Mouse",
+    "brand": "Logitech",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Computer Mice",
+    "price": 14995,
+    "originalPrice": 16995,
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "image": "assets/products/prod-logitech-g-pro-x-superlight-2_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-logitech-g-pro-x-superlight-2_1.jpg",
+      "assets/products/prod-logitech-g-pro-x-superlight-2_2.jpg",
+      "assets/products/prod-logitech-g-pro-x-superlight-2_3.jpg",
+      "assets/products/prod-logitech-g-pro-x-superlight-2_4.jpg"
+    ],
+    "description": "The world's leading competitive esports mouse refined. Weighing just 60 grams with LIGHTFORCE hybrid optical-mechanical switches and HERO 2 sensor.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Pro Champion",
+    "specifications": [
+      "Sensor: HERO 2 (100 – 32,000 DPI, >500 IPS, >40G acceleration)",
+      "Polling Rate: 4000Hz (0.25ms response)",
+      "Weight: 60 grams",
+      "Battery Life: 95 Hours constant motion"
+    ],
+    "images": [
+      "assets/products/prod-logitech-g-pro-x-superlight-2_1.jpg",
+      "assets/products/prod-logitech-g-pro-x-superlight-2_2.jpg",
+      "assets/products/prod-logitech-g-pro-x-superlight-2_3.jpg",
+      "assets/products/prod-logitech-g-pro-x-superlight-2_4.jpg"
+    ],
+    "shortDescription": "The world's leading competitive esports mouse refined. Weighing just 60 grams with LIGHTFORCE hybrid optical-mechanical switches and HERO 2 sensor.",
+    "fullDescription": "The world's leading competitive esports mouse refined. Weighing just 60 grams with LIGHTFORCE hybrid optical-mechanical switches and HERO 2 sensor. Certified original hardware engineered by Logitech for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Featherlight 60-gram tournament-proven symmetrical design",
+      "LIGHTFORCE hybrid optical-mechanical switches for blazing response",
+      "HERO 2 sensor with sub-micron tracking up to 32,000 DPI",
+      "Up to 95 hours of battery life with USB-C fast charging"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-razer-blackwidow-v4-pro",
+    "name": "Razer BlackWidow V4 Pro Mechanical Keyboard",
+    "brand": "Razer",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Keyboards",
+    "price": 21999,
+    "originalPrice": 24999,
+    "rating": 4.7,
+    "reviewsCount": 180,
+    "image": "assets/products/prod-razer-blackwidow-v4-pro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-razer-blackwidow-v4-pro_1.jpg",
+      "assets/products/prod-razer-blackwidow-v4-pro_2.jpg",
+      "assets/products/prod-razer-blackwidow-v4-pro_3.jpg",
+      "assets/products/prod-razer-blackwidow-v4-pro_4.jpg"
+    ],
+    "description": "Full-blown mechanical gaming battlestation with Razer Command Dial, 8 dedicated macro keys, 8000Hz polling rate, and immersive 3-side Chroma underglow.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Battlestation",
+    "specifications": [
+      "Switch Type: Razer Green Mechanical Switches (Tactile & Clicky)",
+      "Polling Rate: Up to 8000 Hz HyperPolling",
+      "Keycaps: Doubleshot ABS Keycaps",
+      "Passthrough: USB 2.0 Passthrough"
+    ],
+    "images": [
+      "assets/products/prod-razer-blackwidow-v4-pro_1.jpg",
+      "assets/products/prod-razer-blackwidow-v4-pro_2.jpg",
+      "assets/products/prod-razer-blackwidow-v4-pro_3.jpg",
+      "assets/products/prod-razer-blackwidow-v4-pro_4.jpg"
+    ],
+    "shortDescription": "Full-blown mechanical gaming battlestation with Razer Command Dial, 8 dedicated macro keys, 8000Hz polling rate, and immersive 3-side Chroma underglow.",
+    "fullDescription": "Full-blown mechanical gaming battlestation with Razer Command Dial, 8 dedicated macro keys, 8000Hz polling rate, and immersive 3-side Chroma underglow. Certified original hardware engineered by Razer for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Razer Command Dial and 8 dedicated macro keys",
+      "Immersive 3-side underglow and per-key Razer Chroma RGB",
+      "Razer Green Clicky Mechanical Switches with satisfying tactile bump",
+      "Magnetic plush leatherette wrist rest with underglow"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-fossil-derrick-bifold",
+    "name": "Fossil Derrick RFID Leather Bifold Wallet",
+    "brand": "Fossil",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Leather Wallets",
+    "price": 3295,
+    "originalPrice": 3995,
+    "rating": 4.8,
+    "reviewsCount": 185,
+    "image": "assets/products/prod-fossil-derrick-bifold_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-fossil-derrick-bifold_1.jpg",
+      "assets/products/prod-fossil-derrick-bifold_2.jpg",
+      "assets/products/prod-fossil-derrick-bifold_3.jpg",
+      "assets/products/prod-fossil-derrick-bifold_4.jpg"
+    ],
+    "description": "Fossil Derrick RFID-blocking leather bifold wallet crafted from 100% genuine full-grain cowhide. Features 8 credit card slots, slide pockets, and bill compartment.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Bestseller",
+    "specifications": [
+      "Material: 100% Genuine Full-Grain Cowhide Leather",
+      "Interior Details: 8 Credit Card Slots, 2 Slip Pockets, 1 Bill Compartment",
+      "Dimensions: 11.4 cm L x 1.9 cm W x 8.9 cm H",
+      "Technology: Built-in RFID blocking fabric layer",
+      "Care: Wipe clean with dry soft leather cloth"
+    ],
+    "images": [
+      "assets/products/prod-fossil-derrick-bifold_1.jpg",
+      "assets/products/prod-fossil-derrick-bifold_2.jpg",
+      "assets/products/prod-fossil-derrick-bifold_3.jpg",
+      "assets/products/prod-fossil-derrick-bifold_4.jpg"
+    ],
+    "shortDescription": "Fossil Derrick RFID-blocking leather bifold wallet crafted from 100% genuine full-grain cowhide. Features 8 credit card slots, slide pockets, and bill compartment.",
+    "fullDescription": "Fossil Derrick RFID-blocking leather bifold wallet crafted from 100% genuine full-grain cowhide. Features 8 credit card slots, slide pockets, and bill compartment. Certified original hardware engineered by Fossil for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "100% genuine full-grain rich brown cowhide leather",
+      "Special RFID lining helps protect credit cards from unauthorized scanning",
+      "8 credit card slots, 2 slip pockets, 1 clear ID window, and currency billfold",
+      "Slim profile fits smoothly into front or back trouser pockets"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "18% OFF"
+  },
+  {
+    "id": "prod-bellroy-hide-and-seek",
+    "name": "Bellroy Hide & Seek RFID Leather Wallet",
+    "brand": "Bellroy",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Leather Wallets",
+    "price": 7499,
+    "originalPrice": 8499,
+    "rating": 4.9,
+    "reviewsCount": 140,
+    "image": "assets/products/prod-bellroy-hide-and-seek_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-bellroy-hide-and-seek_1.jpg",
+      "assets/products/prod-bellroy-hide-and-seek_2.jpg",
+      "assets/products/prod-bellroy-hide-and-seek_3.jpg",
+      "assets/products/prod-bellroy-hide-and-seek_4.jpg"
+    ],
+    "description": "Bellroy Hide & Seek slim leather wallet with hidden bill section, coin pouch, and RFID protection. Made from environmentally certified gold-rated leather.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Premium Craft",
+    "specifications": [
+      "Capacity: 5-12+ cards plus flat bills and business cards",
+      "Dimensions: 115mm x 95mm slim design",
+      "Leather: Certified environmentally tanned leather",
+      "RFID Protection: Integrated anti-theft shielding",
+      "Color: Caramel Brown / Charcoal stitch"
+    ],
+    "images": [
+      "assets/products/prod-bellroy-hide-and-seek_1.jpg",
+      "assets/products/prod-bellroy-hide-and-seek_2.jpg",
+      "assets/products/prod-bellroy-hide-and-seek_3.jpg",
+      "assets/products/prod-bellroy-hide-and-seek_4.jpg"
+    ],
+    "shortDescription": "Bellroy Hide & Seek slim leather wallet with hidden bill section, coin pouch, and RFID protection. Made from environmentally certified gold-rated leather.",
+    "fullDescription": "Bellroy Hide & Seek slim leather wallet with hidden bill section, coin pouch, and RFID protection. Made from environmentally certified gold-rated leather. Certified original hardware engineered by Bellroy for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Holds 5 to 12+ cards without bulk in a slim silhouette",
+      "Hidden bill section conceals extra cash and larger banknotes from view",
+      "Premium, environmentally certified leather sourced under LWG gold protocols",
+      "3-year manufacturer warranty from Bellroy"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-vintage-leather-backpack",
+    "name": "Vintage Full-Grain Leather Commuter Backpack 22L",
+    "brand": "The North Face",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Backpacks",
+    "price": 8999,
+    "originalPrice": 11999,
+    "rating": 4.8,
+    "reviewsCount": 110,
+    "image": "assets/products/prod-vintage-leather-backpack_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-vintage-leather-backpack_1.jpg",
+      "assets/products/prod-vintage-leather-backpack_2.jpg",
+      "assets/products/prod-vintage-leather-backpack_3.jpg",
+      "assets/products/prod-vintage-leather-backpack_4.jpg"
+    ],
+    "description": "Vintage full-grain leather commuter backpack with dedicated padded 15.6-inch laptop compartment, antique brass hardware, and ergonomic padded shoulder straps.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Handcrafted Leather",
+    "specifications": [
+      "Volume: 22 Liters capacity",
+      "Material: Full-grain pull-up cowhide leather with cotton canvas lining",
+      "Laptop Compartment: Padded for up to 15.6-inch laptops",
+      "Hardware: Heavy-duty antique brass zippers and metal rivets",
+      "Dimensions: 43 x 30 x 14 cm, weight 1.25 kg"
+    ],
+    "images": [
+      "assets/products/prod-vintage-leather-backpack_1.jpg",
+      "assets/products/prod-vintage-leather-backpack_2.jpg",
+      "assets/products/prod-vintage-leather-backpack_3.jpg",
+      "assets/products/prod-vintage-leather-backpack_4.jpg"
+    ],
+    "shortDescription": "Vintage full-grain leather commuter backpack with dedicated padded 15.6-inch laptop compartment, antique brass hardware, and ergonomic padded shoulder straps.",
+    "fullDescription": "Vintage full-grain leather commuter backpack with dedicated padded 15.6-inch laptop compartment, antique brass hardware, and ergonomic padded shoulder straps. Certified original hardware engineered by The North Face for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "100% full-grain pull-up leather that develops rich patina over time",
+      "Padded interior sleeve securely accommodates laptops up to 15.6 inches",
+      "Front zippered organizer pocket with key leash and pen slots",
+      "Breathable air-mesh back panel with luggage trolley strap pass-through"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "25% OFF"
+  },
+  {
+    "id": "prod-urban-canvas-rucksack",
+    "name": "Urban Explorer Weatherproof Canvas Rucksack 25L",
+    "brand": "The North Face",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Backpacks",
+    "price": 6499,
+    "originalPrice": 7999,
+    "rating": 4.8,
+    "reviewsCount": 95,
+    "image": "assets/products/prod-urban-canvas-rucksack_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-urban-canvas-rucksack_1.jpg",
+      "assets/products/prod-urban-canvas-rucksack_2.jpg",
+      "assets/products/prod-urban-canvas-rucksack_3.jpg",
+      "assets/products/prod-urban-canvas-rucksack_4.jpg"
+    ],
+    "description": "Urban Explorer weatherproof waxed canvas rucksack with genuine leather buckle straps, magnetic quick-release clasps, and roll-top expandability.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Weatherproof",
+    "specifications": [
+      "Capacity: 25 Liters (expandable to 28L)",
+      "Fabric: 16oz Waxed Cotton Canvas with Water-Repellent Coating",
+      "Straps: Padded ergonomic shoulder straps with sternum clip",
+      "Pockets: 2 side water bottle pockets, 1 quick-access front flap pocket",
+      "Dimensions: 46 x 32 x 16 cm"
+    ],
+    "images": [
+      "assets/products/prod-urban-canvas-rucksack_1.jpg",
+      "assets/products/prod-urban-canvas-rucksack_2.jpg",
+      "assets/products/prod-urban-canvas-rucksack_3.jpg",
+      "assets/products/prod-urban-canvas-rucksack_4.jpg"
+    ],
+    "shortDescription": "Urban Explorer weatherproof waxed canvas rucksack with genuine leather buckle straps, magnetic quick-release clasps, and roll-top expandability.",
+    "fullDescription": "Urban Explorer weatherproof waxed canvas rucksack with genuine leather buckle straps, magnetic quick-release clasps, and roll-top expandability. Certified original hardware engineered by The North Face for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Heavy-duty water-resistant waxed cotton canvas construction",
+      "Genuine bridle leather accent straps with hidden magnetic quick-release snaps",
+      "Expandable main compartment with top drawstring closure",
+      "Padded side-access laptop compartment fits up to 16-inch laptops"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "19% OFF"
+  },
+  {
+    "id": "prod-classic-canvas-daypack",
+    "name": "Classic Minimalist Black Canvas Daypack 20L",
+    "brand": "Adidas",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Backpacks",
+    "price": 2999,
+    "originalPrice": 3999,
+    "rating": 4.7,
+    "reviewsCount": 160,
+    "image": "assets/products/prod-classic-canvas-daypack_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-classic-canvas-daypack_1.jpg",
+      "assets/products/prod-classic-canvas-daypack_2.jpg",
+      "assets/products/prod-classic-canvas-daypack_3.jpg",
+      "assets/products/prod-classic-canvas-daypack_4.jpg"
+    ],
+    "description": "Classic minimalist black canvas daypack for college, commute, and daily travel. Lightweight durable construction with reinforced bottom base.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Everyday Essential",
+    "specifications": [
+      "Capacity: 20 Liters",
+      "Material: 600D high-density woven canvas",
+      "Weight: 450 grams",
+      "Color: Matte Jet Black",
+      "Dimensions: 42 x 30 x 13 cm"
+    ],
+    "images": [
+      "assets/products/prod-classic-canvas-daypack_1.jpg",
+      "assets/products/prod-classic-canvas-daypack_2.jpg",
+      "assets/products/prod-classic-canvas-daypack_3.jpg",
+      "assets/products/prod-classic-canvas-daypack_4.jpg"
+    ],
+    "shortDescription": "Classic minimalist black canvas daypack for college, commute, and daily travel. Lightweight durable construction with reinforced bottom base.",
+    "fullDescription": "Classic minimalist black canvas daypack for college, commute, and daily travel. Lightweight durable construction with reinforced bottom base. Certified original hardware engineered by Adidas for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Ultra-lightweight 450g design with durable woven canvas exterior",
+      "Roomy main compartment with internal sleeve for tablets and books",
+      "Front utility zip pocket with rain guard flap for chargers and keys",
+      "Reinforced top haul handle and adjustable padded shoulder straps"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "25% OFF"
+  },
+  {
+    "id": "prod-dell-pro-backpack-15",
+    "name": "Dell Pro Laptop Backpack 15",
+    "brand": "Dell",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Laptop Bags",
+    "price": 2799,
+    "originalPrice": 3499,
+    "rating": 4.6,
+    "reviewsCount": 210,
+    "image": "assets/products/prod-dell-pro-backpack-15_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-dell-pro-backpack-15_1.jpg",
+      "assets/products/prod-dell-pro-backpack-15_2.jpg",
+      "assets/products/prod-dell-pro-backpack-15_3.jpg",
+      "assets/products/prod-dell-pro-backpack-15_4.jpg"
+    ],
+    "description": "Dell Pro Backpack 15 protects laptops with EVA foam cushioning that absorbs shock. Earth-friendly solution-dyeing process generates 90% less wastewater.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Tech Commuter",
+    "specifications": [
+      "Compatibility: Fits laptops up to 15.6 inches",
+      "Capacity: 20 Liters",
+      "Material: Ballistic weave polyester with waterproof coating",
+      "Trolley Pass-Through: Yes, rear luggage strap",
+      "Dimensions: 43.5 x 31 x 16 cm, weight 780g"
+    ],
+    "images": [
+      "assets/products/prod-dell-pro-backpack-15_1.jpg",
+      "assets/products/prod-dell-pro-backpack-15_2.jpg",
+      "assets/products/prod-dell-pro-backpack-15_3.jpg",
+      "assets/products/prod-dell-pro-backpack-15_4.jpg"
+    ],
+    "shortDescription": "Dell Pro Backpack 15 protects laptops with EVA foam cushioning that absorbs shock. Earth-friendly solution-dyeing process generates 90% less wastewater.",
+    "fullDescription": "Dell Pro Backpack 15 protects laptops with EVA foam cushioning that absorbs shock. Earth-friendly solution-dyeing process generates 90% less wastewater. Certified original hardware engineered by Dell for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "EVA foam cushioning around dedicated laptop pocket absorbs shock",
+      "Water-resistant protective coating made from reclaimed automotive windshields",
+      "Reflective accents on straps and front panel enhance nighttime visibility",
+      "Dedicated tablet sleeve and spacious organizer workstation"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "20% OFF"
+  },
+  {
+    "id": "prod-rayban-classic-sunglasses",
+    "name": "Ray-Ban Round Metal Classic Sunglasses",
+    "brand": "Ray-Ban",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Sunglasses",
+    "price": 10490,
+    "originalPrice": 11990,
+    "rating": 4.9,
+    "reviewsCount": 175,
+    "image": "assets/products/prod-rayban-classic-sunglasses_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-rayban-classic-sunglasses_1.jpg",
+      "assets/products/prod-rayban-classic-sunglasses_2.jpg",
+      "assets/products/prod-rayban-classic-sunglasses_3.jpg",
+      "assets/products/prod-rayban-classic-sunglasses_4.jpg"
+    ],
+    "description": "Ray-Ban Round Metal classic sunglasses with lightweight gold-tone metal frame, crystal green G-15 mineral glass lenses, and adjustable silicone nose pads.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Timeless Icon",
+    "specifications": [
+      "Frame Material: Polished Arista Gold Metal",
+      "Lens: G-15 Classic Green Mineral Glass",
+      "Lens Width: 50 mm, Bridge Width: 21 mm, Temple Length: 145 mm",
+      "Protection: 100% UV400 Category 3 filter",
+      "Packaging: Leather case, microfiber cleaning cloth, authenticity certificate"
+    ],
+    "images": [
+      "assets/products/prod-rayban-classic-sunglasses_1.jpg",
+      "assets/products/prod-rayban-classic-sunglasses_2.jpg",
+      "assets/products/prod-rayban-classic-sunglasses_3.jpg",
+      "assets/products/prod-rayban-classic-sunglasses_4.jpg"
+    ],
+    "shortDescription": "Ray-Ban Round Metal classic sunglasses with lightweight gold-tone metal frame, crystal green G-15 mineral glass lenses, and adjustable silicone nose pads.",
+    "fullDescription": "Ray-Ban Round Metal classic sunglasses with lightweight gold-tone metal frame, crystal green G-15 mineral glass lenses, and adjustable silicone nose pads. Certified original hardware engineered by Ray-Ban for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Iconic round silhouette worn by legendary musicians and trendsetters",
+      "Original G-15 green mineral glass lenses absorb 85% of visible light",
+      "100% UV400 protection against harmful UVA and UVB radiation",
+      "Adjustable soft silicone nose pads and acetate temple tips"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "13% OFF"
+  },
+  {
+    "id": "prod-designer-black-sunglasses",
+    "name": "Ray-Ban Wayfarer Style Black Sunglasses",
+    "brand": "Ray-Ban",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Sunglasses",
+    "price": 8990,
+    "originalPrice": 10490,
+    "rating": 4.8,
+    "reviewsCount": 140,
+    "image": "assets/products/prod-designer-black-sunglasses_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-designer-black-sunglasses_1.jpg",
+      "assets/products/prod-designer-black-sunglasses_2.jpg",
+      "assets/products/prod-designer-black-sunglasses_3.jpg",
+      "assets/products/prod-designer-black-sunglasses_4.jpg"
+    ],
+    "description": "Timeless black acetate sunglasses with iconic trapezoidal shape, polarized dark grey lenses, and durable five-barrel metal hinges.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Classic Style",
+    "specifications": [
+      "Frame: Premium hand-polished Black Acetate",
+      "Lens: Polarized Neutral Grey UV400",
+      "Lens Width: 52 mm, Bridge: 18 mm, Temples: 150 mm",
+      "Hinges: Steel five-barrel custom rivets",
+      "Accessories: Hard protective clamshell case and cleaning cloth"
+    ],
+    "images": [
+      "assets/products/prod-designer-black-sunglasses_1.jpg",
+      "assets/products/prod-designer-black-sunglasses_2.jpg",
+      "assets/products/prod-designer-black-sunglasses_3.jpg",
+      "assets/products/prod-designer-black-sunglasses_4.jpg"
+    ],
+    "shortDescription": "Timeless black acetate sunglasses with iconic trapezoidal shape, polarized dark grey lenses, and durable five-barrel metal hinges.",
+    "fullDescription": "Timeless black acetate sunglasses with iconic trapezoidal shape, polarized dark grey lenses, and durable five-barrel metal hinges. Certified original hardware engineered by Ray-Ban for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Classic trapezoidal silhouette in glossy black Italian acetate",
+      "Polarized lenses eliminate glare from roads, water, and reflective surfaces",
+      "Sturdy five-barrel hinges and embedded metal core temple wires",
+      "Universal comfortable bridge fit suitable for all face shapes"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "14% OFF"
+  },
+  {
+    "id": "prod-genuine-leather-belt",
+    "name": "Men's Heavy Duty Genuine Leather Dress Belt",
+    "brand": "Tommy Hilfiger",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Belts",
+    "price": 2499,
+    "originalPrice": 3299,
+    "rating": 4.8,
+    "reviewsCount": 165,
+    "image": "assets/products/prod-genuine-leather-belt_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-genuine-leather-belt_1.jpg",
+      "assets/products/prod-genuine-leather-belt_2.jpg",
+      "assets/products/prod-genuine-leather-belt_3.jpg",
+      "assets/products/prod-genuine-leather-belt_4.jpg"
+    ],
+    "description": "Men's heavy-duty genuine bridle leather belt with polished single-prong metal buckle, hand-stitched edges, and beveled smooth finish.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Genuine Leather",
+    "specifications": [
+      "Material: 100% Full-Grain Cowhide Bridle Leather",
+      "Buckle: Solid zinc alloy single-prong buckle",
+      "Width: 35 mm (1.4 inches)",
+      "Sizes: 30 to 44 waist inches",
+      "Finish: Smooth semi-gloss hand-burnished edge"
+    ],
+    "images": [
+      "assets/products/prod-genuine-leather-belt_1.jpg",
+      "assets/products/prod-genuine-leather-belt_2.jpg",
+      "assets/products/prod-genuine-leather-belt_3.jpg",
+      "assets/products/prod-genuine-leather-belt_4.jpg"
+    ],
+    "shortDescription": "Men's heavy-duty genuine bridle leather belt with polished single-prong metal buckle, hand-stitched edges, and beveled smooth finish.",
+    "fullDescription": "Men's heavy-duty genuine bridle leather belt with polished single-prong metal buckle, hand-stitched edges, and beveled smooth finish. Certified original hardware engineered by Tommy Hilfiger for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "100% solid full-grain bridle leather strap resists stretching and cracking",
+      "Polished nickel single-prong buckle with rounded smooth corners",
+      "35mm (1.4-inch) versatile width fits dress trousers, chinos, and jeans",
+      "Precision die-cut holes with burnished and sealed edges"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "24% OFF"
+  },
+  {
+    "id": "prod-leather-folio-phone-case",
+    "name": "Genuine Leather Folio Smartphone Wallet Case",
+    "brand": "Spigen",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Phone Cases",
+    "price": 1999,
+    "originalPrice": 2799,
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "image": "assets/products/prod-leather-folio-phone-case_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-leather-folio-phone-case_1.jpg",
+      "assets/products/prod-leather-folio-phone-case_2.jpg",
+      "assets/products/prod-leather-folio-phone-case_3.jpg",
+      "assets/products/prod-leather-folio-phone-case_4.jpg"
+    ],
+    "description": "Handcrafted genuine black leather folio case with magnetic clasp closure, internal card slots, cash pocket, and hands-free landscape kickstand mode.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "360 Protection",
+    "specifications": [
+      "Compatibility: Universal flagship smartphone models",
+      "Material: Genuine Cowhide Leather exterior + Shockproof TPU bumper",
+      "Storage: 3 Card Slots + 1 Currency Slip Pocket",
+      "Closure: Secure dual-magnet side strap",
+      "Features: Wireless charging compatible through case back"
+    ],
+    "images": [
+      "assets/products/prod-leather-folio-phone-case_1.jpg",
+      "assets/products/prod-leather-folio-phone-case_2.jpg",
+      "assets/products/prod-leather-folio-phone-case_3.jpg",
+      "assets/products/prod-leather-folio-phone-case_4.jpg"
+    ],
+    "shortDescription": "Handcrafted genuine black leather folio case with magnetic clasp closure, internal card slots, cash pocket, and hands-free landscape kickstand mode.",
+    "fullDescription": "Handcrafted genuine black leather folio case with magnetic clasp closure, internal card slots, cash pocket, and hands-free landscape kickstand mode. Certified original hardware engineered by Spigen for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Handcrafted genuine black cowhide leather with precision edge stitching",
+      "Internal TPU shock-absorbent shell provides 360-degree drop protection",
+      "3 credit card slots and side cash pocket eliminate need for separate wallet",
+      "Foldable magnetic folio cover doubles as multi-angle hands-free video stand"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "29% OFF"
+  },
+  {
+    "id": "prod-anker-737-power-bank",
+    "name": "Anker 737 Power Bank (PowerCore 24K)",
+    "brand": "Anker",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Power & Charging",
+    "price": 10999,
+    "originalPrice": 12999,
+    "rating": 4.9,
+    "reviewsCount": 210,
+    "image": "assets/products/prod-anker-737-power-bank_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-anker-737-power-bank_1.jpg",
+      "assets/products/prod-anker-737-power-bank_2.jpg",
+      "assets/products/prod-anker-737-power-bank_3.jpg",
+      "assets/products/prod-anker-737-power-bank_4.jpg"
+    ],
+    "description": "Anker 737 Power Bank equipped with Power Delivery 3.1 and bi-directional 140W fast charging. Smart digital display shows output and recharge time.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "140W Two-Way Fast Charge",
+    "specifications": [
+      "Capacity: 24,000mAh (86.4Wh)",
+      "Total Output: 140W Max (2x USB-C + 1x USB-A)",
+      "Ports: 2x USB-C PD 3.1 + 1x USB-A PowerIQ 2.0",
+      "Display: Color smart digital screen",
+      "Weight: 630g compact brick design"
+    ],
+    "images": [
+      "assets/products/prod-anker-737-power-bank_1.jpg",
+      "assets/products/prod-anker-737-power-bank_2.jpg",
+      "assets/products/prod-anker-737-power-bank_3.jpg",
+      "assets/products/prod-anker-737-power-bank_4.jpg"
+    ],
+    "shortDescription": "Anker 737 Power Bank equipped with Power Delivery 3.1 and bi-directional 140W fast charging. Smart digital display shows output and recharge time.",
+    "fullDescription": "Anker 737 Power Bank equipped with Power Delivery 3.1 and bi-directional 140W fast charging. Smart digital display shows output and recharge time. Certified original hardware engineered by Anker for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Ultra-powerful 140W two-way fast charging with Power Delivery 3.1",
+      "Smart digital display shows real-time output and input wattage and time to full charge",
+      "Huge 24,000mAh capacity charges an iPhone 15 five times or MacBook once",
+      "ActiveShield 2.0 real-time temperature monitoring checks thermal levels 3 million times a day"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "15% OFF"
+  },
+  {
+    "id": "prod-anker-prime-100w-charger",
+    "name": "Anker Prime 100W GaN Wall Charger",
+    "brand": "Anker",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Power & Charging",
+    "price": 5499,
+    "originalPrice": 6499,
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "image": "assets/products/prod-anker-prime-100w-charger_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-anker-prime-100w-charger_1.jpg",
+      "assets/products/prod-anker-prime-100w-charger_2.jpg",
+      "assets/products/prod-anker-prime-100w-charger_3.jpg",
+      "assets/products/prod-anker-prime-100w-charger_4.jpg"
+    ],
+    "description": "Anker Prime 100W GaN 3-port wall charger. 43% smaller than Apple's original 96W charger while powering two laptops and one phone simultaneously.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "GaN Tech",
+    "specifications": [
+      "Total Wattage: 100W Max",
+      "Ports: 2x USB-C + 1x USB-A",
+      "Technology: GaNPrime with PowerIQ 4.0 dynamic power distribution",
+      "Plug Type: Foldable prongs for easy travel",
+      "Dimensions: 4.4 x 3.9 x 6.0 cm, weight 183g"
+    ],
+    "images": [
+      "assets/products/prod-anker-prime-100w-charger_1.jpg",
+      "assets/products/prod-anker-prime-100w-charger_2.jpg",
+      "assets/products/prod-anker-prime-100w-charger_3.jpg",
+      "assets/products/prod-anker-prime-100w-charger_4.jpg"
+    ],
+    "shortDescription": "Anker Prime 100W GaN 3-port wall charger. 43% smaller than Apple's original 96W charger while powering two laptops and one phone simultaneously.",
+    "fullDescription": "Anker Prime 100W GaN 3-port wall charger. 43% smaller than Apple's original 96W charger while powering two laptops and one phone simultaneously. Certified original hardware engineered by Anker for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "100W max high-speed charging powers laptops, tablets, and phones",
+      "3-in-1 multi-device power with 2 USB-C ports and 1 USB-A port",
+      "Gallium Nitride (GaN) technology delivers 43% smaller compact form factor",
+      "ActiveShield 2.0 intelligent dynamic temperature sensor"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "15% OFF"
+  },
+  {
+    "id": "prod-anker-maggo-charging-station",
+    "name": "Anker MagGo 3-in-1 Foldable Charging Station",
+    "brand": "Anker",
+    "category": "Accessories",
+    "categoryId": "accessories",
+    "subcategory": "Power & Charging",
+    "price": 8499,
+    "originalPrice": 9999,
+    "rating": 4.8,
+    "reviewsCount": 90,
+    "image": "assets/products/prod-anker-maggo-charging-station_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-anker-maggo-charging-station_1.jpg",
+      "assets/products/prod-anker-maggo-charging-station_2.jpg",
+      "assets/products/prod-anker-maggo-charging-station_3.jpg",
+      "assets/products/prod-anker-maggo-charging-station_4.jpg"
+    ],
+    "description": "Anker MagGo 3-in-1 foldable wireless charging station with official 15W Qi2 fast charging for iPhone, Apple Watch, and wireless earbuds.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Qi2 Certified",
+    "specifications": [
+      "Wireless Output: 15W Qi2 Phone pad + 5W Apple Watch puck + 5W Earbuds pad",
+      "Input: 40W USB-C PD power adapter included",
+      "Foldable Dimensions: 89 x 60 x 25 mm folded",
+      "Weight: 195 grams travel-ready form factor",
+      "Safety: ActiveShield 2.0 thermal protection"
+    ],
+    "images": [
+      "assets/products/prod-anker-maggo-charging-station_1.jpg",
+      "assets/products/prod-anker-maggo-charging-station_2.jpg",
+      "assets/products/prod-anker-maggo-charging-station_3.jpg",
+      "assets/products/prod-anker-maggo-charging-station_4.jpg"
+    ],
+    "shortDescription": "Anker MagGo 3-in-1 foldable wireless charging station with official 15W Qi2 fast charging for iPhone, Apple Watch, and wireless earbuds.",
+    "fullDescription": "Anker MagGo 3-in-1 foldable wireless charging station with official 15W Qi2 fast charging for iPhone, Apple Watch, and wireless earbuds. Certified original hardware engineered by Anker for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Official Qi2 certified 15W ultra-fast magnetic wireless charging",
+      "Charges iPhone, Apple Watch, and AirPods simultaneously",
+      "Ultra-compact foldable design folds down to the size of a deck of cards",
+      "Multi-angle adjustable hinge for StandBy mode on bedside tables"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "15% OFF"
+  },
+  {
+    "id": "prod-apple-watch-series-10",
+    "name": "Apple Watch Series 10",
+    "brand": "Apple",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Smartwatches",
+    "price": 46900,
+    "originalPrice": 49900,
+    "rating": 4.9,
+    "reviewsCount": 210,
+    "image": "assets/products/prod-apple-watch-series-10_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-watch-series-10_1.jpg",
+      "assets/products/prod-apple-watch-series-10_2.jpg",
+      "assets/products/prod-apple-watch-series-10_3.jpg",
+      "assets/products/prod-apple-watch-series-10_4.jpg"
+    ],
+    "description": "Apple Watch Series 10 features Apple's biggest, most advanced wide-angle OLED display yet, thinnest design ever, sleep apnea notifications, and faster charging.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Thinnest Apple Watch",
+    "specifications": [
+      "Case Size: 46mm or 42mm Aerospace-grade aluminum or polished titanium",
+      "Display: Wide-angle OLED Always-On Retina display (up to 2000 nits)",
+      "Chip: S10 SiP with 64-bit dual-core processor and 4-core Neural Engine",
+      "Sensors: ECG, Blood Oxygen, Temperature sensing, Depth gauge to 6m, Water temperature",
+      "Durability: 50m water resistant, IP6X dust resistance"
+    ],
+    "images": [
+      "assets/products/prod-apple-watch-series-10_1.jpg",
+      "assets/products/prod-apple-watch-series-10_2.jpg",
+      "assets/products/prod-apple-watch-series-10_3.jpg",
+      "assets/products/prod-apple-watch-series-10_4.jpg"
+    ],
+    "shortDescription": "Apple Watch Series 10 features Apple's biggest, most advanced wide-angle OLED display yet, thinnest design ever, sleep apnea notifications, and faster charging.",
+    "fullDescription": "Apple Watch Series 10 features Apple's biggest, most advanced wide-angle OLED display yet, thinnest design ever, sleep apnea notifications, and faster charging. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Thinnest Apple Watch ever with up to 30% more active screen area",
+      "Wide-angle OLED display is up to 40% brighter when viewed from an angle",
+      "Sleep apnea notifications and depth/water temperature sensors for snorkeling",
+      "Faster charging: reach 80% battery in approximately 30 minutes"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "6% OFF"
+  },
+  {
+    "id": "prod-apple-watch-ultra-2",
+    "name": "Apple Watch Ultra 2 (Titanium)",
+    "brand": "Apple",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Rugged Smartwatches",
+    "price": 89900,
+    "originalPrice": 89900,
+    "rating": 4.9,
+    "reviewsCount": 140,
+    "image": "assets/products/prod-apple-watch-ultra-2_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-watch-ultra-2_1.jpg",
+      "assets/products/prod-apple-watch-ultra-2_2.jpg",
+      "assets/products/prod-apple-watch-ultra-2_3.jpg",
+      "assets/products/prod-apple-watch-ultra-2_4.jpg"
+    ],
+    "description": "Apple Watch Ultra 2 in 49mm aerospace titanium case. Features 3000 nits display, precision dual-frequency GPS, Action button, and up to 72 hours in Low Power Mode.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Extreme Adventure",
+    "specifications": [
+      "Case: 49mm Grade 5 Titanium with sapphire front crystal",
+      "Display: Always-On Retina OLED up to 3000 nits",
+      "Battery: 36 hours normal use (up to 72 hours in Low Power Mode)",
+      "Siren: 86-decibel sound siren audible up to 180 meters",
+      "Water Resistance: 100 meters (dive certified to 40m)"
+    ],
+    "images": [
+      "assets/products/prod-apple-watch-ultra-2_1.jpg",
+      "assets/products/prod-apple-watch-ultra-2_2.jpg",
+      "assets/products/prod-apple-watch-ultra-2_3.jpg",
+      "assets/products/prod-apple-watch-ultra-2_4.jpg"
+    ],
+    "shortDescription": "Apple Watch Ultra 2 in 49mm aerospace titanium case. Features 3000 nits display, precision dual-frequency GPS, Action button, and up to 72 hours in Low Power Mode.",
+    "fullDescription": "Apple Watch Ultra 2 in 49mm aerospace titanium case. Features 3000 nits display, precision dual-frequency GPS, Action button, and up to 72 hours in Low Power Mode. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "49mm corrosion-resistant aerospace titanium case with raised bezel edges",
+      "Brightest Apple display ever at 3000 nits for direct sun visibility",
+      "Precision dual-frequency GPS (L1 and L5) delivers exact distance and pace",
+      "EN13319 certified dive computer capability down to 40 meters"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": ""
+  },
+  {
+    "id": "prod-apple-watch-se-2",
+    "name": "Apple Watch SE (2nd Gen)",
+    "brand": "Apple",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Smartwatches",
+    "price": 29900,
+    "originalPrice": 32900,
+    "rating": 4.8,
+    "reviewsCount": 260,
+    "image": "assets/products/prod-apple-watch-se-2_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-apple-watch-se-2_1.jpg",
+      "assets/products/prod-apple-watch-se-2_2.jpg",
+      "assets/products/prod-apple-watch-se-2_3.jpg",
+      "assets/products/prod-apple-watch-se-2_4.jpg"
+    ],
+    "description": "Apple Watch SE (2nd Gen) delivers essential fitness tracking, heart rate notifications, Emergency SOS, Crash Detection, and swimproof 50m water resistance.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Essential Value",
+    "specifications": [
+      "Case Size: 44mm or 40mm 100% recycled aluminum case",
+      "Display: Retina LTPO OLED display up to 1000 nits",
+      "Chip: S8 SiP with 64-bit dual-core processor",
+      "Sensors: High and low heart rate, irregular rhythm notifications",
+      "Battery: Up to 18 hours all-day battery life"
+    ],
+    "images": [
+      "assets/products/prod-apple-watch-se-2_1.jpg",
+      "assets/products/prod-apple-watch-se-2_2.jpg",
+      "assets/products/prod-apple-watch-se-2_3.jpg",
+      "assets/products/prod-apple-watch-se-2_4.jpg"
+    ],
+    "shortDescription": "Apple Watch SE (2nd Gen) delivers essential fitness tracking, heart rate notifications, Emergency SOS, Crash Detection, and swimproof 50m water resistance.",
+    "fullDescription": "Apple Watch SE (2nd Gen) delivers essential fitness tracking, heart rate notifications, Emergency SOS, Crash Detection, and swimproof 50m water resistance. Certified original hardware engineered by Apple for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Essential health and fitness tracking with three Activity Rings",
+      "Crash Detection and Fall Detection automatically connect you to emergency services",
+      "S8 SiP dual-core processor delivers up to 20% faster performance than 1st Gen",
+      "Swimproof water resistance up to 50 meters"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "9% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-watch-ultra",
+    "name": "Samsung Galaxy Watch Ultra (LTE)",
+    "brand": "Samsung",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Rugged Smartwatches",
+    "price": 59999,
+    "originalPrice": 64999,
+    "rating": 4.9,
+    "reviewsCount": 95,
+    "image": "assets/products/prod-samsung-galaxy-watch-ultra_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-watch-ultra_1.jpg",
+      "assets/products/prod-samsung-galaxy-watch-ultra_2.jpg",
+      "assets/products/prod-samsung-galaxy-watch-ultra_3.jpg",
+      "assets/products/prod-samsung-galaxy-watch-ultra_4.jpg"
+    ],
+    "description": "Samsung Galaxy Watch Ultra with Grade 4 Titanium cushion case, 10ATM water resistance, dual-frequency GPS, Quick Button, and emergency siren.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Titanium Rugged",
+    "specifications": [
+      "Case: 47mm Grade 4 Titanium with Sapphire Crystal glass",
+      "Display: 1.5-inch Super AMOLED (480x480) 3000 nits peak",
+      "Processor: Exynos W1000 (3nm 5-Core processor)",
+      "Battery: 590mAh with WPC wireless fast charging",
+      "Durability: MIL-STD-810H, IP68, 10ATM ocean-proof"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-watch-ultra_1.jpg",
+      "assets/products/prod-samsung-galaxy-watch-ultra_2.jpg",
+      "assets/products/prod-samsung-galaxy-watch-ultra_3.jpg",
+      "assets/products/prod-samsung-galaxy-watch-ultra_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy Watch Ultra with Grade 4 Titanium cushion case, 10ATM water resistance, dual-frequency GPS, Quick Button, and emergency siren.",
+    "fullDescription": "Samsung Galaxy Watch Ultra with Grade 4 Titanium cushion case, 10ATM water resistance, dual-frequency GPS, Quick Button, and emergency siren. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Rugged cushion design crafted with aerospace Grade 4 Titanium",
+      "10ATM (100m) water resistance certified for ocean swimming",
+      "Up to 100 hours of battery life in Power Saving mode (590mAh battery)",
+      "Quick Button for instant workout initiation and 85dB emergency siren"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-watch-7",
+    "name": "Samsung Galaxy Watch 7 (Bluetooth)",
+    "brand": "Samsung",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Smartwatches",
+    "price": 29999,
+    "originalPrice": 32999,
+    "rating": 4.8,
+    "reviewsCount": 160,
+    "image": "assets/products/prod-samsung-galaxy-watch-7_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-watch-7_1.jpg",
+      "assets/products/prod-samsung-galaxy-watch-7_2.jpg",
+      "assets/products/prod-samsung-galaxy-watch-7_3.jpg",
+      "assets/products/prod-samsung-galaxy-watch-7_4.jpg"
+    ],
+    "description": "Samsung Galaxy Watch 7 with 3nm processor, dual-frequency GPS, BioActive Sensor with AGEs index tracking, Energy Score, and Galaxy AI wellness guidance.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Galaxy AI Health",
+    "specifications": [
+      "Case: 44mm Armor Aluminum case with Sapphire Crystal screen",
+      "Display: 1.5\" Super AMOLED (480 x 480) Always-On Display",
+      "Chip: Exynos W1000 (Penta-core 3nm)",
+      "Memory: 2GB RAM + 32GB internal storage",
+      "Sensors: Optical Bio-signal, Electrical Heart (ECG), Bioelectrical Impedance (BIA)"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-watch-7_1.jpg",
+      "assets/products/prod-samsung-galaxy-watch-7_2.jpg",
+      "assets/products/prod-samsung-galaxy-watch-7_3.jpg",
+      "assets/products/prod-samsung-galaxy-watch-7_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy Watch 7 with 3nm processor, dual-frequency GPS, BioActive Sensor with AGEs index tracking, Energy Score, and Galaxy AI wellness guidance.",
+    "fullDescription": "Samsung Galaxy Watch 7 with 3nm processor, dual-frequency GPS, BioActive Sensor with AGEs index tracking, Energy Score, and Galaxy AI wellness guidance. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "First 3nm processor on a smartwatch delivers 3x faster CPU speed",
+      "Upgraded 13-LED BioActive Sensor measures heart rate, sleep, and AGEs index",
+      "Energy Score uses Galaxy AI to evaluate your daily physical readiness",
+      "Dual-frequency L1 + L5 GPS provides precise tracking through dense cities"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "9% OFF"
+  },
+  {
+    "id": "prod-samsung-galaxy-watch-6-classic",
+    "name": "Samsung Galaxy Watch 6 Classic",
+    "brand": "Samsung",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Classic Smartwatches",
+    "price": 27999,
+    "originalPrice": 36999,
+    "rating": 4.8,
+    "reviewsCount": 210,
+    "image": "assets/products/prod-samsung-galaxy-watch-6-classic_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-samsung-galaxy-watch-6-classic_1.jpg",
+      "assets/products/prod-samsung-galaxy-watch-6-classic_2.jpg",
+      "assets/products/prod-samsung-galaxy-watch-6-classic_3.jpg",
+      "assets/products/prod-samsung-galaxy-watch-6-classic_4.jpg"
+    ],
+    "description": "Samsung Galaxy Watch 6 Classic with iconic physical rotating bezel, refined stainless steel case, sapphire crystal glass, and advanced sleep coaching.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Rotating Bezel",
+    "specifications": [
+      "Case Size: 47mm Stainless Steel casing",
+      "Display: 1.5\" Super AMOLED (480x480) 2000 nits",
+      "Processor: Exynos W930 Dual-Core 1.4GHz",
+      "Memory: 2GB RAM + 16GB Storage",
+      "Durability: 5ATM + IP68 water/dust resistance, MIL-STD-810H"
+    ],
+    "images": [
+      "assets/products/prod-samsung-galaxy-watch-6-classic_1.jpg",
+      "assets/products/prod-samsung-galaxy-watch-6-classic_2.jpg",
+      "assets/products/prod-samsung-galaxy-watch-6-classic_3.jpg",
+      "assets/products/prod-samsung-galaxy-watch-6-classic_4.jpg"
+    ],
+    "shortDescription": "Samsung Galaxy Watch 6 Classic with iconic physical rotating bezel, refined stainless steel case, sapphire crystal glass, and advanced sleep coaching.",
+    "fullDescription": "Samsung Galaxy Watch 6 Classic with iconic physical rotating bezel, refined stainless steel case, sapphire crystal glass, and advanced sleep coaching. Certified original hardware engineered by Samsung for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Physical rotating bezel provides satisfying, tactile UI navigation",
+      "Premium stainless steel case with scratch-resistant Sapphire Crystal",
+      "Advanced sleep coaching with in-depth sleep stage and snore monitoring",
+      "Personalized HR zones tailor workout intensity to cardiovascular limits"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "24% OFF"
+  },
+  {
+    "id": "prod-garmin-forerunner-265",
+    "name": "Garmin Forerunner 265 GPS Running Watch",
+    "brand": "Garmin",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Running Smartwatches",
+    "price": 49990,
+    "originalPrice": 53990,
+    "rating": 4.9,
+    "reviewsCount": 115,
+    "image": "assets/products/prod-garmin-forerunner-265_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-garmin-forerunner-265_1.jpg",
+      "assets/products/prod-garmin-forerunner-265_2.jpg",
+      "assets/products/prod-garmin-forerunner-265_3.jpg",
+      "assets/products/prod-garmin-forerunner-265_4.jpg"
+    ],
+    "description": "Garmin Forerunner 265 GPS running smartwatch with colorful AMOLED touchscreen, training readiness score, multi-band GPS with SatIQ, and 13 days battery life.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Runners Choice",
+    "specifications": [
+      "Display: 1.3\" AMOLED (416 x 416 pixels) with Corning Gorilla Glass 3",
+      "Battery: Smartwatch Mode up to 13 days / GPS-Only up to 20 hours",
+      "Sensors: Multi-frequency positioning, Garmin Elevate V4 wrist HR, Pulse Ox, Barometric altimeter",
+      "Water Rating: 5 ATM (50 meters)",
+      "Connectivity: Bluetooth, ANT+, Wi-Fi, onboard music storage"
+    ],
+    "images": [
+      "assets/products/prod-garmin-forerunner-265_1.jpg",
+      "assets/products/prod-garmin-forerunner-265_2.jpg",
+      "assets/products/prod-garmin-forerunner-265_3.jpg",
+      "assets/products/prod-garmin-forerunner-265_4.jpg"
+    ],
+    "shortDescription": "Garmin Forerunner 265 GPS running smartwatch with colorful AMOLED touchscreen, training readiness score, multi-band GPS with SatIQ, and 13 days battery life.",
+    "fullDescription": "Garmin Forerunner 265 GPS running smartwatch with colorful AMOLED touchscreen, training readiness score, multi-band GPS with SatIQ, and 13 days battery life. Certified original hardware engineered by Garmin for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Brilliant 1.3-inch colorful AMOLED touchscreen with lightweight 46mm bezel",
+      "Training Readiness score based on sleep quality, recovery, and training load",
+      "Multi-band GPS with SatIQ technology delivers superior positioning accuracy",
+      "Up to 13 days of battery life in smartwatch mode and up to 20 hours in GPS mode"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "7% OFF"
+  },
+  {
+    "id": "prod-garmin-fenix-7-pro",
+    "name": "Garmin Fenix 7 Pro Sapphire Solar GPS",
+    "brand": "Garmin",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Multisport GPS Smartwatches",
+    "price": 86990,
+    "originalPrice": 96990,
+    "rating": 5.0,
+    "reviewsCount": 75,
+    "image": "assets/products/prod-garmin-fenix-7-pro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-garmin-fenix-7-pro_1.jpg",
+      "assets/products/prod-garmin-fenix-7-pro_2.jpg",
+      "assets/products/prod-garmin-fenix-7-pro_3.jpg",
+      "assets/products/prod-garmin-fenix-7-pro_4.jpg"
+    ],
+    "description": "Garmin Fenix 7 Pro Sapphire Solar multisport GPS watch with solar charging Power Sapphire lens, built-in LED flashlight, endurance score, and TopoActive maps.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Ultimate Outdoor",
+    "specifications": [
+      "Case: 47mm Fiber-reinforced polymer with titanium rear cover and bezel",
+      "Lens: Power Sapphire with solar charging capability",
+      "Display: 1.3\" Sunlight-visible, transflective memory-in-pixel (MIP)",
+      "Battery: Up to 22 days with solar in smartwatch mode / 73 hours in GPS mode",
+      "Maps: Preloaded TopoActive maps, ski resort maps, golf courses"
+    ],
+    "images": [
+      "assets/products/prod-garmin-fenix-7-pro_1.jpg",
+      "assets/products/prod-garmin-fenix-7-pro_2.jpg",
+      "assets/products/prod-garmin-fenix-7-pro_3.jpg",
+      "assets/products/prod-garmin-fenix-7-pro_4.jpg"
+    ],
+    "shortDescription": "Garmin Fenix 7 Pro Sapphire Solar multisport GPS watch with solar charging Power Sapphire lens, built-in LED flashlight, endurance score, and TopoActive maps.",
+    "fullDescription": "Garmin Fenix 7 Pro Sapphire Solar multisport GPS watch with solar charging Power Sapphire lens, built-in LED flashlight, endurance score, and TopoActive maps. Certified original hardware engineered by Garmin for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Solar charging Power Sapphire lens gains up to 22 days of battery life in smartwatch mode",
+      "Built-in LED flashlight with variable intensities and red safety strobe light",
+      "Hill Score and Endurance Score measure running progress and stamina across climbs",
+      "Gen 5 wrist-based heart rate sensor with ECG app support and Pulse Ox blood oxygen"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-fitbit-charge-6",
+    "name": "Fitbit Charge 6 Advanced Fitness Tracker",
+    "brand": "Fitbit",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Fitness Trackers",
+    "price": 14999,
+    "originalPrice": 16999,
+    "rating": 4.8,
+    "reviewsCount": 180,
+    "image": "assets/products/prod-fitbit-charge-6_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-fitbit-charge-6_1.jpg",
+      "assets/products/prod-fitbit-charge-6_2.jpg",
+      "assets/products/prod-fitbit-charge-6_3.jpg",
+      "assets/products/prod-fitbit-charge-6_4.jpg"
+    ],
+    "description": "Fitbit Charge 6 advanced health & fitness tracker with Google built-in. Features heart rate on exercise equipment, ECG app, YouTube Music controls, and 7-day battery.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Google Essentials",
+    "specifications": [
+      "Display: Color AMOLED touchscreen with haptic side navigation button",
+      "Sensors: Multi-path optical HR, SpO2, Skin temperature, ECG, EDA stress sensor",
+      "GPS: Built-in GPS + GLONASS for phone-free distance tracking",
+      "Water Resistance: Water resistant to 50 meters (5 ATM)",
+      "Compatibility: Works with iOS 15+ and Android OS 9.0+"
+    ],
+    "images": [
+      "assets/products/prod-fitbit-charge-6_1.jpg",
+      "assets/products/prod-fitbit-charge-6_2.jpg",
+      "assets/products/prod-fitbit-charge-6_3.jpg",
+      "assets/products/prod-fitbit-charge-6_4.jpg"
+    ],
+    "shortDescription": "Fitbit Charge 6 advanced health & fitness tracker with Google built-in. Features heart rate on exercise equipment, ECG app, YouTube Music controls, and 7-day battery.",
+    "fullDescription": "Fitbit Charge 6 advanced health & fitness tracker with Google built-in. Features heart rate on exercise equipment, ECG app, YouTube Music controls, and 7-day battery. Certified original hardware engineered by Fitbit for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Most accurate heart rate tracking on a tracker with 60% better accuracy at vigorous workouts",
+      "Built-in Google apps: Google Maps turn-by-turn directions and Google Wallet contactless pay",
+      "Connect to compatible exercise gym equipment via encrypted Bluetooth",
+      "Up to 7 days of battery life without needing daily recharging"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "12% OFF"
+  },
+  {
+    "id": "prod-amazfit-cheetah-pro",
+    "name": "Amazfit Cheetah Pro Running Smartwatch",
+    "brand": "Amazfit",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Running Smartwatches",
+    "price": 26999,
+    "originalPrice": 29999,
+    "rating": 4.8,
+    "reviewsCount": 65,
+    "image": "assets/products/prod-amazfit-cheetah-pro_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-amazfit-cheetah-pro_1.jpg",
+      "assets/products/prod-amazfit-cheetah-pro_2.jpg",
+      "assets/products/prod-amazfit-cheetah-pro_3.jpg",
+      "assets/products/prod-amazfit-cheetah-pro_4.jpg"
+    ],
+    "description": "Amazfit Cheetah Pro lightweight running smartwatch with premium titanium alloy bezel, MaxTrack dual-band circularly-polarized GPS antenna, and AI Zepp Coach.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Titanium Bezel",
+    "specifications": [
+      "Bezel: Titanium Alloy with fiber-reinforced polymer frame",
+      "Display: 1.45-inch AMOLED (480 x 480) 1000 nits peak brightness",
+      "Battery: 14 days typical usage / 26 hours accurate GPS tracking",
+      "Weight: Featherlight 34g without strap",
+      "Waterproofing: 5 ATM water resistant"
+    ],
+    "images": [
+      "assets/products/prod-amazfit-cheetah-pro_1.jpg",
+      "assets/products/prod-amazfit-cheetah-pro_2.jpg",
+      "assets/products/prod-amazfit-cheetah-pro_3.jpg",
+      "assets/products/prod-amazfit-cheetah-pro_4.jpg"
+    ],
+    "shortDescription": "Amazfit Cheetah Pro lightweight running smartwatch with premium titanium alloy bezel, MaxTrack dual-band circularly-polarized GPS antenna, and AI Zepp Coach.",
+    "fullDescription": "Amazfit Cheetah Pro lightweight running smartwatch with premium titanium alloy bezel, MaxTrack dual-band circularly-polarized GPS antenna, and AI Zepp Coach. Certified original hardware engineered by Amazfit for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "MaxTrack GPS technology tracks through skyscrapers and tree canopies with 99.5% accuracy",
+      "Premium lightweight design: Titanium alloy bezel with sweat-wicking nylon strap",
+      "AI-powered Zepp Coach generates personalized training and marathon race plans",
+      "Offline map navigation and route importing with turn-by-turn alerts"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-casio-g-shock-casiOak",
+    "name": "Casio G-Shock GA-2100-1A1 'CasiOak'",
+    "brand": "Casio",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Rugged Watches",
+    "price": 8995,
+    "originalPrice": 9995,
+    "rating": 4.9,
+    "reviewsCount": 340,
+    "image": "assets/products/prod-casio-g-shock-casiOak_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-casio-g-shock-casiOak_1.jpg",
+      "assets/products/prod-casio-g-shock-casiOak_2.jpg",
+      "assets/products/prod-casio-g-shock-casiOak_3.jpg",
+      "assets/products/prod-casio-g-shock-casiOak_4.jpg"
+    ],
+    "description": "Casio G-Shock GA-2100-1A1 'CasiOak' octagonal analog-digital watch with Carbon Core Guard structure. Ultra-thin 11.8mm case in murdered-out stealth all-black.",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "badge": "Cult Favorite",
+    "specifications": [
+      "Case Size: 48.5 x 45.4 x 11.8 mm, Weight: 51 grams",
+      "Glass: Mineral glass scratch-resistant crystal",
+      "Illumination: Double LED light (Super Illuminator for dial and LCD)",
+      "Battery Life: Approximately 3 years on dual SR726W batteries",
+      "Functions: 31 time zones (48 cities), 1/100-sec stopwatch, 5 daily alarms"
+    ],
+    "images": [
+      "assets/products/prod-casio-g-shock-casiOak_1.jpg",
+      "assets/products/prod-casio-g-shock-casiOak_2.jpg",
+      "assets/products/prod-casio-g-shock-casiOak_3.jpg",
+      "assets/products/prod-casio-g-shock-casiOak_4.jpg"
+    ],
+    "shortDescription": "Casio G-Shock GA-2100-1A1 'CasiOak' octagonal analog-digital watch with Carbon Core Guard structure. Ultra-thin 11.8mm case in murdered-out stealth all-black.",
+    "fullDescription": "Casio G-Shock GA-2100-1A1 'CasiOak' octagonal analog-digital watch with Carbon Core Guard structure. Ultra-thin 11.8mm case in murdered-out stealth all-black. Certified original hardware engineered by Casio for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Iconic octagonal bezel inspired by the legendary 1983 original DW-5000C",
+      "Carbon Core Guard structure protects module with carbon fiber-reinforced resin case",
+      "Slimmest G-Shock analog-digital model at just 11.8 mm case thickness",
+      "200-meter water resistance and shock resistance withstands extreme punishment"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-casio-g-shock-dw5600",
+    "name": "Casio G-Shock DW-5600E-1V Classic",
+    "brand": "Casio",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Rugged Watches",
+    "price": 5495,
+    "originalPrice": 5995,
+    "rating": 4.9,
+    "reviewsCount": 460,
+    "image": "assets/products/prod-casio-g-shock-dw5600_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-casio-g-shock-dw5600_1.jpg",
+      "assets/products/prod-casio-g-shock-dw5600_2.jpg",
+      "assets/products/prod-casio-g-shock-dw5600_3.jpg",
+      "assets/products/prod-casio-g-shock-dw5600_4.jpg"
+    ],
+    "description": "Casio G-Shock DW-5600E-1V classic origin square digital watch. The indestructible watch that launched the brand, featuring EL backlight and 200m water resistance.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Origin Square",
+    "specifications": [
+      "Dimensions: 48.9 x 42.8 x 13.4 mm, Weight: 53g",
+      "Case / Bezel Material: High-durability matte resin",
+      "Accuracy: +/-15 seconds per month",
+      "Functions: 1/100-second stopwatch, countdown timer, multi-function alarm",
+      "Battery: CR2016 (approximately 2-3 years lifespan)"
+    ],
+    "images": [
+      "assets/products/prod-casio-g-shock-dw5600_1.jpg",
+      "assets/products/prod-casio-g-shock-dw5600_2.jpg",
+      "assets/products/prod-casio-g-shock-dw5600_3.jpg",
+      "assets/products/prod-casio-g-shock-dw5600_4.jpg"
+    ],
+    "shortDescription": "Casio G-Shock DW-5600E-1V classic origin square digital watch. The indestructible watch that launched the brand, featuring EL backlight and 200m water resistance.",
+    "fullDescription": "Casio G-Shock DW-5600E-1V classic origin square digital watch. The indestructible watch that launched the brand, featuring EL backlight and 200m water resistance. Certified original hardware engineered by Casio for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Authentic G-Shock origin square case design recognized worldwide",
+      "Legendary shock resistance withstands 10-meter freefall drops",
+      "200-meter water resistance suitable for scuba diving and water sports",
+      "Electro-luminescent backlight with afterglow for pitch-black visibility"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "8% OFF"
+  },
+  {
+    "id": "prod-casio-vintage-a168wa",
+    "name": "Casio Vintage A168WA-1YES Digital",
+    "brand": "Casio",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Vintage Digital",
+    "price": 2695,
+    "originalPrice": 2995,
+    "rating": 4.8,
+    "reviewsCount": 510,
+    "image": "assets/products/prod-casio-vintage-a168wa_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-casio-vintage-a168wa_1.jpg",
+      "assets/products/prod-casio-vintage-a168wa_2.jpg",
+      "assets/products/prod-casio-vintage-a168wa_3.jpg",
+      "assets/products/prod-casio-vintage-a168wa_4.jpg"
+    ],
+    "description": "Casio Vintage A168WA-1YES stainless steel digital watch with Illuminator blue-green electroluminescent backlight, daily alarm, and adjustable sliding clasp.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Retro Classic",
+    "specifications": [
+      "Dimensions: 38.6 x 36.3 x 9.6 mm, Weight: 49g",
+      "Band: Stainless Steel Band with Self-Adjustable Clasp",
+      "Water Resistance: Water Resistant under ISO 22810 standards",
+      "Battery: CR2016 delivers up to 7 years battery life",
+      "Features: 1/100-sec stopwatch, daily alarm, hourly time signal, auto-calendar"
+    ],
+    "images": [
+      "assets/products/prod-casio-vintage-a168wa_1.jpg",
+      "assets/products/prod-casio-vintage-a168wa_2.jpg",
+      "assets/products/prod-casio-vintage-a168wa_3.jpg",
+      "assets/products/prod-casio-vintage-a168wa_4.jpg"
+    ],
+    "shortDescription": "Casio Vintage A168WA-1YES stainless steel digital watch with Illuminator blue-green electroluminescent backlight, daily alarm, and adjustable sliding clasp.",
+    "fullDescription": "Casio Vintage A168WA-1YES stainless steel digital watch with Illuminator blue-green electroluminescent backlight, daily alarm, and adjustable sliding clasp. Certified original hardware engineered by Casio for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Timeless retro 1980s aesthetic in gleaming chrome-plated resin and stainless steel",
+      "ElectroLuminescent (EL) panel illuminates entire display for clear reading in darkness",
+      "Adjustable stainless steel bracelet clasp fits any wrist without tool link removal",
+      "7-year battery life provides hassle-free years of continuous daily operation"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "10% OFF"
+  },
+  {
+    "id": "prod-casio-edifice-solar",
+    "name": "Casio Edifice Solar Chronograph",
+    "brand": "Casio",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Motorsport Chronographs",
+    "price": 13995,
+    "originalPrice": 16995,
+    "rating": 4.8,
+    "reviewsCount": 85,
+    "image": "assets/products/prod-casio-edifice-solar_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-casio-edifice-solar_1.jpg",
+      "assets/products/prod-casio-edifice-solar_2.jpg",
+      "assets/products/prod-casio-edifice-solar_3.jpg",
+      "assets/products/prod-casio-edifice-solar_4.jpg"
+    ],
+    "description": "Casio Edifice solar-powered motorsport chronograph with blue dial, sapphire crystal glass, solid stainless steel band, and 100-meter water resistance.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Solar Powered",
+    "specifications": [
+      "Case: 49.5 x 45.3 x 12.0 mm solid Stainless Steel",
+      "Glass: High-grade scratch-resistant Sapphire Crystal",
+      "Power: Tough Solar (operating time approx. 5 months on full charge without light)",
+      "Stopwatch: 1-second stopwatch with split time capability",
+      "Band: Solid stainless steel link bracelet with one-touch 3-fold clasp"
+    ],
+    "images": [
+      "assets/products/prod-casio-edifice-solar_1.jpg",
+      "assets/products/prod-casio-edifice-solar_2.jpg",
+      "assets/products/prod-casio-edifice-solar_3.jpg",
+      "assets/products/prod-casio-edifice-solar_4.jpg"
+    ],
+    "shortDescription": "Casio Edifice solar-powered motorsport chronograph with blue dial, sapphire crystal glass, solid stainless steel band, and 100-meter water resistance.",
+    "fullDescription": "Casio Edifice solar-powered motorsport chronograph with blue dial, sapphire crystal glass, solid stainless steel band, and 100-meter water resistance. Certified original hardware engineered by Casio for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Solar-powered quartz movement converts sunlight and indoor light into battery reserve",
+      "Scratch-resistant sapphire crystal with non-reflective anti-glare coating",
+      "Motorsport-inspired dynamic dial with 3 functional sub-dials and date window",
+      "100-meter (10 bar) water resistance for everyday sport and swimming"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "18% OFF"
+  },
+  {
+    "id": "prod-fossil-grant-chronograph",
+    "name": "Fossil Grant Chronograph Leather Watch",
+    "brand": "Fossil",
+    "category": "Watches",
+    "categoryId": "watches",
+    "subcategory": "Chronograph Watches",
+    "price": 10995,
+    "originalPrice": 13995,
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "image": "assets/products/prod-fossil-grant-chronograph_1.jpg",
+    "thumbnails": [
+      "assets/products/prod-fossil-grant-chronograph_1.jpg",
+      "assets/products/prod-fossil-grant-chronograph_2.jpg",
+      "assets/products/prod-fossil-grant-chronograph_3.jpg",
+      "assets/products/prod-fossil-grant-chronograph_4.jpg"
+    ],
+    "description": "Fossil Grant Chronograph with cream dial, Roman numeral hour markers, stainless steel case, and interchangeable dark brown genuine luggage leather strap.",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "badge": "Classic Dress",
+    "specifications": [
+      "Case Size: 44 mm, Case Thickness: 12 mm",
+      "Movement: Quartz Chronograph movement",
+      "Strap: 22mm 100% Genuine Luggage Leather",
+      "Water Resistance: 5 ATM (50 meters)",
+      "Crystal: Hardened mineral crystal"
+    ],
+    "images": [
+      "assets/products/prod-fossil-grant-chronograph_1.jpg",
+      "assets/products/prod-fossil-grant-chronograph_2.jpg",
+      "assets/products/prod-fossil-grant-chronograph_3.jpg",
+      "assets/products/prod-fossil-grant-chronograph_4.jpg"
+    ],
+    "shortDescription": "Fossil Grant Chronograph with cream dial, Roman numeral hour markers, stainless steel case, and interchangeable dark brown genuine luggage leather strap.",
+    "fullDescription": "Fossil Grant Chronograph with cream dial, Roman numeral hour markers, stainless steel case, and interchangeable dark brown genuine luggage leather strap. Certified original hardware engineered by Fossil for maximum reliability, premium craftsmanship, and backed by manufacturer warranty and 24/7 ShopEase customer support.",
+    "highlights": [
+      "Vintage-inspired Roman numeral markers set against an embossed cream dial",
+      "44mm round stainless steel case with polished silver-tone bezel",
+      "Three sub-dials track 24-hour time, 30-minute timer, and running seconds",
+      "Interchangeable 22mm genuine leather strap with stainless steel buckle"
+    ],
+    "shippingInformation": "Free Express Delivery on orders over ₹1,999. Dispatched within 24-48 hours.",
+    "returnInformation": "30-Day Easy Returns & Hassle-free replacement policy.",
+    "availability": "In Stock",
+    "discount": "21% OFF"
+  }
+];
+
+  // Currency Formatter
+  function formatINR(amount) {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0,
+    }).format(amount);
+  }
+
+  // Fallback Image by Category (Generic dynamic lookup from catalog or safe placeholder)
+  const SAFE_NEUTRAL_PLACEHOLDER = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v2'></path><path d='M3 14v2a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16v-2'></path><polyline points='3.27 6.96 12 12.01 20.73 6.96'></polyline><line x1='12' y1='22.08' x2='12' y2='12'></line></svg>";
+
+  function getFallbackImage(category) {
+    if (!category || typeof category !== 'string') return SAFE_NEUTRAL_PLACEHOLDER;
+    const cat = category.toLowerCase().trim();
+    if (Array.isArray(PRODUCTS)) {
+      const match = PRODUCTS.find(p => (p.category && p.category.toLowerCase() === cat) || (p.categoryId && p.categoryId.toLowerCase() === cat));
+      if (match && match.image) return match.image;
+    }
+    return SAFE_NEUTRAL_PLACEHOLDER;
+  }
+
+  // Universal Item Image Resolver: Uses exact productId/SKU or name to resolve true catalog image
+  function resolveItemImage(item) {
+    if (!item) return SAFE_NEUTRAL_PLACEHOLDER;
+    const rawProdId = String(item.productId || item.id || item.sku || '').trim();
+    const name = String(item.name || item.title || '').trim();
+
+    // 1. Direct ID lookup
+    if (rawProdId) {
+      const direct = getProductById(rawProdId);
+      if (direct && direct.image) return direct.image;
+    }
+
+    // 2. Case-insensitive & normalized ID lookup (handles with/without 'prod-' prefix)
+    if (rawProdId && Array.isArray(PRODUCTS)) {
+      const lowerId = rawProdId.toLowerCase();
+      const cleanId = lowerId.replace(/^prod-/, '');
+      const match = PRODUCTS.find(p => {
+        if (!p || !p.id) return false;
+        const pid = p.id.toLowerCase();
+        const pClean = pid.replace(/^prod-/, '');
+        return pid === lowerId || pClean === cleanId || pid === cleanId || pClean === lowerId;
+      });
+      if (match && match.image) return match.image;
+    }
+
+    // 3. Name lookup in catalog (exact match first, then substring match)
+    if (name && Array.isArray(PRODUCTS)) {
+      const lowerName = name.toLowerCase().trim();
+      let match = PRODUCTS.find(p => p && p.name && p.name.toLowerCase().trim() === lowerName);
+      if (!match) {
+        match = PRODUCTS.find(p => p && p.name && (p.name.toLowerCase().includes(lowerName) || lowerName.includes(p.name.toLowerCase())));
+      }
+      if (match && match.image) return match.image;
+    }
+
+    // 4. Valid item image on the item itself (if not svg/placeholder)
+    if (item.image && typeof item.image === 'string' && item.image.trim() && !item.image.includes('data:image/svg')) {
+      return item.image.trim();
+    }
+
+    // 5. Intelligent category fallback from catalog
+    return getFallbackImage(item.category || name);
+  }
+
+  // Lookup methods
+  function getProductById(id) {
+    return PRODUCTS.find((p) => p.id === id) || null;
+  }
+
+  function getProductsByCategory(categoryId) {
+    if (!categoryId || categoryId === 'all') return PRODUCTS.slice();
+    return PRODUCTS.filter((p) => p.categoryId === categoryId);
+  }
+
+  function getFeaturedProducts() {
+    return PRODUCTS.filter((p) => p.featured);
+  }
+
+  function getAllBrands(categoryId = 'all') {
+    const set = new Set();
+    const source = categoryId === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.categoryId === categoryId);
+    source.forEach((p) => {
+      if (p.brand) set.add(p.brand);
+    });
+    return Array.from(set).sort();
+  }
+
+  /**
+   * Precision tokenized word-boundary search algorithm
+   * Eliminates partial substring false matches (e.g. searching 'ASUS' never matches 'Nike Pegasus')
+   */
+  function searchProducts(query) {
+    if (!query || !query.trim()) return [];
+    const tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+
+    return PRODUCTS.filter((p) => {
+      const brand = (p.brand || '').toLowerCase();
+      const name = (p.name || '').toLowerCase();
+      const category = (p.category || '').toLowerCase();
+      const subcategory = (p.subcategory || '').toLowerCase();
+
+      return tokens.every((token) => {
+        const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const wordBoundaryRegex = new RegExp('(?:^|\\W)' + escaped + '(?:\\W|$)', 'i');
+
+        if (
+          wordBoundaryRegex.test(brand) ||
+          wordBoundaryRegex.test(name) ||
+          wordBoundaryRegex.test(category) ||
+          wordBoundaryRegex.test(subcategory)
+        ) {
+          return true;
+        }
+        return false;
+      });
+    });
+  }
+
+  /**
+   * Advanced Multi-Facet Filter Engine with Pagination & Sorting
+   */
+  function filterCatalog(options) {
+    options = options || {};
+    let list = PRODUCTS.slice();
+
+    // 1. Category filter
+    if (options.category && options.category !== 'all') {
+      list = list.filter((p) => p.categoryId === options.category);
+    }
+
+    // 2. Brand filter (supports array or single string)
+    if (options.brands && options.brands.length > 0) {
+      const bSet = new Set(options.brands.map((b) => b.toLowerCase()));
+      list = list.filter((p) => p.brand && bSet.has(p.brand.toLowerCase()));
+    } else if (options.brand && options.brand !== 'all') {
+      list = list.filter((p) => p.brand && p.brand.toLowerCase() === options.brand.toLowerCase());
+    }
+
+    // 3. Price range filter
+    if (typeof options.minPrice === 'number') {
+      list = list.filter((p) => p.price >= options.minPrice);
+    }
+    if (typeof options.maxPrice === 'number' && options.maxPrice > 0) {
+      list = list.filter((p) => p.price <= options.maxPrice);
+    }
+
+    // 4. Rating filter
+    if (typeof options.minRating === 'number' && options.minRating > 0) {
+      list = list.filter((p) => p.rating >= options.minRating);
+    }
+
+    // 5. In Stock availability filter
+    if (options.inStockOnly) {
+      list = list.filter((p) => p.inStock);
+    }
+
+    // 6. Text query search filter using precision word-boundary logic
+    if (options.query && options.query.trim()) {
+      const searchMatches = new Set(searchProducts(options.query).map((p) => p.id));
+      list = list.filter((p) => searchMatches.has(p.id));
+    }
+
+    // 7. Sorting
+    const sortMode = options.sort || 'featured';
+    if (sortMode === 'price-low' || sortMode === 'price-asc') {
+      list.sort((a, b) => a.price - b.price);
+    } else if (sortMode === 'price-high' || sortMode === 'price-desc') {
+      list.sort((a, b) => b.price - a.price);
+    } else if (sortMode === 'rating' || sortMode === 'rating-desc') {
+      list.sort((a, b) => b.rating - a.rating);
+    } else if (sortMode === 'newest') {
+      list.sort((a, b) => (b.badge === 'New Arrival' ? 1 : 0) - (a.badge === 'New Arrival' ? 1 : 0));
+    } else {
+      list.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+    }
+
+    // 8. Pagination
+    const totalItems = list.length;
+    const page = Math.max(1, parseInt(options.page || 1, 10));
+    const perPage = Math.max(1, parseInt(options.perPage || 12, 10));
+    const totalPages = Math.ceil(totalItems / perPage) || 1;
+    const startIndex = (page - 1) * perPage;
+    const paginatedItems = list.slice(startIndex, startIndex + perPage);
+
+    return {
+      items: paginatedItems,
+      total: totalItems,
+      page,
+      perPage,
+      totalPages,
+      startIndex: totalItems > 0 ? startIndex + 1 : 0,
+      endIndex: Math.min(startIndex + perPage, totalItems),
+    };
+  }
+
+  // Expose global catalog
+  window.ShopEaseData = {
+    CATEGORIES,
+    PRODUCTS,
+    products: PRODUCTS,
+    formatINR,
+    getFallbackImage,
+    resolveItemImage,
+    getProductById,
+    getProductsByCategory,
+    getFeaturedProducts,
+    getAllBrands,
+    searchProducts,
+    filterCatalog,
+  };
+})();

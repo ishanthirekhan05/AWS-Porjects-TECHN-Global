@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Account Portal - Sign in to access your orders, saved wishlist, and personal preferences.">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Account Access - ShopEase</title>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .auth-card-ref {
+      max-width: 440px;
+      margin: 56px auto;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .auth-toggle-bar {
+      display: flex;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 4px;
+      margin-bottom: 24px;
+    }
+    .auth-toggle-btn {
+      flex: 1;
+      padding: 9px 0;
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-radius: calc(var(--radius-sm) - 2px);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      border: none;
+      background: none;
+    }
+    .auth-toggle-btn.active {
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      box-shadow: var(--shadow-xs);
+    }
+    /* Password Eye Button Styles & Browser Reset */
+    .password-input-wrap {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    #btnTogglePassword {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--text-muted, #64748b);
+      cursor: pointer;
+      z-index: 10;
+      pointer-events: auto;
+    }
+    #btnTogglePassword:hover {
+      color: var(--accent) !important;
+    }
+    input[type="password"]::-ms-reveal,
+    input[type="password"]::-ms-clear,
+    input[type="password"]::-webkit-credentials-auto-fill-button {
+      display: none !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+    #loginMetaRow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8125rem;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    #linkForgotPassword {
+      color: var(--accent);
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    #linkForgotPassword:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <!-- Immediate Theme Initializer -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <div class="header-actions">
+          <!-- Theme Switcher Dropdown (Panel 8) -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile" id="profileToggleBtn" aria-label="Appearance settings" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Theme</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <div class="profile-dropdown" id="profileDropdown" role="menu">
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                <div class="theme-pill-group" role="radiogroup">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left"><span>Light Theme</span></div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left"><span>Dark Theme</span></div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left"><span>System / Auto</span></div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="index.html" class="btn btn-outline btn-sm">Return Home</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Auth Card Section (Panel 5) -->
+  <main class="container">
+    <div class="auth-card-ref">
+      
+      <!-- Card Title & Subtitle (Panel 5) -->
+      <div style="text-align: center; margin-bottom: 24px;">
+        <h1 style="font-size: 1.75rem; font-weight: 850; color: var(--text-primary); margin-bottom: 6px; letter-spacing: -0.02em;" id="authCardTitle">
+          Welcome Back!
+        </h1>
+        <p style="font-size: 0.875rem; color: var(--text-secondary);" id="authCardSubtitle">
+          Login to your account and continue shopping with us.
+        </p>
+      </div>
+
+      <!-- Segmented Switcher Toggle: [ Login | Signup ] (Panel 5) -->
+      <div class="auth-toggle-bar" role="tablist">
+        <button type="button" class="auth-toggle-btn active" id="btnModeLogin" role="tab" aria-selected="true">Login</button>
+        <button type="button" class="auth-toggle-btn" id="btnModeSignup" role="tab" aria-selected="false">Signup</button>
+      </div>
+
+      <!-- Auth Form -->
+      <form id="authForm" novalidate>
+        
+        <!-- Signup Only Field: Full Name -->
+        <div class="form-group" id="groupFullName" style="display: none; margin-bottom: 16px;">
+          <label class="form-label" for="inputFullName" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Full Name</label>
+          <input type="text" id="inputFullName" class="form-control" placeholder="Enter your full name" style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label class="form-label" for="inputEmail" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Email Address</label>
+          <input type="email" id="inputEmail" class="form-control" placeholder="Enter your email" required style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+        </div>
+
+        <!-- Password -->
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label class="form-label" for="inputPassword" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Password</label>
+          <div class="password-input-wrap" style="position: relative; width: 100%;">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Enter your password" required style="width: 100%; padding: 10px 46px 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+            <button type="button" id="btnTogglePassword" aria-label="Show password" title="Show password" style="position: absolute; top: 50%; right: 8px; transform: translateY(-50%); display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; border: 0; background: transparent; color: var(--text-muted, #64748b); cursor: pointer; z-index: 10; pointer-events: auto;">
+              <svg id="passwordEyeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="pointer-events: none;"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Signup Only: Confirm Password -->
+        <div class="form-group" id="groupConfirmPassword" style="display: none; margin-bottom: 16px;">
+          <label class="form-label" for="inputConfirmPassword" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Confirm Password</label>
+          <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm your password" style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+        </div>
+
+        <!-- Login Meta: Remember me & Forgot password (Panel 5) -->
+        <div id="loginMetaRow" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 10px; font-size: 0.8125rem; margin-bottom: 20px; width: 100%;">
+          <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary); margin: 0;">
+            <input type="checkbox" checked style="accent-color: var(--accent);"> Remember me
+          </label>
+          <a href="#reset-password" id="linkForgotPassword" style="color: var(--accent); font-weight: 600; text-decoration: none; cursor: pointer; display: inline-block;">Forgot Password?</a>
+        </div>
+
+        <div id="resetPasswordPanel" hidden style="margin: -4px 0 20px; padding: 14px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-subtle);">
+          <p style="margin: 0 0 12px; color: var(--text-secondary); font-size: 0.8125rem; line-height: 1.5;">Enter your registered email to receive a secure, single-use reset link.</p>
+          <label class="form-label" for="resetEmail" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Email Address</label>
+          <input type="email" id="resetEmail" class="form-control" placeholder="Enter your email" style="width: 100%; padding: 10px 14px; margin-bottom: 10px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+          <button type="button" class="btn btn-outline btn-sm" id="btnRequestPasswordReset" style="width: 100%; margin-bottom: 12px; justify-content: center;">Send Reset Link</button>
+          <label class="form-label" for="resetToken" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Reset Token</label>
+          <input type="text" id="resetToken" class="form-control" placeholder="Paste the token from your email link" autocomplete="one-time-code" style="width: 100%; padding: 10px 14px; margin-bottom: 10px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+          <label class="form-label" for="resetNewPassword" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">New Password</label>
+          <input type="password" id="resetNewPassword" class="form-control" placeholder="Enter a new password" style="width: 100%; padding: 10px 14px; margin-bottom: 10px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+          <label class="form-label" for="resetConfirmPassword" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Confirm New Password</label>
+          <input type="password" id="resetConfirmPassword" class="form-control" placeholder="Confirm your new password" style="width: 100%; padding: 10px 14px; margin-bottom: 12px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+          <button type="button" class="btn btn-outline btn-sm" id="btnResetPassword" style="width: 100%; justify-content: center;">Reset Password</button>
+        </div>
+
+        <!-- Submit Button (Panel 5: Full Width Dark Button) -->
+        <button type="submit" class="btn btn-primary btn-lg" id="btnSubmitAuth" style="width: 100%; margin-bottom: 16px; justify-content: center;">
+          Login
+        </button>
+
+        <!-- Divider 'or' (Panel 5) -->
+        <div class="auth-divider">
+          <span>or</span>
+        </div>
+
+        <!-- Social Login Buttons (Panel 5) -->
+        <button type="button" class="social-auth-btn" id="btnGoogleAuth">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+          <span>Continue with Google</span>
+        </button>
+
+        <button type="button" class="social-auth-btn" id="btnFacebookAuth">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Continue with Facebook</span>
+        </button>
+
+        <!-- Switch Mode Prompt (Panel 5) -->
+        <p style="text-align: center; font-size: 0.8125rem; color: var(--text-muted); margin-top: 20px;">
+          <span id="textSwitchPrompt">Don't have an account?</span>
+          <a href="#" id="linkSwitchMode" style="color: var(--accent); font-weight: 700; margin-left: 4px;">Signup</a>
+        </p>
+
+      </form>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-compact-wrap">
+        <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ShopEase Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+          <a href="support.html" class="footer-legal-link">Support Desk</a>
+          <a href="account.html#orders" class="footer-legal-link">My Orders</a>
+          <a href="order-tracking.html" class="footer-legal-link">Order Tracking</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js?v=local-admin-fix"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+
+  <!-- Interactive Auth Controller Script -->
+  <script>
+    function initAuthPage() {
+      const btnModeLogin = document.getElementById('btnModeLogin');
+      const btnModeSignup = document.getElementById('btnModeSignup');
+      const inputPassword = document.getElementById('inputPassword');
+      const cardTitle = document.getElementById('authCardTitle');
+      const cardSubtitle = document.getElementById('authCardSubtitle');
+      const groupFullName = document.getElementById('groupFullName');
+      const groupConfirmPassword = document.getElementById('groupConfirmPassword');
+      const loginMetaRow = document.getElementById('loginMetaRow');
+      const btnSubmit = document.getElementById('btnSubmitAuth');
+      const textSwitchPrompt = document.getElementById('textSwitchPrompt');
+      const linkSwitchMode = document.getElementById('linkSwitchMode');
+      const btnTogglePassword = document.getElementById('btnTogglePassword');
+      const passwordEyeIcon = document.getElementById('passwordEyeIcon');
+      const linkForgotPassword = document.getElementById('linkForgotPassword');
+      const resetPasswordPanel = document.getElementById('resetPasswordPanel');
+      const resetEmail = document.getElementById('resetEmail');
+      const resetToken = document.getElementById('resetToken');
+      const resetNewPassword = document.getElementById('resetNewPassword');
+      const resetConfirmPassword = document.getElementById('resetConfirmPassword');
+      const btnRequestPasswordReset = document.getElementById('btnRequestPasswordReset');
+      const btnResetPassword = document.getElementById('btnResetPassword');
+      const authForm = document.getElementById('authForm');
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirectUrl = urlParams.get('redirect') || 'account.html';
+      const resetTokenFromLink = urlParams.get('reset') || '';
+      let isSignup = false;
+
+      function setMode(signup) {
+        isSignup = signup;
+        btnModeLogin.classList.toggle('active', !isSignup);
+        btnModeSignup.classList.toggle('active', isSignup);
+        btnModeLogin.setAttribute('aria-selected', !isSignup ? 'true' : 'false');
+        btnModeSignup.setAttribute('aria-selected', isSignup ? 'true' : 'false');
+
+        if (isSignup) {
+          cardTitle.textContent = 'Create Account';
+          cardSubtitle.textContent = 'Sign up to access exclusive hardware drops and track orders.';
+          groupFullName.style.display = 'block';
+          groupConfirmPassword.style.display = 'block';
+          loginMetaRow.style.display = 'none';
+          resetPasswordPanel.hidden = true;
+          btnSubmit.textContent = 'Create Account';
+          textSwitchPrompt.textContent = 'Already have an account?';
+          linkSwitchMode.textContent = 'Login';
+        } else {
+          cardTitle.textContent = 'Welcome Back!';
+          cardSubtitle.textContent = 'Login to your account and continue shopping with us.';
+          groupFullName.style.display = 'none';
+          groupConfirmPassword.style.display = 'none';
+          loginMetaRow.style.display = 'flex';
+          linkForgotPassword.style.display = 'inline-block';
+          btnSubmit.textContent = 'Login';
+          textSwitchPrompt.textContent = "Don't have an account?";
+          linkSwitchMode.textContent = 'Signup';
+        }
+      }
+
+      btnModeLogin.addEventListener('click', () => setMode(false));
+      btnModeSignup.addEventListener('click', () => setMode(true));
+      if (btnTogglePassword) {
+        btnTogglePassword.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const showing = inputPassword.type === 'text';
+          inputPassword.type = showing ? 'password' : 'text';
+          btnTogglePassword.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+          btnTogglePassword.title = showing ? 'Show password' : 'Hide password';
+          if (passwordEyeIcon) {
+            passwordEyeIcon.innerHTML = showing
+              ? '<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.5"></circle>'
+              : '<path d="m3 3 18 18"></path><path d="M10.6 6.2A10.8 10.8 0 0 1 12 6c6.5 0 10 6 10 6a18.3 18.3 0 0 1-3.1 3.7M6.3 6.3C3.5 8.1 2 12 2 12s3.5 6 10 6a10.8 10.8 0 0 0 3.4-.5"></path><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"></path>';
+          }
+        });
+      }
+      linkForgotPassword.addEventListener('click', (e) => {
+        e.preventDefault();
+        resetPasswordPanel.hidden = !resetPasswordPanel.hidden;
+        if (!resetPasswordPanel.hidden) {
+          resetEmail.value = document.getElementById('inputEmail').value.trim();
+          resetEmail.focus();
+        }
+      });
+      btnRequestPasswordReset.addEventListener('click', async () => {
+        const result = await window.ShopEaseAuthService.requestPasswordReset(resetEmail.value);
+        window.ShopEaseApp.showToast(result.success ? result.message : result.error, result.success ? 'info' : 'error');
+      });
+      btnResetPassword.addEventListener('click', async () => {
+        const token = resetToken.value.trim();
+        const newPassword = resetNewPassword.value.trim();
+        const confirmPassword = resetConfirmPassword.value.trim();
+        if (!token) return window.ShopEaseApp.showToast('Use the reset token from your email link.', 'error');
+        if (newPassword.length < 6) return window.ShopEaseApp.showToast('Password must be at least 6 characters.', 'error');
+        if (newPassword !== confirmPassword) return window.ShopEaseApp.showToast('Passwords do not match.', 'error');
+        const result = await window.ShopEaseAuthService.confirmPasswordReset(token, newPassword);
+        if (!result.success) return window.ShopEaseApp.showToast(result.error, 'error');
+        resetNewPassword.value = '';
+        resetConfirmPassword.value = '';
+        resetPasswordPanel.hidden = true;
+        window.history.replaceState({}, document.title, `${window.location.pathname}${window.location.hash}`);
+        window.ShopEaseApp.showToast('Password reset successfully. You can now sign in.', 'success');
+      });
+      linkSwitchMode.addEventListener('click', (e) => {
+        e.preventDefault();
+        setMode(!isSignup);
+      });
+
+      if (urlParams.get('mode') === 'signup' || window.location.hash === '#signup') {
+        setMode(true);
+      }
+      if (resetTokenFromLink) {
+        setMode(false);
+        resetPasswordPanel.hidden = false;
+        resetToken.value = resetTokenFromLink;
+        resetEmail.value = urlParams.get('email') || '';
+      }
+
+      // Social clicks - Inform about enterprise OAuth integration
+      document.getElementById('btnGoogleAuth').addEventListener('click', () => {
+        window.ShopEaseApp.showToast('OAuth 2.0 Single Sign-On requires cloud identity provider integration. Please register or sign in with your email and password below.', 'info');
+      });
+
+      document.getElementById('btnFacebookAuth').addEventListener('click', () => {
+        window.ShopEaseApp.showToast('OAuth 2.0 Single Sign-On requires cloud identity provider integration. Please register or sign in with your email and password below.', 'info');
+      });
+
+      // Real Submit Handler
+      authForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('inputEmail').value.trim();
+        const password = document.getElementById('inputPassword').value.trim();
+
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          window.ShopEaseApp.showToast('Please enter a valid email address.', 'error');
+          return;
+        }
+
+        if (!password || password.length < 6) {
+          window.ShopEaseApp.showToast('Password must be at least 6 characters.', 'error');
+          return;
+        }
+
+        btnSubmit.disabled = true;
+        const originalText = btnSubmit.textContent;
+        btnSubmit.textContent = isSignup ? 'Creating Account...' : 'Signing In...';
+
+        try {
+          if (isSignup) {
+            const name = document.getElementById('inputFullName').value.trim();
+            const confirmPassword = document.getElementById('inputConfirmPassword').value.trim();
+            if (!name) {
+              window.ShopEaseApp.showToast('Please enter your full name.', 'error');
+              btnSubmit.disabled = false;
+              btnSubmit.textContent = originalText;
+              return;
+            }
+            if (password !== confirmPassword) {
+              window.ShopEaseApp.showToast('Passwords do not match.', 'error');
+              btnSubmit.disabled = false;
+              btnSubmit.textContent = originalText;
+              return;
+            }
+
+            const res = await window.ShopEaseAuthService.signup(name, email, password);
+            if (!res.success) {
+              window.ShopEaseApp.showToast(res.error || 'Failed to create account.', 'error');
+              btnSubmit.disabled = false;
+              btnSubmit.textContent = originalText;
+              return;
+            }
+
+            window.ShopEaseApp.showToast(`Welcome to ShopEase, ${res.user.name}! Account created.`, 'success');
+            if (window.ShopEaseEvents) {
+              window.ShopEaseEvents.track('user_registered', { emailDomain: email.split('@')[1] });
+            }
+
+            setTimeout(() => {
+              window.location.href = redirectUrl;
+            }, 800);
+
+          } else {
+            // Real Login
+            const res = await window.ShopEaseAuthService.login(email, password);
+            if (!res.success) {
+              window.ShopEaseApp.showToast(res.error || 'Invalid credentials.', 'error');
+              btnSubmit.disabled = false;
+              btnSubmit.textContent = originalText;
+              return;
+            }
+
+            window.ShopEaseApp.showToast(`Logged in successfully! Welcome back, ${res.user.name}.`, 'success');
+            if (window.ShopEaseEvents) {
+              window.ShopEaseEvents.track('user_logged_in', { emailDomain: email.split('@')[1] });
+            }
+
+            setTimeout(() => {
+              window.location.href = redirectUrl;
+            }, 800);
+          }
+        } catch (err) {
+          console.error('Authentication error:', err);
+          window.ShopEaseApp.showToast('An error occurred during authentication. Please try again.', 'error');
+          btnSubmit.disabled = false;
+          btnSubmit.textContent = originalText;
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAuthPage);
+    } else {
+      initAuthPage();
+    }
+  </script>
+</body>
+</html>

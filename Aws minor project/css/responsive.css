@@ -1,0 +1,309 @@
+@media (min-width: 760px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .primary-navigation {
+        align-items: center;
+        border-top: 0;
+        display: block;
+        flex-shrink: 1;
+        max-width: calc(100vw - 12rem);
+        padding: 0;
+        position: static;
+    }
+
+    .primary-navigation ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        justify-content: flex-end;
+    }
+
+    .primary-navigation a {
+        padding: 0.5rem 0.55rem;
+    }
+
+    .primary-navigation a {
+        transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .primary-navigation .nav-actions {
+        margin-left: 0;
+    }
+
+    .primary-navigation .nav-action {
+        font-size: 0.88rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .primary-navigation .nav-actions .nav-action--signup {
+        font-size: 0.86rem;
+        padding: 0.5rem 0.55rem !important;
+    }
+
+    .filters {
+        grid-template-columns: minmax(220px, 2fr) repeat(3, minmax(140px, 1fr));
+    }
+
+    .opportunity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .career-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .guidance-hero {
+        align-items: center;
+        display: grid;
+        gap: clamp(2rem, 5vw, 5rem);
+        grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+    }
+
+    .guidance-hero__visual {
+        margin-top: 0;
+    }
+
+    .intro-section,
+    .page-heading,
+    .preparation-hero,
+    .resources-hero,
+    .events-hero,
+    .contact-hero {
+        align-items: center;
+        display: grid;
+        gap: clamp(2rem, 5vw, 5rem);
+        grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+    }
+
+    .page-visual-hero__illustration {
+        margin-top: 0;
+        min-height: 330px;
+    }
+
+    .preparation-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-writing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .learning-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-hero {
+        grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+    }
+
+    .home-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .home-category-grid,
+    .home-opportunity-grid,
+    .roadmap-grid,
+    .home-events-grid,
+    .learning-summary-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .home-document .home-category-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .home-document .home-stats {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .journey-grid,
+    .tips-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .prep-summary-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .home-final-cta {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .profile-hero {
+        grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+    }
+
+    .profile-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .profile-card--progress {
+        grid-column: 1 / -1;
+    }
+
+    .auth-layout {
+        grid-template-columns: minmax(430px, 1.1fr) minmax(340px, 0.9fr);
+        min-height: 560px;
+    }
+
+    .auth-layout--signup {
+        grid-template-columns: minmax(340px, 0.9fr) minmax(430px, 1.1fr);
+    }
+
+    .auth-illustration {
+        min-height: 420px;
+    }
+
+    .auth-layout--signup .auth-illustration {
+        order: 2;
+    }
+
+    .auth-layout--signup .auth-panel {
+        order: 1;
+    }
+
+    .auth-layout--combined .auth-illustration {
+        min-height: 480px;
+    }
+
+    .auth-layout--combined {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.86fr);
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: clamp(2.35rem, 12vw, 3.6rem);
+        line-height: 1.08;
+    }
+
+    h2 {
+        font-size: clamp(1.9rem, 9vw, 2.6rem);
+    }
+
+    .main-container {
+        padding-bottom: 3.5rem;
+        padding-top: 2rem;
+    }
+
+    .home-hero,
+    .guidance-hero,
+    .preparation-hero,
+    .resources-hero,
+    .events-hero,
+    .contact-hero,
+    .profile-hero,
+    .auth-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home-hero {
+        padding: 3.5rem 0;
+    }
+
+    .home-hero__visual,
+    .career-visual,
+    .page-visual-hero__illustration,
+    .guidance-hero__visual,
+    .profile-hero__illustration,
+    .auth-illustration {
+        width: 100%;
+    }
+
+    .career-visual__steps a {
+        grid-template-columns: 2rem 1fr;
+    }
+
+    .career-visual__steps small {
+        grid-column: 2;
+    }
+
+    .career-visual__steps b {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .home-section__heading,
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .home-section__heading > p,
+    .data-note {
+        max-width: none;
+        text-align: left;
+    }
+
+    .home-category-grid,
+    .home-opportunity-grid,
+    .roadmap-grid,
+    .prep-summary-grid,
+    .home-events-grid,
+    .learning-summary-grid,
+    .tips-grid,
+    .journey-grid,
+    .opportunity-grid,
+    .career-grid,
+    .preparation-grid,
+    .resource-grid,
+    .learning-grid,
+    .event-grid,
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    html body.home-document .home-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-document .home-stat:nth-child(n + 3) {
+        border-top: 1px solid #d9d2c7;
+    }
+
+    .home-final-cta {
+        display: block;
+    }
+
+    .home-final-cta .home-hero__actions {
+        margin-top: 1.5rem;
+    }
+
+    .home-hero__actions .button {
+        text-align: center;
+    }
+
+    .profile-link {
+        padding-left: 0.35rem;
+        padding-right: 0.35rem;
+    }
+
+    .primary-navigation .nav-actions .nav-action--signup {
+        padding: 0.6rem 0.7rem !important;
+    }
+
+    .site-footer__inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 2rem;
+        margin-left: 0;
+    }
+}

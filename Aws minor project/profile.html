@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View the CareerBridge Pro static profile demo.">
+    <title>Profile | CareerBridge Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="profile-page">
+    <header class="site-header">
+        <div class="nav-wrapper">
+            <div class="nav-identity"><a class="brand" href="index.html" aria-label="CareerBridge Pro home"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg><span>CareerBridge <b>Pro</b></span></a><a class="profile-link is-current" href="profile.html" aria-label="View profile" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c.7-3.3 2.9-5 6.5-5s5.8 1.7 6.5 5"></path></svg><span>Profile</span></a></div>
+        </div>
+    </header>
+
+    <main class="main-container profile-main">
+        <section class="profile-hero" aria-labelledby="profile-title">
+            <div class="profile-hero__content">
+                <p class="eyebrow">Your career workspace</p>
+                <h1 id="profile-title">Keep your direction visible.</h1>
+                <p class="intro-section__text">Review your interests, skills, and learning progress in one simple student profile.</p>
+                <div class="profile-actions"><button class="button" id="edit-profile" type="button">Edit Profile</button><a class="button profile-home-link" href="index.html">Back to Home</a><button class="button profile-logout-link" id="log-out" type="button">Log Out</button></div>
+                <p class="profile-status" id="profile-status" role="status" aria-live="polite"></p>
+            </div>
+            <div class="profile-hero__illustration"><img src="assets/images/home-career.jpg" alt="Young professionals collaborating in a career workspace"></div>
+        </section>
+
+        <section class="profile-grid" aria-label="Profile information">
+            <article class="profile-card profile-card--identity">
+                <div class="profile-avatar">AS</div>
+                <div><p class="eyebrow">Student profile</p><h2 id="profile-name">Aarav Sharma</h2><p class="profile-email">aarav.sharma@example.com</p></div>
+            </article>
+            <article class="profile-card"><h2>Career interests</h2><ul class="profile-tags"><li>Cloud & AWS</li><li>Web Development</li><li>Data Analytics</li></ul></article>
+            <article class="profile-card"><h2>Skills</h2><ul class="profile-tags"><li>HTML & CSS</li><li>JavaScript</li><li>Python</li><li>Git</li><li>AWS basics</li></ul></article>
+            <article class="profile-card profile-card--progress"><h2>Career progress</h2><p class="profile-progress-label"><span>Foundation roadmap</span><strong>60%</strong></p><div class="progress-track" role="progressbar" aria-label="Foundation roadmap progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><span></span></div><ol class="profile-roadmap"><li class="is-complete">Explore career paths</li><li class="is-complete">Build core skills</li><li>Complete a portfolio project</li><li>Practice interview communication</li></ol></article>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="site-footer__inner"><div class="footer-brand"><p class="footer-brand__wordmark"><svg class="brand-mark brand-mark--footer" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg>CareerBridge <b>Pro</b></p><small>Build skills. Find direction.</small></div><div class="footer-links"><div><h2>Quick links</h2><a href="jobs.html">Jobs</a><a href="guidance.html">Guidance</a><a href="events.html">Events</a></div><div><h2>Resources</h2><a href="preparation.html">Preparation</a><a href="resources.html">Resume resources</a><a href="contact.html">Contact</a></div><div><h2>Support</h2><a href="resources.html">Help Center</a><a href="contact.html">Contact Support</a><a href="resources.html">FAQs</a></div></div></div><p class="footer-legal">CareerBridge Pro — Build skills. Find direction. Move forward.</p></footer>
+    <script src="js/main.js"></script><script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CareerBridge Pro is a student career and placement portal.">
+    <title>CareerBridge Pro | Student Career Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="home-document">
+    <header class="site-header">
+        <div class="nav-wrapper">
+            <div class="nav-identity"><a class="brand" href="index.html" aria-label="CareerBridge Pro home"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg><span>CareerBridge <b>Pro</b></span></a><a class="profile-link" href="profile.html" aria-label="View profile"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c.7-3.3 2.9-5 6.5-5s5.8 1.7 6.5 5"></path></svg><span>Profile</span></a></div>
+            <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation" aria-hidden="true">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="guidance.html">Guidance</a></li>
+                    <li><a href="preparation.html">Preparation</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-actions"><a class="nav-action nav-action--signup" href="auth.html">Create Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container home-page">
+        <section class="home-hero" aria-labelledby="page-title">
+            <div class="page-visual-hero__content">
+                <p class="eyebrow">Student career and placement portal</p>
+                <h1 id="page-title"><span class="hero-line">Build Your</span><span class="hero-line">Career.</span><span class="hero-line hero-line--accent">Find Your</span><span class="hero-line hero-line--accent">Opportunity.</span></h1>
+                <p class="intro-section__text">CareerBridge Pro brings career direction, practical skill-building, placement preparation, and student opportunities into one focused space.</p>
+                <div class="home-hero__actions"><a class="button" href="jobs.html">Explore Jobs</a><a class="button button--secondary" href="guidance.html">Career Guidance</a><button class="button button--quiet" type="button" onclick="showMessage()">Preview Welcome</button></div>
+                <p class="message" id="message" aria-live="polite"></p>
+            </div>
+            <div class="home-hero__visual" aria-label="CareerBridge Pro career journey">
+                <div class="career-visual">
+                    <div class="career-visual__topline"><svg class="career-visual__mark" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg><strong>CareerBridge <b>Pro</b></strong><span>01 / 05</span></div>
+                    <div class="career-visual__title"><span class="panel-title-line">Career</span><span class="panel-title-line panel-title-line--accent"><em>with clarity.</em></span></div>
+                    <ol class="career-visual__steps">
+                        <li><a href="guidance.html"><span>01</span><strong>Discover</strong><small>Find your direction</small><b aria-hidden="true">↗</b></a></li>
+                        <li><a href="jobs.html"><span>02</span><strong>Explore</strong><small>Meet opportunity</small><b aria-hidden="true">↗</b></a></li>
+                        <li><a href="preparation.html"><span>03</span><strong>Prepare</strong><small>Build confidence</small><b aria-hidden="true">↗</b></a></li>
+                        <li><a href="events.html"><span>04</span><strong>Grow</strong><small>Keep moving forward</small><b aria-hidden="true">↗</b></a></li>
+                    </ol>
+                    <div class="career-visual__footer"><span>For students and early professionals</span><span aria-hidden="true">↗</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-stats" aria-label="CareerBridge Pro resources">
+            <div class="home-stat"><strong>06</strong><span>Career Paths</span></div>
+            <div class="home-stat"><strong>04</strong><span>Job Opportunities</span></div>
+            <div class="home-stat"><strong>04</strong><span>Learning Resources</span></div>
+            <div class="home-stat"><strong>05</strong><span>Career Events</span></div>
+        </section>
+
+        <section class="home-section" aria-labelledby="categories-title">
+            <div class="home-section__heading"><div><p class="eyebrow">Find your direction</p><h2 id="categories-title">Career categories</h2></div><p>Explore focused starting points and understand the skills behind each path.</p></div>
+            <div class="home-category-grid">
+                <article class="home-category-card"><span class="home-card-number">01</span><h3>Cloud / AWS</h3><p>Learn how modern applications are hosted, secured, and scaled in the cloud.</p><ul><li>AWS basics</li><li>Linux and networking</li></ul><a href="guidance.html">Explore Path <span aria-hidden="true">→</span></a></article>
+                <article class="home-category-card"><span class="home-card-number">02</span><h3>Software Development</h3><p>Build dependable software by combining programming, design, testing, and problem-solving.</p><ul><li>Data structures</li><li>Programming fundamentals</li></ul><a href="guidance.html">Explore Path <span aria-hidden="true">→</span></a></article>
+                <article class="home-category-card"><span class="home-card-number">03</span><h3>Web Development</h3><p>Create responsive, accessible web experiences that are useful on every screen.</p><ul><li>HTML, CSS, JavaScript</li><li>Browser tools</li></ul><a href="guidance.html">Explore Path <span aria-hidden="true">→</span></a></article>
+                <article class="home-category-card"><span class="home-card-number">04</span><h3>Data Analytics</h3><p>Turn structured information into clear findings through analysis and communication.</p><ul><li>SQL and statistics</li><li>Data visualization</li></ul><a href="guidance.html">Explore Path <span aria-hidden="true">→</span></a></article>
+                <article class="home-category-card"><span class="home-card-number">05</span><h3>Cybersecurity</h3><p>Understand risks, controls, and responsible practices for protecting systems and data.</p><ul><li>Networking and Linux</li><li>Risk awareness</li></ul><a href="guidance.html">Explore Path <span aria-hidden="true">→</span></a></article>
+                <article class="home-category-card"><span class="home-card-number">06</span><h3>UI/UX Design</h3><p>Design clear, thoughtful interfaces by combining user research, structure, and visual communication.</p><ul><li>Wireframing</li><li>Design systems</li></ul><a href="guidance.html">Explore Path <span aria-hidden="true">→</span></a></article>
+            </div>
+        </section>
+
+        <section class="home-section home-journey" aria-labelledby="journey-title">
+            <div class="home-section__heading"><div><p class="eyebrow">A practical route forward</p><h2 id="journey-title">How CareerBridgePro helps</h2></div><p>Move from curiosity to confident action one step at a time.</p></div>
+            <ol class="journey-grid"><li><span>01</span><h3>Discover your career</h3><p>Compare paths, technologies, and beginner-friendly project ideas.</p></li><li><span>02</span><h3>Build required skills</h3><p>Use roadmaps and learning resources to create a steady practice routine.</p></li><li><span>03</span><h3>Prepare for opportunities</h3><p>Strengthen your resume, interviews, coding, aptitude, and communication.</p></li><li><span>04</span><h3>Find jobs and internships</h3><p>Search sample opportunities and learn how to evaluate a role.</p></li></ol>
+        </section>
+
+        <section class="home-section" aria-labelledby="featured-title">
+            <div class="home-section__heading"><div><p class="eyebrow">Start exploring</p><h2 id="featured-title">Featured opportunities</h2></div><a class="text-link" href="jobs.html">View all opportunities <span aria-hidden="true">→</span></a></div>
+            <div class="home-opportunity-grid">
+                <article class="home-opportunity-card"><div class="home-card-topline"><span>Full-time</span><span>Entry level</span></div><h3>Junior Frontend Developer</h3><p class="home-company">BrightLayer Technologies</p><p class="home-muted">Bengaluru · Build accessible interfaces with a product engineering team.</p><div class="home-skill-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="button button--secondary" href="jobs.html">View Details</a></article>
+                <article class="home-opportunity-card"><div class="home-card-topline"><span>Full-time</span><span>Entry level</span></div><h3>Cloud Support Associate</h3><p class="home-company">Northstar Systems</p><p class="home-muted">Hyderabad · Troubleshoot cloud environments and document solutions.</p><div class="home-skill-list"><span>AWS</span><span>Linux</span><span>Networking</span></div><a class="button button--secondary" href="jobs.html">View Details</a></article>
+                <article class="home-opportunity-card"><div class="home-card-topline"><span>Internship</span><span>Student</span></div><h3>Data Analyst Intern</h3><p class="home-company">InsightWorks Labs</p><p class="home-muted">Pune · Turn structured datasets into clear reports and findings.</p><div class="home-skill-list"><span>Python</span><span>SQL</span><span>Excel</span></div><a class="button button--secondary" href="jobs.html">View Details</a></article>
+            </div>
+        </section>
+
+        <section class="home-section" aria-labelledby="roadmaps-title">
+            <div class="home-section__heading"><div><p class="eyebrow">Learn by building</p><h2 id="roadmaps-title">Career roadmaps</h2></div><a class="text-link" href="guidance.html">Explore guidance <span aria-hidden="true">→</span></a></div>
+            <div class="roadmap-grid"><article class="roadmap-card"><h3>Cloud / AWS Engineer</h3><ol><li>Learn Linux, networking, and cloud concepts.</li><li>Study S3, IAM, and core AWS services.</li><li>Deploy and document a static project.</li></ol></article><article class="roadmap-card"><h3>Data Analyst</h3><ol><li>Practice spreadsheets and basic statistics.</li><li>Query and clean data with SQL.</li><li>Explain findings with simple charts.</li></ol></article><article class="roadmap-card"><h3>Web Developer</h3><ol><li>Build semantic HTML page structures.</li><li>Practice responsive CSS layouts.</li><li>Add accessible JavaScript interactions.</li></ol></article><article class="roadmap-card"><h3>Cybersecurity Analyst</h3><ol><li>Understand networks and operating systems.</li><li>Practice safely in legal learning labs.</li><li>Document risks and recommended controls.</li></ol></article></div>
+        </section>
+
+        <section class="home-section" aria-labelledby="prep-title">
+            <div class="home-section__heading"><div><p class="eyebrow">Get ready with intention</p><h2 id="prep-title">Placement preparation</h2></div><a class="text-link" href="preparation.html">Open preparation <span aria-hidden="true">→</span></a></div>
+            <div class="prep-summary-grid"><article><h3>Resume Building</h3><p>Present your skills and projects with clear, truthful evidence.</p></article><article><h3>Interview Preparation</h3><p>Rehearse technical concepts, HR answers, and project explanations.</p></article><article><h3>Technical Skills</h3><p>Strengthen programming, data structures, systems, and cloud foundations.</p></article><article><h3>Communication Skills</h3><p>Practice speaking, group discussions, presentations, and professional writing.</p></article><article><h3>Aptitude Preparation</h3><p>Improve accuracy and time management with a simple error-log routine.</p></article></div>
+        </section>
+
+        <section class="home-section" aria-labelledby="events-title">
+            <div class="home-section__heading"><div><p class="eyebrow">Learn together</p><h2 id="events-title">Upcoming events</h2></div><a class="text-link" href="events.html">View all events <span aria-hidden="true">→</span></a></div>
+            <div class="home-events-grid"><article><time datetime="2026-09-05">Sep 05, 2026</time><span>Workshop</span><h3>Resume Workshop: From Draft to Direction</h3><p>Review structure, project descriptions, and ways to make your work easier to understand.</p><a href="events.html">View Event <span aria-hidden="true">→</span></a></article><article><time datetime="2026-09-19">Sep 19, 2026</time><span>Technical Session</span><h3>Building Your First Cloud Project</h3><p>Explore the ideas behind a small static website deployment and cloud choices.</p><a href="events.html">View Event <span aria-hidden="true">→</span></a></article><article><time datetime="2026-09-26">Sep 26, 2026</time><span>Mock Interview</span><h3>Practice Mock Interviews</h3><p>Rehearse introductions, project explanations, and technical questions.</p><a href="events.html">View Event <span aria-hidden="true">→</span></a></article></div>
+        </section>
+
+        <section class="home-section" aria-labelledby="learning-title">
+            <div class="home-section__heading"><div><p class="eyebrow">Keep growing</p><h2 id="learning-title">Learning resources</h2></div><a class="text-link" href="resources.html">Browse resources <span aria-hidden="true">→</span></a></div>
+            <div class="learning-summary-grid"><article><span class="home-resource-icon">01</span><h3>Web development</h3><p>Use browser documentation and accessibility references to build for real users.</p></article><article><span class="home-resource-icon">02</span><h3>Programming foundations</h3><p>Choose one language, read its documentation, and reinforce concepts with exercises.</p></article><article><span class="home-resource-icon">03</span><h3>Cloud and AWS</h3><p>Learn service concepts through official AWS documentation and guided material.</p></article><article><span class="home-resource-icon">04</span><h3>Data and analysis</h3><p>Combine SQL practice, public datasets, and clear visual communication.</p></article></div>
+        </section>
+
+        <section class="home-section" aria-labelledby="tips-title"><div class="home-section__heading"><div><p class="eyebrow">Small habits, useful progress</p><h2 id="tips-title">Career tips and insights</h2></div></div><div class="tips-grid"><article><span>01</span><p>Choose one learning path for the next few weeks instead of collecting unrelated tutorials.</p></article><article><span>02</span><p>Turn every topic into a small project or explanation you can show and discuss.</p></article><article><span>03</span><p>Keep an honest record of what you built, what broke, and what you learned.</p></article><article><span>04</span><p>Practice explaining technical work in plain language for both technical and HR conversations.</p></article><article><span>05</span><p>Review your progress regularly and adjust your roadmap when your interests become clearer.</p></article></div></section>
+
+        <section class="home-final-cta" aria-labelledby="cta-title"><div><p class="eyebrow">Your next step is practical</p><h2 id="cta-title">Your career journey starts here.</h2><p>Explore a path, build one useful skill, and keep your progress moving forward with CareerBridgePro.</p></div><div class="home-hero__actions"><a class="button" href="guidance.html">Explore Careers</a><a class="button button--secondary" href="auth.html">Create Account</a></div></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="footer-brand"><p class="footer-brand__wordmark"><svg class="brand-mark brand-mark--footer" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg>CareerBridge <b>Pro</b></p><small>Build skills. Find direction.</small></div>
+            <div class="footer-links"><div><h2>Quick links</h2><a href="jobs.html">Jobs</a><a href="guidance.html">Guidance</a><a href="events.html">Events</a></div><div><h2>Resources</h2><a href="preparation.html">Preparation</a><a href="resources.html">Resume resources</a><a href="contact.html">Contact</a></div><div><h2>Support</h2><a href="resources.html">Help Center</a><a href="contact.html">Contact Support</a><a href="resources.html">FAQs</a></div></div>
+        </div>
+        <p class="footer-legal">CareerBridge Pro — Build skills. Find direction. Move forward.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

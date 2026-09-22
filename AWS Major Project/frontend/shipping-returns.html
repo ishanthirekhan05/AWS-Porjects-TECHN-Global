@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Shipping, Delivery & 7-Day Returns Policy. Check order return eligibility and initiate hassle-free replacements.">
+  <title>Shipping &amp; Returns — ShopEase Customer Care</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Production Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme Bootstrapper -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Announcement">
+    <div class="container top-banner-inner">
+      <div class="top-banner-text">
+        <span class="top-banner-highlight">Free Express Delivery</span> on all domestic orders over ₹1,999 across India.
+      </div>
+      <div class="top-banner-links">
+        <a href="order-tracking.html">Order Tracking</a>
+        <span>•</span>
+        <a href="shipping-returns.html">Shipping &amp; Returns</a>
+        <span>•</span>
+        <a href="support.html">Customer Care</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-icon btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Integrated Header Search Bar -->
+        <form class="header-search-wrap" role="search" action="products.html" method="GET">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="search" class="header-search-input" placeholder="Search products, categories..." autocomplete="off">
+        </form>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="products.html" class="nav-link" role="menuitem">Products</a></li>
+          <li role="none"><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        </ul>
+
+        <!-- Action Controls: Wishlist, Cart, Profile -->
+        <div class="header-actions">
+          
+          <!-- Mobile Search Trigger Button -->
+          <button type="button" class="btn-icon mobile-search-btn" data-open-search aria-label="Open search" title="Search products">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Wishlist Indicator -->
+          <a href="products.html?view=wishlist" class="btn-icon header-wishlist-btn" id="wishlistBtn" aria-label="View wishlist" title="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-count-badge wishlist-badge" id="wishlistCount" style="display: none;">0</span>
+          </a>
+
+          <!-- Shopping Cart Navigation Link -->
+          <a href="cart.html" class="btn-icon header-cart-btn" id="cartBtn" aria-label="View shopping cart" title="Shopping Cart">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count cart-count-badge cart-badge" id="cartCount" style="display: none;">0</span>
+          </a>
+
+          <!-- User Profile Dropdown -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile" id="profileToggleBtn" aria-label="Open user profile and appearance menu" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Account</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <!-- Profile & Theme Dropdown Menu -->
+            <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="User Account and Appearance Settings">
+              <div class="profile-dropdown-header">
+                <div class="profile-header-avatar">U</div>
+                <div>
+                  <div class="profile-header-name">Welcome Guest</div>
+                  <span class="profile-header-badge">Guest Visitor</span>
+                </div>
+              </div>
+
+              <ul class="profile-nav-links" role="none">
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html#orders" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>My Orders</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="order-tracking.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Order Tracking</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="products.html?view=wishlist" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Saved Wishlist</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="cart.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>My Shopping Bag</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="profile-dropdown-divider"></div>
+
+              <!-- Theme Switcher System -->
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                
+                <div class="theme-pill-group" role="radiogroup" aria-label="Select theme appearance">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                      <span>Light</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                      <span>Dark</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span>System</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation drawer">
+    <div class="mobile-menu-header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+            <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+          </svg>
+        </span>
+        <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+      </div>
+      <button type="button" class="btn-icon" id="closeMobileMenu" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="products.html" class="mobile-nav-link">All Products</a></li>
+        <li><a href="events.html" class="mobile-nav-link">Deals &amp; Events</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About ShopEase</a></li>
+        <li><a href="cart.html" class="mobile-nav-link">Shopping Cart</a></li>
+        <li><a href="account.html#orders" class="mobile-nav-link">My Orders</a></li>
+        <li><a href="order-tracking.html" class="mobile-nav-link">Order Tracking</a></li>
+        <li><a href="shipping-returns.html" class="mobile-nav-link active" style="color: var(--accent); font-weight: 700;">Shipping &amp; Returns</a></li>
+        <li><a href="warranty.html" class="mobile-nav-link">Warranty Certification</a></li>
+        <li><a href="support.html" class="mobile-nav-link">Support Desk</a></li>
+        <li><a href="account.html" class="mobile-nav-link">My Account</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Hero Header Section -->
+  <section class="policy-hero">
+    <div class="container">
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 16px;">
+        <a href="index.html" style="color: var(--text-muted); text-decoration: none;">Home</a>
+        <span>/</span>
+        <span style="color: var(--text-muted);">Customer Care</span>
+        <span>/</span>
+        <span style="color: var(--text-primary); font-weight: 700;">Shipping &amp; Returns</span>
+      </nav>
+      
+      <div class="policy-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        <span>Customer Assurance</span>
+      </div>
+      <h1 class="policy-hero-title">Shipping, Delivery &amp; Returns</h1>
+      <p class="policy-hero-subtitle">
+        Everything you need to know about our domestic delivery timelines, free express shipping criteria, hassle-free 7-day replacements, and our automated return authorization tool.
+      </p>
+      <div class="policy-meta">
+        <span>Effective: September 2026</span>
+        <span>•</span>
+        <span>Standard Indian Commercial E-Commerce Practice</span>
+        <span>•</span>
+        <span>Zero-Risk Guarantee</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container">
+    <div class="policy-layout">
+
+      <!-- Left Navigation Column -->
+      <aside class="policy-nav" aria-label="On this page">
+        <div class="policy-nav-title">Quick Navigation</div>
+        <ul class="policy-nav-list">
+          <li><a href="#return-tool" class="policy-nav-link">⚡ Initiate Return Tool</a></li>
+          <li><a href="#shipping-policy" class="policy-nav-link">📦 Shipping Timelines</a></li>
+          <li><a href="#delivery-charges" class="policy-nav-link">💰 Delivery Fees &amp; Free Shipping</a></li>
+          <li><a href="#return-policy" class="policy-nav-link">🔄 7-Day Replacement Policy</a></li>
+          <li><a href="#refund-process" class="policy-nav-link">💳 Refund Processing</a></li>
+          <li><a href="#faqs" class="policy-nav-link">❓ Frequently Asked Questions</a></li>
+        </ul>
+      </aside>
+
+      <!-- Right Main Content Articles -->
+      <div class="policy-content">
+
+        <!-- Interactive Return Initiator Tool -->
+        <section id="return-tool" class="interactive-tool-box">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(29, 78, 216, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+            </div>
+            <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin: 0;">Interactive Return &amp; Replacement Portal</h2>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 18px;">
+            Need to return an eligible purchase or claim a replacement? Enter your details below to immediately verify return eligibility and generate your Return Merchandise Authorization (RMA) ticket.
+          </p>
+
+          <!-- Professional "No Orders Yet" Empty State for Return Tool -->
+          <div id="noOrdersReturnState" class="account-empty-state" style="display: none; padding: 48px 24px; text-align: center; background: var(--bg-surface); border: 1px dashed var(--border-color); border-radius: var(--radius-md); margin-top: 16px;">
+            <div class="account-empty-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 113, 227, 0.08); color: var(--accent); margin-bottom: 16px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 0 0 8px;">No Orders Available for Return or Replacement</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); max-width: 460px; margin: 0 auto 20px; line-height: 1.6;">
+              You currently have no completed orders with ShopEase. Once your purchase is delivered, our 7-Day Hassle-Free Return &amp; Replacement portal will automatically activate here with your order details.
+            </p>
+            <a href="products.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+              <span>Explore Products &amp; Place Order &rarr;</span>
+            </a>
+          </div>
+
+          <form id="returnInitiatorForm">
+            <div class="tool-form-grid">
+              <div class="tool-input-group">
+                <label for="returnOrderId">Order ID *</label>
+                <input type="text" id="returnOrderId" class="tool-input" placeholder="Enter Order ID" required>
+              </div>
+              <div class="tool-input-group">
+                <label for="returnCustomerEmail">Registered Email *</label>
+                <input type="email" id="returnCustomerEmail" class="tool-input" placeholder="e.g. name@example.com" required>
+              </div>
+            </div>
+
+            <div class="tool-form-grid">
+              <div class="tool-input-group">
+                <label for="returnReason">Reason for Return / Replacement *</label>
+                <select id="returnReason" class="tool-input" style="cursor: pointer;" required>
+                  <option value="defective">Defective Hardware or Malfunction</option>
+                  <option value="damaged">Damaged in Transit / Crushed Packaging</option>
+                  <option value="wrong_item">Incorrect Item / Variant Received</option>
+                  <option value="sizing">Size / Fit Issue (Footwear / Wearables)</option>
+                  <option value="mind_change">Changed Mind within 7-Day Window</option>
+                </select>
+              </div>
+              <div class="tool-input-group">
+                <label for="returnActionType">Requested Resolution *</label>
+                <select id="returnActionType" class="tool-input" style="cursor: pointer;" required>
+                  <option value="replacement">Direct Product Replacement (Fastest)</option>
+                  <option value="refund_source">100% Refund to Original Payment Method</option>
+                  <option value="store_credit">Instant ShopEase Wallet Credit</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <label for="returnRemarks" style="display: block; font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">Brief Description of Issue</label>
+              <textarea id="returnRemarks" class="tool-textarea" placeholder="Provide any details that will help our quality inspection team process your return faster..."></textarea>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+              <input type="checkbox" id="returnTermsCheck" checked required style="width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer;">
+              <label for="returnTermsCheck" style="font-size: 0.8125rem; color: var(--text-secondary); cursor: pointer;">
+                I confirm the product is in its original box with all manufacturer accessories, tags, and invoice intact.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnSubmitReturn" style="height: 44px; padding: 0 24px; font-weight: 700;">
+              <span>Verify Eligibility &amp; Initiate Return &rarr;</span>
+            </button>
+          </form>
+
+          <!-- Error / Ineligible Notification Card -->
+          <div id="returnErrorPanel" class="tool-result-panel" style="display: none; border-left: 4px solid var(--error, #dc2626); margin-top: 24px; background: rgba(239, 68, 68, 0.05); padding: 16px; border-radius: var(--radius-sm); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <div>
+                <h3 style="font-size: 1.05rem; font-weight: 800; color: #dc2626; margin: 0 0 4px;">Return Ineligible</h3>
+                <p id="resErrorMsg" style="font-size: 0.875rem; color: var(--text-secondary); margin: 0; line-height: 1.5;"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Live Result Card -->
+          <div id="returnResultPanel" class="tool-result-panel" style="display: none; border-left: 4px solid var(--accent); margin-top: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <span class="badge badge-success" style="font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 9999px;">Return Authorized</span>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin: 8px 0 2px;">
+                  RMA Ticket: <span id="resRmaCode" style="color: var(--accent); font-family: monospace;">RMA-SE-90382</span>
+                </h3>
+                <div style="font-size: 0.8125rem; color: var(--text-muted);" id="resOrderMeta"></div>
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <a href="order-details.html" id="resOrderDetailsLink" class="btn btn-outline btn-sm">View Order Details &rarr;</a>
+                <a href="order-tracking.html" id="resTrackLink" class="btn btn-outline btn-sm">Track Live Status &rarr;</a>
+              </div>
+            </div>
+            <div style="background: var(--surface); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary);">
+              <p style="margin: 0 0 8px;"><strong>Pickup Schedule:</strong> BlueDart Express has been notified. A courier associate will arrive at your registered delivery address within <strong>24–48 hours</strong>.</p>
+              <p style="margin: 0;"><strong>Packaging Instructions:</strong> Keep the item securely placed in its original retail package with warranty card and power cable. No printout is required; show this RMA code to the courier.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 1: Shipping Policy & Timelines -->
+        <article id="shipping-policy" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            Shipping Policy &amp; Delivery Timelines
+          </h2>
+          <p>
+            ShopEase partners exclusively with tier-1 national logistics providers including <strong>BlueDart Air Express, Delhivery Prime, and Shadowfax</strong> to guarantee rapid, insured, and GPS-tracked doorstep deliveries across all operational PIN codes in India.
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0;">
+            <div style="border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; background: var(--bg-main);">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase;">Express Air Shipping</div>
+              <div style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 6px 0;">2 – 3 Business Days</div>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">Metro cities (Bengaluru, Mumbai, Delhi NCR, Hyderabad, Chennai, Kolkata, Pune).</p>
+            </div>
+            <div style="border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; background: var(--bg-main);">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase;">Standard Surface Delivery</div>
+              <div style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 6px 0;">4 – 7 Business Days</div>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">Tier-2 and Tier-3 regional towns across all states and union territories.</p>
+            </div>
+          </div>
+          <p>
+            All packages are dispatched within <strong>24 business hours</strong> of payment verification from our centralized fulfilment centers in Bengaluru and Gurugram. Once handed over to the courier partner, an automated SMS and email containing the tracking URL is immediately dispatched.
+          </p>
+        </article>
+
+        <!-- Section 2: Delivery Fees & Free Shipping -->
+        <article id="delivery-charges" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            Delivery Charges &amp; Free Shipping Threshold
+          </h2>
+          <ul>
+            <li><strong>Orders above ₹1,999:</strong> 100% FREE Express Shipping across India. Zero hidden handling or packaging charges.</li>
+            <li><strong>Standard Orders under ₹1,999:</strong> A nominal flat logistics fee of ₹99 is applied at checkout to cover insured courier handling.</li>
+            <li><strong>High-Value Hardware:</strong> All laptops, smartphones, and professional monitors above ₹25,000 include complimentary tamper-proof security seals and OTP-verified delivery.</li>
+          </ul>
+        </article>
+
+        <!-- Section 3: 7-Day Replacement Policy -->
+        <article id="return-policy" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+            7-Day Hassle-Free Replacement &amp; Returns Policy
+          </h2>
+          <p>
+            We stand behind every authentic product we sell. If your order arrives defective, physically damaged, missing accessories, or differs from the catalog description, you may initiate a return or replacement within <strong>7 days of confirmed delivery</strong>.
+          </p>
+          <h4 style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); margin: 18px 0 8px;">Eligibility Requirements:</h4>
+          <ul>
+            <li>Product must be accompanied by the original brand retail packaging, user manuals, warranty documentation, and bundled accessories.</li>
+            <li>Serial numbers and IMEI tags must match the records on your ShopEase order invoice.</li>
+            <li>Items must be free from customer-induced physical damage, liquid exposure, or unauthorized firmware modifications.</li>
+          </ul>
+        </article>
+
+        <!-- Section 4: Refund Processing -->
+        <article id="refund-process" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            Refund Timelines &amp; Payment Methods
+          </h2>
+          <p>
+            Once our verification team receives and inspects the returned item at the fulfillment facility (typically within 48 hours of pickup), refunds are approved and processed immediately:
+          </p>
+          <ul>
+            <li><strong>Credit / Debit Cards:</strong> 3 – 5 business days depending on your issuing bank.</li>
+            <li><strong>UPI &amp; Net Banking:</strong> Instant to 24 business hours.</li>
+            <li><strong>Cash on Delivery (COD):</strong> Refunded directly to your bank account via NEFT/IMPS after providing account details in your dashboard.</li>
+          </ul>
+        </article>
+
+        <!-- Section 5: FAQs -->
+        <article id="faqs" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Frequently Asked Questions
+          </h2>
+
+          <div class="faq-card-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can I track the return courier in real-time?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Yes. Once your RMA ticket is generated, our courier partner's tracking details will be linked directly to your <a href="order-tracking.html" style="color: var(--accent); font-weight: 600;">Track Orders</a> dashboard.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do I have to pay for return shipping?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Never. All verified returns and replacements for defective, transit-damaged, or incorrect products include 100% free doorstep pickup arranged by ShopEase.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What if my delivery location is in a containment or remote zone?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              In remote areas where standard air couriers do not offer regular daily runs, India Post Speed Post is utilized with full tracking telemetry. Delivery may require 5–9 business days.
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer (Black Background Design System) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-col">
+          <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+                <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+              </svg>
+            </span>
+            <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Next-generation consumer hardware and digital lifestyle platform. Engineered for reliability, speed, and real-time performance telemetry.
+          </p>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Department -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Shop Department</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=laptops" class="footer-link">Laptops &amp; Workstations</a></li>
+            <li><a href="products.html?category=smartphones" class="footer-link">Flagship Smartphones</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Studio Audio &amp; Monitors</a></li>
+            <li><a href="products.html?category=footwear" class="footer-link">Ergonomic Footwear</a></li>
+            <li><a href="products.html?category=accessories" class="footer-link">Lifestyle Accessories</a></li>
+            <li><a href="products.html?category=watches" class="footer-link">Watches &amp; Wearables</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="account.html#orders" class="footer-link">My Orders</a></li>
+            <li><a href="order-tracking.html" class="footer-link">Order Tracking</a></li>
+            <li><a href="shipping-returns.html" class="footer-link active" style="color: var(--accent); font-weight: 600;">Shipping &amp; Returns</a></li>
+            <li><a href="warranty.html" class="footer-link">Warranty Certification</a></li>
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="support.html" class="footer-link">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <!-- Stay Connected -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for hardware releases, firmware updates, and seasonal priority access.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to ShopEase updates!'); this.reset();">
+            <input type="email" class="footer-newsletter-input newsletter-input" placeholder="Enter your work email" required autocomplete="email">
+            <button type="submit" class="btn btn-primary footer-newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Legal Row -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 ShopEase Technologies Inc. All rights reserved.</p>
+        <div class="footer-bottom-links footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        const answer = btn.nextElementSibling;
+        if (answer) {
+          answer.classList.toggle('open', !expanded);
+        }
+      });
+    });
+
+    // Smooth navigation with header offset
+    document.querySelectorAll('.policy-nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            const headerHeight = document.getElementById('siteHeader') ? document.getElementById('siteHeader').offsetHeight : 70;
+            const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+            window.scrollTo({ top: targetPos, behavior: 'smooth' });
+            if (window.history && window.history.pushState) {
+              window.history.pushState(null, null, targetId);
+            }
+            document.querySelectorAll('.policy-nav-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
+        }
+      });
+    });
+
+    // Interactive Return Initiator
+    const returnForm = document.getElementById('returnInitiatorForm');
+    const returnPanel = document.getElementById('returnResultPanel');
+    const returnEmpty = document.getElementById('noOrdersReturnState');
+    const errorPanel = document.getElementById('returnErrorPanel');
+    const errorMsg = document.getElementById('resErrorMsg');
+    const orderService = window.ShopEaseOrderService;
+    const hasOrders = orderService && typeof orderService.hasOrders === 'function' ? orderService.hasOrders() : false;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryOrderId = urlParams.get('orderId') || urlParams.get('id');
+
+    function checkAndDisplayOrderStatus(targetOrder) {
+      if (!targetOrder) return;
+      const cleanId = (targetOrder.rawId || targetOrder.orderId || '').replace('#', '');
+      const isCancelled = targetOrder.status === 'Cancelled' || 
+                          targetOrder.statusClass === 'cancelled' || 
+                          (targetOrder.status || '').toLowerCase().includes('cancel');
+
+      if (isCancelled) {
+        if (returnPanel) returnPanel.style.display = 'none';
+        const reason = `Order #${cleanId} was cancelled${targetOrder.cancelledAt ? ' on ' + targetOrder.cancelledAt : ''} and is not eligible for return or replacement. Returns are only available for fulfilled and delivered orders.`;
+        if (errorPanel && errorMsg) {
+          errorMsg.innerHTML = `<strong>Order Cancelled:</strong> ${reason} <div style="margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap;"><a href="order-tracking.html?orderId=${cleanId}" class="btn btn-sm btn-outline" style="border-radius: 6px; padding: 6px 14px; font-size: 0.8125rem;">Track Order &rarr;</a><a href="order-details.html?orderId=${cleanId}" class="btn btn-sm btn-outline" style="border-radius: 6px; padding: 6px 14px; font-size: 0.8125rem;">View Order Details</a></div>`;
+          errorPanel.style.display = 'block';
+        }
+        return;
+      }
+
+      // If this order already has an active return request, display existing RMA details immediately
+      if (targetOrder.returnStatus) {
+        if (errorPanel) errorPanel.style.display = 'none';
+        document.getElementById('resRmaCode').textContent = targetOrder.rmaCode || 'RMA-ACTIVE';
+        const prodName = (targetOrder.items && targetOrder.items[0] && targetOrder.items[0].name) || 'Product';
+        document.getElementById('resOrderMeta').innerHTML = `Order #${cleanId} &bull; <strong>${targetOrder.returnStatus}</strong> &bull; Item: ${prodName}`;
+        const resTrack = document.getElementById('resTrackLink');
+        if (resTrack) resTrack.href = `order-tracking.html?orderId=${cleanId}`;
+        const resDetails = document.getElementById('resOrderDetailsLink');
+        if (resDetails) resDetails.href = `order-details.html?orderId=${cleanId}`;
+        if (returnPanel) returnPanel.style.display = 'block';
+      }
+    }
+
+    if (!hasOrders && !queryOrderId) {
+      if (returnForm) returnForm.style.display = 'none';
+      if (returnPanel) returnPanel.style.display = 'none';
+      if (returnEmpty) returnEmpty.style.display = 'block';
+    } else {
+      if (returnForm) returnForm.style.display = 'block';
+      if (returnEmpty) returnEmpty.style.display = 'none';
+
+      let targetInitialOrder = null;
+      if (queryOrderId && orderService) {
+        targetInitialOrder = orderService.getOrderById(queryOrderId);
+      }
+      if (!targetInitialOrder && !queryOrderId && orderService) {
+        const userOrders = orderService.getUserOrders();
+        if (userOrders && userOrders.length > 0) {
+          targetInitialOrder = userOrders[0];
+        }
+      }
+
+      if (targetInitialOrder) {
+        const returnOrderInput = document.getElementById('returnOrderId');
+        const returnEmailInput = document.getElementById('returnCustomerEmail');
+        if (returnOrderInput) {
+          returnOrderInput.value = (targetInitialOrder.rawId || targetInitialOrder.orderId || '').replace('#', '');
+        }
+        if (returnEmailInput && (targetInitialOrder.customerEmail || (targetInitialOrder.customer && targetInitialOrder.customer.email))) {
+          returnEmailInput.value = targetInitialOrder.customerEmail || targetInitialOrder.customer.email;
+        }
+
+        checkAndDisplayOrderStatus(targetInitialOrder);
+      }
+
+      // Background sync with AWS API Gateway / DynamoDB
+      const targetSyncId = queryOrderId || (targetInitialOrder && (targetInitialOrder.rawId || targetInitialOrder.orderId));
+      if (targetSyncId && orderService && typeof orderService.fetchOrderById === 'function') {
+        orderService.fetchOrderById(targetSyncId).then(freshOrder => {
+          if (freshOrder) {
+            targetInitialOrder = freshOrder;
+            const returnOrderInput = document.getElementById('returnOrderId');
+            if (returnOrderInput) {
+              returnOrderInput.value = (freshOrder.rawId || freshOrder.orderId || '').replace('#', '');
+            }
+            checkAndDisplayOrderStatus(freshOrder);
+          }
+        }).catch(() => {});
+      }
+    }
+
+    // Reactive listeners: Sync if order cancelled or updated
+    window.addEventListener('shopease:order-updated', (e) => {
+      const updated = e.detail && e.detail.order;
+      if (updated) {
+        const curId = document.getElementById('returnOrderId')?.value?.trim();
+        const cleanUpdated = (updated.rawId || updated.orderId || '').replace('#', '');
+        if (!curId || curId === cleanUpdated) {
+          checkAndDisplayOrderStatus(updated);
+        }
+      }
+    });
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'shopease_orders_data' || e.key === 'shopease_last_order') {
+        const curId = document.getElementById('returnOrderId')?.value?.trim();
+        if (curId && orderService && typeof orderService.getOrderById === 'function') {
+          const fresh = orderService.getOrderById(curId);
+          if (fresh) checkAndDisplayOrderStatus(fresh);
+        }
+      }
+    });
+
+    if (returnForm && returnPanel) {
+      returnForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (errorPanel) errorPanel.style.display = 'none';
+
+        const orderId = document.getElementById('returnOrderId').value.trim();
+        if (!orderId) {
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast('Please enter a valid Order ID.', 'error');
+          }
+          return;
+        }
+        const cleanId = orderId.replace('#', '');
+        const targetOrder = orderService && typeof orderService.getOrderById === 'function' ? orderService.getOrderById(cleanId) : null;
+
+        if (!targetOrder) {
+          returnPanel.style.display = 'none';
+          const reason = `No order found matching #${cleanId}. Please verify your Order ID in your Track Orders dashboard.`;
+          if (errorPanel && errorMsg) {
+            errorMsg.textContent = reason;
+            errorPanel.style.display = 'block';
+            errorPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast(reason, 'error');
+          }
+          return;
+        }
+
+        // 1. Check if order was cancelled
+        if (targetOrder.status === 'Cancelled' || targetOrder.statusClass === 'cancelled') {
+          returnPanel.style.display = 'none';
+          const reason = `Order #${cleanId} was cancelled${targetOrder.cancelledAt ? ' on ' + targetOrder.cancelledAt : ''} and is not eligible for return or replacement. Returns are only available for fulfilled and delivered orders.`;
+          if (errorPanel && errorMsg) {
+            errorMsg.textContent = reason;
+            errorPanel.style.display = 'block';
+            errorPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast(reason, 'error');
+          }
+          return;
+        }
+
+        // 2. Check if a return was already submitted (prevent duplicate)
+        if (targetOrder.returnStatus) {
+          returnPanel.style.display = 'none';
+          const reason = `A return request has already been submitted for Order #${cleanId} (${targetOrder.returnStatus}, RMA: ${targetOrder.rmaCode || '--'}). Duplicate requests cannot be created.`;
+          if (errorPanel && errorMsg) {
+            errorMsg.textContent = reason;
+            errorPanel.style.display = 'block';
+            errorPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast(reason, 'warning');
+          }
+          return;
+        }
+
+        // 3. Check delivery status eligibility
+        if (orderService && typeof orderService.isReturnEligible === 'function') {
+          const check = orderService.isReturnEligible(targetOrder);
+          if (!check.eligible) {
+            returnPanel.style.display = 'none';
+            if (errorPanel && errorMsg) {
+              errorMsg.textContent = check.reason;
+              errorPanel.style.display = 'block';
+              errorPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+              window.ShopEaseApp.showToast(check.reason, 'error');
+            }
+            return;
+          }
+        }
+
+        const reasonSelect = document.getElementById('returnReason');
+        const reasonText = reasonSelect ? reasonSelect.options[reasonSelect.selectedIndex].text : 'Customer Return';
+        const actionTypeSelect = document.getElementById('returnActionType');
+        const actionType = actionTypeSelect ? actionTypeSelect.value : 'replacement';
+        const remarks = document.getElementById('returnRemarks') ? document.getElementById('returnRemarks').value.trim() : '';
+
+        const btnSubmit = document.getElementById('btnSubmitReturn');
+        const originalBtnText = btnSubmit ? btnSubmit.innerHTML : 'Verify Eligibility & Initiate Return &rarr;';
+        if (btnSubmit) {
+          btnSubmit.disabled = true;
+          btnSubmit.innerHTML = '<span style="display: inline-flex; align-items: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9" stroke-opacity="0.2"></circle><path d="M12 3a9 9 0 0 1 9 9"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></path></svg> Processing Return Request...</span>';
+        }
+
+        try {
+          const result = await orderService.requestReturn(cleanId, reasonText, actionType === 'replacement' ? 'REPLACE' : 'RETURN_REFUND', remarks);
+          if (result && result.success) {
+            const rmaCode = result.rmaCode || `RMA-${cleanId.replace(/[^A-Za-z0-9]/g, '')}-99281`;
+            document.getElementById('resRmaCode').textContent = rmaCode;
+            const prodName = (targetOrder.items && targetOrder.items[0] && targetOrder.items[0].name) || 'Product';
+            document.getElementById('resOrderMeta').innerHTML = `Order #${cleanId} &bull; Item: <strong>${prodName}</strong> &bull; Resolution: <strong>${actionType === 'replacement' ? 'Direct Replacement' : 'Return & Refund'}</strong>`;
+            
+            const resTrack = document.getElementById('resTrackLink');
+            if (resTrack) resTrack.href = `order-tracking.html?orderId=${cleanId}`;
+            const resDetails = document.getElementById('resOrderDetailsLink');
+            if (resDetails) resDetails.href = `order-details.html?orderId=${cleanId}`;
+
+            if (errorPanel) errorPanel.style.display = 'none';
+            returnPanel.style.display = 'block';
+            returnPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+              window.ShopEaseApp.showToast(`Return authorized for Order #${cleanId}. RMA: ${rmaCode}`, 'success');
+            }
+          } else {
+            const errMsg = (result && (result.error || result.message)) || 'Unable to submit return request.';
+            if (errorPanel && errorMsg) {
+              errorMsg.textContent = errMsg;
+              errorPanel.style.display = 'block';
+            }
+            if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+              window.ShopEaseApp.showToast(errMsg, 'error');
+            }
+          }
+        } catch (err) {
+          console.error('Return initiation error:', err);
+          alert('An unexpected error occurred while initiating return.');
+        } finally {
+          if (btnSubmit) {
+            btnSubmit.disabled = false;
+            btnSubmit.innerHTML = originalBtnText;
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

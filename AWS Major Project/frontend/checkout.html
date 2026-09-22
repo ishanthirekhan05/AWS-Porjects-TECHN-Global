@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Secure Checkout - Complete your shipping details and select payment method for express dispatch.">
+  <title>Checkout - ShopEase</title>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .checkout-step-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 36px;
+      font-weight: 700;
+      font-size: 0.9375rem;
+    }
+    .checkout-step-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+    }
+    .checkout-step-item.active {
+      color: var(--accent);
+    }
+    .step-num-bubble {
+      width: 26px;
+      height: 26px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      background-color: var(--bg-subtle);
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+    }
+    .checkout-step-item.active .step-num-bubble {
+      background-color: var(--accent);
+      color: var(--accent-contrast);
+      border-color: var(--accent);
+    }
+    .step-connector-line {
+      width: 44px;
+      height: 2px;
+      background-color: var(--border-color);
+    }
+    .checkout-box-card {
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+    }
+    .checkout-box-title {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .payment-radio-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      cursor: pointer;
+      background-color: var(--bg-page);
+      transition: all var(--transition-fast);
+    }
+    .payment-radio-row:hover,
+    .payment-radio-row.selected {
+      border-color: var(--accent);
+      background-color: var(--bg-surface);
+    }
+    .payment-radio-row input[type="radio"] {
+      accent-color: var(--accent);
+      width: 16px;
+      height: 16px;
+    }
+    .order-mini-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.875rem;
+    }
+    .order-mini-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-xs);
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-surface);
+      object-fit: contain;
+      padding: 2px;
+    }
+  </style>
+
+  <!-- Immediate Theme Initializer -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <div style="font-size: 0.8125rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>256-Bit SSL Encrypted Checkout</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Checkout Section (Panel 6) -->
+  <main class="section-spacing" id="checkoutMainWrap">
+    <div class="container">
+      
+      <!-- Progress Stepper: (1) Shipping ── (2) Payment ── (3) Review (Panel 6) -->
+      <div class="checkout-step-nav" aria-label="Checkout Progress">
+        <div class="checkout-step-item active" id="stepIndicator1">
+          <span class="step-num-bubble">1</span>
+          <span>Shipping</span>
+        </div>
+        <div class="step-connector-line"></div>
+        <div class="checkout-step-item active" id="stepIndicator2">
+          <span class="step-num-bubble">2</span>
+          <span>Payment</span>
+        </div>
+        <div class="step-connector-line"></div>
+        <div class="checkout-step-item" id="stepIndicator3">
+          <span class="step-num-bubble">3</span>
+          <span>Review</span>
+        </div>
+      </div>
+
+      <form id="checkoutForm" novalidate>
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 36px; align-items: start;" class="checkout-layout-wrap">
+          
+          <!-- Left Column: Shipping & Payment (Panel 6) -->
+          <div>
+            
+            <!-- 1. Shipping Information (Panel 6) -->
+            <div class="checkout-box-card">
+              <h2 class="checkout-box-title">Shipping Information</h2>
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label" for="coFullName" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Full Name *</label>
+                <input type="text" id="coFullName" class="form-control" placeholder="Enter your name" required style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label" for="coEmail" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Email Address *</label>
+                <input type="email" id="coEmail" class="form-control" placeholder="Enter your email" required style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label" for="coPhone" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Mobile Number *</label>
+                <input type="tel" id="coPhone" class="form-control" placeholder="Enter mobile number" required style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label" for="coAddress" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">Address *</label>
+                <input type="text" id="coAddress" class="form-control" placeholder="Enter address (House/Flat, Street, Area)" required style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label class="form-label" for="coCity" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">City *</label>
+                  <input type="text" id="coCity" class="form-control" placeholder="Enter city" required style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="coPin" style="display: block; font-size: 0.8125rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">PIN Code *</label>
+                  <input type="text" id="coPin" class="form-control" placeholder="Enter pin" required style="width: 100%; padding: 10px 14px; font-size: 0.9375rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--bg-page); color: var(--text-primary);">
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Payment Method (Panel 6) -->
+            <div class="checkout-box-card">
+              <h2 class="checkout-box-title">Payment Method</h2>
+
+              <label class="payment-radio-row selected" id="payOptCard">
+                <input type="radio" name="payMethod" value="card" checked>
+                <div style="flex-grow: 1;">
+                  <div style="font-weight: 700; color: var(--text-primary);">Credit / Debit Card</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Visa, MasterCard, RuPay, American Express</div>
+                </div>
+                <div style="font-size: 1.125rem;">💳</div>
+              </label>
+
+              <label class="payment-radio-row" id="payOptUPI">
+                <input type="radio" name="payMethod" value="upi">
+                <div style="flex-grow: 1;">
+                  <div style="font-weight: 700; color: var(--text-primary);">UPI Instant Payment</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Google Pay, PhonePe, Paytm, BHIM</div>
+                </div>
+                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent);">UPI</div>
+              </label>
+
+              <label class="payment-radio-row" id="payOptCOD">
+                <input type="radio" name="payMethod" value="cod">
+                <div style="flex-grow: 1;">
+                  <div style="font-weight: 700; color: var(--text-primary);">Cash on Delivery</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Pay securely upon parcel handover</div>
+                </div>
+                <div style="font-size: 1.125rem;">💵</div>
+              </label>
+
+            </div>
+
+            <!-- Submit Button (Panel 6) -->
+            <button type="submit" class="btn btn-primary btn-lg" id="btnPlaceOrder" style="width: 100%; justify-content: center;">
+              Place Order &rarr;
+            </button>
+
+          </div>
+
+          <!-- Right Column: Order Summary (Panel 6) -->
+          <div>
+            <div class="checkout-box-card" style="position: sticky; top: calc(var(--header-height) + 24px);">
+              <h2 class="checkout-box-title" style="margin-bottom: 12px;">Order Summary</h2>
+
+              <!-- Items List -->
+              <div id="coItemsContainer" style="max-height: 240px; overflow-y: auto; margin-bottom: 16px;">
+                <!-- Populated dynamically -->
+              </div>
+
+              <!-- Price Totals -->
+              <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9375rem; color: var(--text-secondary);">
+                <span>Subtotal</span>
+                <span id="coSubtotal" style="font-weight: 700; color: var(--text-primary);">₹0</span>
+              </div>
+
+              <div id="coDiscountRow" style="display: none; justify-content: space-between; margin-bottom: 10px; font-size: 0.9375rem; color: var(--success);">
+                <span>Coupon Discount (<span id="coCouponCode">--</span>)</span>
+                <span id="coDiscount" style="font-weight: 700;">- ₹0</span>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9375rem; color: var(--text-secondary);">
+                <span>Shipping</span>
+                <span id="coShipping" style="font-weight: 700; color: var(--success);">FREE</span>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 14px; border-top: 1px solid var(--border-color); margin-top: 14px; margin-bottom: 18px;">
+                <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-primary);">Total</span>
+                <span id="coTotal" style="font-size: 1.35rem; font-weight: 850; color: var(--text-primary);">₹0</span>
+              </div>
+
+              <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+                Orders are dispatched within 48 hours. Real-time telemetry events will be registered upon confirmation.
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-compact-wrap">
+        <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ShopEase Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+          <a href="support.html" class="footer-legal-link">Support Desk</a>
+          <a href="account.html#orders" class="footer-legal-link">My Orders</a>
+          <a href="order-tracking.html" class="footer-legal-link">Order Tracking</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/cart.js?v=cart-selection-20260922"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/payment-gateway-sandbox.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+
+  <!-- Interactive Checkout Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const itemsContainer = document.getElementById('coItemsContainer');
+      const subtotalEl = document.getElementById('coSubtotal');
+      const totalEl = document.getElementById('coTotal');
+      const form = document.getElementById('checkoutForm');
+      if (!form || form.dataset.orderHandlerBound === 'true') return;
+      form.dataset.orderHandlerBound = 'true';
+      const formatINR = window.ShopEaseData ? window.ShopEaseData.formatINR : (n) => '₹' + n;
+      let orderSubmissionInFlight = false;
+      let orderFinalizationComplete = false;
+      const paymentState = {
+        pendingTransactionId: null,
+        loading: false,
+        error: null,
+        temporaryCardState: null,
+        callback: null,
+        cancelled: false
+      };
+      const pendingOrderKey = 'shopease_pending_order_creation';
+
+      const clearPaymentState = () => {
+        paymentState.pendingTransactionId = null;
+        paymentState.loading = false;
+        paymentState.error = null;
+        paymentState.temporaryCardState = null;
+        paymentState.callback = null;
+        paymentState.cancelled = true;
+      };
+
+      const selectedCheckout = new URLSearchParams(window.location.search).get('selected') === '1';
+      const getCheckoutItems = () => window.ShopEaseCart
+        ? (selectedCheckout ? window.ShopEaseCart.getSelectedCartItems() : window.ShopEaseCart.getCartItems())
+        : [];
+      const cart = getCheckoutItems();
+
+      if (cart.length === 0) {
+        itemsContainer.innerHTML = `
+          <p style="color: var(--text-muted); font-size: 0.875rem; text-align: center; padding: 20px 0;">
+            No items in bag. <a href="products.html" style="color: var(--accent); font-weight: 700;">Add products</a>
+          </p>
+        `;
+        subtotalEl.textContent = '₹0';
+        totalEl.textContent = '₹0';
+      } else {
+        itemsContainer.innerHTML = cart.map(item => `
+          <div class="order-mini-item">
+            <img src="${item.image}" alt="${item.name}" class="order-mini-thumb" onerror="this.src='${window.ShopEaseData.getFallbackImage(item.category || 'laptops')}'">
+            <div style="flex-grow: 1; min-width: 0;">
+              <div style="font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.name}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Qty: ${item.quantity}</div>
+            </div>
+            <div style="font-weight: 700; color: var(--text-primary);">${formatINR(item.price * item.quantity)}</div>
+          </div>
+        `).join('');
+
+        const subtotal = selectedCheckout && window.ShopEaseCart.getCartSubtotalForItems
+          ? window.ShopEaseCart.getCartSubtotalForItems(cart)
+          : window.ShopEaseCart.getCartSubtotal();
+        const discount = selectedCheckout && window.ShopEaseCart.getCartDiscountForItems
+          ? window.ShopEaseCart.getCartDiscountForItems(cart)
+          : window.ShopEaseCart.getCartDiscount();
+        const shippingFee = selectedCheckout && window.ShopEaseCart.getCartShippingForItems
+          ? window.ShopEaseCart.getCartShippingForItems(cart)
+          : window.ShopEaseCart.getCartShipping();
+        const total = selectedCheckout && window.ShopEaseCart.getCartTotalForItems
+          ? window.ShopEaseCart.getCartTotalForItems(cart)
+          : window.ShopEaseCart.getCartTotal();
+        const appliedCoupon = window.ShopEaseCart.getAppliedCoupon ? window.ShopEaseCart.getAppliedCoupon() : null;
+
+        subtotalEl.textContent = formatINR(subtotal);
+        const coShippingEl = document.getElementById('coShipping');
+        if (coShippingEl) coShippingEl.textContent = shippingFee === 0 ? 'FREE' : formatINR(shippingFee);
+        totalEl.textContent = formatINR(total);
+
+        const coDiscountRow = document.getElementById('coDiscountRow');
+        const coDiscount = document.getElementById('coDiscount');
+        const coCouponCode = document.getElementById('coCouponCode');
+        if (appliedCoupon && discount > 0) {
+          if (coDiscountRow) coDiscountRow.style.display = 'flex';
+          if (coDiscount) coDiscount.textContent = `- ${formatINR(discount)}`;
+          if (coCouponCode) coCouponCode.textContent = appliedCoupon.code;
+        } else if (coDiscountRow) {
+          coDiscountRow.style.display = 'none';
+        }
+      }
+
+      // Radio row selection visual highlight
+      document.querySelectorAll('input[name="payMethod"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          document.querySelectorAll('.payment-radio-row').forEach(row => row.classList.remove('selected'));
+          radio.closest('.payment-radio-row').classList.add('selected');
+          if (radio.value === 'cod') clearPaymentState();
+        });
+      });
+
+      // Prefill user details from authenticated user session & address book
+      try {
+        const currentUser = window.ShopEaseAuthService ? window.ShopEaseAuthService.getCurrentUser() : null;
+        if (currentUser) {
+          const fn = document.getElementById('coFullName');
+          const em = document.getElementById('coEmail');
+          const ph = document.getElementById('coPhone');
+          if (fn && currentUser.name && !fn.value) fn.value = currentUser.name;
+          if (em && currentUser.email && !em.value) em.value = currentUser.email;
+          if (ph && currentUser.phone && !ph.value) ph.value = currentUser.phone;
+
+          const addrs = window.ShopEaseAuthService.getAddresses();
+          if (Array.isArray(addrs) && addrs.length > 0) {
+            const defAddr = addrs.find(a => a.isDefault) || addrs[0];
+            const addrInput = document.getElementById('coAddress');
+            const cityInput = document.getElementById('coCity');
+            const pinInput = document.getElementById('coPin');
+            if (addrInput && !addrInput.value && defAddr.line1) {
+              addrInput.value = defAddr.line1 + (defAddr.line2 ? ', ' + defAddr.line2 : '');
+            }
+            if (cityInput && !cityInput.value && defAddr.city) cityInput.value = defAddr.city;
+            if (pinInput && !pinInput.value && defAddr.pin) pinInput.value = defAddr.pin;
+            if (ph && !ph.value && defAddr.phone) ph.value = defAddr.phone;
+          }
+        }
+      } catch (e) {
+        console.warn('Could not prefill user details:', e);
+      }
+
+      // Submit checkout
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const authenticatedUser = window.ShopEaseAuthService && typeof window.ShopEaseAuthService.isAuthenticated === 'function'
+          ? window.ShopEaseAuthService.isAuthenticated()
+          : Boolean(window.ShopEaseAuthService && window.ShopEaseAuthService.getCurrentUser && window.ShopEaseAuthService.getCurrentUser());
+        if (!authenticatedUser) {
+          const checkoutRedirect = selectedCheckout ? 'checkout.html?selected=1' : 'checkout.html';
+          window.location.href = `login.html?redirect=${encodeURIComponent(checkoutRedirect)}`;
+          return;
+        }
+
+        if (orderSubmissionInFlight || orderFinalizationComplete) return;
+
+        const placeOrderButton = document.getElementById('btnPlaceOrder');
+        orderSubmissionInFlight = true;
+        if (placeOrderButton) {
+          placeOrderButton.disabled = true;
+          placeOrderButton.classList.add('loading');
+        }
+
+        const currentCart = getCheckoutItems();
+        if (!currentCart || currentCart.length === 0) {
+          orderSubmissionInFlight = false;
+          if (placeOrderButton) {
+            placeOrderButton.disabled = false;
+            placeOrderButton.classList.remove('loading');
+          }
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast('Your shopping bag is empty. Please add items to checkout.', 'error');
+          } else {
+            alert('Your shopping bag is empty. Please add items to checkout.');
+          }
+          return;
+        }
+
+        const name = document.getElementById('coFullName').value.trim();
+        const email = document.getElementById('coEmail').value.trim();
+        const phone = document.getElementById('coPhone') ? document.getElementById('coPhone').value.trim() : '';
+        const address = document.getElementById('coAddress').value.trim();
+        const city = document.getElementById('coCity').value.trim();
+        const pin = document.getElementById('coPin').value.trim();
+
+        if (!name || !email || !address || !city || !pin) {
+          orderSubmissionInFlight = false;
+          if (placeOrderButton) {
+            placeOrderButton.disabled = false;
+            placeOrderButton.classList.remove('loading');
+          }
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast('Please fill all required shipping fields.', 'error');
+          } else {
+            alert('Please fill all required shipping fields.');
+          }
+          return;
+        }
+
+        const subtotal = window.ShopEaseCart
+          ? (selectedCheckout ? window.ShopEaseCart.getCartSubtotalForItems(currentCart) : window.ShopEaseCart.getCartSubtotal())
+          : 0;
+        const discount = window.ShopEaseCart
+          ? (selectedCheckout ? window.ShopEaseCart.getCartDiscountForItems(currentCart) : window.ShopEaseCart.getCartDiscount())
+          : 0;
+        const shippingFee = window.ShopEaseCart
+          ? (selectedCheckout ? window.ShopEaseCart.getCartShippingForItems(currentCart) : window.ShopEaseCart.getCartShipping())
+          : (subtotal >= 999 ? 0 : 99);
+        const total = window.ShopEaseCart
+          ? (selectedCheckout ? window.ShopEaseCart.getCartTotalForItems(currentCart) : window.ShopEaseCart.getCartTotal())
+          : Math.max(0, subtotal - discount + shippingFee);
+        const count = currentCart.reduce((totalCount, item) => totalCount + item.quantity, 0);
+        const appliedCoupon = window.ShopEaseCart ? window.ShopEaseCart.getAppliedCoupon() : null;
+        const currentUser = window.ShopEaseAuthService ? window.ShopEaseAuthService.getCurrentUser() : null;
+
+        let pendingOrder = null;
+        try { pendingOrder = JSON.parse(localStorage.getItem(pendingOrderKey) || 'null'); } catch (e) {}
+        const orderId = pendingOrder && pendingOrder.orderId
+          ? pendingOrder.orderId.replace('#', '')
+          : 'SE' + Math.floor(10000000 + Math.random() * 90000000);
+        const idempotencyKey = pendingOrder && pendingOrder.idempotencyKey
+          ? pendingOrder.idempotencyKey
+          : 'checkout_' + (window.crypto && typeof window.crypto.randomUUID === 'function'
+            ? window.crypto.randomUUID()
+            : Date.now().toString(36) + '_' + Math.random().toString(36).slice(2));
+        try {
+          localStorage.setItem(pendingOrderKey, JSON.stringify({
+            orderId: '#' + orderId,
+            idempotencyKey,
+            startedAt: pendingOrder && pendingOrder.startedAt ? pendingOrder.startedAt : Date.now()
+          }));
+        } catch (e) {}
+        const now = new Date();
+        const dateOptions = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
+        const selectedPayMethod = document.querySelector('input[name="payMethod"]:checked')?.value || 'card';
+        if (selectedPayMethod === 'cod') clearPaymentState();
+
+        const finalizeOrder = async (paymentDetails) => {
+          if (orderFinalizationComplete) return;
+          orderFinalizationComplete = true;
+          const finalizedItems = getCheckoutItems();
+          if (!finalizedItems.length) {
+            orderFinalizationComplete = false;
+            orderSubmissionInFlight = false;
+            if (placeOrderButton) {
+              placeOrderButton.disabled = false;
+              placeOrderButton.classList.remove('loading');
+            }
+            if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+              window.ShopEaseApp.showToast('Your selected cart items are no longer available.', 'error');
+            }
+            return;
+          }
+          const finalizedSubtotal = selectedCheckout && window.ShopEaseCart.getCartSubtotalForItems
+            ? window.ShopEaseCart.getCartSubtotalForItems(finalizedItems)
+            : window.ShopEaseCart.getCartSubtotal();
+          const finalizedDiscount = selectedCheckout && window.ShopEaseCart.getCartDiscountForItems
+            ? window.ShopEaseCart.getCartDiscountForItems(finalizedItems)
+            : window.ShopEaseCart.getCartDiscount();
+          const finalizedShippingFee = selectedCheckout && window.ShopEaseCart.getCartShippingForItems
+            ? window.ShopEaseCart.getCartShippingForItems(finalizedItems)
+            : window.ShopEaseCart.getCartShipping();
+          const finalizedTotal = selectedCheckout && window.ShopEaseCart.getCartTotalForItems
+            ? window.ShopEaseCart.getCartTotalForItems(finalizedItems)
+            : window.ShopEaseCart.getCartTotal();
+          const finalizedCount = finalizedItems.reduce((totalCount, item) => totalCount + item.quantity, 0);
+          const orderData = {
+            orderId: '#' + orderId,
+            orderDate: now.toLocaleString('en-IN', dateOptions),
+            status: 'Order Confirmed',
+            userId: currentUser ? currentUser.id : undefined,
+            customer: {
+              id: currentUser ? currentUser.id : undefined,
+              name: name,
+              email: email,
+              phone: phone || (currentUser ? currentUser.phone : '') || '+91 98000 00000',
+              address: address,
+              city: city,
+              pin: pin
+            },
+            shippingAddress: {
+              name: name,
+              line1: address,
+              city: city,
+              state: 'India',
+              pin: pin,
+              phone: phone || (currentUser ? currentUser.phone : '')
+            },
+            paymentMethod: paymentDetails.paymentMethod,
+            paymentStatus: paymentDetails.paymentStatus,
+            paymentType: selectedPayMethod === 'cod' ? 'COD' : 'PREPAID',
+            paymentId: paymentDetails.paymentId,
+            idempotencyKey,
+            carrier: 'BlueDart Air Express',
+            trackingNumber: 'BD' + Math.floor(100000000 + Math.random() * 900000000) + 'IN',
+            estimatedDelivery: 'Within 48 Hours',
+            items: [...finalizedItems],
+            total: finalizedTotal,
+            subtotal: finalizedSubtotal,
+            discount: finalizedDiscount,
+            couponCode: appliedCoupon ? appliedCoupon.code : null,
+            shippingFee: finalizedShippingFee
+          };
+
+          let createdOrder = null;
+          try {
+            if (window.ShopEaseOrderService && typeof window.ShopEaseOrderService.createOrder === 'function') {
+              createdOrder = window.ShopEaseOrderService.createOrder(orderData);
+              if (!createdOrder) throw new Error('Order service did not create an order.');
+              if (typeof window.ShopEaseOrderService.waitForOrderCreation === 'function') {
+                await Promise.race([
+                  window.ShopEaseOrderService.waitForOrderCreation(orderId),
+                  new Promise(r => setTimeout(r, 1200))
+                ]);
+              }
+              try { localStorage.removeItem(pendingOrderKey); } catch (e) {}
+            } else {
+              localStorage.setItem('shopease_last_order', JSON.stringify(orderData));
+              createdOrder = orderData;
+            }
+          } catch (err) {
+            console.warn('Could not save order:', err);
+            orderFinalizationComplete = false;
+            orderSubmissionInFlight = false;
+            if (placeOrderButton) {
+              placeOrderButton.disabled = false;
+              placeOrderButton.classList.remove('loading');
+            }
+            if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+              window.ShopEaseApp.showToast('We could not create your order. Your cart was not changed.', 'error');
+            }
+            return;
+          }
+
+          // Track telemetry
+          if (window.ShopEaseEvents) {
+            window.ShopEaseEvents.track('order_placed', {
+              orderId: orderId,
+              itemCount: finalizedCount,
+              totalAmount: finalizedTotal,
+              shippingCity: city,
+              paymentMethod: paymentDetails.paymentMethod
+            });
+          }
+
+          // Clear user cart and applied coupon
+          if (window.ShopEaseCart) {
+            if (selectedCheckout && typeof window.ShopEaseCart.removeItemsFromCart === 'function') {
+              window.ShopEaseCart.removeItemsFromCart(finalizedItems.map(item => item.id));
+            } else {
+              window.ShopEaseCart.clearCart();
+            }
+            if (typeof window.ShopEaseCart.removeCoupon === 'function') {
+              window.ShopEaseCart.removeCoupon();
+            }
+          }
+
+          // Redirect to success page
+          window.location.href = `success.html?orderId=${orderId}&amount=${finalizedTotal}`;
+        };
+
+        if (selectedPayMethod === 'cod') {
+          // Cash on Delivery
+          finalizeOrder({
+            paymentMethod: 'Cash on Delivery',
+            paymentStatus: 'Pay on Delivery / Unpaid',
+            paymentId: 'COD_' + orderId
+          });
+        } else {
+          // Online Payment through Official Sandbox Gateway
+          if (window.ShopEasePaymentGateway && typeof window.ShopEasePaymentGateway.open === 'function') {
+            paymentState.pendingTransactionId = orderId;
+            paymentState.loading = true;
+            paymentState.error = null;
+            paymentState.temporaryCardState = selectedPayMethod === 'card' ? 'gateway_open' : null;
+            paymentState.cancelled = false;
+            paymentState.callback = finalizeOrder;
+            window.ShopEasePaymentGateway.open({
+              order_id: orderId,
+              amount: total * 100, // paise
+              currency: 'INR',
+              name: 'ShopEase Technologies',
+              description: `Payment for Order #${orderId} (${count} item${count > 1 ? 's' : ''})`,
+              prefill: {
+                name: name,
+                email: email,
+                contact: phone
+              },
+              handler: function(response) {
+                if (paymentState.cancelled || paymentState.pendingTransactionId !== orderId) return;
+                finalizeOrder({
+                  paymentMethod: response.method === 'upi' ? 'UPI Instant Payment (Sandbox Verified)' : 'Credit / Debit Card (Sandbox Verified)',
+                  paymentStatus: 'Paid (Sandbox Verified)',
+                  paymentId: response.payment_id
+                });
+              },
+              onDismiss: function() {
+                clearPaymentState();
+                orderSubmissionInFlight = false;
+                if (placeOrderButton) {
+                  placeOrderButton.disabled = false;
+                  placeOrderButton.classList.remove('loading');
+                }
+                try { localStorage.removeItem(pendingOrderKey); } catch (e) {}
+                if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+                  window.ShopEaseApp.showToast('Payment cancelled. You can choose another payment method.', 'info');
+                }
+              }
+            });
+          } else {
+            finalizeOrder({
+              paymentMethod: selectedPayMethod === 'upi' ? 'UPI Instant Payment (Sandbox Test)' : 'Credit / Debit Card (Sandbox Test)',
+              paymentStatus: 'Paid (Sandbox Verified)',
+              paymentId: 'pay_test_' + orderId
+            });
+          }
+        }
+      });
+
+      const placeBtn = document.getElementById('btnPlaceOrder');
+      if (placeBtn) {
+        placeBtn.addEventListener('click', (ev) => {
+          if (orderSubmissionInFlight || orderFinalizationComplete) {
+            ev.preventDefault();
+            ev.stopPropagation();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

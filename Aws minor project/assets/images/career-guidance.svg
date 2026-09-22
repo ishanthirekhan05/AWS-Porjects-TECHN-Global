@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-labelledby="title description">
+  <title id="title">Student planning a career with a laptop</title>
+  <desc id="description">An original illustration of a student using a laptop beside a target, graduation cap, chart and light bulb.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#122641"/>
+      <stop offset="1" stop-color="#0b172b"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a5f3fc"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect x="28" y="22" width="584" height="476" rx="34" fill="url(#panel)" stroke="#2b4263" stroke-width="2"/>
+  <circle cx="478" cy="112" r="72" fill="#14b8a6" opacity=".08"/>
+  <circle cx="478" cy="112" r="48" fill="none" stroke="#22d3ee" stroke-width="2" opacity=".5"/>
+  <path d="M416 112h124M478 50v124" stroke="#22d3ee" stroke-width="2" opacity=".28"/>
+  <circle cx="478" cy="112" r="13" fill="#f59e0b"/>
+  <circle cx="478" cy="112" r="5" fill="#0f172a"/>
+  <path d="M90 382h460" stroke="#2b4263" stroke-width="2"/>
+  <rect x="94" y="108" width="128" height="92" rx="14" fill="#0d1b31" stroke="#365174" stroke-width="2"/>
+  <path d="M112 177l24-28 19 17 24-39 25 20" fill="none" stroke="url(#teal)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="136" cy="149" r="5" fill="#5eead4"/><circle cx="155" cy="166" r="5" fill="#5eead4"/><circle cx="179" cy="127" r="5" fill="#5eead4"/><circle cx="204" cy="147" r="5" fill="#5eead4"/>
+  <path d="M123 126h58" stroke="#607a9c" stroke-width="3" stroke-linecap="round"/>
+  <g transform="translate(386 188)">
+    <path d="M0 40h104l-14 72H14z" fill="#0a1426" stroke="#416080" stroke-width="2"/>
+    <path d="M-14 40h132l-17 12H3z" fill="url(#cyan)" opacity=".85"/>
+    <rect x="15" y="56" width="74" height="45" rx="4" fill="#102a43"/>
+    <path d="M25 89h17V73h14v16h14V65h13v24" fill="none" stroke="#5eead4" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-28 113h160" stroke="#42607f" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(234 94)">
+    <path d="M72 82c-8-30 8-62 39-71 33-10 69 10 77 43 6 25-4 48-21 63-9 8-14 17-16 30H92c-2-13-7-22-16-31-7-7-12-16-14-25z" fill="#f2b6a0"/>
+    <path d="M72 82c-8-30 8-62 39-71 33-10 69 10 77 43 6 25-4 48-21 63-9 8-14 17-16 30H92c-2-13-7-22-16-31-7-7-12-16-14-25z" fill="none" stroke="#f6c4ae" stroke-width="3"/>
+    <path d="M73 78c-9-33 9-67 44-76 30-8 63 8 76 36-21 2-32-11-45-18-8 16-24 27-47 28 2 13 0 23-8 30z" fill="#1c314b"/>
+    <circle cx="126" cy="72" r="5" fill="#0f172a"/><circle cx="166" cy="72" r="5" fill="#0f172a"/>
+    <path d="M137 96c10 6 20 6 29 0" fill="none" stroke="#9d554d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M100 142c-20 8-36 31-40 59l-10 73h151l-13-77c-5-28-22-48-43-55z" fill="url(#teal)"/>
+    <path d="M102 143c-8 23-8 48-7 68" fill="none" stroke="#8ef5e5" stroke-width="4" opacity=".55"/>
+    <path d="M151 151c15 13 25 34 27 57" fill="none" stroke="#087f78" stroke-width="5" opacity=".6"/>
+    <path d="M67 180l-48 77 29 14 57-70" fill="#f2b6a0"/>
+    <path d="M191 181l44 55-23 18-65-59" fill="#f2b6a0"/>
+    <path d="M38 260l-15 54h65l19-54zM164 259l16 55h66l-18-55z" fill="#162a43"/>
+    <path d="M23 314h70M180 314h66" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(91 256)">
+    <path d="M0 42l61-27 61 27-61 27z" fill="url(#cyan)"/>
+    <path d="M24 48v29c19 17 55 17 74 0V48" fill="#14b8a6" stroke="#5eead4" stroke-width="2"/>
+    <path d="M122 42v48" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="122" cy="95" r="8" fill="#f59e0b"/>
+  </g>
+  <g transform="translate(276 332)">
+    <path d="M26 44c-11-21 1-47 25-52 25-5 46 14 43 38-2 13-10 19-15 29-3 6-4 11-4 17H39c0-7-1-13-5-19-3-5-6-8-8-13z" fill="#fef3c7" stroke="#fbbf24" stroke-width="3"/>
+    <path d="M49 83h36M52 92h30" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+    <path d="M66 2V-12M27 17L17 6M106 17l10-11" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Shopping Events & Deals - Explore live flash sales, mega shopping festivals, laptop week, smartphone days, and audio fest with verified instant bank discounts.">
+  <title>Shopping Events & Deals - ShopEase</title>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Immediate Theme Initializer -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Announcement">
+    <div class="container top-banner-inner">
+      <div class="top-banner-text">
+        <span class="top-banner-highlight">Mega Shopping Festival Active</span> — Flat 10% Instant Discount on HDFC &amp; ICICI Cards.
+      </div>
+      <div class="top-banner-links">
+        <a href="order-tracking.html">Order Tracking</a>
+        <span>•</span>
+        <a href="products.html">Browse Catalog</a>
+        <span>•</span>
+        <a href="support.html">Customer Care</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-icon btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Integrated Header Search Bar -->
+        <form class="header-search-wrap" role="search" action="products.html" method="GET">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="search" class="header-search-input" placeholder="Search products, brands, events..." autocomplete="off">
+        </form>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="products.html" class="nav-link" role="menuitem">Products</a></li>
+          <li role="none"><a href="events.html" class="nav-link active" role="menuitem">Events</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        </ul>
+
+        <!-- Action Controls: Wishlist, Cart, Profile -->
+        <div class="header-actions">
+          
+          <!-- Mobile Search Trigger -->
+          <button type="button" class="btn-icon mobile-search-btn" data-open-search aria-label="Open search" title="Search products">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Saved Wishlist Link -->
+          <a href="products.html?view=wishlist" class="btn-icon" aria-label="View saved wishlist" title="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- Shopping Cart Navigation Link -->
+          <a href="cart.html" class="btn-icon" aria-label="View shopping cart" title="Shopping Cart">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count cart-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- User Profile & Theme Switcher Dropdown Container -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile" id="profileToggleBtn" aria-label="Open user profile and appearance menu" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Account</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <!-- Profile & Theme Dropdown Menu -->
+            <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="User Account and Appearance Settings">
+              <div class="profile-dropdown-header">
+                <div class="profile-header-avatar">U</div>
+                <div>
+                  <div class="profile-header-name">Welcome Guest</div>
+                  <span class="profile-header-badge">Guest Visitor</span>
+                </div>
+              </div>
+
+              <ul class="profile-nav-links" role="none">
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html#orders" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>My Orders</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="order-tracking.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Order Tracking</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="products.html?view=wishlist" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Saved Wishlist</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="cart.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>My Shopping Bag</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="login.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                    <span>Sign In / Switch User</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="profile-dropdown-divider"></div>
+
+              <!-- Interface Theme Switcher -->
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                <div class="theme-pill-group" role="radiogroup" aria-label="Select Interface Theme">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+                      <span>Light Theme</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                      <span>Dark Theme</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span>System / Auto</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="profile-dropdown-divider"></div>
+              <a href="login.html" class="profile-nav-item" style="padding: 10px 14px; font-size: 0.8125rem; color: var(--text-muted); display: block;">
+                Sign Out
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section: Deals & Shopping Events -->
+  <section class="events-hero" aria-label="Shopping Events Banner">
+    <div class="container">
+      <div class="events-hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <span>Verified E-Commerce Promotions</span>
+      </div>
+      <h1 class="events-hero-title">Exclusive Deals &amp; Shopping Events</h1>
+      <p class="events-hero-desc">
+        Explore live flash sales, mega seasonal festivals, and category-exclusive markdowns with real-time countdowns and instant bank discounts across premium hardware and lifestyle essentials.
+      </p>
+
+      <div class="events-perks-bar">
+        <div class="events-perk-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span>Up to 60% Markdown</span>
+        </div>
+        <div class="events-perk-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+          <span>100% Brand Warranty</span>
+        </div>
+        <div class="events-perk-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          <span>Free Delivery &gt; ₹999</span>
+        </div>
+        <div class="events-perk-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+          <span>No-Cost EMI Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="section-spacing" id="eventsMainContent">
+    <div class="container">
+      
+      <!-- Interactive Filter Controls Bar -->
+      <div class="events-filter-bar" aria-label="Event filter controls">
+        <!-- Status Tabs -->
+        <div class="events-status-tabs" role="tablist" aria-label="Filter events by status">
+          <button type="button" class="event-tab-btn active" data-filter="all" role="tab" aria-selected="true">
+            <span>All Events</span>
+            <span class="event-tab-count" id="countAll">8</span>
+          </button>
+          <button type="button" class="event-tab-btn" data-filter="live" role="tab" aria-selected="false">
+            <span class="pulse-dot" style="background-color: #ef4444; width: 6px; height: 6px;"></span>
+            <span>Live Events</span>
+            <span class="event-tab-count" id="countLive">4</span>
+          </button>
+          <button type="button" class="event-tab-btn" data-filter="upcoming" role="tab" aria-selected="false">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Upcoming Events</span>
+            <span class="event-tab-count" id="countUpcoming">2</span>
+          </button>
+          <button type="button" class="event-tab-btn" data-filter="ended" role="tab" aria-selected="false">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Past Events</span>
+            <span class="event-tab-count" id="countEnded">2</span>
+          </button>
+        </div>
+
+        <!-- Category Pills -->
+        <div class="events-category-pills" aria-label="Filter events by category">
+          <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Categories:</span>
+          <button type="button" class="event-pill-btn active" data-cat="all">All Departments</button>
+          <button type="button" class="event-pill-btn" data-cat="laptops">Laptops</button>
+          <button type="button" class="event-pill-btn" data-cat="smartphones">Smartphones</button>
+          <button type="button" class="event-pill-btn" data-cat="audio">Audio</button>
+          <button type="button" class="event-pill-btn" data-cat="footwear">Footwear</button>
+          <button type="button" class="event-pill-btn" data-cat="accessories">Accessories</button>
+          <button type="button" class="event-pill-btn" data-cat="watches">Watches &amp; Wearables</button>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           SECTION 1: LIVE EVENTS (Active Now)
+           ================================================================ -->
+      <section class="events-group-block" id="sectionLiveEvents" data-group="live" aria-label="Live Shopping Events">
+        <div class="events-section-header">
+          <h2 class="events-section-title">
+            <span class="pulse-dot" style="background-color: #ef4444;"></span>
+            <span>Live Events (Active Now)</span>
+          </h2>
+          <span style="font-size: 0.8125rem; font-weight: 600; color: var(--text-muted);">Real-time promotional discounts</span>
+        </div>
+
+        <div class="events-grid-3">
+          
+          <!-- Featured Live Event: Mega Shopping Festival 2026 -->
+          <article class="event-card event-card-featured status-live" data-status="live" data-category="all" data-event-id="mega-festival">
+            <div class="event-featured-content">
+              <div class="event-card-badge-wrap" style="position: static; margin-bottom: 12px;">
+                <span class="event-badge live">
+                  <span class="pulse-dot"></span> LIVE NOW • SITEWIDE FESTIVAL
+                </span>
+                <span class="event-badge" style="background-color: var(--accent); color: #fff;">TOP PROMOTION</span>
+              </div>
+
+              <div class="event-meta-row">
+                <span class="event-dates-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Sep 05 – Sep 12, 2026</span>
+                </span>
+                <span>Sitewide Clearance</span>
+              </div>
+
+              <h3 class="event-card-title" style="font-size: 1.5rem;">Mega Shopping Festival 2026</h3>
+              
+              <div class="event-offer-highlight">
+                Flat 25% to 50% OFF + Extra 10% Instant Bank Discount on HDFC &amp; ICICI Cards
+              </div>
+
+              <p class="event-card-desc">
+                India's premier consumer hardware celebration. Experience monumental savings across Apple M3 laptops, titanium smartphones, Dolby Atmos soundbars, and premium footwear with guaranteed 48-hour express dispatch.
+              </p>
+
+              <!-- Live Countdown Timer -->
+              <div class="event-countdown-card">
+                <div class="countdown-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Event Ends In:</span>
+                </div>
+                <div class="countdown-digits" data-countdown-target="2026-09-12T23:59:59">Calculating...</div>
+              </div>
+
+              <div class="event-card-actions">
+                <a href="products.html" class="btn btn-primary" aria-label="Shop Mega Shopping Festival Deals">
+                  <span>Shop Now &rarr;</span>
+                </a>
+                <button type="button" class="btn btn-outline" data-view-details="mega-festival">
+                  View Details
+                </button>
+              </div>
+            </div>
+
+            <!-- Featured Promotional Banner Media -->
+            <div class="event-featured-media">
+              <img 
+                src="assets/events/banner-mega-festival.jpg" 
+                alt="Mega Shopping Festival 2026 Official Promotional Event Banner" 
+                class="event-featured-banner-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });"
+              >
+            </div>
+          </article>
+
+          <!-- Live Event 2: Laptop Week -->
+          <article class="event-card status-live" data-status="live" data-category="laptops" data-event-id="laptop-week">
+            <div class="event-card-banner">
+              <div class="event-card-badge-wrap">
+                <span class="event-badge live"><span class="pulse-dot"></span> LIVE NOW</span>
+                <span class="event-badge" style="background-color: var(--accent); color: #fff;">COMPUTING</span>
+              </div>
+              <img 
+                src="assets/events/banner-laptop-week.jpg" 
+                alt="Laptop Week Computing Promotional Event Banner" 
+                class="event-banner-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });"
+              >
+            </div>
+
+            <div class="event-card-body">
+              <div class="event-meta-row">
+                <span class="event-dates-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Sep 07 – Sep 14, 2026</span>
+                </span>
+                <span>Laptops</span>
+              </div>
+
+              <h3 class="event-card-title">Laptop Week Special</h3>
+              <div class="event-offer-highlight">Up to ₹35,000 OFF on MacBooks, Dell XPS &amp; ASUS ROG</div>
+
+              <p class="event-card-desc">
+                High-performance computing workstations for software architects, digital artists, and competitive gamers. Includes 12-month zero-interest EMI and free executive laptop sleeve.
+              </p>
+
+              <!-- Live Countdown -->
+              <div class="event-countdown-card">
+                <div class="countdown-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ends In:</span>
+                </div>
+                <div class="countdown-digits" data-countdown-target="2026-09-14T23:59:59">Calculating...</div>
+              </div>
+
+              <div class="event-card-actions">
+                <a href="products.html?category=laptops" class="btn btn-primary" aria-label="Shop Laptop Week Deals">
+                  <span>Shop Now &rarr;</span>
+                </a>
+                <button type="button" class="btn btn-outline" data-view-details="laptop-week">
+                  Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Live Event 3: Smartphone Days -->
+          <article class="event-card status-live" data-status="live" data-category="smartphones" data-event-id="smartphone-days">
+            <div class="event-card-banner">
+              <div class="event-card-badge-wrap">
+                <span class="event-badge live"><span class="pulse-dot"></span> LIVE NOW</span>
+                <span class="event-badge" style="background-color: var(--accent); color: #fff;">SMARTPHONES</span>
+              </div>
+              <img 
+                src="assets/events/banner-smartphone-days.jpg" 
+                alt="Smartphone Days Flagship Mobile Promotional Event Banner" 
+                class="event-banner-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });"
+              >
+            </div>
+
+            <div class="event-card-body">
+              <div class="event-meta-row">
+                <span class="event-dates-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Sep 06 – Sep 11, 2026</span>
+                </span>
+                <span>Smartphones</span>
+              </div>
+
+              <h3 class="event-card-title">Smartphone Days</h3>
+              <div class="event-offer-highlight">Up to ₹20,000 Exchange Bonus + 18-Mo Screen Protection</div>
+
+              <p class="event-card-desc">
+                Titanium durability and Snapdragon 8 Gen 3 computing. Grab the best trade-in exchange bonuses on Samsung Galaxy S24 Ultra, iPhone 15, and Google Pixel 8 Pro.
+              </p>
+
+              <!-- Live Countdown -->
+              <div class="event-countdown-card">
+                <div class="countdown-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Ends In:</span>
+                </div>
+                <div class="countdown-digits" data-countdown-target="2026-09-11T23:59:59">Calculating...</div>
+              </div>
+
+              <div class="event-card-actions">
+                <a href="products.html?category=smartphones" class="btn btn-primary" aria-label="Shop Smartphone Days Deals">
+                  <span>Shop Now &rarr;</span>
+                </a>
+                <button type="button" class="btn btn-outline" data-view-details="smartphone-days">
+                  Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Live Event 4: Flash Sale -->
+          <article class="event-card status-live" data-status="live" data-category="accessories" data-event-id="flash-sale">
+            <div class="event-card-banner">
+              <div class="event-card-badge-wrap">
+                <span class="event-badge live"><span class="pulse-dot"></span> HOURLY FLASH</span>
+                <span class="event-badge" style="background-color: #f59e0b; color: #fff;">LIMITED STOCK</span>
+              </div>
+              <img 
+                src="assets/events/banner-flash-sale.jpg" 
+                alt="Lightning Flash Sale Accessories & Tech EDC Promotional Event Banner" 
+                class="event-banner-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });"
+              >
+            </div>
+
+            <div class="event-card-body">
+              <div class="event-meta-row">
+                <span class="event-dates-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Sep 08, 2026 • 12PM–11:59PM</span>
+                </span>
+                <span>Accessories</span>
+              </div>
+
+              <h3 class="event-card-title">Lightning Flash Sale</h3>
+              <div class="event-offer-highlight">Flat 40% – 60% OFF Hourly Markdown</div>
+
+              <p class="event-card-desc">
+                High-speed GaN charging hubs, MagSafe leather card cases, mechanical keypads, and premium tech EDC accessories. Inventory refreshed every 2 hours while supplies last.
+              </p>
+
+              <!-- Live Countdown -->
+              <div class="event-countdown-card">
+                <div class="countdown-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Flash Ends In:</span>
+                </div>
+                <div class="countdown-digits" data-countdown-target="2026-09-08T23:59:59">Calculating...</div>
+              </div>
+
+              <div class="event-card-actions">
+                <a href="products.html?category=accessories" class="btn btn-primary" aria-label="Shop Flash Sale Deals">
+                  <span>Shop Now &rarr;</span>
+                </a>
+                <button type="button" class="btn btn-outline" data-view-details="flash-sale">
+                  Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTION 2: UPCOMING EVENTS (Starting Soon)
+           ================================================================ -->
+      <section class="events-group-block" id="sectionUpcomingEvents" data-group="upcoming" aria-label="Upcoming Shopping Events">
+        <div class="events-section-header">
+          <h2 class="events-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Upcoming Events (Starting Soon)</span>
+          </h2>
+          <span style="font-size: 0.8125rem; font-weight: 600; color: var(--text-muted);">Set reminders &amp; preview offers</span>
+        </div>
+
+        <div class="events-grid-2">
+          
+          <!-- Upcoming Event 1: Audio Fest -->
+          <article class="event-card status-upcoming" data-status="upcoming" data-category="audio" data-event-id="audio-fest">
+            <div class="event-card-banner">
+              <div class="event-card-badge-wrap">
+                <span class="event-badge upcoming"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> UPCOMING</span>
+                <span class="event-badge" style="background-color: var(--text-muted); color: #fff;">AUDIO</span>
+              </div>
+              <img 
+                src="assets/events/banner-audio-fest.jpg" 
+                alt="Audio Fest 2026 Studio Acoustic Promotional Event Banner" 
+                class="event-banner-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });"
+              >
+            </div>
+
+            <div class="event-card-body">
+              <div class="event-meta-row">
+                <span class="event-dates-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Sep 11 – Sep 18, 2026</span>
+                </span>
+                <span>Audio &amp; Headphones</span>
+              </div>
+
+              <h3 class="event-card-title">Audio Fest 2026</h3>
+              <div class="event-offer-highlight">Up to 45% OFF on Studio ANC Headphones &amp; Soundbars</div>
+
+              <p class="event-card-desc">
+                Immerse yourself in acoustic precision. Launch markdowns on Sony WH-1000XM5, Bose QuietComfort Ultra, and Sennheiser Momentum 4 with 6 months of complimentary lossless music streaming.
+              </p>
+
+              <!-- Upcoming Countdown -->
+              <div class="event-countdown-card">
+                <div class="countdown-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Starts In:</span>
+                </div>
+                <div class="countdown-digits" data-countdown-target="2026-09-11T00:00:00">Calculating...</div>
+              </div>
+
+              <div class="event-card-actions">
+                <a href="products.html?category=audio" class="btn btn-primary" aria-label="Shop Audio Fest Deals">
+                  <span>Shop Now &rarr;</span>
+                </a>
+                <button type="button" class="btn btn-outline" data-view-details="audio-fest">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Upcoming Event 2: Footwear Sale -->
+          <article class="event-card status-upcoming" data-status="upcoming" data-category="footwear" data-event-id="footwear-sale">
+            <div class="event-card-banner">
+              <div class="event-card-badge-wrap">
+                <span class="event-badge upcoming"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> UPCOMING</span>
+                <span class="event-badge" style="background-color: var(--text-muted); color: #fff;">FOOTWEAR</span>
+              </div>
+              <img 
+                src="assets/events/banner-footwear-sale.jpg" 
+                alt="Footwear Sale Extravaganza Athletic Running Shoes Promotional Event Banner" 
+                class="event-banner-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });"
+              >
+            </div>
+
+            <div class="event-card-body">
+              <div class="event-meta-row">
+                <span class="event-dates-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Sep 13 – Sep 20, 2026</span>
+                </span>
+                <span>Footwear</span>
+              </div>
+
+              <h3 class="event-card-title">Footwear Sale Extravaganza</h3>
+              <div class="event-offer-highlight">Buy 1 Get 1 at 50% OFF + Flat 30% OFF on Classics</div>
+
+              <p class="event-card-desc">
+                Step into responsive stride comfort. Engineered ZoomX cushioning, Ultraboost midsoles, and daily streetwear essentials from Nike, Adidas, and Asics with free size exchanges.
+              </p>
+
+              <!-- Upcoming Countdown -->
+              <div class="event-countdown-card">
+                <div class="countdown-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Starts In:</span>
+                </div>
+                <div class="countdown-digits" data-countdown-target="2026-09-13T00:00:00">Calculating...</div>
+              </div>
+
+              <div class="event-card-actions">
+                <a href="products.html?category=footwear" class="btn btn-primary" aria-label="Shop Footwear Sale Deals">
+                  <span>Shop Now &rarr;</span>
+                </a>
+                <button type="button" class="btn btn-outline" data-view-details="footwear-sale">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTION 3: PAST EVENTS (Recently Concluded)
+           ================================================================ -->
+      <section class="events-group-block" id="sectionPastEvents" data-group="ended" aria-label="Past Shopping Events">
+        <div class="events-section-header">
+          <h2 class="events-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Past Events (Recently Concluded)</span>
+          </h2>
+          <span style="font-size: 0.8125rem; font-weight: 600; color: var(--text-muted);">Browse full catalog at standard pricing</span>
+        </div>
+
+        <div class="events-grid-2">
+          
+          <!-- Past Event 1: Wearables Gala -->
+          <article class="event-card status-ended" data-status="ended" data-category="watches" data-event-id="wearables-gala">
+            <div class="event-card-banner">
+              <div class="event-card-badge-wrap">
+                <span class="event-badge ended">CONCLUDED</span>
+                <span class="event-badge" style="background-color: #475569; color: #fff;">WATCHES</span>
+              </div>
+              <img 
+                src="assets/events/banner-wearables-gala.jpg" 
+                alt="Wearables & Smartwatch Gala Promotional Event Banner" 
+                class="event-banner-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });"
+              >
+            </div>
+
+            <div class="event-card-body">
+              <div class="event-meta-row">
+                <span class="event-dates-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Aug 28 – Sep 04, 2026</span>
+                </span>
+                <span>Watches &amp; Wearables</span>
+              </div>
+
+              <h3 class="event-card-title">Wearables &amp; Smartwatch Gala</h3>
+              <div class="event-offer-highlight">Promotional Event Ended (Was Flat 35% OFF)</div>
+
+              <p class="event-card-desc">
+                Our premiere smartwatch exhibition featuring Apple Watch Ultra 2, Galaxy Watch 6, and Garmin Fenix GPS trackers. All promotional coupon quotas have been redeemed. You can still order items from the standard catalog.
+              </p>
+
+              <div class="event-countdown-card">
+                <div class="countdown-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Event Status:</span>
+                </div>
+                <div class="countdown-ended-label">Concluded on Sep 04, 2026</div>
+              </div>
+
+              <div class="event-card-actions">
+                <a href="products.html?category=watches" class="btn btn-primary" aria-label="Shop Watches Catalog">
+                  <span>Shop Now &rarr;</span>
+                </a>
+                <button type="button" class="btn btn-outline" data-view-details="wearables-gala">
+                  Recap
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Past Event 2: Mid-Season Clearance -->
+          <article class="event-card status-ended" data-status="ended" data-category="all" data-event-id="midseason-clearance">
+            <div class="event-card-banner">
+              <div class="event-card-badge-wrap">
+                <span class="event-badge ended">CONCLUDED</span>
+                <span class="event-badge" style="background-color: #475569; color: #fff;">CLEARANCE</span>
+              </div>
+              <img 
+                src="assets/events/banner-clearance.jpg" 
+                alt="Mid-Season Tech Clearance Promotional Event Banner" 
+                class="event-banner-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });"
+              >
+            </div>
+
+            <div class="event-card-body">
+              <div class="event-meta-row">
+                <span class="event-dates-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>Aug 18 – Aug 25, 2026</span>
+                </span>
+                <span>All Departments</span>
+              </div>
+
+              <h3 class="event-card-title">Mid-Season Tech Clearance</h3>
+              <div class="event-offer-highlight">Promotional Event Ended (Was Up to 60% OFF)</div>
+
+              <p class="event-card-desc">
+                Seasonal inventory refresh across high-speed desktop docks, mechanical keyboards, and legacy ultrabooks. All promotional clearance stock has been transitioned back to regular catalog listings.
+              </p>
+
+              <div class="event-countdown-card">
+                <div class="countdown-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Event Status:</span>
+                </div>
+                <div class="countdown-ended-label">Concluded on Aug 25, 2026</div>
+              </div>
+
+              <div class="event-card-actions">
+                <a href="products.html" class="btn btn-primary" aria-label="Browse Full Catalog">
+                  <span>Shop Now &rarr;</span>
+                </a>
+                <button type="button" class="btn btn-outline" data-view-details="midseason-clearance">
+                  Recap
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Interactive Event Details Modal Dialog -->
+  <div class="event-modal-backdrop" id="eventModalBackdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalEventTitle">
+    <div class="event-modal-card">
+      <div class="event-modal-header">
+        <div>
+          <span class="event-badge live" id="modalEventBadge">LIVE EVENT</span>
+          <h3 style="font-size: 1.35rem; font-weight: 850; color: var(--text-primary); margin-top: 8px;" id="modalEventTitle">Event Details</h3>
+        </div>
+        <button type="button" class="btn-icon" id="closeEventModalBtn" aria-label="Close event details modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="event-modal-body">
+        <div class="event-modal-banner-wrap">
+          <img id="modalEventImg" src="assets/events/banner-mega-festival.jpg" alt="Event Banner" class="event-modal-banner-img" onerror="this.onerror=null; this.src='assets/events/banner-fallback.jpg'; this.addEventListener('error', function() { this.src='assets/events/banner-fallback.svg'; });">
+        </div>
+
+        <div id="modalEventOffer" class="event-offer-highlight" style="display: block; font-size: 1rem; margin-bottom: 16px;">
+          Offer Information
+        </div>
+
+        <p id="modalEventDesc" style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+          Event description details.
+        </p>
+
+        <!-- Coupon Code Box -->
+        <div class="event-coupon-box">
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Promotional Coupon Code:</div>
+            <div class="coupon-code-val" id="modalCouponCode">MEGAFEST50</div>
+          </div>
+          <button type="button" class="btn btn-outline btn-sm" id="copyCouponBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Code</span>
+          </button>
+        </div>
+
+        <!-- Terms & Benefits -->
+        <div style="background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 24px;">
+          <h4 style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; color: var(--text-primary); margin-bottom: 10px;">
+            Promotion Terms &amp; Eligibility
+          </h4>
+          <ul style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6; padding-left: 18px; margin: 0;" id="modalTermsList">
+            <li>Instant 10% discount applicable on HDFC, ICICI, and Axis Bank cards.</li>
+            <li>Zero-cost EMI valid up to 12 months on eligible order totals above ₹10,000.</li>
+            <li>Complimentary standard manufacturer warranty applies to all items.</li>
+            <li>Free domestic express delivery included for orders above ₹999.</li>
+          </ul>
+        </div>
+
+        <!-- Direct Action CTA -->
+        <div style="display: flex; gap: 12px;">
+          <a href="products.html" id="modalShopBtn" class="btn btn-primary btn-lg" style="flex: 1; justify-content: center; text-align: center;">
+            <span>Shop This Event Now &rarr;</span>
+          </a>
+          <button type="button" class="btn btn-outline" id="modalCloseBtn">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standard ShopEase Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+                <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+              </svg>
+            </span>
+            <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Next-generation consumer hardware and digital lifestyle platform. Engineered for reliability, speed, and real-time performance telemetry.
+          </p>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Shop Department</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=laptops" class="footer-link">Laptops &amp; Workstations</a></li>
+            <li><a href="products.html?category=smartphones" class="footer-link">Flagship Smartphones</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Studio Audio &amp; Monitors</a></li>
+            <li><a href="products.html?category=footwear" class="footer-link">Ergonomic Footwear</a></li>
+            <li><a href="products.html?category=accessories" class="footer-link">Lifestyle Accessories</a></li>
+            <li><a href="products.html?category=watches" class="footer-link">Watches &amp; Wearables</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" id="support">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="account.html#orders" class="footer-link">My Orders</a></li>
+            <li><a href="order-tracking.html" class="footer-link">Order Tracking</a></li>
+            <li><a href="shipping-returns.html" class="footer-link">Shipping &amp; Returns</a></li>
+            <li><a href="warranty.html" class="footer-link">Warranty Certification</a></li>
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="support.html" class="footer-link">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for hardware releases, firmware updates, and seasonal priority access.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input 
+              type="email" 
+              class="newsletter-input" 
+              placeholder="Enter your work email" 
+              aria-label="Email address for newsletter"
+              required
+            >
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ShopEase Technologies Inc. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Drawer Menu (Identical to other pages) -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-menu-header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+            <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+          </svg>
+        </span>
+        <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+      </div>
+      <button type="button" class="btn-icon" id="closeMobileMenu" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="products.html" class="mobile-nav-link">All Products</a></li>
+      <li><a href="events.html" class="mobile-nav-link active" style="color: var(--accent); font-weight: 700;">Deals &amp; Events</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About ShopEase</a></li>
+      <li><a href="cart.html" class="mobile-nav-link">Shopping Cart</a></li>
+      <li><a href="account.html#orders" class="mobile-nav-link">My Orders</a></li>
+      <li><a href="order-tracking.html" class="mobile-nav-link">Order Tracking</a></li>
+      <li><a href="login.html" class="mobile-nav-link">Account / Sign In</a></li>
+    </ul>
+
+    <!-- Theme Switcher in Mobile Drawer -->
+    <div class="mobile-theme-picker">
+      <div class="profile-section-title">
+        <span>Interface Appearance</span>
+        <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+      </div>
+      <div class="theme-pill-group" style="gap: 6px;">
+        <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light">
+          <div class="theme-pill-left">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+            <span>Light</span>
+          </div>
+          <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+        <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark">
+          <div class="theme-pill-left">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <span>Dark</span>
+          </div>
+          <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Interactive Live Search Modal Overlay -->
+  <div class="search-backdrop" id="searchBackdrop" aria-hidden="true"></div>
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search catalog">
+    <div class="search-input-group">
+      <svg class="search-icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input 
+        type="search" 
+        id="searchModalInput" 
+        class="search-input" 
+        placeholder="Search catalog, deals, and events..." 
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button type="button" class="btn-icon" id="closeSearchModal" aria-label="Close search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results-area" id="searchResults"></div>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+
+  <!-- Events Page Engine (Countdown Timers, Filtering, Details Modal) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      'use strict';
+
+      // Event Meta Directory for interactive Details Modal
+      const EVENTS_DATA = {
+        'mega-festival': {
+          title: 'Mega Shopping Festival 2026',
+          banner: 'assets/events/banner-mega-festival.jpg',
+          badge: 'LIVE NOW • SITEWIDE FESTIVAL',
+          badgeClass: 'live',
+          offer: 'Flat 25% to 50% OFF + 10% Instant Bank Discount on HDFC & ICICI Cards',
+          desc: 'Our premier sitewide shopping festival offering steep discounts across laptops, flagship smartphones, studio audio headphones, footwear, and lifestyle tech accessories.',
+          coupon: 'MEGAFEST50',
+          categoryLink: 'products.html',
+          categoryName: 'All Products',
+          terms: [
+            'Flat 10% instant discount up to ₹3,000 on HDFC & ICICI credit and debit cards.',
+            'Zero-cost EMI for up to 12 months with participating banks on orders above ₹10,000.',
+            '48-hour express priority air dispatch with tracking updates via SMS & Email.',
+            'Original brand warranty certification and GST tax invoice included with every order.'
+          ]
+        },
+        'laptop-week': {
+          title: 'Laptop Week Special',
+          banner: 'assets/events/banner-laptop-week.jpg',
+          badge: 'LIVE NOW • COMPUTING',
+          badgeClass: 'live',
+          offer: 'Up to ₹35,000 OFF on MacBooks, Dell XPS & ASUS ROG',
+          desc: 'Comprehensive savings on developer workstations, creator laptops, and high-refresh OLED gaming rigs. Every purchase during Laptop Week includes a complimentary premium padded neoprene sleeve.',
+          coupon: 'LAPTOPWEEK',
+          categoryLink: 'products.html?category=laptops',
+          categoryName: 'Laptops',
+          terms: [
+            'Exchange bonus of up to ₹15,000 on qualifying old laptops in working condition.',
+            'Includes complimentary 1-year accidental damage protection bundle.',
+            'No-cost EMI available for 3, 6, 9, and 12-month tenures on all major credit cards.'
+          ]
+        },
+        'smartphone-days': {
+          title: 'Smartphone Days 2026',
+          banner: 'assets/events/banner-smartphone-days.jpg',
+          badge: 'LIVE NOW • SMARTPHONES',
+          badgeClass: 'live',
+          offer: 'Up to ₹20,000 Extra Exchange Bonus + 18-Mo Screen Protection',
+          desc: 'Upgrade to cutting-edge mobile silicon. Massive exchange valuations on Samsung Galaxy S24 Ultra, Apple iPhone 15, and Google Pixel 8 Pro with zero down payment financing.',
+          coupon: 'PHONEFEST',
+          categoryLink: 'products.html?category=smartphones',
+          categoryName: 'Smartphones',
+          terms: [
+            'Extra ₹20,000 exchange valuation when upgrading from qualifying flagships.',
+            'Complimentary 18-month one-time screen replacement warranty included.',
+            '0% processing fee and instant approvals on Bajaj Finserv and major bank cards.'
+          ]
+        },
+        'flash-sale': {
+          title: 'Lightning Flash Sale',
+          banner: 'assets/events/banner-flash-sale.jpg',
+          badge: 'HOURLY FLASH SALE',
+          badgeClass: 'live',
+          offer: 'Flat 40% – 60% OFF Hourly Markdown',
+          desc: 'High-speed GaN charging hubs, MagSafe leather card cases, mechanical keypads, and premium everyday carry tech. Quantities are strictly limited per order.',
+          coupon: 'FLASH60',
+          categoryLink: 'products.html?category=accessories',
+          categoryName: 'Accessories',
+          terms: [
+            'Limit of 2 units per customer on lightning deal flash items.',
+            'Orders are packed and dispatched within 2 hours of payment confirmation.',
+            'Promotional coupon FLASH60 provides an additional 5% discount at checkout.'
+          ]
+        },
+        'audio-fest': {
+          title: 'Audio Fest 2026',
+          banner: 'assets/events/banner-audio-fest.jpg',
+          badge: 'UPCOMING • STARTS IN 2 DAYS',
+          badgeClass: 'upcoming',
+          offer: 'Up to 45% OFF on Studio ANC Headphones & Soundbars',
+          desc: 'Immerse yourself in acoustic precision. Launch markdowns on Sony WH-1000XM5, Bose QuietComfort Ultra, and Sennheiser Momentum 4 with 6 months of complimentary lossless music streaming.',
+          coupon: 'AUDIOFEST',
+          categoryLink: 'products.html?category=audio',
+          categoryName: 'Audio',
+          terms: [
+            'VIP early access opens 12 hours prior for registered ShopEase account holders.',
+            'Includes free 6-month Hi-Res lossless music streaming membership code.',
+            'Price match guarantee against official brand retail stores throughout the event.'
+          ]
+        },
+        'footwear-sale': {
+          title: 'Footwear Sale Extravaganza',
+          banner: 'assets/events/banner-footwear-sale.jpg',
+          badge: 'UPCOMING • STARTS IN 4 DAYS',
+          badgeClass: 'upcoming',
+          offer: 'Buy 1 Get 1 at 50% OFF + Flat 30% OFF on Classics',
+          desc: 'Step into responsive stride comfort. Engineered ZoomX cushioning, Ultraboost midsoles, and daily streetwear essentials from Nike, Adidas, and Asics with free size exchanges.',
+          coupon: 'SNEAKERFEST',
+          categoryLink: 'products.html?category=footwear',
+          categoryName: 'Footwear',
+          terms: [
+            'Buy One, Get Second Pair at 50% OFF applied automatically in your shopping cart.',
+            'Hassle-free 14-day doorstep size exchange policy with free courier pickup.',
+            '100% genuine original boxed inventory with official brand QR authentication.'
+          ]
+        },
+        'wearables-gala': {
+          title: 'Wearables & Smartwatch Gala (Recap)',
+          banner: 'assets/events/banner-wearables-gala.jpg',
+          badge: 'CONCLUDED ON SEP 04',
+          badgeClass: 'ended',
+          offer: 'Promotional Event Concluded (Was Flat 35% OFF)',
+          desc: 'Our smartwatch showcase featuring Apple Watch Ultra 2, Galaxy Watch 6, and Garmin Fenix GPS trackers. All promotional coupon quotas have been redeemed, but you can continue browsing the full watch catalog.',
+          coupon: 'EXPIRED',
+          categoryLink: 'products.html?category=watches',
+          categoryName: 'Watches & Wearables',
+          terms: [
+            'This promotion concluded on September 04, 2026.',
+            'Regular catalog warranty and 48-hour delivery remain active for all new orders.',
+            'Sign up for future wearable event alerts via the newsletter in the footer.'
+          ]
+        },
+        'midseason-clearance': {
+          title: 'Mid-Season Tech Clearance (Recap)',
+          banner: 'assets/events/banner-clearance.jpg',
+          badge: 'CONCLUDED ON AUG 25',
+          badgeClass: 'ended',
+          offer: 'Promotional Event Concluded (Was Up to 60% OFF)',
+          desc: 'Seasonal inventory clearance across desktop docks, mechanical keyboards, and previous generation ultrabooks. All promotional clearance stock has been transitioned back to regular catalog listings.',
+          coupon: 'EXPIRED',
+          categoryLink: 'products.html',
+          categoryName: 'All Products',
+          terms: [
+            'This promotion concluded on August 25, 2026.',
+            'All items remain available at standard competitive retail pricing.',
+            'Browse our current live events above for ongoing discounts.'
+          ]
+        }
+      };
+
+      // 1. Countdown Timer Engine
+      function updateCountdownTimers() {
+        const timerElements = document.querySelectorAll('[data-countdown-target]');
+        const now = new Date().getTime();
+
+        timerElements.forEach(el => {
+          const targetStr = el.getAttribute('data-countdown-target');
+          const targetDate = new Date(targetStr).getTime();
+          const distance = targetDate - now;
+
+          if (distance <= 0) {
+            el.textContent = 'Ended';
+            el.style.color = 'var(--text-muted)';
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          const pad = (n) => String(n).padStart(2, '0');
+
+          if (days > 0) {
+            el.textContent = `${days}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
+          } else {
+            el.textContent = `${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
+          }
+        });
+      }
+
+      updateCountdownTimers();
+      setInterval(updateCountdownTimers, 1000);
+
+      // 2. Interactive Filtering (Status Tabs & Category Pills)
+      let activeStatusFilter = 'all';
+      let activeCategoryFilter = 'all';
+
+      const statusTabBtns = document.querySelectorAll('.event-tab-btn');
+      const categoryPillBtns = document.querySelectorAll('.event-pill-btn');
+      const allCards = document.querySelectorAll('.event-card');
+      const sectionBlocks = document.querySelectorAll('.events-group-block');
+
+      function applyEventFilters() {
+        let visibleCount = 0;
+
+        allCards.forEach(card => {
+          const cardStatus = card.getAttribute('data-status');
+          const cardCat = card.getAttribute('data-category');
+
+          const matchesStatus = (activeStatusFilter === 'all') || (cardStatus === activeStatusFilter);
+          const matchesCategory = (activeCategoryFilter === 'all') || (cardCat === 'all') || (cardCat === activeCategoryFilter);
+
+          if (matchesStatus && matchesCategory) {
+            card.style.display = card.classList.contains('event-card-featured') ? 'grid' : 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Hide section headers if all cards in that section are hidden
+        sectionBlocks.forEach(sec => {
+          const secGroup = sec.getAttribute('data-group');
+          if (activeStatusFilter !== 'all' && activeStatusFilter !== secGroup) {
+            sec.style.display = 'none';
+          } else {
+            const visibleCardsInSection = sec.querySelectorAll('.event-card:not([style*="display: none"])');
+            sec.style.display = visibleCardsInSection.length > 0 ? 'block' : 'none';
+          }
+        });
+      }
+
+      statusTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          statusTabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          activeStatusFilter = btn.getAttribute('data-filter');
+          applyEventFilters();
+        });
+      });
+
+      categoryPillBtns.forEach(pill => {
+        pill.addEventListener('click', () => {
+          categoryPillBtns.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          activeCategoryFilter = pill.getAttribute('data-cat');
+          applyEventFilters();
+        });
+      });
+
+      // 3. Event Details Modal Controls
+      const modalBackdrop = document.getElementById('eventModalBackdrop');
+      const modalTitle = document.getElementById('modalEventTitle');
+      const modalBadge = document.getElementById('modalEventBadge');
+      const modalOffer = document.getElementById('modalEventOffer');
+      const modalDesc = document.getElementById('modalEventDesc');
+      const modalCoupon = document.getElementById('modalCouponCode');
+      const modalTerms = document.getElementById('modalTermsList');
+      const modalShopBtn = document.getElementById('modalShopBtn');
+      const closeModalBtn = document.getElementById('closeEventModalBtn');
+      const modalCloseSecondary = document.getElementById('modalCloseBtn');
+      const copyCouponBtn = document.getElementById('copyCouponBtn');
+
+      function openEventModal(eventId) {
+        const data = EVENTS_DATA[eventId];
+        if (!data) return;
+
+        modalTitle.textContent = data.title;
+        modalBadge.textContent = data.badge;
+        modalBadge.className = `event-badge ${data.badgeClass}`;
+        modalOffer.textContent = data.offer;
+        modalDesc.textContent = data.desc;
+        modalCoupon.textContent = data.coupon;
+        
+        // Modal Banner Image
+        const modalImg = document.getElementById('modalEventImg');
+        if (modalImg) {
+          modalImg.src = data.banner || 'assets/events/banner-fallback.jpg';
+          modalImg.alt = `${data.title} Promotional Event Banner`;
+        }
+
+        // Link and CTA
+        modalShopBtn.href = data.categoryLink;
+        modalShopBtn.innerHTML = `<span>Shop ${data.categoryName} Now &rarr;</span>`;
+
+        modalTerms.innerHTML = data.terms.map(t => `<li>${t}</li>`).join('');
+
+        modalBackdrop.classList.add('open');
+        modalBackdrop.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        if (window.ShopEaseEvents) {
+          window.ShopEaseEvents.track('event_details_viewed', { eventId, title: data.title });
+        }
+      }
+
+      function closeEventModal() {
+        modalBackdrop.classList.remove('open');
+        modalBackdrop.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Delegate View Details button clicks
+      document.addEventListener('click', (e) => {
+        const detailsBtn = e.target.closest('[data-view-details]');
+        if (detailsBtn) {
+          e.preventDefault();
+          const eventId = detailsBtn.getAttribute('data-view-details');
+          openEventModal(eventId);
+        }
+      });
+
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeEventModal);
+      if (modalCloseSecondary) modalCloseSecondary.addEventListener('click', closeEventModal);
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) closeEventModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalBackdrop.classList.contains('open')) {
+          closeEventModal();
+        }
+      });
+
+      // Copy Coupon Code with Toast
+      if (copyCouponBtn) {
+        copyCouponBtn.addEventListener('click', () => {
+          const code = modalCoupon.textContent;
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(code).then(() => {
+              if (window.ShopEaseApp && window.ShopEaseApp.showToast) {
+                window.ShopEaseApp.showToast(`Coupon code "${code}" copied to clipboard!`, 'success');
+              }
+            }).catch(() => {
+              fallbackCopy(code);
+            });
+          } else {
+            fallbackCopy(code);
+          }
+        });
+      }
+
+      function fallbackCopy(text) {
+        const tempInput = document.createElement('input');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        if (window.ShopEaseApp && window.ShopEaseApp.showToast) {
+          window.ShopEaseApp.showToast(`Coupon code "${text}" copied!`, 'success');
+        }
+      }
+
+      // Universal multi-tier fallback protection for all event images
+      document.querySelectorAll('.event-banner-img, .event-featured-banner-img, .event-modal-banner-img').forEach(img => {
+        img.addEventListener('error', function () {
+          if (!this.getAttribute('data-fallback-attempted')) {
+            this.setAttribute('data-fallback-attempted', 'tier1');
+            this.src = 'assets/events/banner-fallback.jpg';
+          } else if (this.getAttribute('data-fallback-attempted') === 'tier1') {
+            this.setAttribute('data-fallback-attempted', 'tier2');
+            this.src = 'assets/events/banner-fallback.svg';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

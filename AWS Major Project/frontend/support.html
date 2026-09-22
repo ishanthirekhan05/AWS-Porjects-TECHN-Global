@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Customer Support Desk. Submit priority assistance tickets, get order help, and connect with customer care concierges.">
+  <title>Support Desk — ShopEase Customer Care</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Production Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme Bootstrapper -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Announcement">
+    <div class="container top-banner-inner">
+      <div class="top-banner-text">
+        <span class="top-banner-highlight">Free Express Delivery</span> on all domestic orders over ₹1,999 across India.
+      </div>
+      <div class="top-banner-links">
+        <a href="order-tracking.html">Order Tracking</a>
+        <span>•</span>
+        <a href="shipping-returns.html">Shipping &amp; Returns</a>
+        <span>•</span>
+        <a href="support.html">Customer Care</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-icon btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Integrated Header Search Bar -->
+        <form class="header-search-wrap" role="search" action="products.html" method="GET">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="search" class="header-search-input" placeholder="Search products, categories..." autocomplete="off">
+        </form>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="products.html" class="nav-link" role="menuitem">Products</a></li>
+          <li role="none"><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        </ul>
+
+        <!-- Action Controls: Wishlist, Cart, Profile -->
+        <div class="header-actions">
+          
+          <!-- Mobile Search Trigger Button -->
+          <button type="button" class="btn-icon mobile-search-btn" data-open-search aria-label="Open search" title="Search products">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Wishlist Indicator -->
+          <a href="products.html?view=wishlist" class="btn-icon header-wishlist-btn" id="wishlistBtn" aria-label="View wishlist" title="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-count-badge wishlist-badge" id="wishlistCount" style="display: none;">0</span>
+          </a>
+
+          <!-- Shopping Cart Navigation Link -->
+          <a href="cart.html" class="btn-icon header-cart-btn" id="cartBtn" aria-label="View shopping cart" title="Shopping Cart">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count cart-count-badge cart-badge" id="cartCount" style="display: none;">0</span>
+          </a>
+
+          <!-- User Profile Dropdown -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile" id="profileToggleBtn" aria-label="Open user profile and appearance menu" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Account</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <!-- Profile & Theme Dropdown Menu -->
+            <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="User Account and Appearance Settings">
+              <div class="profile-dropdown-header">
+                <div class="profile-header-avatar">U</div>
+                <div>
+                  <div class="profile-header-name">Welcome Guest</div>
+                  <span class="profile-header-badge">Guest Visitor</span>
+                </div>
+              </div>
+
+              <ul class="profile-nav-links" role="none">
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html#orders" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>My Orders</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="order-tracking.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Order Tracking</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="products.html?view=wishlist" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Saved Wishlist</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="cart.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>My Shopping Bag</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="profile-dropdown-divider"></div>
+
+              <!-- Theme Switcher System -->
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                
+                <div class="theme-pill-group" role="radiogroup" aria-label="Select theme appearance">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                      <span>Light</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                      <span>Dark</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span>System</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation drawer">
+    <div class="mobile-menu-header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+            <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+          </svg>
+        </span>
+        <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+      </div>
+      <button type="button" class="btn-icon" id="closeMobileMenu" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="products.html" class="mobile-nav-link">All Products</a></li>
+        <li><a href="events.html" class="mobile-nav-link">Deals &amp; Events</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About ShopEase</a></li>
+        <li><a href="cart.html" class="mobile-nav-link">Shopping Cart</a></li>
+        <li><a href="account.html#orders" class="mobile-nav-link">My Orders</a></li>
+        <li><a href="order-tracking.html" class="mobile-nav-link">Order Tracking</a></li>
+        <li><a href="shipping-returns.html" class="mobile-nav-link">Shipping &amp; Returns</a></li>
+        <li><a href="warranty.html" class="mobile-nav-link">Warranty Certification</a></li>
+        <li><a href="support.html" class="mobile-nav-link active" style="color: var(--accent); font-weight: 700;">Support Desk</a></li>
+        <li><a href="account.html" class="mobile-nav-link">My Account</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Hero Header Section -->
+  <section class="policy-hero">
+    <div class="container">
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 16px;">
+        <a href="index.html" style="color: var(--text-muted); text-decoration: none;">Home</a>
+        <span>/</span>
+        <span style="color: var(--text-muted);">Customer Care</span>
+        <span>/</span>
+        <span style="color: var(--text-primary); font-weight: 700;">Support Desk</span>
+      </nav>
+      
+      <div class="policy-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span>24/7 Concierge Care</span>
+      </div>
+      <h1 class="policy-hero-title">ShopEase Support Desk &amp; Help Hub</h1>
+      <p class="policy-hero-subtitle">
+        Have questions about an active shipment, return authorization, product specifications, or billing? Our dedicated support team is available around the clock.
+      </p>
+      <div class="policy-meta">
+        <span>Avg. Response Time: &lt; 2 Hours</span>
+        <span>•</span>
+        <span>Toll-Free National Helpline</span>
+        <span>•</span>
+        <span>Direct Engineering Escalations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container">
+    <div class="policy-layout">
+
+      <!-- Left Navigation Column -->
+      <aside class="policy-nav" aria-label="On this page">
+        <div class="policy-nav-title">Quick Navigation</div>
+        <ul class="policy-nav-list">
+          <li><a href="#ticket-tool" class="policy-nav-link">✉️ Submit Support Ticket</a></li>
+          <li><a href="#fast-channels" class="policy-nav-link">📞 Contact Channels</a></li>
+          <li><a href="#quick-actions" class="policy-nav-link">🚀 Self-Service Hub</a></li>
+          <li><a href="#support-faqs" class="policy-nav-link">❓ Common Questions</a></li>
+        </ul>
+      </aside>
+
+      <!-- Right Main Content Articles -->
+      <div class="policy-content">
+
+        <!-- Fast Contact Channels Overview Card -->
+        <section id="fast-channels" class="policy-card" style="border-left: 4px solid var(--accent);">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Direct Contact &amp; Escalation Channels
+          </h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0;">
+            <div style="background: var(--bg-main); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase;">Toll-Free Customer Care</div>
+              <div style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 6px 0;">1800-419-7467</div>
+              <div style="font-size: 0.8125rem; color: var(--text-muted);">Mon – Sat: 8:00 AM – 10:00 PM IST</div>
+            </div>
+            <div style="background: var(--bg-main); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase;">Priority Concierge Email</div>
+              <div style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin: 6px 0;">support@shopease.com</div>
+              <div style="font-size: 0.8125rem; color: var(--text-muted);">24/7 Ingestion &bull; &lt; 2hr Response</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Interactive Support Ticket Submission Form -->
+        <section id="ticket-tool" class="interactive-tool-box">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(29, 78, 216, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin: 0;">Submit an Official Support Ticket</h2>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 18px;">
+            Fill out the ticket below. Our automated triage system routes your inquiry immediately to the appropriate fulfillment or technical specialist.
+          </p>
+
+          <form id="supportTicketForm">
+            <div class="tool-form-grid">
+              <div class="tool-input-group">
+                <label for="ticketFullName">Your Full Name *</label>
+                <input type="text" id="ticketFullName" class="tool-input" placeholder="e.g. John Doe" required>
+              </div>
+              <div class="tool-input-group">
+                <label for="ticketEmail">Email Address *</label>
+                <input type="email" id="ticketEmail" class="tool-input" placeholder="e.g. name@example.com" required>
+              </div>
+            </div>
+
+            <div class="tool-form-grid">
+              <div class="tool-input-group">
+                <label for="ticketOrderId">Order ID (Optional)</label>
+                <input type="text" id="ticketOrderId" class="tool-input" placeholder="Enter Order ID (optional)">
+              </div>
+              <div class="tool-input-group">
+                <label for="ticketCategory">Issue Category *</label>
+                <select id="ticketCategory" class="tool-input" style="cursor: pointer;" required>
+                  <option value="order_tracking">Order Tracking &amp; Delivery Delay</option>
+                  <option value="returns">7-Day Replacement / Return Request</option>
+                  <option value="warranty">Warranty Claim &amp; Authorized Repair</option>
+                  <option value="payment">Payment Issue &amp; GST Tax Invoice</option>
+                  <option value="technical">Product Specifications &amp; Setup</option>
+                  <option value="other">General Account Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <label for="ticketSubject" style="display: block; font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">Subject *</label>
+              <input type="text" id="ticketSubject" class="tool-input" placeholder="Brief summary of your request" required>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <label for="ticketMessage" style="display: block; font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">Message / Inquiry Details *</label>
+              <textarea id="ticketMessage" class="tool-textarea" placeholder="Please provide specific details to help us resolve your issue promptly..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnSubmitTicket" style="height: 44px; padding: 0 24px; font-weight: 700;">
+              <span>Dispatch Support Ticket &rarr;</span>
+            </button>
+          </form>
+
+          <!-- Interactive Live Result Confirmation -->
+          <div id="ticketResultPanel" class="tool-result-panel" style="display: none; border-left: 4px solid var(--accent); margin-top: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <span class="badge badge-success" style="font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 9999px;">✓ Ticket Logged Successfully</span>
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin: 8px 0 2px;">
+                  Ticket ID: <span id="resTicketCode" style="color: var(--accent); font-family: monospace;">TKT-89210</span>
+                </h3>
+                <div style="font-size: 0.8125rem; color: var(--text-muted);" id="resTicketMeta">
+                  Assigned to: Priority Logistics Desk &bull; Status: Open / In Queue
+                </div>
+              </div>
+            </div>
+            <div style="background: var(--surface); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary);">
+              <p style="margin: 0 0 6px;"><strong>Confirmation Sent:</strong> A copy of this ticket with secure lookup link has been sent to your email.</p>
+              <p style="margin: 0;"><strong>Estimated Resolution:</strong> A support associate will review your ticket and respond within <strong>1–2 business hours</strong>.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Self-Service Portal Tiles -->
+        <section id="quick-actions" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            Instant Self-Service Actions
+          </h2>
+          <p style="margin-bottom: 20px;">Save time by using our direct online self-service portals:</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
+            <a href="order-tracking.html" style="text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; background: var(--bg-main); display: block; transition: border-color 0.15s ease;">
+              <div style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Track Active Order &rarr;</div>
+              <div style="font-size: 0.8125rem; color: var(--text-muted);">View live carrier GPS milestones and download tax invoices.</div>
+            </a>
+            <a href="shipping-returns.html#return-tool" style="text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; background: var(--bg-main); display: block; transition: border-color 0.15s ease;">
+              <div style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Initiate 7-Day Return &rarr;</div>
+              <div style="font-size: 0.8125rem; color: var(--text-muted);">Generate RMA authorization for doorstep pickup.</div>
+            </a>
+            <a href="warranty.html#verify-tool" style="text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; background: var(--bg-main); display: block; transition: border-color 0.15s ease;">
+              <div style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Verify Brand Warranty &rarr;</div>
+              <div style="font-size: 0.8125rem; color: var(--text-muted);">Check OEM coverage and book certified brand repairs.</div>
+            </a>
+            <a href="account.html" style="text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; background: var(--bg-main); display: block; transition: border-color 0.15s ease;">
+              <div style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Customer Account &rarr;</div>
+              <div style="font-size: 0.8125rem; color: var(--text-muted);">Manage delivery addresses, login security, and orders.</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- FAQs -->
+        <article id="support-faqs" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Frequently Asked Support Questions
+          </h2>
+
+          <div class="faq-card-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What if I need to change my shipping address after placing an order?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              If your order has not yet entered the "Shipped / In Transit" stage, you can update your address directly in your <a href="order-tracking.html" style="color: var(--accent); font-weight: 600;">Track Orders</a> screen or submit an immediate ticket under "Order Tracking".
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How do I download my GST tax invoice?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Navigate to <a href="order-tracking.html" style="color: var(--accent); font-weight: 600;">Track Orders</a> and click the "Download Invoice" button located in the order header card to immediately view and print your itemized tax invoice.
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer (Black Background Design System) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-col">
+          <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+                <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+              </svg>
+            </span>
+            <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Next-generation consumer hardware and digital lifestyle platform. Engineered for reliability, speed, and real-time performance telemetry.
+          </p>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Department -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Shop Department</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=laptops" class="footer-link">Laptops &amp; Workstations</a></li>
+            <li><a href="products.html?category=smartphones" class="footer-link">Flagship Smartphones</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Studio Audio &amp; Monitors</a></li>
+            <li><a href="products.html?category=footwear" class="footer-link">Ergonomic Footwear</a></li>
+            <li><a href="products.html?category=accessories" class="footer-link">Lifestyle Accessories</a></li>
+            <li><a href="products.html?category=watches" class="footer-link">Watches &amp; Wearables</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="account.html#orders" class="footer-link">My Orders</a></li>
+            <li><a href="order-tracking.html" class="footer-link">Order Tracking</a></li>
+            <li><a href="shipping-returns.html" class="footer-link">Shipping &amp; Returns</a></li>
+            <li><a href="warranty.html" class="footer-link">Warranty Certification</a></li>
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="support.html" class="footer-link active" style="color: var(--accent); font-weight: 600;">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <!-- Stay Connected -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for hardware releases, firmware updates, and seasonal priority access.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to ShopEase updates!'); this.reset();">
+            <input type="email" class="footer-newsletter-input newsletter-input" placeholder="Enter your work email" required autocomplete="email">
+            <button type="submit" class="btn btn-primary footer-newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Legal Row -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 ShopEase Technologies Inc. All rights reserved.</p>
+        <div class="footer-bottom-links footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        const answer = btn.nextElementSibling;
+        if (answer) {
+          answer.classList.toggle('open', !expanded);
+        }
+      });
+    });
+
+    // Support Ticket Submission
+    const ticketForm = document.getElementById('supportTicketForm');
+    const ticketPanel = document.getElementById('ticketResultPanel');
+    const orderService = window.ShopEaseOrderService;
+
+    // Prefill user details if available
+    if (orderService) {
+      const user = orderService.getCurrentUser();
+      if (user && !user.isGuest) {
+        const nameInput = document.getElementById('ticketFullName');
+        const emailInput = document.getElementById('ticketEmail');
+        if (nameInput && user.name && !nameInput.value) nameInput.value = user.name;
+        if (emailInput && user.email && !emailInput.value) emailInput.value = user.email;
+      }
+      if (typeof orderService.hasOrders === 'function' && orderService.hasOrders()) {
+        const orders = orderService.getUserOrders();
+        if (orders && orders.length > 0) {
+          const orderInput = document.getElementById('ticketOrderId');
+          if (orderInput && !orderInput.value) {
+            orderInput.value = (orders[0].rawId || orders[0].orderId || '').replace('#', '');
+          }
+        }
+      }
+    }
+
+    if (ticketForm && ticketPanel) {
+      ticketForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const cat = document.getElementById('ticketCategory').value;
+        const name = document.getElementById('ticketFullName') ? document.getElementById('ticketFullName').value.trim() : '';
+        const email = document.getElementById('ticketEmail') ? document.getElementById('ticketEmail').value.trim() : '';
+        const orderId = document.getElementById('ticketOrderId') ? document.getElementById('ticketOrderId').value.trim() : '';
+        const subject = document.getElementById('ticketSubject') ? document.getElementById('ticketSubject').value.trim() : '';
+        const message = document.getElementById('ticketMessage') ? document.getElementById('ticketMessage').value.trim() : '';
+
+        const randomNum = Math.floor(10000 + Math.random() * 90000);
+        const ticketId = `TKT-${randomNum}`;
+        document.getElementById('resTicketCode').textContent = ticketId;
+        
+        let dept = 'Customer Care Specialist';
+        if (cat === 'warranty') dept = 'Technical Engineering & OEM Warranty Desk';
+        else if (cat === 'returns') dept = 'Fulfillment & Returns Authorization Desk';
+        else if (cat === 'payment') dept = 'Billing & Accounts Verification Desk';
+        else if (cat === 'order_tracking') dept = 'BlueDart Air Express Logistics Liaison';
+        
+        document.getElementById('resTicketMeta').textContent = `Assigned to: ${dept} • Status: Open / In Priority Queue`;
+
+        // Persist support ticket to storage
+        try {
+          const authUser = window.ShopEaseAuthService ? window.ShopEaseAuthService.getCurrentUser() : null;
+          const ticketObj = {
+            id: ticketId,
+            userId: authUser ? authUser.id : 'guest',
+            name: name,
+            email: email,
+            orderId: orderId,
+            category: cat,
+            department: dept,
+            subject: subject,
+            message: message,
+            status: 'Open',
+            createdAt: new Date().toISOString()
+          };
+          const tickets = JSON.parse(localStorage.getItem('shopease_support_tickets') || '[]');
+          tickets.unshift(ticketObj);
+          localStorage.setItem('shopease_support_tickets', JSON.stringify(tickets));
+
+          // Synchronize with AWS DynamoDB (Table: ShopEaseSupportTickets)
+          try {
+            const apiBaseUrl = (window.SHOPEASE_API_URL || 'https://nxdrpc6yk3.execute-api.us-east-1.amazonaws.com').replace(/\/+$/, '');
+            fetch(`${apiBaseUrl}/tickets`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(ticketObj)
+            }).catch(apiErr => console.warn('[ShopEaseSupport] AWS ticket sync deferred:', apiErr));
+          } catch (e) {}
+
+          if (window.ShopEaseEvents) {
+            window.ShopEaseEvents.track('support_ticket_created', { ticketId, category: cat });
+          }
+        } catch (err) {
+          console.warn('Could not persist support ticket:', err);
+        }
+
+        ticketPanel.style.display = 'block';
+        ticketPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }
+  </script>
+</body>
+</html>

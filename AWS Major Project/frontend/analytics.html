@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Real-Time Analytics - Redirecting...</title>
+  <script>
+    (function () {
+      try {
+        var raw = localStorage.getItem('shopease_session');
+        var session = raw ? JSON.parse(raw) : null;
+        var isAdmin = session && session.userId && !session.isGuest && session.role === 'admin';
+        if (isAdmin) {
+          window.location.replace('admin.html' + (window.location.search || '') + (window.location.hash || ''));
+        } else {
+          window.location.replace('account.html');
+        }
+      } catch (e) {
+        window.location.replace('account.html');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="account.html">Account</a>...</p>
+</body>
+</html>

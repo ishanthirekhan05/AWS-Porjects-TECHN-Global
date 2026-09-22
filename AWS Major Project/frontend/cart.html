@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Shopping Bag - Review your selected hardware, update quantities, and proceed to secure checkout.">
+  <title>Shopping Cart - ShopEase</title>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Immediate Theme Initializer -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Announcement">
+    <div class="container top-banner-inner">
+      <div class="top-banner-text">
+        <span class="top-banner-highlight">Free Express Delivery</span> on all domestic orders over ₹999 across India.
+      </div>
+      <div class="top-banner-links">
+        <a href="order-tracking.html">Order Tracking</a>
+        <span>•</span>
+        <a href="products.html">Continue Shopping</a>
+        <span>•</span>
+        <a href="support.html">Customer Care</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <button type="button" class="btn-icon btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Integrated Header Search Bar -->
+        <form class="header-search-wrap" role="search" action="products.html" method="GET">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="search" name="search" class="header-search-input" placeholder="Search products..." autocomplete="off">
+        </form>
+
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="products.html" class="nav-link" role="menuitem">Products</a></li>
+          <li role="none"><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button type="button" class="btn-icon mobile-search-btn" data-open-search aria-label="Open search">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+
+          <a href="products.html?view=wishlist" class="btn-icon" aria-label="View wishlist" title="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span class="badge-count wishlist-badge" style="display: none;">0</span>
+          </a>
+
+          <a href="cart.html" class="btn-icon active" aria-current="page" aria-label="View shopping cart (current page)" title="Shopping Cart (Active)">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span class="badge-count cart-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- User Profile & Theme Switcher Dropdown -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile" id="profileToggleBtn" aria-label="User account and appearance" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Account</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <div class="profile-dropdown" id="profileDropdown" role="menu">
+              <div class="profile-dropdown-header">
+                <div class="profile-header-avatar">U</div>
+                <div>
+                  <div class="profile-header-name">Welcome Guest</div>
+                  <span class="profile-header-badge">Guest Visitor</span>
+                </div>
+              </div>
+
+              <ul class="profile-nav-links" role="none">
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html#orders" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>My Orders</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="order-tracking.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Order Tracking</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="products.html?view=wishlist" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Saved Wishlist</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="cart.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>My Shopping Bag</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="login.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                    <span>Sign In / Switch User</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="profile-dropdown-divider"></div>
+
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                <div class="theme-pill-group" role="radiogroup">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+                      <span>Light Theme</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                      <span>Dark Theme</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span>System / Auto</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="profile-dropdown-divider"></div>
+              <a href="login.html" class="profile-nav-item" style="padding: 10px 14px; font-size: 0.8125rem; color: var(--text-muted); display: block;">
+                Sign Out
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Cart Section (Panel 4) -->
+  <main class="section-spacing" id="cartMainWrap">
+    <div class="container">
+      
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 36px; align-items: start;" class="cart-layout-wrap">
+        
+        <!-- Left Column: Your Cart (Panel 4) -->
+        <div>
+          
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border-color);">
+            <h1 style="font-size: 1.5rem; font-weight: 850; color: var(--text-primary);" id="cartHeaderTitle">
+              Your Cart (<span id="cartItemCountNum">0</span>)
+            </h1>
+            <a href="products.html" style="font-size: 0.875rem; font-weight: 600; color: var(--accent); display: flex; align-items: center; gap: 4px;">
+              <span>Continue Shopping</span> &rarr;
+            </a>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
+            <label style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.875rem; font-weight: 700; color: var(--text-primary); cursor: pointer;">
+              <input type="checkbox" id="selectAllCartItems" aria-label="Select all cart items">
+              <span>Select All</span>
+            </label>
+            <button type="button" class="btn btn-primary" id="orderSelectedBtn">
+              <span>Order Selected</span>
+            </button>
+          </div>
+
+          <!-- Cart Items List (Panel 4) -->
+          <div class="cart-items-list-ref" id="cartItemsContainer">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Empty Cart State -->
+          <div id="cartEmptyCard" style="display: none; text-align: center; padding: 64px 24px; background-color: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 18px; color: var(--text-muted);"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;">Your Shopping Bag is Empty</h2>
+            <p style="color: var(--text-secondary); font-size: 0.9375rem; margin-bottom: 24px; max-width: 360px; margin-left: auto; margin-right: auto;">
+              Explore our curated selection of high-performance laptops, studio audio, and digital essentials.
+            </p>
+            <a href="products.html" class="btn btn-primary btn-lg">Browse Products</a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Price Details Card (Panel 4) -->
+        <div>
+          <div style="background-color: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px; position: sticky; top: calc(var(--header-height) + 24px);">
+            <h2 style="font-size: 1.125rem; font-weight: 800; color: var(--text-primary); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
+              Price Details
+            </h2>
+
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9375rem; color: var(--text-secondary);">
+              <span>Subtotal</span>
+              <span id="priceSubtotal" style="font-weight: 700; color: var(--text-primary);">₹0</span>
+            </div>
+
+            <!-- Promotional Discount Row -->
+            <div id="discountRow" style="display: none; justify-content: space-between; margin-bottom: 12px; font-size: 0.9375rem; color: var(--success);">
+              <span>Coupon Discount (<span id="couponLabel">--</span>)</span>
+              <span id="priceDiscount" style="font-weight: 700;">- ₹0</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 0.9375rem; color: var(--text-secondary);">
+              <span>Shipping</span>
+              <span id="priceShipping" style="font-weight: 700; color: var(--success);">FREE</span>
+            </div>
+
+            <!-- Coupon Input Box -->
+            <div style="margin: 16px 0 12px; padding: 12px; background: var(--bg-surface); border: 1px dashed var(--border-color); border-radius: var(--radius-sm);">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">Apply Promo Coupon</div>
+              <div style="display: flex; gap: 8px;" id="couponInputGroup">
+                <input type="text" id="couponInput" placeholder="WELCOME10 / FESTIVE20" style="flex: 1; padding: 8px 10px; font-size: 0.8125rem; text-transform: uppercase; font-weight: 700; border: 1px solid var(--border-color); border-radius: var(--radius-xs); background: var(--bg-page); color: var(--text-primary);">
+                <button type="button" class="btn btn-outline btn-sm" id="btnApplyCoupon" style="font-size: 0.8125rem; font-weight: 700;">Apply</button>
+              </div>
+              <div id="couponAppliedBadge" style="display: none; align-items: center; justify-content: space-between; font-size: 0.8125rem; color: var(--success); font-weight: 700;">
+                <span id="couponAppliedText">✓ Applied</span>
+                <button type="button" id="btnRemoveCoupon" style="background: transparent; border: none; color: var(--error); font-size: 0.75rem; font-weight: 700; cursor: pointer; text-decoration: underline;">Remove</button>
+              </div>
+              <div id="couponMessage" style="font-size: 0.75rem; margin-top: 6px; display: none;"></div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 16px; border-top: 1px solid var(--border-color); margin-top: 14px; margin-bottom: 24px;">
+              <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-primary);">Total</span>
+              <span id="priceTotal" style="font-size: 1.5rem; font-weight: 850; color: var(--text-primary);">₹0</span>
+            </div>
+
+            <a href="checkout.html" id="proceedCheckoutBtn" class="btn btn-primary btn-lg" style="width: 100%; text-align: center; justify-content: center;">
+              <span>Proceed to Checkout &rarr;</span>
+            </a>
+
+            <a href="products.html" class="btn btn-outline" style="width: 100%; text-align: center; justify-content: center; margin-top: 10px;">
+              <span>Continue Shopping</span>
+            </a>
+
+            <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 8px; font-size: 0.8125rem; color: var(--text-muted);">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>256-Bit SSL Encrypted Checkout</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <span>Official GST Tax Invoice Included</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-compact-wrap">
+        <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ShopEase Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+          <a href="support.html" class="footer-legal-link">Support Desk</a>
+          <a href="account.html#orders" class="footer-legal-link">My Orders</a>
+          <a href="order-tracking.html" class="footer-legal-link">Order Tracking</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js?v=cart-selection-20260922"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+
+  <!-- Interactive Cart Page Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('cartItemsContainer');
+      const emptyCard = document.getElementById('cartEmptyCard');
+      const countNumEl = document.getElementById('cartItemCountNum');
+      const subtotalEl = document.getElementById('priceSubtotal');
+      const shippingEl = document.getElementById('priceShipping');
+      const totalEl = document.getElementById('priceTotal');
+      const checkoutBtn = document.getElementById('proceedCheckoutBtn');
+      const selectAllEl = document.getElementById('selectAllCartItems');
+      const orderSelectedBtn = document.getElementById('orderSelectedBtn');
+
+      function showNoSelectionNotice() {
+        if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+          window.ShopEaseApp.showToast('Please select at least one item to order.', 'info');
+        }
+      }
+
+      function openSelectedCheckout() {
+        if (window.ShopEaseCart.getSelectedCartItems().length === 0) {
+          showNoSelectionNotice();
+          return;
+        }
+        window.location.href = 'checkout.html?selected=1';
+      }
+
+      function renderCartPage() {
+        if (!window.ShopEaseCart || !window.ShopEaseData) return;
+        const cart = window.ShopEaseCart.getCartItems();
+        const selectedIds = window.ShopEaseCart.getSelectedItemIds();
+        const formatINR = window.ShopEaseData.formatINR;
+
+        if (selectAllEl) {
+          selectAllEl.checked = cart.length > 0 && selectedIds.length === cart.length;
+          selectAllEl.indeterminate = selectedIds.length > 0 && selectedIds.length < cart.length;
+          selectAllEl.disabled = cart.length === 0;
+        }
+        if (orderSelectedBtn) orderSelectedBtn.disabled = cart.length === 0 || selectedIds.length === 0;
+
+        countNumEl.textContent = window.ShopEaseCart.getCartCount();
+
+        if (cart.length === 0) {
+          container.style.display = 'none';
+          emptyCard.style.display = 'block';
+          subtotalEl.textContent = '₹0';
+          totalEl.textContent = '₹0';
+          shippingEl.textContent = '₹0';
+          checkoutBtn.classList.add('disabled');
+          checkoutBtn.style.pointerEvents = 'none';
+          checkoutBtn.style.opacity = '0.5';
+          return;
+        }
+
+        container.style.display = 'flex';
+        emptyCard.style.display = 'none';
+        checkoutBtn.classList.remove('disabled');
+        checkoutBtn.style.pointerEvents = 'auto';
+        checkoutBtn.style.opacity = '1';
+
+        container.innerHTML = cart.map(item => {
+          const prod = window.ShopEaseData ? window.ShopEaseData.getProductById(item.id) : null;
+          const fallbackImg = window.ShopEaseData ? window.ShopEaseData.getFallbackImage(item.category || (prod && prod.category) || 'Laptops') : 'assets/products/macbook_front.jpg';
+          const primaryImg = (prod && Array.isArray(prod.images) && prod.images.length > 0)
+            ? prod.images[0]
+            : ((prod && prod.image) || item.image || fallbackImg);
+          const itemName = (prod && prod.name) || item.name;
+          const itemPrice = (prod && typeof prod.price === 'number') ? prod.price : item.price;
+          const lineSubtotal = itemPrice * item.quantity;
+
+          return `
+            <div class="cart-item-card-ref" data-item-id="${item.id}">
+              <label style="display: inline-flex; align-items: center; align-self: center; margin-right: 4px; cursor: pointer;" aria-label="Select ${itemName}">
+                <input type="checkbox" data-cart-select data-id="${item.id}" ${selectedIds.includes(item.id) ? 'checked' : ''}>
+              </label>
+              <img src="${primaryImg}" alt="${itemName}" class="cart-item-thumb-ref" onerror="this.src='${fallbackImg}'">
+              
+              <div class="cart-item-details-ref">
+                <h3 class="cart-item-title-ref">
+                  <a href="product.html?id=${item.id}">${itemName}</a>
+                </h3>
+                <div class="cart-item-price-ref">${formatINR(itemPrice)}</div>
+              </div>
+
+              <!-- Stepper: [ − ] 1 [ + ] -->
+              <div class="cart-item-stepper-ref">
+                <button type="button" class="cart-stepper-btn-ref" data-cart-minus data-id="${item.id}" aria-label="Decrease quantity" title="Decrease quantity">&minus;</button>
+                <span class="cart-stepper-qty-ref">${item.quantity}</span>
+                <button type="button" class="cart-stepper-btn-ref" data-cart-plus data-id="${item.id}" aria-label="Increase quantity" title="Increase quantity">+</button>
+              </div>
+
+              <!-- Line Subtotal -->
+              <div class="cart-item-subtotal-ref">
+                ${formatINR(lineSubtotal)}
+              </div>
+
+              <!-- Remove Cross Button -->
+              <button type="button" class="cart-item-remove-ref" data-cart-remove data-id="${item.id}" aria-label="Remove product" title="Remove product">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+            </div>
+          `;
+        }).join('');
+
+        const selectedItems = window.ShopEaseCart.getSelectedCartItems();
+        const subtotal = window.ShopEaseCart.getCartSubtotalForItems(selectedItems);
+        const discount = window.ShopEaseCart.getCartDiscountForItems(selectedItems);
+        const shippingFee = window.ShopEaseCart.getCartShippingForItems(selectedItems);
+        const total = window.ShopEaseCart.getCartTotalForItems(selectedItems);
+        const appliedCoupon = window.ShopEaseCart.getAppliedCoupon ? window.ShopEaseCart.getAppliedCoupon() : null;
+
+        subtotalEl.textContent = formatINR(subtotal);
+        shippingEl.textContent = shippingFee === 0 ? 'FREE' : formatINR(shippingFee);
+        totalEl.textContent = formatINR(total);
+
+        // Update discount row & coupon badge
+        const discountRow = document.getElementById('discountRow');
+        const priceDiscount = document.getElementById('priceDiscount');
+        const couponLabel = document.getElementById('couponLabel');
+        const couponInputGroup = document.getElementById('couponInputGroup');
+        const couponAppliedBadge = document.getElementById('couponAppliedBadge');
+        const couponAppliedText = document.getElementById('couponAppliedText');
+
+        if (appliedCoupon && discount > 0) {
+          if (discountRow) discountRow.style.display = 'flex';
+          if (priceDiscount) priceDiscount.textContent = `- ${formatINR(discount)}`;
+          if (couponLabel) couponLabel.textContent = appliedCoupon.code;
+          if (couponInputGroup) couponInputGroup.style.display = 'none';
+          if (couponAppliedBadge) {
+            couponAppliedBadge.style.display = 'flex';
+            if (couponAppliedText) couponAppliedText.textContent = `✓ ${appliedCoupon.code} (${appliedCoupon.description})`;
+          }
+        } else {
+          if (discountRow) discountRow.style.display = 'none';
+          if (couponInputGroup) couponInputGroup.style.display = 'flex';
+          if (couponAppliedBadge) couponAppliedBadge.style.display = 'none';
+        }
+
+        // Wire Stepper & Remove clicks
+        container.querySelectorAll('[data-cart-minus]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = btn.getAttribute('data-id');
+            const item = cart.find(i => i.id === id);
+            if (item) {
+              window.ShopEaseCart.updateQuantity(id, item.quantity - 1);
+              renderCartPage();
+            }
+          });
+        });
+
+        container.querySelectorAll('[data-cart-plus]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = btn.getAttribute('data-id');
+            const item = cart.find(i => i.id === id);
+            if (item) {
+              window.ShopEaseCart.updateQuantity(id, item.quantity + 1);
+              renderCartPage();
+            }
+          });
+        });
+
+        container.querySelectorAll('[data-cart-remove]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = btn.getAttribute('data-id');
+            window.ShopEaseCart.removeFromCart(id);
+            renderCartPage();
+          });
+        });
+
+        container.querySelectorAll('[data-cart-select]').forEach(input => {
+          input.addEventListener('change', () => {
+            const currentIds = window.ShopEaseCart.getSelectedItemIds();
+            const id = input.getAttribute('data-id');
+            const nextIds = input.checked
+              ? [...currentIds, id]
+              : currentIds.filter(selectedId => selectedId !== id);
+            window.ShopEaseCart.setSelectedItemIds(nextIds);
+            renderCartPage();
+          });
+        });
+      }
+
+      if (selectAllEl) {
+        selectAllEl.addEventListener('change', () => {
+          const cart = window.ShopEaseCart.getCartItems();
+          window.ShopEaseCart.setSelectedItemIds(selectAllEl.checked ? cart.map(item => item.id) : []);
+          renderCartPage();
+        });
+      }
+
+      if (orderSelectedBtn) {
+        orderSelectedBtn.addEventListener('click', () => {
+          openSelectedCheckout();
+        });
+      }
+
+      if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', (event) => {
+          event.preventDefault();
+          openSelectedCheckout();
+        });
+      }
+
+      // Wire Coupon Actions
+      const btnApplyCoupon = document.getElementById('btnApplyCoupon');
+      const btnRemoveCoupon = document.getElementById('btnRemoveCoupon');
+      const couponInput = document.getElementById('couponInput');
+      const couponMessage = document.getElementById('couponMessage');
+
+      if (btnApplyCoupon && couponInput) {
+        const doApplyCoupon = () => {
+          const code = couponInput.value.trim();
+          if (!code) {
+            if (couponMessage) {
+              couponMessage.textContent = 'Please enter a coupon code.';
+              couponMessage.style.color = 'var(--error)';
+              couponMessage.style.display = 'block';
+            }
+            return;
+          }
+          const res = window.ShopEaseCart.applyCoupon(code);
+          if (res.success) {
+            if (couponMessage) {
+              couponMessage.textContent = res.message;
+              couponMessage.style.color = 'var(--success)';
+              couponMessage.style.display = 'block';
+            }
+            renderCartPage();
+          } else {
+            if (couponMessage) {
+              couponMessage.textContent = res.message;
+              couponMessage.style.color = 'var(--error)';
+              couponMessage.style.display = 'block';
+            }
+          }
+        };
+
+        btnApplyCoupon.addEventListener('click', doApplyCoupon);
+        couponInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            doApplyCoupon();
+          }
+        });
+      }
+
+      if (btnRemoveCoupon) {
+        btnRemoveCoupon.addEventListener('click', () => {
+          window.ShopEaseCart.removeCoupon();
+          if (couponMessage) {
+            couponMessage.textContent = 'Coupon removed.';
+            couponMessage.style.color = 'var(--text-muted)';
+            couponMessage.style.display = 'block';
+          }
+          if (couponInput) couponInput.value = '';
+          renderCartPage();
+        });
+      }
+
+      window.addEventListener('shopease:cart-updated', renderCartPage);
+      window.addEventListener('shopease:cart-selection-updated', renderCartPage);
+      renderCartPage();
+    });
+  </script>
+</body>
+</html>

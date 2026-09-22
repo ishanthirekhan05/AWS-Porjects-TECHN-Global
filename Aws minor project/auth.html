@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CareerBridge Pro static login and account creation demo.">
+    <title>Account Access | CareerBridge Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page">
+    <header class="site-header auth-header">
+        <div class="auth-header-wrapper">
+            <a class="auth-brand" href="index.html" aria-label="CareerBridge Pro home"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg><span>CareerBridge <b>Pro</b></span></a>
+            <a class="auth-back-link" href="index.html">Back to Home</a>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        <section class="auth-layout auth-layout--combined" aria-labelledby="auth-title">
+            <div class="auth-illustration">
+                <img src="assets/images/auth-career.jpg" alt="Professionals collaborating on career development and job search preparation">
+            </div>
+            <div class="auth-panel">
+                <p class="eyebrow">CareerBridge Pro access</p>
+                <h1 id="auth-title">Build your next opportunity.</h1>
+                <div class="auth-tabs" role="tablist" aria-label="Account access options">
+                    <button class="auth-tab is-active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-panel">Log In</button>
+                    <button class="auth-tab" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel">Create Account</button>
+                </div>
+
+                <section class="auth-form-panel" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+                    <form class="auth-form" id="login-form" novalidate>
+                        <div class="auth-field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" autocomplete="email" required aria-describedby="login-email-error"><p class="auth-error" id="login-email-error" aria-live="polite"></p></div>
+                        <div class="auth-field"><label for="login-password">Password</label><div class="password-field"><input id="login-password" name="password" type="password" autocomplete="current-password" required aria-describedby="login-password-error"><button class="password-toggle" type="button" aria-controls="login-password" aria-pressed="false">Show</button></div><p class="auth-error" id="login-password-error" aria-live="polite"></p></div>
+                        <div class="auth-options"><label class="checkbox-label"><input type="checkbox" name="remember"> <span>Remember me</span></label><a class="demo-link" href="#forgot-password">Forgot password?</a></div>
+                        <button class="button auth-submit" type="submit">Log In</button>
+                        <div class="social-actions" aria-label="Demo social login options"><button class="social-button" type="button" data-demo-action>Continue with Google</button><button class="social-button" type="button" data-demo-action>Continue with Facebook</button></div>
+                        <p class="auth-status" role="status" aria-live="polite"></p>
+                    </form>
+                    <p class="auth-switch">New to CareerBridgePro? <button class="auth-inline-button" type="button" data-switch-tab="signup">Create Account</button></p>
+                </section>
+
+                <section class="auth-form-panel" id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden>
+                    <form class="auth-form" id="signup-form" novalidate>
+                        <div class="auth-field"><label for="signup-name">Full Name</label><input id="signup-name" name="fullName" type="text" autocomplete="name" required aria-describedby="signup-name-error"><p class="auth-error" id="signup-name-error" aria-live="polite"></p></div>
+                        <div class="auth-field"><label for="signup-email">Email</label><input id="signup-email" name="email" type="email" autocomplete="email" required aria-describedby="signup-email-error"><p class="auth-error" id="signup-email-error" aria-live="polite"></p></div>
+                        <div class="auth-field"><label for="signup-password">Password</label><div class="password-field"><input id="signup-password" name="password" type="password" autocomplete="new-password" required aria-describedby="signup-password-error"><button class="password-toggle" type="button" aria-controls="signup-password" aria-pressed="false">Show</button></div><p class="auth-error" id="signup-password-error" aria-live="polite"></p></div>
+                        <div class="auth-field"><label for="signup-confirm-password">Confirm Password</label><div class="password-field"><input id="signup-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required aria-describedby="signup-confirm-password-error"><button class="password-toggle" type="button" aria-controls="signup-confirm-password" aria-pressed="false">Show</button></div><p class="auth-error" id="signup-confirm-password-error" aria-live="polite"></p></div>
+                        <div class="auth-field"><label class="checkbox-label"><input id="terms" name="terms" type="checkbox" required aria-describedby="terms-error"> <span>I agree to the terms and conditions.</span></label><p class="auth-error" id="terms-error" aria-live="polite"></p></div>
+                        <button class="button auth-submit" type="submit">Create Account</button>
+                        <div class="social-actions" aria-label="Demo social signup options"><button class="social-button" type="button" data-demo-action>Continue with Google</button><button class="social-button" type="button" data-demo-action>Continue with Facebook</button></div>
+                        <p class="auth-status" role="status" aria-live="polite"></p>
+                    </form>
+                    <p class="auth-switch">Already have an account? <button class="auth-inline-button" type="button" data-switch-tab="login">Log In</button></p>
+                </section>
+                <p class="auth-note">Frontend-only demo. Account data stays in this browser.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="site-footer__inner"><div class="footer-brand"><p class="footer-brand__wordmark"><svg class="brand-mark brand-mark--footer" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg>CareerBridge <b>Pro</b></p><small>Build skills. Find direction.</small></div><div class="footer-links"><div><h2>Quick links</h2><a href="jobs.html">Jobs</a><a href="guidance.html">Guidance</a><a href="events.html">Events</a></div><div><h2>Resources</h2><a href="preparation.html">Preparation</a><a href="resources.html">Resume resources</a><a href="contact.html">Contact</a></div><div><h2>Support</h2><a href="resources.html">Help Center</a><a href="contact.html">Contact Support</a><a href="resources.html">FAQs</a></div></div></div><p class="footer-legal">CareerBridge Pro — Build skills. Find direction. Move forward.</p></footer>
+    <script src="js/main.js"></script><script src="js/auth.js"></script>
+</body>
+</html>

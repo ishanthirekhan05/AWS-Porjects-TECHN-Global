@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Order Confirmation - Your order has been placed and registered.">
+  <title>Order Placed Successfully - ShopEase</title>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .success-card-ref {
+      max-width: 540px;
+      margin: 64px auto;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 44px 36px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .success-circle-icon {
+      width: 68px;
+      height: 68px;
+      border-radius: var(--radius-full);
+      background-color: var(--success);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    }
+    .order-details-box-ref {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      margin: 28px 0;
+      text-align: left;
+    }
+    .order-details-box-title {
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .order-row-ref {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 0.9375rem;
+    }
+    .order-row-ref:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <!-- Immediate Theme Initializer -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Theme Switcher & Return Link -->
+        <div class="header-actions">
+          <a href="index.html" class="btn btn-outline btn-sm">Return Home</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Order Confirmation Card (Panel 7) -->
+  <main class="container">
+    <div class="success-card-ref">
+      
+      <!-- Green Circular Checkmark (Panel 7) -->
+      <div class="success-circle-icon">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <!-- Heading & Subtitle (Panel 7) -->
+      <h1 style="font-size: 1.85rem; font-weight: 850; color: var(--text-primary); margin-bottom: 10px; letter-spacing: -0.02em;">
+        Order Placed Successfully!
+      </h1>
+      <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; max-width: 420px; margin: 0 auto;">
+        Thank you for shopping with us. Your order has been placed and will be processed shortly.
+      </p>
+
+      <!-- Order Details Box (Panel 7) -->
+      <div class="order-details-box-ref">
+        <div class="order-details-box-title">Order Details</div>
+
+        <div class="order-row-ref">
+          <span style="color: var(--text-muted); font-weight: 500;">Order ID</span>
+          <strong id="displayOrderId" style="color: var(--text-primary); font-family: var(--font-mono); font-size: 0.9375rem;">#SE12345678</strong>
+        </div>
+
+        <div class="order-row-ref">
+          <span style="color: var(--text-muted); font-weight: 500;">Date</span>
+          <span id="displayDate" style="color: var(--text-primary); font-weight: 600;">24 Aug 2026, 10:24 AM</span>
+        </div>
+
+        <div class="order-row-ref">
+          <span style="color: var(--text-muted); font-weight: 500;">Total Amount</span>
+          <strong id="displayAmount" style="color: var(--text-primary); font-weight: 800;">₹1,78,889</strong>
+        </div>
+
+        <div class="order-row-ref" style="padding-top: 8px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
+          <span style="color: var(--text-muted); font-weight: 500;">Estimated Delivery</span>
+          <span style="color: var(--success); font-weight: 700;">Within 48 Hours</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons (Panel 7) -->
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="account.html#orders" id="viewOrderDetailsBtn" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+          <span>View Order Details &rarr;</span>
+        </a>
+        <a href="products.html" class="btn btn-outline btn-lg" style="width: 100%; justify-content: center;">
+          <span>Continue Shopping &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-compact-wrap">
+        <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ShopEase Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+          <a href="support.html" class="footer-legal-link">Support Desk</a>
+          <a href="account.html#orders" class="footer-legal-link">My Orders</a>
+          <a href="order-tracking.html" class="footer-legal-link">Order Tracking</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let queryOrderId = urlParams.get('orderId');
+      if (queryOrderId && !queryOrderId.startsWith('#')) queryOrderId = '#' + queryOrderId;
+
+      const formatINR = window.ShopEaseData ? window.ShopEaseData.formatINR : (n) => '₹' + n;
+      const orderService = window.ShopEaseOrderService;
+      let order = null;
+
+      if (queryOrderId && orderService && typeof orderService.getOrderById === 'function') {
+        order = orderService.getOrderById(queryOrderId);
+      }
+
+      if (!order && orderService && typeof orderService.getUserOrders === 'function') {
+        const userOrders = orderService.getUserOrders();
+        if (Array.isArray(userOrders) && userOrders.length > 0) {
+          order = userOrders[0];
+        }
+      }
+
+      if (!order) {
+        try {
+          const raw = localStorage.getItem('shopease_last_order');
+          if (raw) order = JSON.parse(raw);
+        } catch (e) {}
+      }
+
+      const displayOrderId = document.getElementById('displayOrderId');
+      const displayAmount = document.getElementById('displayAmount');
+      const displayDate = document.getElementById('displayDate');
+      const viewBtn = document.getElementById('viewOrderDetailsBtn');
+
+      if (order) {
+        if (displayOrderId) displayOrderId.textContent = order.orderId;
+        if (displayAmount) displayAmount.textContent = formatINR(order.total || 0);
+        if (displayDate) displayDate.textContent = order.orderDate || new Date().toLocaleString('en-IN');
+        if (viewBtn) {
+          viewBtn.href = 'account.html#orders';
+        }
+      } else {
+        // No orders present
+        const detailsBox = document.querySelector('.order-details-box-ref');
+        if (detailsBox) {
+          detailsBox.innerHTML = `
+            <div style="text-align: center; padding: 12px; color: var(--text-muted); font-size: 0.875rem;">
+              No recent order details available.
+            </div>
+          `;
+        }
+        if (viewBtn) {
+          viewBtn.textContent = 'View My Orders';
+          viewBtn.href = 'order-tracking.html';
+        }
+      }
+    });
+  </script>
+</body>
+</html>

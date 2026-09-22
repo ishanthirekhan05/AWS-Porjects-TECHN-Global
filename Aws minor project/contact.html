@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact CareerBridge Pro with questions or feedback about this student project.">
+    <title>Contact | CareerBridge Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-wrapper">
+            <div class="nav-identity"><a class="brand" href="index.html" aria-label="CareerBridge Pro home"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg><span>CareerBridge <b>Pro</b></span></a><a class="profile-link" href="profile.html" aria-label="View profile"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c.7-3.3 2.9-5 6.5-5s5.8 1.7 6.5 5"></path></svg><span>Profile</span></a></div>
+            <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation" aria-hidden="true">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="guidance.html">Guidance</a></li>
+                    <li><a href="preparation.html">Preparation</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    <li class="nav-actions"><a class="nav-action nav-action--signup" href="auth.html">Create Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container contact-page">
+        <section class="contact-hero" aria-labelledby="contact-title">
+            <div class="page-visual-hero__content">
+                <p class="eyebrow">Questions and feedback</p>
+                <h1 id="contact-title">Let’s keep the bridge open.</h1>
+                <p class="intro-section__text">Share a question or suggestion about this student career portal. This static form provides local feedback only and does not send data to a backend.</p>
+            </div>
+            <div class="page-visual-hero__illustration">
+                <img src="assets/images/contact-support.jpg" alt="Student working on a laptop while contacting career support">
+            </div>
+        </section>
+
+        <section class="contact-panel" aria-labelledby="form-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Static contact form</p>
+                    <h2 id="form-title">Send a message</h2>
+                </div>
+            </div>
+            <form class="contact-form" id="contact-form" novalidate>
+                <div class="contact-form__field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                    <p class="field-error" id="name-error" aria-live="polite"></p>
+                </div>
+                <div class="contact-form__field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                    <p class="field-error" id="email-error" aria-live="polite"></p>
+                </div>
+                <div class="contact-form__field">
+                    <label for="message-input">Message</label>
+                    <textarea id="message-input" name="message" rows="6" required aria-describedby="message-error"></textarea>
+                    <p class="field-error" id="message-error" aria-live="polite"></p>
+                </div>
+                <button class="button" type="submit">Show confirmation</button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="footer-brand"><p class="footer-brand__wordmark"><svg class="brand-mark brand-mark--footer" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg>CareerBridge <b>Pro</b></p><small>Build skills. Find direction.</small></div>
+            <div class="footer-links"><div><h2>Quick links</h2><a href="jobs.html">Jobs</a><a href="guidance.html">Guidance</a><a href="events.html">Events</a></div><div><h2>Resources</h2><a href="preparation.html">Preparation</a><a href="resources.html">Resume resources</a><a href="contact.html">Contact</a></div><div><h2>Support</h2><a href="resources.html">Help Center</a><a href="contact.html">Contact Support</a><a href="resources.html">FAQs</a></div></div>
+        </div>
+        <p class="footer-legal">CareerBridge Pro — Build skills. Find direction. Move forward.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>

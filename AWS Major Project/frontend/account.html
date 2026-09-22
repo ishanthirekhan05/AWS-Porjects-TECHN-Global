@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage your ShopEase account, track active orders in real-time, update shipping addresses, manage wishlist items, and configure security preferences.">
+  <title>My Account &amp; Orders — ShopEase</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Production Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=cancel-modal-fix-20260918">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme Bootstrapper (Prevents Flash of Wrong Theme) -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Store Announcement">
+    <div class="container top-banner-inner">
+      <div class="top-banner-text">
+        <span class="top-banner-highlight">Free Express Delivery</span> on all domestic orders over ₹1,999 across India.
+      </div>
+      <div class="top-banner-links">
+        <span>•</span>
+        <a href="support.html">Customer Care</a>
+        <span>•</span>
+        <a href="products.html">Browse Catalog</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Production Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-icon btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Brand Identity Logo -->
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Integrated Header Search Bar -->
+        <form class="header-search-wrap" role="search" action="products.html" method="GET">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="search" class="header-search-input" placeholder="Search products, brands, categories..." autocomplete="off">
+        </form>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="products.html" class="nav-link" role="menuitem">Products</a></li>
+          <li role="none"><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        </ul>
+
+        <!-- Action Controls: Wishlist, Cart, Profile -->
+        <div class="header-actions">
+          
+          <!-- Mobile Search Trigger -->
+          <button type="button" class="btn-icon mobile-search-btn" data-open-search aria-label="Open search" title="Search products">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Saved Wishlist Link -->
+          <a href="products.html?view=wishlist" class="btn-icon" aria-label="View saved wishlist" title="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- Shopping Cart Navigation Link -->
+          <a href="cart.html" class="btn-icon" aria-label="View shopping cart" title="Shopping Cart">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count cart-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- User Profile & Theme Switcher Dropdown -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile active" id="profileToggleBtn" aria-label="Open user profile and appearance menu" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Account</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="User Account and Appearance Settings">
+              <div class="profile-dropdown-header">
+                <div class="profile-header-avatar">U</div>
+                <div>
+                  <div class="profile-header-name">Welcome Guest</div>
+                  <span class="profile-header-badge">Guest Visitor</span>
+                </div>
+              </div>
+
+              <!-- Quick Links -->
+              <ul class="profile-nav-links" role="none">
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html" role="menuitem" class="active" style="color: var(--accent); font-weight: 700;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html#orders" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>My Orders</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="products.html?view=wishlist" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Saved Wishlist</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="cart.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>My Shopping Bag</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="login.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                    <span>Sign In / Switch User</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="profile-dropdown-divider"></div>
+
+              <!-- Theme Switcher System inside Profile Panel -->
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                
+                <div class="theme-pill-group" role="radiogroup" aria-label="Color theme selection">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+                      <span>Light</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                      <span>Dark</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span>System</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu mobile-menu-drawer" id="mobileMenu" aria-label="Mobile navigation drawer">
+    <div class="mobile-menu-header">
+      <div class="brand-name" style="font-size: 1.125rem;">Shop<span class="brand-accent">Ease</span></div>
+      <button type="button" class="btn-icon" id="closeMobileMenu" data-close-mobile-menu aria-label="Close navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="products.html" class="mobile-nav-link">All Products</a></li>
+      <li><a href="events.html" class="mobile-nav-link">Deals &amp; Events</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About ShopEase</a></li>
+      <li><a href="cart.html" class="mobile-nav-link">Shopping Cart</a></li>
+      <li><a href="account.html#orders" class="mobile-nav-link">My Orders</a></li>
+      <li><a href="account.html" class="mobile-nav-link active" style="color: var(--accent); font-weight: 700;">My Account</a></li>
+      <li><a href="login.html" class="mobile-nav-link">Sign In / Register</a></li>
+    </ul>
+
+    <!-- Theme Switcher in Mobile Drawer -->
+    <div class="mobile-theme-picker">
+      <div class="profile-section-title">
+        <span>Interface Appearance</span>
+        <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+      </div>
+      <div class="theme-pill-group" style="gap: 6px;">
+        <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light">
+          <div class="theme-pill-left">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+            <span>Light</span>
+          </div>
+          <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+        <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark">
+          <div class="theme-pill-left">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <span>Dark</span>
+          </div>
+          <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Container -->
+  <main class="container account-dashboard-wrapper" id="accountMainContent">
+
+    <!-- Breadcrumb Trail -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 20px;">
+      <a href="index.html" style="color: var(--text-muted); text-decoration: none;">Home</a>
+      <span>/</span>
+      <span style="color: var(--text-primary); font-weight: 700;">My Account</span>
+    </nav>
+
+    <!-- Authentication Required State (Shown when visitor is not signed in) -->
+    <div id="authRequiredCard" class="account-empty-state" style="display: none; padding: 64px 24px; text-align: center; background: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-lg); margin: 24px 0;">
+      <div class="account-empty-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; background: rgba(0, 113, 227, 0.08); color: var(--accent); margin-bottom: 20px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
+      <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin: 0 0 10px;">Sign In to Your Account</h2>
+      <p style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 24px; line-height: 1.6;">
+        Please sign in or create an account to view your profile, track real orders, manage saved delivery addresses, and configure security preferences.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="login.html?redirect=account.html" id="btnAuthCardSignIn" onclick="window.location.href='login.html?redirect=account.html'; return false;" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 8px;">
+          <span>Sign In / Register &rarr;</span>
+        </a>
+        <a href="products.html" class="btn btn-outline btn-lg">Browse Products</a>
+      </div>
+    </div>
+
+    <!-- Dashboard Two-Column Layout -->
+    <div class="account-layout" id="accountDashboardLayout">
+
+      <!-- Left Sidebar Column: User Identity & Tabs Navigation -->
+      <aside class="account-sidebar" aria-label="Account navigation">
+        
+        <!-- User Identity Mini-Card -->
+        <div class="account-sidebar-profile">
+          <div class="account-sidebar-avatar" id="sidebarAvatar">--</div>
+          <div style="overflow: hidden;">
+            <div class="account-sidebar-user-name" id="sidebarName">Customer</div>
+            <div class="account-sidebar-email" id="sidebarEmail">--</div>
+            <div class="account-sidebar-user-role" style="margin-top: 4px;">
+              <span class="account-badge-pill verified" id="sidebarBadge">Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Navigation Menu Tabs -->
+        <ul class="account-nav-list" role="tablist">
+          <li>
+            <button type="button" class="account-nav-btn active" data-tab="overview" role="tab" aria-selected="true">
+              <div class="account-nav-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                <span>Dashboard Overview</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="account-nav-btn" data-tab="orders" role="tab" aria-selected="false">
+              <div class="account-nav-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v2"></path><path d="M3 14v2a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16v-2"></path><line x1="3.27" y1="6.96" x2="12" y2="12.01"></line><line x1="20.73" y1="6.96" x2="12" y2="12.01"></line><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>My Orders</span>
+              </div>
+              <span class="account-nav-count" id="navOrdersCount">0</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="account-nav-btn" data-tab="wishlist" role="tab" aria-selected="false">
+              <div class="account-nav-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <span>Wishlist / Saved Items</span>
+              </div>
+              <span class="account-nav-count" id="navWishlistCount">0</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="account-nav-btn" data-tab="profile" role="tab" aria-selected="false">
+              <div class="account-nav-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>Personal Information</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="account-nav-btn" data-tab="addresses" role="tab" aria-selected="false">
+              <div class="account-nav-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Delivery Addresses</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="account-nav-btn" data-tab="payments" role="tab" aria-selected="false">
+              <div class="account-nav-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                <span>Payment Methods</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="account-nav-btn" data-tab="security" role="tab" aria-selected="false">
+              <div class="account-nav-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Security &amp; Login</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="account-nav-btn account-logout-btn" id="btnAccountLogout" role="button" style="color: var(--error);">
+              <div class="account-nav-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span>Logout</span>
+              </div>
+            </button>
+          </li>
+        </ul>
+
+        <div class="account-nav-divider"></div>
+
+        <button type="button" class="account-signout-btn" id="btnSignOut">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Logout</span>
+        </button>
+
+      </aside>
+
+      <!-- Right Main Content Panel -->
+      <section class="account-content-area" aria-label="Account details">
+
+        <!-- ==========================================
+             TAB 1: DASHBOARD OVERVIEW
+             ========================================== -->
+        <div class="account-tab-panel active" id="tab-overview" role="tabpanel">
+          
+          <!-- Profile Header / Account Summary Card -->
+          <div class="account-header-card">
+            <div class="account-header-left">
+              <div class="account-header-avatar" id="headerAvatar">--</div>
+              <div class="account-header-info">
+                <h1>
+                  <span id="headerName">Customer</span>
+                  <span class="account-badge-pill verified" id="headerStatusBadge">Verified Member</span>
+                </h1>
+                <div class="account-header-meta">
+                  <div class="account-header-meta-item">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span id="headerEmail">--</span>
+                  </div>
+                  <div class="account-header-meta-item">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span id="headerPhone">Not Provided</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="account-header-right">
+              <button type="button" class="btn btn-outline btn-sm" id="btnOpenEditProfile" style="display: inline-flex; align-items: center; gap: 8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                <span>Edit Profile</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 4-Column Account Overview Cards -->
+          <div class="account-overview-grid">
+            
+            <a href="#orders" class="account-stat-card" data-tab="orders">
+              <div class="account-stat-top">
+                <div class="account-stat-icon-wrapper orders">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v2"></path><path d="M3 14v2a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16v-2"></path><line x1="3.27" y1="6.96" x2="12" y2="12.01"></line><line x1="20.73" y1="6.96" x2="12" y2="12.01"></line><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <div class="account-stat-number" id="statTotalOrders">0</div>
+              </div>
+              <div>
+                <div class="account-stat-label">Total Orders Placed</div>
+                <div class="account-stat-action">View history &rarr;</div>
+              </div>
+            </a>
+
+            <a href="#orders" class="account-stat-card" data-tab="orders">
+              <div class="account-stat-top">
+                <div class="account-stat-icon-wrapper active">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div class="account-stat-number" id="statActiveOrders">0</div>
+              </div>
+              <div>
+                <div class="account-stat-label">Active Orders</div>
+                <div class="account-stat-action" style="color: var(--warning);">Track shipment &rarr;</div>
+              </div>
+            </a>
+
+            <a href="#wishlist" class="account-stat-card" data-tab="wishlist">
+              <div class="account-stat-top">
+                <div class="account-stat-icon-wrapper wishlist">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </div>
+                <div class="account-stat-number" id="statWishlistItems">0</div>
+              </div>
+              <div>
+                <div class="account-stat-label">Saved Wishlist Items</div>
+                <div class="account-stat-action" style="color: var(--wishlist-active);">Open wishlist &rarr;</div>
+              </div>
+            </a>
+
+            <a href="cart.html" class="account-stat-card">
+              <div class="account-stat-top">
+                <div class="account-stat-icon-wrapper bag">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </div>
+                <div class="account-stat-number" id="statBagItems">0</div>
+              </div>
+              <div>
+                <div class="account-stat-label">Shopping Bag</div>
+                <div class="account-stat-action" style="color: var(--success);">Proceed to checkout &rarr;</div>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Active Order Real-Time Teaser -->
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h3 class="account-section-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  <span>Recent Orders</span>
+                </h3>
+                <div class="account-section-subtitle">Latest order updates and live transit tracking</div>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm btn-nav-tab" data-tab="orders">View All Orders &rarr;</button>
+            </div>
+            
+            <div id="overviewRecentOrdersContainer">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Default Delivery Destination Preview -->
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h3 class="account-section-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Primary Delivery Destination</span>
+                </h3>
+                <div class="account-section-subtitle">Used for express 1-click checkout and automated invoice shipping</div>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm btn-nav-tab" data-tab="addresses">Manage Addresses &rarr;</button>
+            </div>
+            <div id="overviewAddressesContainer">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ==========================================
+             TAB 2: MY ORDERS
+             ========================================== -->
+        <div class="account-tab-panel" id="tab-orders" role="tabpanel">
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h2 class="account-section-title">My Orders</h2>
+                <div class="account-section-subtitle">View detailed item breakdowns, track live transit progress, and manage cancellations.</div>
+              </div>
+              <a href="products.html" class="btn btn-primary btn-sm">Explore Products &rarr;</a>
+            </div>
+
+            <div class="account-order-list" id="accountOrdersContainer">
+              <!-- Populated dynamically by account.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 3: SAVED WISHLIST
+             ========================================== -->
+        <div class="account-tab-panel" id="tab-wishlist" role="tabpanel">
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h2 class="account-section-title">Saved Wishlist</h2>
+                <div class="account-section-subtitle">Items you have bookmarked for later. Move them to your shopping bag at any time.</div>
+              </div>
+              <a href="products.html" class="btn btn-outline btn-sm">Browse Catalog &rarr;</a>
+            </div>
+
+            <div class="account-wishlist-grid" id="accountWishlistContainer">
+              <!-- Populated dynamically by account.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 4: PERSONAL INFORMATION
+             ========================================== -->
+        <div class="account-tab-panel" id="tab-profile" role="tabpanel">
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h2 class="account-section-title">Personal Profile Information</h2>
+                <div class="account-section-subtitle">Your contact details are stored securely and used exclusively for order fulfillment and delivery notifications.</div>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm" id="btnOpenEditProfileSecondary">Edit Information</button>
+            </div>
+
+            <div class="account-info-grid">
+              <div class="account-info-field">
+                <span class="account-info-label">Full Name</span>
+                <span class="account-info-value" id="infoName">Customer</span>
+              </div>
+              <div class="account-info-field">
+                <span class="account-info-label">Email Address</span>
+                <span class="account-info-value" id="infoEmail">--</span>
+              </div>
+              <div class="account-info-field">
+                <span class="account-info-label">Mobile Number</span>
+                <span class="account-info-value" id="infoPhone">Not Provided</span>
+              </div>
+              <div class="account-info-field">
+                <span class="account-info-label">Date of Birth</span>
+                <span class="account-info-value" id="infoDob">Not Provided</span>
+              </div>
+              <div class="account-info-field">
+                <span class="account-info-label">Gender</span>
+                <span class="account-info-value" id="infoGender">Not Specified</span>
+              </div>
+              <div class="account-info-field">
+                <span class="account-info-label">Account User ID</span>
+                <span class="account-info-value" style="font-family: var(--font-mono); font-size: 0.8125rem;" id="infoCognito">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 5: DELIVERY ADDRESSES
+             ========================================== -->
+        <div class="account-tab-panel" id="tab-addresses" role="tabpanel">
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h2 class="account-section-title">Saved Delivery Addresses</h2>
+                <div class="account-section-subtitle">Manage multiple shipping destinations for home, office, and family gifts.</div>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm" id="btnOpenAddAddress">Add New Address</button>
+            </div>
+
+            <div class="account-address-grid" id="accountAddressesContainer">
+              <!-- Populated dynamically by account.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 6: PAYMENT METHODS
+             ========================================== -->
+        <div class="account-tab-panel" id="tab-payments" role="tabpanel">
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h2 class="account-section-title">Saved Payment Methods</h2>
+                <div class="account-section-subtitle">PCI-DSS Level 1 compliant storage. Sensitive card numbers and CVV codes are never stored on ShopEase servers.</div>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm" id="btnOpenAddPayment">Add Payment Method</button>
+            </div>
+
+            <div class="account-payment-grid" id="accountPaymentsContainer">
+              <!-- Populated dynamically by account.js -->
+            </div>
+
+            <div style="margin-top: 24px; padding: 16px; background: var(--bg-subtle); border-radius: var(--radius-md); font-size: 0.8125rem; color: var(--text-muted); display: flex; align-items: center; gap: 12px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--success);"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <span>All payment instruments are encrypted end-to-end via AWS KMS and tokenized through certified Indian payment gateways (Razorpay / PayU). We adhere strictly to Reserve Bank of India (RBI) tokenization guidelines.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 7: SECURITY & LOGIN
+             ========================================== -->
+        <div class="account-tab-panel" id="tab-security" role="tabpanel">
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h2 class="account-section-title">Security &amp; Authentication</h2>
+                <div class="account-section-subtitle">Manage your credentials, two-factor authentication, and AWS Cognito sessions.</div>
+              </div>
+            </div>
+
+            <div class="account-security-grid">
+              
+              <!-- Password -->
+              <div class="account-security-row">
+                <div class="account-security-left">
+                  <div class="account-security-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  </div>
+                  <div>
+                    <div class="account-security-title">Account Password</div>
+                    <div class="account-security-desc">Strong password configured (Last changed 90 days ago)</div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm" id="btnOpenChangePassword">Change Password</button>
+              </div>
+
+              <!-- Two Factor Authentication -->
+              <div class="account-security-row">
+                <div class="account-security-left">
+                  <div class="account-security-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  </div>
+                  <div>
+                    <div class="account-security-title">Two-Factor Authentication (2FA)</div>
+                    <div class="account-security-desc" id="twoFaStatusText">Disabled (Recommended to enable)</div>
+                  </div>
+                </div>
+                <label class="account-switch" aria-label="Toggle Two-Factor Authentication">
+                  <input type="checkbox" id="twoFaToggle">
+                  <span class="account-slider"></span>
+                </label>
+              </div>
+
+              <!-- AWS Cognito Infrastructure Status -->
+              <div class="account-security-row">
+                <div class="account-security-left">
+                  <div class="account-security-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                  </div>
+                  <div>
+                    <div class="account-security-title">AWS Cloud Security Architecture</div>
+                    <div class="account-security-desc">Protected by Amazon Cognito User Pool (<span style="font-family: var(--font-mono);">ap-south-1_ShopEasePool</span>) &amp; AWS WAF DDoS mitigation.</div>
+                  </div>
+                </div>
+                <span class="account-badge-pill verified">Operational</span>
+              </div>
+
+              <!-- Active Session -->
+              <div class="account-security-row">
+                <div class="account-security-left">
+                  <div class="account-security-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  </div>
+                  <div>
+                    <div class="account-security-title">Active Browser Session</div>
+                    <div class="account-security-desc">Current device: Windows PC &bull; Chrome Browser &bull; Bengaluru, IN</div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm" id="btnSignOutSecondary" style="color: var(--error);">Sign Out</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 8: PREFERENCES
+             ========================================== -->
+        <div class="account-tab-panel" id="tab-preferences" role="tabpanel">
+          <div class="account-section-card">
+            <div class="account-section-header">
+              <div>
+                <h2 class="account-section-title">Account Preferences</h2>
+                <div class="account-section-subtitle">Customize communication alerts, notifications, and store display options.</div>
+              </div>
+            </div>
+
+            <!-- Appearance Theme Picker -->
+            <div style="margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color);">
+              <div class="account-pref-title">Interface Appearance</div>
+              <div class="account-pref-desc">Choose between daytime light mode, high-contrast dark charcoal mode, or match your operating system theme.</div>
+              
+              <div class="account-theme-picker">
+                <div class="account-theme-option" data-mode="light">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+                  <span>Light Theme</span>
+                </div>
+                <div class="account-theme-option" data-mode="dark">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                  <span>Dark Theme</span>
+                </div>
+                <div class="account-theme-option" data-mode="system">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  <span>System Default</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Notifications List -->
+            <div class="account-pref-list">
+              
+              <div class="account-pref-item">
+                <div class="account-pref-text">
+                  <div class="account-pref-title">Order Status SMS &amp; WhatsApp Alerts</div>
+                  <div class="account-pref-desc">Receive real-time courier dispatch and delivery updates directly on your registered phone.</div>
+                </div>
+                <label class="account-switch" aria-label="Toggle SMS alerts">
+                  <input type="checkbox" checked onchange="window.ShopEaseAccount.showToast('SMS alert preferences updated');">
+                  <span class="account-slider"></span>
+                </label>
+              </div>
+
+              <div class="account-pref-item">
+                <div class="account-pref-text">
+                  <div class="account-pref-title">Email Invoices &amp; Order Receipts</div>
+                  <div class="account-pref-desc">Automatically email GST-compliant tax invoices as soon as an order is placed.</div>
+                </div>
+                <label class="account-switch" aria-label="Toggle Email receipts">
+                  <input type="checkbox" checked onchange="window.ShopEaseAccount.showToast('Email invoice preferences updated');">
+                  <span class="account-slider"></span>
+                </label>
+              </div>
+
+              <div class="account-pref-item">
+                <div class="account-pref-text">
+                  <div class="account-pref-title">Promotional Newsletters &amp; Shopping Events</div>
+                  <div class="account-pref-desc">Get notified about exclusive festive sales, Prime day promotions, and category discounts.</div>
+                </div>
+                <label class="account-switch" aria-label="Toggle Promotions">
+                  <input type="checkbox" onchange="window.ShopEaseAccount.showToast('Newsletter preferences updated');">
+                  <span class="account-slider"></span>
+                </label>
+              </div>
+
+              <div class="account-pref-item">
+                <div class="account-pref-text">
+                  <div class="account-pref-title">Preferred Currency</div>
+                  <div class="account-pref-desc">All pricing across ShopEase is displayed in Indian Rupees.</div>
+                </div>
+                <span class="account-badge-pill verified" style="font-weight: 700; font-size: 0.8125rem;">INR ₹ (Indian Rupee)</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ==========================================
+       MODALS
+       ========================================== -->
+
+  <!-- 1. Edit Profile Modal -->
+  <div class="account-modal-overlay" id="modalEditProfile" role="dialog" aria-modal="true" aria-labelledby="modalEditProfileTitle">
+    <div class="account-modal">
+      <div class="account-modal-header">
+        <h3 class="account-modal-title" id="modalEditProfileTitle">Edit Personal Information</h3>
+        <button type="button" class="btn-icon" data-close-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="formEditProfile">
+        <div class="account-modal-body">
+          <div class="account-form-group">
+            <label class="account-form-label" for="editFullName">Full Name</label>
+            <input type="text" id="editFullName" class="account-form-input" required>
+          </div>
+          <div class="account-form-row">
+            <div class="account-form-group">
+              <label class="account-form-label" for="editEmail">Email Address</label>
+              <input type="email" id="editEmail" class="account-form-input" required>
+            </div>
+            <div class="account-form-group">
+              <label class="account-form-label" for="editPhone">Mobile Phone</label>
+              <input type="tel" id="editPhone" class="account-form-input" required>
+            </div>
+          </div>
+          <div class="account-form-row">
+            <div class="account-form-group">
+              <label class="account-form-label" for="editDob">Date of Birth</label>
+              <input type="date" id="editDob" class="account-form-input">
+            </div>
+            <div class="account-form-group">
+              <label class="account-form-label" for="editGender">Gender</label>
+              <select id="editGender" class="account-form-select">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Non-Binary">Non-Binary</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="account-modal-footer">
+          <button type="button" class="btn btn-outline" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Add/Edit Address Modal -->
+  <div class="account-modal-overlay" id="modalAddress" role="dialog" aria-modal="true" aria-labelledby="modalAddressTitle">
+    <div class="account-modal">
+      <div class="account-modal-header">
+        <h3 class="account-modal-title" id="modalAddressTitle">Add New Delivery Address</h3>
+        <button type="button" class="btn-icon" data-close-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="formAddress">
+        <input type="hidden" id="addressId" value="">
+        <div class="account-modal-body">
+          <div class="account-form-row">
+            <div class="account-form-group">
+              <label class="account-form-label" for="addrTag">Address Label</label>
+              <select id="addrTag" class="account-form-select">
+                <option value="Home">Home</option>
+                <option value="Work / Office">Work / Office</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="account-form-group">
+              <label class="account-form-label" for="addrName">Recipient Full Name</label>
+              <input type="text" id="addrName" class="account-form-input" placeholder="Full Name" required>
+            </div>
+          </div>
+
+          <div class="account-form-group">
+            <label class="account-form-label" for="addrPhone">Recipient Contact Number</label>
+            <input type="tel" id="addrPhone" class="account-form-input" placeholder="+91 98765 43210" required>
+          </div>
+
+          <div class="account-form-group">
+            <label class="account-form-label" for="addrLine1">Address Line 1 (Flat, House no., Building)</label>
+            <input type="text" id="addrLine1" class="account-form-input" placeholder="Flat 402, Skyline Residency" required>
+          </div>
+
+          <div class="account-form-group">
+            <label class="account-form-label" for="addrLine2">Address Line 2 (Area, Street, Landmark)</label>
+            <input type="text" id="addrLine2" class="account-form-input" placeholder="MG Road, Indiranagar">
+          </div>
+
+          <div class="account-form-row">
+            <div class="account-form-group">
+              <label class="account-form-label" for="addrCity">City</label>
+              <input type="text" id="addrCity" class="account-form-input" placeholder="Bengaluru" required>
+            </div>
+            <div class="account-form-group">
+              <label class="account-form-label" for="addrState">State</label>
+              <input type="text" id="addrState" class="account-form-input" placeholder="Karnataka" required>
+            </div>
+          </div>
+
+          <div class="account-form-row">
+            <div class="account-form-group">
+              <label class="account-form-label" for="addrPin">PIN Code (6 digits)</label>
+              <input type="text" id="addrPin" class="account-form-input" placeholder="560001" maxlength="6" required>
+            </div>
+            <div class="account-form-group" style="justify-content: center;">
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; font-weight: 600; cursor: pointer; margin-top: 24px;">
+                <input type="checkbox" id="addrIsDefault">
+                <span>Set as default shipping address</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="account-modal-footer">
+          <button type="button" class="btn btn-outline" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Address</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. Add Payment Method Modal -->
+  <div class="account-modal-overlay" id="modalPayment" role="dialog" aria-modal="true" aria-labelledby="modalPaymentTitle">
+    <div class="account-modal">
+      <div class="account-modal-header">
+        <h3 class="account-modal-title" id="modalPaymentTitle">Add Payment Method</h3>
+        <button type="button" class="btn-icon" data-close-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="formPayment">
+        <div class="account-modal-body">
+          <div class="account-form-group">
+            <label class="account-form-label" for="payMethodType">Payment Instrument</label>
+            <select id="payMethodType" class="account-form-select" onchange="
+              const isCard = this.value === 'CARD';
+              document.getElementById('cardFieldsGroup').style.display = isCard ? 'block' : 'none';
+              document.getElementById('upiFieldsGroup').style.display = isCard ? 'none' : 'block';
+            ">
+              <option value="CARD">Credit / Debit Card (Visa / Mastercard / RuPay)</option>
+              <option value="UPI">UPI ID (Google Pay / PhonePe / BHIM)</option>
+            </select>
+          </div>
+
+          <div id="cardFieldsGroup">
+            <div class="account-form-group">
+              <label class="account-form-label" for="payCardNumber">Card Number</label>
+              <input type="text" id="payCardNumber" class="account-form-input" placeholder="4111 2222 3333 4892" maxlength="19">
+            </div>
+            <div class="account-form-row">
+              <div class="account-form-group">
+                <label class="account-form-label" for="payCardHolder">Cardholder Name</label>
+                <input type="text" id="payCardHolder" class="account-form-input" placeholder="Name on card">
+              </div>
+              <div class="account-form-group">
+                <label class="account-form-label" for="payCardExpiry">Expiry Date (MM/YY)</label>
+                <input type="text" id="payCardExpiry" class="account-form-input" placeholder="08/28" maxlength="5">
+              </div>
+            </div>
+          </div>
+
+          <div id="upiFieldsGroup" style="display: none;">
+            <div class="account-form-group">
+              <label class="account-form-label" for="payUpiId">Virtual Payment Address (UPI ID)</label>
+              <input type="text" id="payUpiId" class="account-form-input" placeholder="username@okhdfcbank">
+            </div>
+          </div>
+
+          <div style="padding: 12px; background: var(--bg-subtle); border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--accent);"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>PCI-DSS Tokenization: CVV numbers are never saved. Tokenized per RBI mandates.</span>
+          </div>
+        </div>
+        <div class="account-modal-footer">
+          <button type="button" class="btn btn-outline" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Payment Method</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Change Password Modal -->
+  <div class="account-modal-overlay" id="modalPassword" role="dialog" aria-modal="true" aria-labelledby="modalPasswordTitle">
+    <div class="account-modal">
+      <div class="account-modal-header">
+        <h3 class="account-modal-title" id="modalPasswordTitle">Update Account Password</h3>
+        <button type="button" class="btn-icon" data-close-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="formPassword">
+        <div class="account-modal-body">
+          <div class="account-form-group">
+            <label class="account-form-label" for="currPass">Current Password</label>
+            <input type="password" id="currPass" class="account-form-input" required>
+          </div>
+          <div class="account-form-group">
+            <label class="account-form-label" for="newPass">New Password (Min 8 chars, 1 uppercase, 1 symbol)</label>
+            <input type="password" id="newPass" class="account-form-input" required>
+          </div>
+          <div class="account-form-group">
+            <label class="account-form-label" for="confirmPass">Confirm New Password</label>
+            <input type="password" id="confirmPass" class="account-form-input" required>
+          </div>
+        </div>
+        <div class="account-modal-footer">
+          <button type="button" class="btn btn-outline" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary">Update Password</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. Order Details Modal -->
+  <div class="account-modal-overlay" id="modalOrderDetails" role="dialog" aria-modal="true" aria-labelledby="modalOrderDetailsTitle">
+    <div class="account-modal modal-wide">
+      <div class="account-modal-header">
+        <div>
+          <h3 class="account-modal-title" id="modalOrderDetailsTitle">Order Details</h3>
+          <div id="modalOrderDetailsSub" style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 2px;"></div>
+        </div>
+        <button type="button" class="btn-icon" data-close-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="account-modal-body" id="modalOrderDetailsBody">
+        <!-- Dynamically populated by account.js -->
+      </div>
+      <div class="account-modal-footer" id="modalOrderDetailsFooter">
+        <button type="button" class="btn btn-outline" data-close-modal>Close</button>
+        <button type="button" class="btn btn-outline" id="btnModalDownloadInvoice" style="display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Download Invoice</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Cancel Order Confirmation Modal -->
+  <div class="account-modal-overlay" id="modalCancelOrderDashboard" role="dialog" aria-modal="true" aria-labelledby="modalCancelTitle">
+    <div class="account-modal">
+      <div class="account-modal-header">
+        <h3 class="account-modal-title" id="modalCancelTitle">Cancel Order?</h3>
+        <button type="button" class="btn-icon" data-close-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="formCancelOrderDashboard">
+        <input type="hidden" id="cancelOrderId" value="">
+        <div class="account-modal-body">
+          <p style="margin-bottom: 16px; color: var(--text-secondary); font-size: 0.9375rem;">
+            Are you sure you want to cancel order <strong id="cancelOrderDisplayId"></strong>?
+          </p>
+
+          <div class="account-form-group">
+            <label class="account-form-label" for="cancelReasonSelect">Reason for cancellation <span style="color: var(--error);">*</span></label>
+            <select id="cancelReasonSelect" class="account-form-select" required>
+              <option value="">Select a reason...</option>
+              <option value="Changed my mind">Changed my mind</option>
+              <option value="Ordered by mistake">Ordered by mistake</option>
+              <option value="Found a better price">Found a better price</option>
+              <option value="Delivery taking too long">Delivery taking too long</option>
+              <option value="Product no longer needed">Product no longer needed</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="account-form-group">
+            <label class="account-form-label" for="cancelCommentsText">Additional Comments (Optional)</label>
+            <textarea id="cancelCommentsText" class="account-form-input" rows="3" placeholder="Tell us more about why you are cancelling..." style="resize: vertical;"></textarea>
+          </div>
+
+          <div style="padding: 12px; background: var(--bg-subtle); border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--warning); margin-top: 1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span>Once cancelled, this order cannot be undone. If payment was made online, refund processing will be initiated automatically.</span>
+          </div>
+        </div>
+        <div class="account-modal-footer">
+          <button type="button" class="btn btn-outline" data-close-modal>Keep Order</button>
+          <button type="submit" class="btn btn-primary" style="background: var(--error); border-color: var(--error);" id="btnConfirmCancellation">Confirm Cancellation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+                <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+              </svg>
+            </span>
+            <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Next-generation e-commerce platform delivering certified authentic products, same-day dispatch, and secure cloud customer accounts.
+          </p>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Top Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=laptops" class="footer-link">Laptops &amp; Workstations</a></li>
+            <li><a href="products.html?category=smartphones" class="footer-link">Flagship Smartphones</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Studio Audio &amp; Monitors</a></li>
+            <li><a href="products.html?category=footwear" class="footer-link">Ergonomic Footwear</a></li>
+            <li><a href="products.html?category=accessories" class="footer-link">Lifestyle Accessories</a></li>
+            <li><a href="products.html?category=watches" class="footer-link">Watches &amp; Wearables</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" id="support">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="account.html#orders" class="footer-link">My Orders</a></li>
+            <li><a href="shipping-returns.html" class="footer-link">Shipping &amp; Returns</a></li>
+            <li><a href="warranty.html" class="footer-link">Warranty Certification</a></li>
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="support.html" class="footer-link">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for hardware releases, firmware updates, and seasonal priority access.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input 
+              type="email" 
+              class="newsletter-input" 
+              placeholder="Enter your work email" 
+              aria-label="Email address for newsletter"
+              required
+            >
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ShopEase Technologies Inc. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Production App Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js?v=admin-role"></script>
+  <script src="js/order-service.js?v=orders-reconcile1"></script>
+  <script src="js/jspdf.umd.min.js"></script>
+  <script src="js/jspdf.plugin.autotable.min.js"></script>
+  <script src="js/invoice-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+  <script src="js/account.js?v=account-orders-fix-20260916"></script>
+  <script>
+    (() => {
+      const syncAdminLink = () => {
+        const item = document.getElementById('adminAnalyticsNavItem');
+        const auth = window.ShopEaseAuthService;
+        if (item && auth && typeof auth.isAdmin === 'function') {
+          item.style.display = auth.isAdmin() ? 'list-item' : 'none';
+        }
+      };
+      syncAdminLink();
+      document.addEventListener('DOMContentLoaded', syncAdminLink);
+      window.addEventListener('shopease:auth-changed', syncAdminLink);
+    })();
+  </script>
+
+</body>
+</html>

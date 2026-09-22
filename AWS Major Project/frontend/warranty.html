@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Official Brand Warranty Certification. Verify product serial numbers, look up manufacturer coverage, and submit warranty claim tickets.">
+  <title>Warranty Certification — ShopEase Customer Care</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Production Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme Bootstrapper -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Announcement">
+    <div class="container top-banner-inner">
+      <div class="top-banner-text">
+        <span class="top-banner-highlight">Free Express Delivery</span> on all domestic orders over ₹1,999 across India.
+      </div>
+      <div class="top-banner-links">
+        <a href="order-tracking.html">Order Tracking</a>
+        <span>•</span>
+        <a href="shipping-returns.html">Shipping &amp; Returns</a>
+        <span>•</span>
+        <a href="support.html">Customer Care</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-icon btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Integrated Header Search Bar -->
+        <form class="header-search-wrap" role="search" action="products.html" method="GET">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="search" class="header-search-input" placeholder="Search products, categories..." autocomplete="off">
+        </form>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="products.html" class="nav-link" role="menuitem">Products</a></li>
+          <li role="none"><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        </ul>
+
+        <!-- Action Controls: Wishlist, Cart, Profile -->
+        <div class="header-actions">
+          
+          <!-- Mobile Search Trigger Button -->
+          <button type="button" class="btn-icon mobile-search-btn" data-open-search aria-label="Open search" title="Search products">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Wishlist Indicator -->
+          <a href="products.html?view=wishlist" class="btn-icon header-wishlist-btn" id="wishlistBtn" aria-label="View wishlist" title="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-count-badge wishlist-badge" id="wishlistCount" style="display: none;">0</span>
+          </a>
+
+          <!-- Shopping Cart Navigation Link -->
+          <a href="cart.html" class="btn-icon header-cart-btn" id="cartBtn" aria-label="View shopping cart" title="Shopping Cart">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count cart-count-badge cart-badge" id="cartCount" style="display: none;">0</span>
+          </a>
+
+          <!-- User Profile Dropdown -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile" id="profileToggleBtn" aria-label="Open user profile and appearance menu" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Account</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <!-- Profile & Theme Dropdown Menu -->
+            <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="User Account and Appearance Settings">
+              <div class="profile-dropdown-header">
+                <div class="profile-header-avatar">U</div>
+                <div>
+                  <div class="profile-header-name">Welcome Guest</div>
+                  <span class="profile-header-badge">Guest Visitor</span>
+                </div>
+              </div>
+
+              <ul class="profile-nav-links" role="none">
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html#orders" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>My Orders</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="order-tracking.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Order Tracking</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="products.html?view=wishlist" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Saved Wishlist</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="cart.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>My Shopping Bag</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="profile-dropdown-divider"></div>
+
+              <!-- Theme Switcher System -->
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                
+                <div class="theme-pill-group" role="radiogroup" aria-label="Select theme appearance">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                      <span>Light</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                      <span>Dark</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span>System</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation drawer">
+    <div class="mobile-menu-header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+            <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+          </svg>
+        </span>
+        <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+      </div>
+      <button type="button" class="btn-icon" id="closeMobileMenu" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="products.html" class="mobile-nav-link">All Products</a></li>
+        <li><a href="events.html" class="mobile-nav-link">Deals &amp; Events</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About ShopEase</a></li>
+        <li><a href="cart.html" class="mobile-nav-link">Shopping Cart</a></li>
+        <li><a href="account.html#orders" class="mobile-nav-link">My Orders</a></li>
+        <li><a href="order-tracking.html" class="mobile-nav-link">Order Tracking</a></li>
+        <li><a href="shipping-returns.html" class="mobile-nav-link">Shipping &amp; Returns</a></li>
+        <li><a href="warranty.html" class="mobile-nav-link active" style="color: var(--accent); font-weight: 700;">Warranty Certification</a></li>
+        <li><a href="support.html" class="mobile-nav-link">Support Desk</a></li>
+        <li><a href="account.html" class="mobile-nav-link">My Account</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Hero Header Section -->
+  <section class="policy-hero">
+    <div class="container">
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 16px;">
+        <a href="index.html" style="color: var(--text-muted); text-decoration: none;">Home</a>
+        <span>/</span>
+        <span style="color: var(--text-muted);">Customer Care</span>
+        <span>/</span>
+        <span style="color: var(--text-primary); font-weight: 700;">Warranty Certification</span>
+      </nav>
+      
+      <div class="policy-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+        <span>Certified Authentic Hardware</span>
+      </div>
+      <h1 class="policy-hero-title">Official Brand Warranty &amp; Claims</h1>
+      <p class="policy-hero-subtitle">
+        Every electronic device, acoustic monitor, and wearable on ShopEase is sourced directly from authorized brand distributors with 100% manufacturer warranty coverage across India.
+      </p>
+      <div class="policy-meta">
+        <span>Verified OEM Direct</span>
+        <span>•</span>
+        <span>Authorized Service Center Network</span>
+        <span>•</span>
+        <span>Zero Grey-Market Goods</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container">
+    <div class="policy-layout">
+
+      <!-- Left Navigation Column -->
+      <aside class="policy-nav" aria-label="On this page">
+        <div class="policy-nav-title">Quick Navigation</div>
+        <ul class="policy-nav-list">
+          <li><a href="#verify-tool" class="policy-nav-link">🔍 Verify Warranty Tool</a></li>
+          <li><a href="#warranty-scope" class="policy-nav-link">🛡️ Manufacturer Coverage</a></li>
+          <li><a href="#claim-process" class="policy-nav-link">📋 How to File a Claim</a></li>
+          <li><a href="#service-partners" class="policy-nav-link">🏢 Authorized Service Network</a></li>
+          <li><a href="#warranty-faqs" class="policy-nav-link">❓ Warranty FAQs</a></li>
+        </ul>
+      </aside>
+
+      <!-- Right Main Content Articles -->
+      <div class="policy-content">
+
+        <!-- Interactive Warranty Verification Tool -->
+        <section id="verify-tool" class="interactive-tool-box">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(29, 78, 216, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            </div>
+            <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin: 0;">Interactive Warranty Status &amp; Verification Portal</h2>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 18px;">
+            Check your manufacturer coverage, verify authenticity, or initiate a priority warranty service claim. Enter your device Serial Number, IMEI, or ShopEase Order Number below.
+          </p>
+
+          <!-- Professional "No Orders Yet" Empty State for Warranty Tool -->
+          <div id="noOrdersWarrantyState" class="account-empty-state" style="display: none; padding: 48px 24px; text-align: center; background: var(--bg-surface); border: 1px dashed var(--border-color); border-radius: var(--radius-md); margin-top: 16px;">
+            <div class="account-empty-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 113, 227, 0.08); color: var(--accent); margin-bottom: 16px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 0 0 8px;">No Active Warranty Certificates</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); max-width: 460px; margin: 0 auto 20px; line-height: 1.6;">
+              You haven't purchased any products yet. Official brand warranty certification and serial coverage are automatically registered when you purchase genuine hardware on ShopEase.
+            </p>
+            <a href="products.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+              <span>Discover Verified Products &rarr;</span>
+            </a>
+          </div>
+
+          <form id="warrantyLookupForm">
+            <div class="tool-form-grid">
+              <div class="tool-input-group">
+                <label for="warrantySerialInput">Device Serial Number / IMEI / Order ID *</label>
+                <input type="text" id="warrantySerialInput" class="tool-input" placeholder="Enter Serial Number or Order ID" required>
+              </div>
+              <div class="tool-input-group">
+                <label for="warrantyBrandSelect">Manufacturer / Brand *</label>
+                <select id="warrantyBrandSelect" class="tool-input" style="cursor: pointer;" required>
+                  <option value="Sony">Sony Electronics (Acoustics &amp; Audio)</option>
+                  <option value="Apple">Apple India (MacBook &amp; iPhone)</option>
+                  <option value="Samsung">Samsung Electronics (Galaxy Series)</option>
+                  <option value="Dell">Dell Technologies (Laptops &amp; Workstations)</option>
+                  <option value="Bose">Bose Corporation (Soundbars &amp; ANC)</option>
+                  <option value="Nike">Nike Athletic Performance</option>
+                  <option value="Garmin">Garmin India (GPS Multisport)</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnVerifyWarranty" style="height: 44px; padding: 0 24px; font-weight: 700;">
+              <span>Verify Official Warranty Coverage &rarr;</span>
+            </button>
+          </form>
+
+          <!-- Ineligible / Cancelled Warranty Alert Panel -->
+          <div id="warrantyIneligiblePanel" class="tool-result-panel" style="display: none; border-left: 4px solid var(--error, #dc2626); margin-top: 24px; background: rgba(239, 68, 68, 0.05); padding: 16px; border-radius: var(--radius-sm); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <div>
+                <span class="badge" style="background: rgba(239, 68, 68, 0.15); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 9999px;">✕ Warranty Inactive — Order Cancelled</span>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: #dc2626; margin: 8px 0 4px;" id="resWarrantyIneligibleTitle">
+                  Warranty Coverage Not Active
+                </h3>
+                <p id="resWarrantyIneligibleMsg" style="font-size: 0.875rem; color: var(--text-secondary); margin: 0; line-height: 1.5;"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Live Result Card -->
+          <div id="warrantyResultPanel" class="tool-result-panel" style="display: none; border-left: 4px solid var(--accent); margin-top: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <span class="badge badge-success" style="font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 9999px;">✓ Active Official Manufacturer Warranty</span>
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin: 8px 0 2px;" id="resWarrantyDevice">
+                  Manufacturer Certified Hardware
+                </h3>
+                <div style="font-size: 0.8125rem; color: var(--text-muted);" id="resWarrantyMeta"></div>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm" id="btnRegisterClaimTicket">
+                Register Claim Ticket &rarr;
+              </button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 16px;">
+              <div style="background: var(--surface); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Coverage Term</div>
+                <div style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary);" id="resWarrantyCoverage">12 Months Comprehensive</div>
+              </div>
+              <div style="background: var(--surface); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Valid Until</div>
+                <div style="font-size: 0.9375rem; font-weight: 700; color: var(--accent);" id="resWarrantyExpiry">--</div>
+              </div>
+              <div style="background: var(--surface); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Service Type</div>
+                <div style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary);" id="resWarrantyService">Doorstep / Authorized Walk-In</div>
+              </div>
+            </div>
+
+            <div id="claimNoticeBox" style="display: none; background: rgba(29, 78, 216, 0.06); border: 1px solid rgba(29, 78, 216, 0.2); padding: 16px; border-radius: var(--radius-sm); font-size: 0.875rem; color: var(--text-secondary);">
+              <div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">
+                Warranty Claim Registered &bull; Reference: <span id="resClaimIdText" style="font-family: monospace;">WAR-CLAIM-PENDING</span>
+              </div>
+              <div>
+                A priority diagnostic inspection request has been logged with authorized brand engineers. Our concierge will contact you via registered phone/email within 4 business hours to coordinate complimentary doorstep diagnostic pickup.
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="order-details.html" id="resWarrantyOrderDetailsLink" class="btn btn-outline btn-sm">View Order Details &rarr;</a>
+                <a href="order-tracking.html" id="resWarrantyTrackLink" class="btn btn-outline btn-sm">Track Order &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 1: Manufacturer Coverage Scope -->
+        <article id="warranty-scope" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            What is Covered Under Official Brand Warranty
+          </h2>
+          <p>
+            ShopEase operates with a strict direct-from-brand policy. When you purchase on ShopEase, your device comes with the exact same warranty coverage as purchasing directly from Apple, Sony, Samsung, Dell, or Bose company flagship stores:
+          </p>
+          <ul>
+            <li><strong>Internal Hardware Malfunction:</strong> Logic board, processors, RAM, solid-state storage, sensor arrays, or display controller failures.</li>
+            <li><strong>Acoustic &amp; Driver Failures:</strong> Distortion, silent channels, ANC microphone defects, or driver imbalances in headphones and monitors.</li>
+            <li><strong>Battery Health Safeguards:</strong> Premature battery capacity degradation (>20% drop within manufacturer warranty period).</li>
+            <li><strong>100% Genuine OEM Replacement:</strong> All repairs utilize certified original factory components preserving dust/water resistance ratings and FCC/BIS certifications.</li>
+          </ul>
+        </article>
+
+        <!-- Section 2: Claim Process -->
+        <article id="claim-process" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            3-Step Warranty Claim Workflow
+          </h2>
+          <div style="display: flex; flex-direction: column; gap: 16px; margin: 20px 0;">
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">1</div>
+              <div>
+                <h4 style="margin: 0 0 4px; font-size: 1rem; color: var(--text-primary);">Verify Serial Number &amp; Download Invoice</h4>
+                <p style="margin: 0; font-size: 0.875rem; color: var(--text-secondary);">Locate your order on the <a href="order-tracking.html" style="color: var(--accent); font-weight: 600;">Track Orders</a> page to download your tax invoice containing official GSTIN and serial number records.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">2</div>
+              <div>
+                <h4 style="margin: 0 0 4px; font-size: 1rem; color: var(--text-primary);">Choose Doorstep Pickup or Service Center Walk-In</h4>
+                <p style="margin: 0; font-size: 0.875rem; color: var(--text-secondary);">Opt for our complimentary concierge doorstep pickup or take your device to any authorized brand service center in your city.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">3</div>
+              <div>
+                <h4 style="margin: 0 0 4px; font-size: 1rem; color: var(--text-primary);">Diagnosis &amp; Free Repair / Replacement</h4>
+                <p style="margin: 0; font-size: 0.875rem; color: var(--text-secondary);">Certified brand engineers inspect and restore the device. If repair exceeds 7 working days, brand replacement guidelines apply.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Section 3: Authorized Service Partners -->
+        <article id="service-partners" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            Authorized Service Network &amp; Brand Direct Care
+          </h2>
+          <p>
+            Because all devices sold on ShopEase are genuine Indian market retail units (with BIS and EPR certifications), you are fully entitled to walk in to any authorized service center nationwide:
+          </p>
+          <ul>
+            <li><strong>Apple:</strong> Apple Authorised Service Providers (AASP), Apple BKC (Mumbai), Apple Saket (Delhi).</li>
+            <li><strong>Sony:</strong> Sony Authorized Service Centers nationwide.</li>
+            <li><strong>Samsung:</strong> Samsung Smart Care Centers across 400+ cities.</li>
+            <li><strong>Dell:</strong> Dell Onsite ProSupport &amp; Authorised Service Centers.</li>
+            <li><strong>Bose:</strong> Bose Service Centers &amp; Authorized Concierge Support.</li>
+          </ul>
+        </article>
+
+        <!-- Section 4: FAQs -->
+        <article id="warranty-faqs" class="policy-card">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Frequently Asked Warranty Questions
+          </h2>
+
+          <div class="faq-card-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do I need physical warranty cards to claim warranty?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              No. Modern brand service networks in India (Apple, Sony, Samsung, Dell) authenticate warranty coverage through the device serial number / IMEI registered upon dispatch and your ShopEase GST invoice.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can I extend my warranty beyond the default 1-year coverage?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Yes. You can purchase official extended protection plans (such as AppleCare+, Dell ProSupport, or Samsung Care+) using your serial number within 60 days of purchase directly through the brand.
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer (Black Background Design System) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-col">
+          <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+                <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+              </svg>
+            </span>
+            <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Next-generation consumer hardware and digital lifestyle platform. Engineered for reliability, speed, and real-time performance telemetry.
+          </p>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Department -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Shop Department</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=laptops" class="footer-link">Laptops &amp; Workstations</a></li>
+            <li><a href="products.html?category=smartphones" class="footer-link">Flagship Smartphones</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Studio Audio &amp; Monitors</a></li>
+            <li><a href="products.html?category=footwear" class="footer-link">Ergonomic Footwear</a></li>
+            <li><a href="products.html?category=accessories" class="footer-link">Lifestyle Accessories</a></li>
+            <li><a href="products.html?category=watches" class="footer-link">Watches &amp; Wearables</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="account.html#orders" class="footer-link">My Orders</a></li>
+            <li><a href="order-tracking.html" class="footer-link">Order Tracking</a></li>
+            <li><a href="shipping-returns.html" class="footer-link">Shipping &amp; Returns</a></li>
+            <li><a href="warranty.html" class="footer-link active" style="color: var(--accent); font-weight: 600;">Warranty Certification</a></li>
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="support.html" class="footer-link">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <!-- Stay Connected -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for hardware releases, firmware updates, and seasonal priority access.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to ShopEase updates!'); this.reset();">
+            <input type="email" class="footer-newsletter-input newsletter-input" placeholder="Enter your work email" required autocomplete="email">
+            <button type="submit" class="btn btn-primary footer-newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Legal Row -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 ShopEase Technologies Inc. All rights reserved.</p>
+        <div class="footer-bottom-links footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        const answer = btn.nextElementSibling;
+        if (answer) {
+          answer.classList.toggle('open', !expanded);
+        }
+      });
+    });
+
+    // Smooth navigation with header offset
+    document.querySelectorAll('.policy-nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            const headerHeight = document.getElementById('siteHeader') ? document.getElementById('siteHeader').offsetHeight : 70;
+            const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+            window.scrollTo({ top: targetPos, behavior: 'smooth' });
+            if (window.history && window.history.pushState) {
+              window.history.pushState(null, null, targetId);
+            }
+            document.querySelectorAll('.policy-nav-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
+        }
+      });
+    });
+
+    // Interactive Warranty Lookup
+    const warrantyForm = document.getElementById('warrantyLookupForm');
+    const warrantyPanel = document.getElementById('warrantyResultPanel');
+    const warrantyEmpty = document.getElementById('noOrdersWarrantyState');
+    const ineligPanel = document.getElementById('warrantyIneligiblePanel');
+    const ineligMsg = document.getElementById('resWarrantyIneligibleMsg');
+    const orderService = window.ShopEaseOrderService;
+    const hasOrders = orderService && typeof orderService.hasOrders === 'function' ? orderService.hasOrders() : false;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryOrderId = urlParams.get('orderId') || urlParams.get('id');
+
+    let activeWarrantyOrder = null;
+
+    function verifyWarrantyForOrder(order, serialStr) {
+      if (!order) return;
+      activeWarrantyOrder = order;
+      const cleanId = (order.rawId || order.orderId || serialStr || '').replace('#', '');
+
+      // 1. Check if order was cancelled
+      if (order.status === 'Cancelled' || order.statusClass === 'cancelled') {
+        if (warrantyPanel) warrantyPanel.style.display = 'none';
+        const reason = `Warranty Inactive: Order #${cleanId} was cancelled${order.cancelledAt ? ' on ' + order.cancelledAt : ''}. Official manufacturer warranty coverage and serial registration are only active on completed purchases.`;
+        if (ineligPanel && ineligMsg) {
+          ineligMsg.textContent = reason;
+          ineligPanel.style.display = 'block';
+          ineligPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+          window.ShopEaseApp.showToast(reason, 'error');
+        }
+        return;
+      }
+
+      // 2. Check general warranty eligibility
+      if (orderService && typeof orderService.isWarrantyEligible === 'function') {
+        const check = orderService.isWarrantyEligible(order);
+        if (!check.eligible) {
+          if (warrantyPanel) warrantyPanel.style.display = 'none';
+          if (ineligPanel && ineligMsg) {
+            ineligMsg.textContent = check.reason;
+            ineligPanel.style.display = 'block';
+            ineligPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast(check.reason, 'error');
+          }
+          return;
+        }
+      }
+
+      let brand = 'Brand';
+      let deviceName = 'Manufacturer Certified Hardware';
+      if (order.items && order.items.length > 0) {
+        deviceName = order.items[0].name || deviceName;
+        brand = order.items[0].brand || brand;
+      }
+
+      // Sync brand select if matches
+      const brandSelect = document.getElementById('warrantyBrandSelect');
+      if (brandSelect) {
+        for (let i = 0; i < brandSelect.options.length; i++) {
+          if (brandSelect.options[i].value.toLowerCase() === brand.toLowerCase()) {
+            brandSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      const orderDateObj = order.orderDate ? new Date(order.orderDate) : new Date();
+      const expiryDate = isNaN(orderDateObj.getTime()) ? new Date() : new Date(orderDateObj);
+      expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+      const formattedExpiry = expiryDate.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' });
+      const expiryEl = document.getElementById('resWarrantyExpiry');
+      if (expiryEl) expiryEl.textContent = formattedExpiry;
+
+      if (orderService && typeof orderService.isWarrantyEligible === 'function') {
+        const wCheck = orderService.isWarrantyEligible(order);
+        if (wCheck && wCheck.coverageTerm) {
+          const covEl = document.getElementById('resWarrantyCoverage');
+          if (covEl) covEl.textContent = wCheck.coverageTerm;
+        }
+        if (wCheck && wCheck.serviceType) {
+          const srvEl = document.getElementById('resWarrantyService');
+          if (srvEl) srvEl.textContent = wCheck.serviceType;
+        }
+      }
+
+      document.getElementById('resWarrantyDevice').textContent = deviceName;
+      document.getElementById('resWarrantyMeta').innerHTML = `Serial/Order: <strong>#${cleanId}</strong> &bull; Sourced from Official ${brand} Authorized Channel`;
+
+      const orderDetailsLink = document.getElementById('resWarrantyOrderDetailsLink');
+      if (orderDetailsLink) orderDetailsLink.href = `order-details.html?orderId=${cleanId}`;
+      const trackLink = document.getElementById('resWarrantyTrackLink');
+      if (trackLink) trackLink.href = `order-tracking.html?orderId=${cleanId}`;
+
+      // Check if a warranty claim was already submitted
+      const claimNoticeBox = document.getElementById('claimNoticeBox');
+      const btnRegisterClaim = document.getElementById('btnRegisterClaimTicket');
+      if (order.warrantyClaim && order.warrantyClaim.claimId) {
+        if (claimNoticeBox) {
+          const claimRefEl = document.getElementById('resClaimIdText');
+          if (claimRefEl) claimRefEl.textContent = order.warrantyClaim.claimId;
+          claimNoticeBox.style.display = 'block';
+        }
+        if (btnRegisterClaim) btnRegisterClaim.style.display = 'none';
+      } else {
+        if (claimNoticeBox) claimNoticeBox.style.display = 'none';
+        if (btnRegisterClaim) {
+          btnRegisterClaim.style.display = 'inline-flex';
+          btnRegisterClaim.disabled = false;
+          btnRegisterClaim.innerHTML = 'Register Claim Ticket &rarr;';
+        }
+      }
+
+      if (ineligPanel) ineligPanel.style.display = 'none';
+      if (warrantyPanel) {
+        warrantyPanel.style.display = 'block';
+        warrantyPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    if (!hasOrders && !queryOrderId) {
+      if (warrantyForm) warrantyForm.style.display = 'none';
+      if (warrantyPanel) warrantyPanel.style.display = 'none';
+      if (warrantyEmpty) warrantyEmpty.style.display = 'block';
+    } else {
+      if (warrantyForm) warrantyForm.style.display = 'block';
+      if (warrantyEmpty) warrantyEmpty.style.display = 'none';
+
+      let initialTargetOrder = null;
+      if (queryOrderId && orderService) {
+        initialTargetOrder = orderService.getOrderById(queryOrderId);
+      }
+      if (!initialTargetOrder && !queryOrderId && orderService) {
+        const userOrders = orderService.getUserOrders();
+        if (userOrders && userOrders.length > 0) {
+          initialTargetOrder = userOrders[0];
+        }
+      }
+
+      if (initialTargetOrder) {
+        const serialInput = document.getElementById('warrantySerialInput');
+        if (serialInput) {
+          serialInput.value = (initialTargetOrder.rawId || initialTargetOrder.orderId || '').replace('#', '');
+        }
+        // Auto-verify on initial load
+        verifyWarrantyForOrder(initialTargetOrder, (initialTargetOrder.rawId || initialTargetOrder.orderId || '').replace('#', ''));
+      }
+
+      // Background sync with AWS API Gateway / DynamoDB
+      const targetSyncId = queryOrderId || (initialTargetOrder && (initialTargetOrder.rawId || initialTargetOrder.orderId));
+      if (targetSyncId && orderService && typeof orderService.fetchOrderById === 'function') {
+        orderService.fetchOrderById(targetSyncId).then(freshOrder => {
+          if (freshOrder) {
+            initialTargetOrder = freshOrder;
+            const serialInput = document.getElementById('warrantySerialInput');
+            if (serialInput) {
+              serialInput.value = (freshOrder.rawId || freshOrder.orderId || '').replace('#', '');
+            }
+            verifyWarrantyForOrder(freshOrder, (freshOrder.rawId || freshOrder.orderId || '').replace('#', ''));
+          }
+        }).catch(() => {});
+      }
+    }
+
+    // Reactive listeners: Sync if order cancelled or updated
+    window.addEventListener('shopease:order-updated', (e) => {
+      const updated = e.detail && e.detail.order;
+      if (updated) {
+        const curId = document.getElementById('warrantySerialInput')?.value?.trim();
+        const cleanUpdated = (updated.rawId || updated.orderId || '').replace('#', '');
+        if (!curId || curId === cleanUpdated) {
+          verifyWarrantyForOrder(updated, cleanUpdated);
+        }
+      }
+    });
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'shopease_orders_data' || e.key === 'shopease_last_order') {
+        const curId = document.getElementById('warrantySerialInput')?.value?.trim();
+        if (curId && orderService && typeof orderService.getOrderById === 'function') {
+          const fresh = orderService.getOrderById(curId);
+          if (fresh) verifyWarrantyForOrder(fresh, curId);
+        }
+      }
+    });
+
+    if (warrantyForm) {
+      warrantyForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (ineligPanel) ineligPanel.style.display = 'none';
+
+        const serial = document.getElementById('warrantySerialInput').value.trim();
+        if (!serial) {
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast('Please enter your Device Serial Number or Order ID.', 'error');
+          }
+          return;
+        }
+
+        const cleanId = serial.replace('#', '');
+        const targetOrder = orderService && typeof orderService.getOrderById === 'function' ? orderService.getOrderById(cleanId) : null;
+
+        if (!targetOrder) {
+          if (warrantyPanel) warrantyPanel.style.display = 'none';
+          const reason = `No verified purchase record found matching Serial / Order "${serial}". Warranty certification requires a genuine purchase registered in your account.`;
+          if (ineligPanel && ineligMsg) {
+            ineligMsg.textContent = reason;
+            ineligPanel.style.display = 'block';
+            ineligPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+            window.ShopEaseApp.showToast(reason, 'error');
+          }
+          return;
+        }
+
+        verifyWarrantyForOrder(targetOrder, serial);
+      });
+    }
+
+    // Register Claim Ticket Click Handler
+    const btnRegisterClaimTicket = document.getElementById('btnRegisterClaimTicket');
+    if (btnRegisterClaimTicket) {
+      btnRegisterClaimTicket.addEventListener('click', async (e) => {
+        e.preventDefault();
+        if (!activeWarrantyOrder) return;
+        const cleanId = (activeWarrantyOrder.rawId || activeWarrantyOrder.orderId || '').replace('#', '');
+        const prodName = (activeWarrantyOrder.items && activeWarrantyOrder.items[0] && activeWarrantyOrder.items[0].name) || 'Product';
+        const brand = (activeWarrantyOrder.items && activeWarrantyOrder.items[0] && activeWarrantyOrder.items[0].brand) || 'Official';
+
+        btnRegisterClaimTicket.disabled = true;
+        btnRegisterClaimTicket.innerHTML = '<span style="display: inline-flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9" stroke-opacity="0.2"></circle><path d="M12 3a9 9 0 0 1 9 9"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></path></svg> Registering Claim...</span>';
+
+        try {
+          if (orderService && typeof orderService.submitWarrantyClaim === 'function') {
+            const res = await orderService.submitWarrantyClaim(cleanId, prodName, brand);
+            if (res && res.success) {
+              const claimId = res.claimId || `WAR-CLAIM-${Math.floor(100000 + Math.random() * 900000)}`;
+              const claimRefEl = document.getElementById('resClaimIdText');
+              if (claimRefEl) claimRefEl.textContent = claimId;
+              const claimNoticeBox = document.getElementById('claimNoticeBox');
+              if (claimNoticeBox) claimNoticeBox.style.display = 'block';
+              btnRegisterClaimTicket.style.display = 'none';
+
+              if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+                window.ShopEaseApp.showToast(`Warranty claim registered: Reference #${claimId}`, 'success');
+              } else {
+                alert(`Warranty claim registered: Reference #${claimId}`);
+              }
+            } else {
+              const errMsg = (res && (res.error || res.message)) || 'Failed to register claim ticket.';
+              alert(errMsg);
+              btnRegisterClaimTicket.disabled = false;
+              btnRegisterClaimTicket.innerHTML = 'Register Claim Ticket &rarr;';
+            }
+          }
+        } catch (err) {
+          console.error('Warranty claim registration error:', err);
+          alert('An unexpected error occurred while registering warranty claim.');
+          btnRegisterClaimTicket.disabled = false;
+          btnRegisterClaimTicket.innerHTML = 'Register Claim Ticket &rarr;';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

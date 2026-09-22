@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Order Details & Real-Time Tracking. Track package status, view itemized invoice, and manage delivery.">
+  <title>Order Details &amp; Tracking - ShopEase</title>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=cancel-modal-fix-20260918">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Immediate Theme Initializer -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Announcement">
+    <div class="container top-banner-inner">
+      <div class="top-banner-text">
+        <span class="top-banner-highlight">Free Express Delivery</span> on all domestic orders over ₹1,999 across India.
+      </div>
+      <div class="top-banner-links">
+        <a href="order-tracking.html">Order Tracking</a>
+        <span>•</span>
+        <a href="support.html">Customer Care</a>
+        <span>•</span>
+        <a href="products.html">Browse Catalog</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-icon btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Integrated Header Search Bar -->
+        <form class="header-search-wrap" role="search" action="products.html" method="GET">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="search" class="header-search-input" placeholder="Search products..." autocomplete="off">
+        </form>
+
+        <!-- Desktop Navigation Links (Panel 1: Home, Products, Events, About) -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="products.html" class="nav-link" role="menuitem">Products</a></li>
+          <li role="none"><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        </ul>
+
+        <!-- Action Controls: Wishlist, Cart, Profile (Theme Switcher is inside Profile) -->
+        <div class="header-actions">
+          
+          <!-- Mobile Search Trigger Button -->
+          <button type="button" class="btn-icon mobile-search-btn" data-open-search aria-label="Open search" title="Search products">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Wishlist Indicator -->
+          <a href="products.html?view=wishlist" class="btn-icon header-wishlist-btn" id="wishlistBtn" aria-label="View wishlist" title="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-count-badge wishlist-badge" id="wishlistCount" style="display: none;">0</span>
+          </a>
+
+          <!-- Shopping Cart Navigation Link -->
+          <a href="cart.html" class="btn-icon header-cart-btn" id="cartBtn" aria-label="View shopping cart" title="Shopping Cart">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count cart-count-badge cart-badge" id="cartCount" style="display: none;">0</span>
+          </a>
+
+          <!-- User Profile & Theme Switcher Dropdown Container -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile" id="profileToggleBtn" aria-label="Open user profile and appearance menu" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Account</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <!-- Profile & Theme Dropdown Menu -->
+            <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="User Account and Appearance Settings">
+              <div class="profile-dropdown-header">
+                <div class="profile-header-avatar">U</div>
+                <div>
+                  <div class="profile-header-name">Welcome Guest</div>
+                  <span class="profile-header-badge">Guest Visitor</span>
+                </div>
+              </div>
+
+              <!-- Quick Links -->
+              <ul class="profile-nav-links" role="none">
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html#orders" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>My Orders</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="order-tracking.html" role="menuitem" class="active" style="color: var(--accent); font-weight: 700;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Order Tracking</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="products.html?view=wishlist" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Saved Wishlist</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="cart.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>My Shopping Bag</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="login.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                    <span>Sign In / Switch User</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="profile-dropdown-divider"></div>
+
+              <!-- Theme Switcher System inside Profile Panel -->
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                
+                <div class="theme-pill-group" role="radiogroup" aria-label="Select theme appearance">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                      <span>Light</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                      <span>Dark</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span>System</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation drawer">
+    <div class="mobile-menu-header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+            <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+          </svg>
+        </span>
+        <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+      </div>
+      <button type="button" class="btn-icon" id="closeMobileMenu" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="products.html" class="mobile-nav-link">All Products</a></li>
+        <li><a href="account.html#orders" class="mobile-nav-link">My Orders</a></li>
+        <li><a href="order-tracking.html" class="mobile-nav-link active">Order Tracking</a></li>
+        <li><a href="cart.html" class="mobile-nav-link">Shopping Bag</a></li>
+        <li><a href="login.html" class="mobile-nav-link">Sign In / Register</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content Container -->
+  <main class="container" style="padding-top: 28px; padding-bottom: 72px;">
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 20px;">
+      <a href="index.html" style="color: var(--text-muted); text-decoration: none;">Home</a>
+      <span>/</span>
+      <a href="order-tracking.html" style="color: var(--text-muted); text-decoration: none;">My Orders</a>
+      <span>/</span>
+      <span style="color: var(--text-primary); font-weight: 700;" id="crumbOrderId">Order Details</span>
+    </nav>
+
+    <!-- Clean Professional "No Orders Yet" Empty State -->
+    <div id="noOrdersStateCard" class="account-empty-state" style="display: none; padding: 64px 24px; text-align: center; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); margin: 24px 0;">
+      <div class="account-empty-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; background: rgba(0, 113, 227, 0.08); color: var(--accent); margin-bottom: 20px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v2"></path>
+          <path d="M3 14v2a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16v-2"></path>
+          <line x1="3.27" y1="6.96" x2="12" y2="12.01"></line>
+          <line x1="20.73" y1="6.96" x2="12" y2="12.01"></line>
+          <line x1="12" y1="22.08" x2="12" y2="12"></line>
+        </svg>
+      </div>
+      <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin: 0 0 10px;">No Orders Placed Yet</h2>
+      <p style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 24px; line-height: 1.6;">
+        You currently have no active or completed orders on ShopEase. Once you complete a purchase, your live GPS milestone tracking, delivery dates, and tax invoices will appear here.
+      </p>
+      <a href="products.html" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 8px;">
+        <span>Explore Products &amp; Place Order &rarr;</span>
+      </a>
+    </div>
+
+    <!-- Top Order Action & Meta Bar -->
+    <div class="order-detail-header-card" id="orderHeaderCard">
+      <div class="order-detail-meta">
+        <div class="order-id-tag">
+          <span id="headingOrderId">Order Details</span>
+          <span class="badge badge-success" id="orderStatusPill" style="font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: var(--radius-full);">Confirmed</span>
+        </div>
+        <div class="order-date-label">
+          Placed on <span id="headingOrderDate" style="font-weight: 600; color: var(--text-primary);">--</span>
+        </div>
+      </div>
+
+      <div class="order-actions-group" id="orderActionsGroup">
+        <!-- Dynamic contextual action: Cancel Order, Return / Replace, or Dispatched notice -->
+        <span id="orderContextualActionWrap"></span>
+        <button type="button" class="btn btn-outline btn-sm" id="btnPrintInvoice" style="display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Download Invoice</span>
+        </button>
+        <a href="products.html" class="btn btn-primary btn-sm">
+          <span>Continue Shopping &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Cancellation Status & Refund Banner (Rendered dynamically when Cancelled) -->
+    <div id="cancellationBannerContainer"></div>
+
+    <!-- Security Authorization Alert (Rendered when URL attempts unauthorized access) -->
+    <div id="securityAccessDeniedContainer" style="display: none;"></div>
+
+    <div id="orderMainContentWrap">
+    <!-- Real-Time Delivery Tracking Card -->
+    <section class="order-tracker-card" id="orderTrackerSection" aria-label="Shipment Tracking Progress">
+      <div class="order-tracker-title-row">
+        <div>
+          <h2 class="tracker-heading">Delivery Status &amp; Tracking</h2>
+          <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 2px;" id="courierTrackingMeta">
+            Carrier: <strong>BlueDart Air Express</strong> &bull; Tracking ID: <span style="font-family: var(--font-mono); color: var(--accent); font-weight: 700;">--</span>
+          </div>
+        </div>
+        <div class="tracker-delivery-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          <span id="deliveryEstimateText">Expected by Thursday, 10 Sep 2026</span>
+        </div>
+      </div>
+
+      <!-- Stepper Progress Timeline -->
+      <div class="tracker-timeline" id="trackingTimeline">
+        <div class="tracker-progress-bar" id="timelineProgressBar" style="width: 50%;"></div>
+
+        <!-- Step 1 -->
+        <div class="timeline-step completed">
+          <div class="step-node">✓</div>
+          <div class="step-title">Order Placed</div>
+          <div class="step-time" id="stepTime1">07 Sep, 12:45 PM</div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step completed">
+          <div class="step-node">✓</div>
+          <div class="step-title">Order Confirmed</div>
+          <div class="step-time" id="stepTime2">07 Sep, 01:10 PM</div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step completed">
+          <div class="step-node">✓</div>
+          <div class="step-title">Packed</div>
+          <div class="step-time" id="stepTime3">07 Sep, 04:30 PM</div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step active">
+          <div class="step-node">🚚</div>
+          <div class="step-title">Shipped (In Transit)</div>
+          <div class="step-time" id="stepTime4">08 Sep, 08:15 AM</div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step">
+          <div class="step-node">5</div>
+          <div class="step-title">Out for Delivery</div>
+          <div class="step-time">Expected 10 Sep</div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-step">
+          <div class="step-node">6</div>
+          <div class="step-title">Delivered</div>
+          <div class="step-time">Expected 10 Sep</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two-Column Order Breakdown Grid -->
+    <div class="order-content-grid">
+      
+      <!-- Left Column: Itemized Products & Shipping Destination -->
+      <div>
+        
+        <!-- Ordered Items Box -->
+        <div class="order-box-card">
+          <h3 class="order-box-title">
+            <span>Itemized Order Summary (<span id="itemCountLabel">2 Items</span>)</span>
+            <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted);">Standard Delivery</span>
+          </h3>
+
+          <div id="orderedProductsContainer">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Shipping & Delivery Destination -->
+        <div class="order-box-card">
+          <h3 class="order-box-title">Shipping Address</h3>
+          
+          <div class="address-info-block">
+            <div class="address-recipient-name" id="shippingName">--</div>
+            <div id="shippingAddressLine">--</div>
+            <div id="shippingCityPin">--</div>
+            <div style="margin-top: 8px; color: var(--text-primary); font-weight: 600;">
+              Phone: <span id="shippingPhone">--</span>
+            </div>
+          </div>
+
+          <div class="courier-info-strip">
+            <div>
+              <strong>Dispatch Hub:</strong> Bengaluru South Fulfillment Center
+            </div>
+            <div style="color: var(--accent); font-weight: 700;">
+              Standard Express Delivery (Dispatched in 24h)
+            </div>
+          </div>
+        </div>
+
+        <!-- Policy & Customer Support Guidance -->
+        <div class="order-box-card" id="support">
+          <h3 class="order-box-title">Need Help with this Order?</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
+            ShopEase provides a 30-day hassle-free return window and 24/7 technical customer support for all verified purchases.
+          </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="mailto:support@shopease.com" class="btn btn-outline btn-sm">
+              <span>Email Support</span>
+            </a>
+            <a href="tel:18001233273" class="btn btn-outline btn-sm">
+              <span>Call Helpline: 1800-123-EASE</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Price & Payment Breakdown -->
+      <div>
+        
+        <!-- Financial Summary -->
+        <div class="order-box-card">
+          <h3 class="order-box-title">Price Details</h3>
+
+          <div class="price-breakup-row">
+            <span>List Price Subtotal</span>
+            <span id="priceSubtotal" style="font-weight: 700; color: var(--text-primary);">₹0</span>
+          </div>
+
+          <div class="price-breakup-row">
+            <span>Shipping &amp; Handling</span>
+            <span style="font-weight: 700; color: var(--success);">FREE</span>
+          </div>
+
+          <div class="price-breakup-row">
+            <span>Packaging &amp; Insurance</span>
+            <span style="font-weight: 700; color: var(--success);">FREE</span>
+          </div>
+
+          <div class="price-breakup-row">
+            <span>Taxes (18% GST Included)</span>
+            <span id="priceTax" style="font-weight: 600; color: var(--text-muted);">₹0</span>
+          </div>
+
+          <div class="price-breakup-row total-row">
+            <span>Total Amount</span>
+            <span id="priceTotal" style="color: var(--text-primary);">₹0</span>
+          </div>
+
+          <!-- Payment Mode Badge -->
+          <div style="background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; margin-top: 18px;">
+            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;">Payment Method</div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span id="paymentMethodLabel" style="font-weight: 750; color: var(--text-primary);">Credit Card (Visa ending 4242)</span>
+              <span style="font-size: 0.75rem; font-weight: 800; color: var(--success); background-color: var(--success-bg); padding: 2px 8px; border-radius: var(--radius-full);">Paid</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ShopEase Guarantees -->
+        <div class="order-box-card" style="background-color: var(--bg-surface);">
+          <h4 style="font-size: 0.875rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-primary); margin-bottom: 12px;">ShopEase Guarantees</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.8125rem; color: var(--text-secondary);">
+            <li style="display: flex; gap: 8px;">
+              <span style="color: var(--accent); font-weight: 800;">✓</span>
+              <span>100% Original Equipment Certified</span>
+            </li>
+            <li style="display: flex; gap: 8px;">
+              <span style="color: var(--accent); font-weight: 800;">✓</span>
+              <span>30-Day Hassle-Free Replacement Guarantee</span>
+            </li>
+            <li style="display: flex; gap: 8px;">
+              <span style="color: var(--accent); font-weight: 800;">✓</span>
+              <span>Brand Warranty Covered Across 500+ Service Centers</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    </div> <!-- end #orderMainContentWrap -->
+
+  </main>
+
+  <!-- ==========================================
+       MODALS: CANCELLATION & RETURN
+       ========================================== -->
+
+  <!-- Cancellation Confirmation Modal -->
+  <div class="account-modal-overlay" id="modalCancelOrder" role="dialog" aria-modal="true" aria-labelledby="cancelModalHeading">
+    <div class="account-modal" style="max-width: 520px;">
+      <div class="account-modal-header">
+        <h3 class="account-modal-title" id="cancelModalHeading" style="display: flex; align-items: center; gap: 10px; color: var(--error);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+          <span>Cancel Order?</span>
+        </h3>
+        <button type="button" class="btn-icon" data-close-cancel-modal aria-label="Close cancellation modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="formCancelOrder">
+        <div class="account-modal-body">
+          <p style="font-size: 0.9375rem; color: var(--text-primary); font-weight: 700; margin-bottom: 4px;" id="cancelConfirmPromptText">
+            Are you sure you want to cancel this order?
+          </p>
+          <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 14px;">
+            Please select the primary reason for cancellation:
+          </p>
+
+          <div class="cancellation-reason-list" role="radiogroup" aria-label="Cancellation reasons">
+            <label class="cancellation-reason-item selected">
+              <input type="radio" name="cancelReason" value="Changed my mind" checked>
+              <span>Changed my mind</span>
+            </label>
+            <label class="cancellation-reason-item">
+              <input type="radio" name="cancelReason" value="Ordered by mistake">
+              <span>Ordered by mistake</span>
+            </label>
+            <label class="cancellation-reason-item">
+              <input type="radio" name="cancelReason" value="Found a better price">
+              <span>Found a better price</span>
+            </label>
+            <label class="cancellation-reason-item">
+              <input type="radio" name="cancelReason" value="Delivery taking too long">
+              <span>Delivery taking too long</span>
+            </label>
+            <label class="cancellation-reason-item">
+              <input type="radio" name="cancelReason" value="Product no longer required">
+              <span>Product no longer required</span>
+            </label>
+            <label class="cancellation-reason-item">
+              <input type="radio" name="cancelReason" value="Other">
+              <span>Other</span>
+            </label>
+          </div>
+
+          <div id="otherReasonInputGroup" style="display: none; margin-top: 10px;">
+            <input type="text" id="otherReasonText" class="account-form-input" placeholder="Please specify your reason (optional)">
+          </div>
+
+          <!-- Refund Notice Box -->
+          <div id="cancelRefundNotice" style="margin-top: 16px; padding: 12px 14px; background: var(--bg-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.8125rem; line-height: 1.5; color: var(--text-secondary);">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div class="account-modal-footer">
+          <button type="button" class="btn btn-outline" id="btnKeepOrder" data-close-cancel-modal>Keep Order</button>
+          <button type="submit" class="btn btn-primary" id="btnConfirmCancel" style="background-color: var(--error); border-color: var(--error); color: #ffffff;">
+            Confirm Cancellation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Return / Replacement Modal -->
+  <div class="account-modal-overlay" id="modalReturnOrder" role="dialog" aria-modal="true" aria-labelledby="returnModalHeading">
+    <div class="account-modal" style="max-width: 520px;">
+      <div class="account-modal-header">
+        <h3 class="account-modal-title" id="returnModalHeading">Return or Replace Order</h3>
+        <button type="button" class="btn-icon" data-close-return-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="formReturnOrder">
+        <div class="account-modal-body">
+          <div style="background: var(--success-bg); color: var(--success); padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.8125rem; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Eligible for 30-Day Hassle-Free Replacement / Return</span>
+          </div>
+
+          <div class="account-form-group">
+            <label class="account-form-label" for="returnActionType">Resolution Type</label>
+            <select id="returnActionType" class="account-form-select">
+              <option value="RETURN_REFUND">Return items and initiate refund</option>
+              <option value="REPLACE">Replace with brand-new identical item</option>
+            </select>
+          </div>
+
+          <div class="account-form-group">
+            <label class="account-form-label" for="returnReasonSelect">Reason for Return / Replacement</label>
+            <select id="returnReasonSelect" class="account-form-select">
+              <option value="Defective or damaged">Defective or damaged during transit</option>
+              <option value="Received wrong item">Received wrong item or variant</option>
+              <option value="Quality not as expected">Product quality not as expected</option>
+              <option value="Missing parts/accessories">Missing components or accessories</option>
+              <option value="Product no longer needed">Product no longer required</option>
+            </select>
+          </div>
+
+          <div class="account-form-group">
+            <label class="account-form-label" for="returnNotes">Additional Comments (Optional)</label>
+            <textarea id="returnNotes" class="account-form-input" rows="3" placeholder="Describe the issue with the delivered item..."></textarea>
+          </div>
+        </div>
+
+        <div class="account-modal-footer">
+          <button type="button" class="btn btn-outline" data-close-return-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+                <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+              </svg>
+            </span>
+            <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Engineered hardware, audio monitors, performance lifestyle gear, and smart home technology with transparent telemetry and manufacturer warranties.
+          </p>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Shop Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=laptops" class="footer-link">Laptops &amp; Computing</a></li>
+            <li><a href="products.html?category=smartphones" class="footer-link">Smartphones &amp; Watches</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Studio &amp; Wireless Audio</a></li>
+            <li><a href="products.html?category=footwear" class="footer-link">Performance Footwear</a></li>
+            <li><a href="products.html?category=accessories" class="footer-link">Lifestyle Accessories</a></li>
+            <li><a href="products.html?category=watches" class="footer-link">Watches &amp; Wearables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" id="support">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="account.html#orders" class="footer-link">My Orders</a></li>
+            <li><a href="order-tracking.html" class="footer-link">Order Tracking</a></li>
+            <li><a href="shipping-returns.html" class="footer-link">Shipping &amp; Returns</a></li>
+            <li><a href="warranty.html" class="footer-link">Warranty Certification</a></li>
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="support.html" class="footer-link">Support Desk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for hardware releases, firmware updates, and seasonal priority access.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input 
+              type="email" 
+              class="newsletter-input" 
+              placeholder="Enter your work email" 
+              aria-label="Email address for newsletter"
+              required
+            >
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ShopEase Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/jspdf.umd.min.js"></script>
+  <script src="js/jspdf.plugin.autotable.min.js"></script>
+  <script src="js/invoice-service.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Interactive Order Details & Tracking Loader -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const formatINR = window.ShopEaseData ? window.ShopEaseData.formatINR : (n) => '₹' + Number(n).toLocaleString('en-IN');
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryOrderId = urlParams.get('orderId') || urlParams.get('id') || urlParams.get('order_id');
+      const orderService = window.ShopEaseOrderService;
+      let activeOrder = null;
+      let orderLookupPending = false;
+
+      function fetchActiveOrder() {
+        let order = null;
+        if (queryOrderId && orderService) {
+          order = orderService.getOrderById(queryOrderId);
+        }
+
+        // Check localStorage for temporary checkout order fallback
+        if (!order && queryOrderId) {
+          try {
+            const raw = localStorage.getItem('shopease_last_order');
+            if (raw) {
+              const parsed = JSON.parse(raw);
+              if (parsed && (parsed.orderId === queryOrderId || parsed.rawId === queryOrderId.replace('#', ''))) {
+                order = parsed;
+              }
+            }
+          } catch (e) {}
+        }
+
+        // ONLY if no orderId in query, load the latest real order for current user
+        if (!order && !queryOrderId && orderService) {
+          const userOrders = orderService.getUserOrders();
+          if (userOrders && userOrders.length > 0) {
+            order = userOrders[0];
+          }
+        }
+        return order;
+      }
+
+      function renderOrderDetails(order) {
+        // A missing order is rendered only after the selected lookup has completed.
+        if (!order) {
+          const noOrdersCard = document.getElementById('noOrdersStateCard');
+          if (noOrdersCard) {
+            noOrdersCard.style.display = 'block';
+            if (queryOrderId && orderLookupPending) {
+              const displayTargetId = queryOrderId.startsWith('#') ? queryOrderId : '#' + queryOrderId;
+              noOrdersCard.innerHTML = `
+                <div style="padding: 48px 20px; text-align: center;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 16px; display: block; color: var(--accent);">
+                    <circle cx="12" cy="12" r="9" stroke-opacity="0.2"></circle>
+                    <path d="M12 3a9 9 0 0 1 9 9">
+                      <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/>
+                    </path>
+                  </svg>
+                  <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Synchronizing Order ${displayTargetId}</h3>
+                  <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0;">Retrieving live delivery milestones, shipment status, and cancellation telemetry from AWS DynamoDB...</p>
+                </div>
+              `;
+            } else if (queryOrderId) {
+              const displayTargetId = queryOrderId.startsWith('#') ? queryOrderId : '#' + queryOrderId;
+              noOrdersCard.innerHTML = `
+                <div style="padding: 48px 20px; text-align: center;">
+                  <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--error); margin-bottom: 8px;">Order ${displayTargetId} Not Found</h3>
+                  <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0 0 16px;">We could not locate this order. Please check the order ID or visit your orders dashboard.</p>
+                  <a href="account.html#orders" class="btn btn-primary btn-sm">View All Orders &rarr;</a>
+                </div>
+              `;
+            }
+          }
+          const headerCard = document.getElementById('orderHeaderCard');
+          if (headerCard) headerCard.style.display = 'none';
+          const mainWrap = document.getElementById('orderMainContentWrap');
+          if (mainWrap) mainWrap.style.display = 'none';
+          const crumb = document.getElementById('crumbOrderId');
+          if (crumb) crumb.textContent = queryOrderId ? `Order ${queryOrderId.startsWith('#') ? queryOrderId : '#' + queryOrderId}` : 'Track Orders';
+          return;
+        }
+
+        // Active order exists: show order details and hide empty state
+        const noOrdersCard = document.getElementById('noOrdersStateCard');
+        if (noOrdersCard) noOrdersCard.style.display = 'none';
+        const headerCard = document.getElementById('orderHeaderCard');
+        if (headerCard) headerCard.style.display = '';
+        const mainWrap = document.getElementById('orderMainContentWrap');
+        if (mainWrap) mainWrap.style.display = '';
+        window.currentOrder = order;
+
+        // SECURITY & ORDER OWNERSHIP VALIDATION
+        const currentUser = orderService ? orderService.getCurrentUser() : null;
+        const isAuthorized = orderService ? orderService.validateOrderOwnership(order, currentUser) : true;
+
+        const orderIdStr = order.orderId.startsWith('#') ? order.orderId : '#' + order.orderId;
+        const crumbEl = document.getElementById('crumbOrderId');
+        if (crumbEl) crumbEl.textContent = `Order ${orderIdStr}`;
+        const headingEl = document.getElementById('headingOrderId');
+        if (headingEl) headingEl.textContent = `Order ${orderIdStr}`;
+
+        if (!isAuthorized) {
+          console.warn(`[Security Alert] Access denied on ${orderIdStr} for current user.`);
+          if (headerCard) headerCard.style.display = 'none';
+          if (mainWrap) mainWrap.style.display = 'none';
+          const trackerSec = document.getElementById('orderTrackerSection');
+          if (trackerSec) trackerSec.style.display = 'none';
+          const actGroup = document.getElementById('orderActionsGroup');
+          if (actGroup) actGroup.style.display = 'none';
+          const statusPill = document.getElementById('orderStatusPill');
+          if (statusPill) statusPill.style.display = 'none';
+          if (crumbEl) crumbEl.textContent = 'Access Denied';
+
+          const cancelBanner = document.getElementById('cancellationBannerContainer');
+          if (cancelBanner) cancelBanner.style.display = 'none';
+
+          const securityContainer = document.getElementById('securityAccessDeniedContainer');
+          if (securityContainer) {
+            securityContainer.style.display = 'block';
+            securityContainer.innerHTML = `
+              <div class="order-security-denied-card" style="padding: 48px 24px; text-align: center; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); margin: 24px 0;">
+                <div class="order-security-denied-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; background: rgba(255, 59, 48, 0.1); color: var(--danger, #ff3b30); margin-bottom: 16px;">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <h2 class="order-security-denied-title" style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin: 0 0 10px;">Access Denied: Order Authorization Failed</h2>
+                <p class="order-security-denied-desc" style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 24px; line-height: 1.6;">
+                  You do not have authorization to view or manage <strong>Order ${orderIdStr}</strong>. This order is registered to a different customer identity. Cross-account order access and cancellations are strictly blocked.
+                </p>
+                <a href="account.html#orders" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                  <span>Return to My Orders &rarr;</span>
+                </a>
+              </div>
+            `;
+          }
+          return;
+        }
+
+        // Populate Static Meta
+        if (order.orderDate) {
+          document.getElementById('headingOrderDate').textContent = order.orderDate;
+        }
+
+        // Populate Shipping Address
+        if (order.customer) {
+          if (order.customer.name) document.getElementById('shippingName').textContent = order.customer.name;
+          if (order.customer.address) document.getElementById('shippingAddressLine').textContent = order.customer.address;
+          if (order.customer.city && order.customer.pin) {
+            document.getElementById('shippingCityPin').textContent = `${order.customer.city}, ${order.customer.state || 'Karnataka'} - ${order.customer.pin}`;
+          }
+          if (order.customer.phone) document.getElementById('shippingPhone').textContent = order.customer.phone;
+        }
+
+        const isCancelled = order.status === 'Cancelled' || order.statusClass === 'cancelled' || (order.status || '').toLowerCase().includes('cancel');
+
+        // 1. Status Pill
+        const statusPill = document.getElementById('orderStatusPill');
+        if (statusPill) {
+          statusPill.className = 'badge';
+          if (isCancelled) {
+            statusPill.classList.add('badge-cancelled');
+            statusPill.textContent = 'Cancelled';
+          } else if (order.status === 'Confirmed' || order.status === 'Placed' || order.status === 'Packed') {
+            statusPill.classList.add('badge-confirmed');
+            statusPill.textContent = order.statusLabel || order.status;
+          } else if (order.status === 'In Transit' || order.status === 'Shipped') {
+            statusPill.classList.add('badge-in-transit');
+            statusPill.textContent = 'In Transit';
+          } else if (order.status === 'Delivered') {
+            statusPill.classList.add('badge-success');
+            statusPill.textContent = 'Delivered';
+          } else {
+            statusPill.classList.add('badge-success');
+            statusPill.textContent = order.status;
+          }
+        }
+
+        // 2. Delivery Badge (.tracker-delivery-badge)
+        const deliveryBadge = document.querySelector('.tracker-delivery-badge');
+        if (deliveryBadge) {
+          if (isCancelled) {
+            deliveryBadge.innerHTML = `
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--error);"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+              <span id="deliveryEstimateText" style="color: var(--error); font-weight: 700;">Delivery Cancelled</span>
+            `;
+          } else {
+            deliveryBadge.innerHTML = `
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <span id="deliveryEstimateText">${order.estimatedDelivery || 'Within 48 Hours'}</span>
+            `;
+          }
+        }
+
+        // 3. Carrier Metadata
+        const carrierMeta = document.getElementById('courierTrackingMeta');
+        if (carrierMeta) {
+          const carrierName = order.carrier || 'BlueDart Air Express';
+          const trackingNum = order.trackingNumber || '--';
+          if (isCancelled) {
+            carrierMeta.innerHTML = `
+              Carrier: <strong>${carrierName}</strong> &bull; Tracking ID: <span style="font-family: var(--font-mono); color: var(--accent); font-weight: 700;">${trackingNum}</span> &bull; <strong style="color: var(--error);">Shipment Cancelled</strong>
+            `;
+          } else {
+            carrierMeta.innerHTML = `
+              Carrier: <strong>${carrierName}</strong> &bull; Tracking ID: <span style="font-family: var(--font-mono); color: var(--accent); font-weight: 700;">${trackingNum}</span>
+            `;
+          }
+        }
+
+        // 4. Contextual Action Buttons
+        const contextualActionWrap = document.getElementById('orderContextualActionWrap');
+        const elig = orderService ? orderService.isCancellationEligible(order.status) : { eligible: false };
+        const returnElig = orderService ? orderService.isReturnEligible(order) : { eligible: false };
+
+        if (contextualActionWrap) {
+          contextualActionWrap.innerHTML = '';
+          if (elig.eligible) {
+            contextualActionWrap.innerHTML = `
+              <button type="button" class="btn btn-outline btn-sm btn-cancel-order" id="btnOpenCancelModal">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                <span>Cancel Order</span>
+              </button>
+            `;
+          } else if (order.status === 'Delivered' && returnElig.eligible) {
+            contextualActionWrap.innerHTML = `
+              <button type="button" class="btn btn-outline btn-sm btn-return-order" id="btnOpenReturnModal">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                <span>Return / Replace</span>
+              </button>
+            `;
+          } else if (order.status === 'In Transit' || order.status === 'Shipped' || order.status === 'Out for Delivery') {
+            contextualActionWrap.innerHTML = `
+              <span class="order-dispatched-notice" title="${elig.reason}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span>Dispatched &bull; Cancellation Unavailable</span>
+              </span>
+            `;
+          }
+        }
+
+        // 5. Cancellation Banner Presentation
+        const cancellationBanner = document.getElementById('cancellationBannerContainer');
+        if (cancellationBanner) {
+          if (isCancelled) {
+            cancellationBanner.innerHTML = `
+              <div class="order-cancellation-banner">
+                <div class="order-cancellation-icon">✕</div>
+                <div class="order-cancellation-body">
+                  <div class="order-cancellation-title">Order Cancelled</div>
+                  <div class="order-cancellation-meta">
+                    Cancelled on <strong>${order.cancelledAt || 'Recently'}</strong> &bull; Selected Reason: <strong>${order.cancellationReason || 'Customer Request'}</strong>
+                  </div>
+                  <div class="order-cancellation-refund">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                    <span>Refund Status: <strong>${order.refundStatus || 'Refund Processing'}</strong></span>
+                    ${order.refundAmount ? `<span style="color: var(--text-muted); font-size: 0.75rem;">(${formatINR(order.refundAmount)} initiated to original payment method in 3–5 business days)</span>` : ''}
+                  </div>
+                </div>
+              </div>
+            `;
+          } else {
+            cancellationBanner.innerHTML = '';
+          }
+        }
+
+        // 6. Tracking Timeline
+        const timelineContainer = document.getElementById('trackingTimeline');
+        if (timelineContainer) {
+          const placedTime = order.orderDate ? (order.orderDate.includes(',') ? order.orderDate.split(',')[0] : order.orderDate) : 'Completed';
+          if (isCancelled) {
+            timelineContainer.innerHTML = `
+              <div class="tracker-progress-bar" id="timelineProgressBar" style="width: 100%; background-color: var(--error);"></div>
+              <div class="timeline-step completed">
+                <div class="step-node">✓</div>
+                <div class="step-title">Placed</div>
+                <div class="step-time">${placedTime}</div>
+              </div>
+              <div class="timeline-step completed">
+                <div class="step-node">✓</div>
+                <div class="step-title">Confirmed</div>
+                <div class="step-time">${placedTime}</div>
+              </div>
+              <div class="timeline-step active" style="color: var(--error);">
+                <div class="step-node" style="background-color: var(--error); border-color: var(--error); color: #fff;">✕</div>
+                <div class="step-title" style="color: var(--error); font-weight: 700;">Cancelled</div>
+                <div class="step-time">${order.cancelledAt || 'Cancelled'}</div>
+              </div>
+            `;
+          } else {
+            const normStatus = (order.status || '').toLowerCase().trim();
+            let currentStageIndex = 1; // Default to Confirmed for verified orders
+            if (normStatus === 'placed' || normStatus === 'order placed') {
+              currentStageIndex = 0;
+            } else if (normStatus === 'confirmed' || normStatus === 'order confirmed') {
+              currentStageIndex = 1;
+            } else if (normStatus === 'packed' || normStatus === 'processing' || normStatus === 'shipped' || normStatus === 'in transit') {
+              currentStageIndex = 2;
+            } else if (normStatus === 'out for delivery') {
+              currentStageIndex = 3;
+            } else if (normStatus === 'delivered') {
+              currentStageIndex = 4;
+            }
+
+            const widths = ['10%', '28%', '52%', '76%', '100%'];
+            const barWidth = widths[currentStageIndex] || '28%';
+
+            const timelineSteps = [
+              { title: 'Placed', time: placedTime },
+              { title: 'Confirmed', time: placedTime },
+              { title: 'Shipped', time: order.carrier || 'Express Logistics' },
+              { title: 'Out for Delivery', time: 'Local Courier Partner' },
+              { title: 'Delivered', time: order.status === 'Delivered' ? (order.deliveredAt || 'Delivered') : (order.estimatedDelivery || 'Doorstep') }
+            ];
+
+            const stepsHtml = timelineSteps.map((step, idx) => {
+              const isCompleted = idx < currentStageIndex || (idx === currentStageIndex && currentStageIndex === 4);
+              const isActive = idx === currentStageIndex && currentStageIndex !== 4;
+              const stepClass = isCompleted ? 'completed' : (isActive ? 'active' : '');
+              const nodeIcon = isCompleted ? '✓' : (isActive ? (idx <= 1 ? '✓' : (idx === 2 ? '🚚' : idx + 1)) : (idx + 1));
+
+              return `
+                <div class="timeline-step ${stepClass}">
+                  <div class="step-node">${nodeIcon}</div>
+                  <div class="step-title">${step.title}</div>
+                  <div class="step-time">${step.time}</div>
+                </div>
+              `;
+            }).join('');
+
+            timelineContainer.innerHTML = `
+              <div class="tracker-progress-bar" id="timelineProgressBar" style="width: ${barWidth}; background-color: var(--accent);"></div>
+              ${stepsHtml}
+            `;
+          }
+        }
+
+        // 7. Itemized Products Container
+        const itemsContainer = document.getElementById('orderedProductsContainer');
+        const items = order.items && order.items.length > 0 ? order.items : [];
+        const itemCountLabel = document.getElementById('itemCountLabel');
+        if (itemCountLabel) itemCountLabel.textContent = `${items.length} ${items.length === 1 ? 'Item' : 'Items'}`;
+
+        let subtotal = 0;
+        if (itemsContainer) {
+          itemsContainer.innerHTML = items.map(item => {
+            const itemTotal = item.price * (item.quantity || 1);
+            subtotal += itemTotal;
+            const prodId = item.productId || item.id || 'P001';
+            const catalogProducts = window.ShopEaseData && (window.ShopEaseData.products || window.ShopEaseData.PRODUCTS);
+            const catalogMatch = Array.isArray(catalogProducts)
+              ? catalogProducts.find(product => product.id === prodId || product.id === 'prod-' + prodId)
+              : null;
+            const fallbackImg = window.ShopEaseData && typeof window.ShopEaseData.getFallbackImage === 'function'
+              ? window.ShopEaseData.getFallbackImage(item.category || 'electronics')
+              : '';
+
+            let resolvedImg = (window.ShopEaseData && typeof window.ShopEaseData.resolveItemImage === 'function')
+              ? window.ShopEaseData.resolveItemImage(item)
+              : (item.image || '');
+
+            let productBadgeHtml = '';
+            if (isCancelled) {
+              productBadgeHtml = `
+                <span class="badge badge-cancelled" style="font-size: 0.75rem; font-weight: 700; background-color: rgba(239, 68, 68, 0.1); color: var(--error); padding: 3px 10px; border-radius: var(--radius-full); border: 1px solid rgba(239, 68, 68, 0.25); display: inline-flex; align-items: center; gap: 4px;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  Order Cancelled
+                </span>
+              `;
+            } else if (order.status === 'Delivered') {
+              productBadgeHtml = `
+                <span style="font-size: 0.75rem; color: var(--success); font-weight: 700; background-color: var(--success-bg); padding: 2px 8px; border-radius: var(--radius-full);">
+                  30-Day Replacement Window Active
+                </span>
+              `;
+            } else {
+              productBadgeHtml = `
+                <span style="font-size: 0.75rem; color: var(--accent); font-weight: 700; background-color: rgba(0, 113, 227, 0.08); padding: 2px 8px; border-radius: var(--radius-full);">
+                  Order Confirmed &bull; Preparing for Dispatch
+                </span>
+              `;
+            }
+
+            return `
+              <div class="order-product-row">
+                <img src="${resolvedImg}" alt="${item.name}" class="order-product-thumb" onerror="this.src='${fallbackImg}'">
+                <div class="order-product-info">
+                  <div class="order-product-brand">${item.brand || (catalogMatch && catalogMatch.brand) || 'Authentic Brand'}</div>
+                  <div class="order-product-name">
+                    <a href="product.html?id=${prodId}">${item.name}</a>
+                  </div>
+                  <div class="order-product-qty">Qty: ${item.quantity || 1} &bull; Price: ${formatINR(item.price)}</div>
+                  <div style="margin-top: 6px;">
+                    ${productBadgeHtml}
+                  </div>
+                </div>
+                <div class="order-product-price">
+                  ${formatINR(itemTotal)}
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+
+        // 8. Totals & Payment
+        const finalTotal = order.total || subtotal;
+        const subtotalEl = document.getElementById('priceSubtotal');
+        if (subtotalEl) subtotalEl.textContent = formatINR(finalTotal);
+        const totalEl = document.getElementById('priceTotal');
+        if (totalEl) totalEl.textContent = formatINR(finalTotal);
+        const estTax = Math.round(finalTotal * 0.18 / 1.18);
+        const taxEl = document.getElementById('priceTax');
+        if (taxEl) taxEl.textContent = formatINR(estTax);
+        if (order.paymentMethod) {
+          const pmLabel = document.getElementById('paymentMethodLabel');
+          if (pmLabel) pmLabel.textContent = order.paymentMethod;
+        }
+      }
+
+      function renderLoadingState() {
+        orderLookupPending = true;
+        renderOrderDetails(null);
+      }
+
+      // Initial Load
+      activeOrder = fetchActiveOrder();
+      if (queryOrderId && orderService && typeof orderService.fetchOrderById === 'function') {
+        renderLoadingState();
+      } else {
+        renderOrderDetails(activeOrder);
+      }
+
+      // Perform one lookup for the selected order and resolve loading into success or not-found.
+      const targetSyncId = queryOrderId ? queryOrderId.replace('#', '').trim() : (activeOrder && activeOrder.rawId);
+      if (targetSyncId && orderService && typeof orderService.fetchOrderById === 'function') {
+        orderService.fetchOrderById(targetSyncId).then(freshOrder => {
+          orderLookupPending = false;
+          if (freshOrder) {
+            activeOrder = freshOrder;
+            renderOrderDetails(activeOrder);
+          } else if (activeOrder) {
+            renderOrderDetails(activeOrder);
+          } else {
+            renderOrderDetails(null);
+          }
+        }).catch(() => {
+          orderLookupPending = false;
+          if (activeOrder) {
+            renderOrderDetails(activeOrder);
+          } else {
+            renderOrderDetails(null);
+          }
+        });
+      } else if (!queryOrderId && orderService && typeof orderService.fetchUserOrders === 'function') {
+        orderService.fetchUserOrders().then(res => {
+          if (res && res.orders && res.orders.length > 0) {
+            activeOrder = res.orders[0];
+            renderOrderDetails(activeOrder);
+          }
+        }).catch(() => {});
+      }
+
+      // Reactive Listener: Sync when order status is mutated anywhere in the app
+      window.addEventListener('shopease:order-updated', () => {
+        if (orderLookupPending) return;
+        activeOrder = fetchActiveOrder();
+        renderOrderDetails(activeOrder);
+      });
+      window.addEventListener('pageshow', () => {
+        if (orderLookupPending) return;
+        activeOrder = fetchActiveOrder();
+        renderOrderDetails(activeOrder);
+      });
+      window.addEventListener('storage', (e) => {
+        if (e.key === 'shopease_orders_data' || e.key === 'shopease_last_order') {
+          if (orderLookupPending) return;
+          activeOrder = fetchActiveOrder();
+          renderOrderDetails(activeOrder);
+        }
+      });
+
+      // MODALS: CANCELLATION & RETURN
+      const modalCancel = document.getElementById('modalCancelOrder');
+      const modalReturn = document.getElementById('modalReturnOrder');
+
+      document.addEventListener('click', (e) => {
+        const btnCancel = e.target.closest('#btnOpenCancelModal');
+        if (btnCancel && activeOrder) {
+          e.preventDefault();
+          const orderIdStr = activeOrder.orderId.startsWith('#') ? activeOrder.orderId : '#' + activeOrder.orderId;
+          document.getElementById('cancelConfirmPromptText').textContent = `Are you sure you want to cancel Order ${orderIdStr}?`;
+          
+          const isCOD = activeOrder.paymentType === 'COD' || (activeOrder.paymentMethod && activeOrder.paymentMethod.toLowerCase().includes('cash on delivery'));
+          const refundNotice = document.getElementById('cancelRefundNotice');
+          if (refundNotice) {
+            if (isCOD) {
+              refundNotice.innerHTML = `
+                <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">Payment Method: Cash on Delivery</div>
+                <div>No advance payment was charged for this order. No refund is required.</div>
+              `;
+            } else {
+              refundNotice.innerHTML = `
+                <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">Prepaid Refund Telemetry (PCI-DSS)</div>
+                <div>A refund of <strong>${formatINR(activeOrder.total)}</strong> will be initiated to your original payment method (${activeOrder.paymentMethod || 'Prepaid Card/UPI'}). Processing typically takes 3–5 business days.</div>
+              `;
+            }
+          }
+
+          if (modalCancel) modalCancel.classList.add('active');
+          return;
+        }
+
+        const btnReturn = e.target.closest('#btnOpenReturnModal');
+        if (btnReturn) {
+          e.preventDefault();
+          if (modalReturn) modalReturn.classList.add('active');
+          return;
+        }
+
+        if (e.target.closest('[data-close-cancel-modal]')) {
+          e.preventDefault();
+          if (modalCancel) modalCancel.classList.remove('active');
+          return;
+        }
+
+        if (e.target.closest('[data-close-return-modal]')) {
+          e.preventDefault();
+          if (modalReturn) modalReturn.classList.remove('active');
+          return;
+        }
+      });
+
+      // Cancellation Reason Radio Toggle
+      const reasonInputs = document.querySelectorAll('input[name="cancelReason"]');
+      reasonInputs.forEach(input => {
+        input.addEventListener('change', () => {
+          document.querySelectorAll('.cancellation-reason-item').forEach(item => item.classList.remove('selected'));
+          const parentLabel = input.closest('.cancellation-reason-item');
+          if (parentLabel) parentLabel.classList.add('selected');
+
+          const otherGroup = document.getElementById('otherReasonInputGroup');
+          if (otherGroup) {
+            otherGroup.style.display = input.value === 'Other' ? 'block' : 'none';
+          }
+        });
+      });
+
+      // Confirm Cancellation Form Submission
+      const formCancel = document.getElementById('formCancelOrder');
+      if (formCancel) {
+        formCancel.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (!activeOrder) return;
+          const selectedRadio = document.querySelector('input[name="cancelReason"]:checked');
+          let reason = selectedRadio ? selectedRadio.value : 'Changed my mind';
+          if (reason === 'Other') {
+            const customText = document.getElementById('otherReasonText').value.trim();
+            if (customText) reason = `Other: ${customText}`;
+          }
+
+          if (orderService) {
+            const result = await orderService.cancelOrder(activeOrder.rawId, reason);
+            if (result.success) {
+              activeOrder = result.order;
+              if (modalCancel) modalCancel.classList.remove('active');
+              renderOrderDetails(activeOrder);
+              if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+                window.ShopEaseApp.showToast(`Order ${activeOrder.orderId} cancelled successfully.`, 'success');
+              } else {
+                alert(`Order ${activeOrder.orderId} cancelled successfully.`);
+              }
+            } else {
+              alert(result.error || 'Failed to cancel order.');
+            }
+          }
+        });
+      }
+
+      // Return Request Form Submission
+      const formReturn = document.getElementById('formReturnOrder');
+      if (formReturn) {
+        formReturn.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!activeOrder) return;
+          const actionType = document.getElementById('returnActionType').value;
+          const reason = document.getElementById('returnReasonSelect').value;
+          const notes = document.getElementById('returnNotes').value.trim();
+
+          if (orderService) {
+            const result = orderService.requestReturn(activeOrder.rawId, reason, actionType, notes);
+            if (result.success) {
+              if (modalReturn) modalReturn.classList.remove('active');
+              if (window.ShopEaseApp && typeof window.ShopEaseApp.showToast === 'function') {
+                window.ShopEaseApp.showToast(result.message, 'success');
+              } else {
+                alert(result.message);
+              }
+            } else {
+              alert(result.error || 'Failed to submit return request.');
+            }
+          }
+        });
+      }
+
+      // Close modals on overlay click or escape key
+      [modalCancel, modalReturn].forEach(modal => {
+        if (!modal) return;
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) modal.classList.remove('active');
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (modalCancel) modalCancel.classList.remove('active');
+          if (modalReturn) modalReturn.classList.remove('active');
+        }
+      });
+
+      // Download Real Tax Invoice Action
+      const btnPrint = document.getElementById('btnPrintInvoice');
+      if (btnPrint) {
+        btnPrint.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (window.ShopEaseInvoice && typeof window.ShopEaseInvoice.downloadInvoiceForCurrentOrder === 'function') {
+            window.ShopEaseInvoice.downloadInvoiceForCurrentOrder();
+          } else {
+            window.print();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

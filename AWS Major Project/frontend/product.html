@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Product Details - View full specifications, verified reviews, transparent pricing, and instant stock availability.">
+  <title>Product Details - ShopEase</title>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Immediate Theme Initializer -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Announcement">
+    <div class="container top-banner-inner">
+      <div class="top-banner-text">
+        <span class="top-banner-highlight">Free Express Delivery</span> on all domestic orders over ₹999 across India.
+      </div>
+      <div class="top-banner-links">
+        <a href="order-tracking.html">Order Tracking</a>
+        <span>•</span>
+        <a href="products.html">All Products</a>
+        <span>•</span>
+        <a href="support.html">Customer Care</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-icon btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand" aria-label="ShopEase Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+              <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+        </a>
+
+        <!-- Integrated Header Search Bar (Panel 1/2/3) -->
+        <form class="header-search-wrap" role="search" action="products.html" method="GET">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="search" class="header-search-input" placeholder="Search products..." autocomplete="off">
+        </form>
+
+        <!-- Desktop Navigation Links (Panel 1/3: Home, Products, Events, About) -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="products.html" class="nav-link active" role="menuitem">Products</a></li>
+          <li role="none"><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        </ul>
+
+        <!-- Action Controls: Wishlist, Cart, Profile (Theme Switcher is inside Profile) -->
+        <div class="header-actions">
+          
+          <!-- Mobile Search Trigger Button -->
+          <button type="button" class="btn-icon mobile-search-btn" data-open-search aria-label="Open search" title="Search products">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Wishlist Indicator -->
+          <a href="products.html?view=wishlist" class="btn-icon" aria-label="View saved wishlist" title="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- Quick Cart Drawer Trigger -->
+          <button type="button" class="btn-icon" data-open-cart aria-label="View shopping cart" title="Shopping Cart">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count cart-badge" style="display: none;">0</span>
+          </button>
+
+          <!-- User Profile & Theme Switcher Dropdown Container -->
+          <div class="profile-menu-container">
+            <button type="button" class="btn-profile" id="profileToggleBtn" aria-label="Open user profile and appearance menu" aria-haspopup="true" aria-expanded="false">
+              <span class="profile-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span style="font-size: 0.8125rem;">Account</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <!-- Profile & Theme Dropdown Menu -->
+            <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="User Account and Appearance Settings">
+              <div class="profile-dropdown-header">
+                <div class="profile-header-avatar">U</div>
+                <div>
+                  <div class="profile-header-name">Welcome Guest</div>
+                  <span class="profile-header-badge">Guest Visitor</span>
+                </div>
+              </div>
+
+              <ul class="profile-nav-links" role="none">
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="account.html#orders" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>My Orders</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="order-tracking.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Order Tracking</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="products.html?view=wishlist" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Saved Wishlist</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="cart.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>My Shopping Bag</span>
+                  </a>
+                </li>
+                <li class="profile-nav-item" role="none">
+                  <a href="login.html" role="menuitem">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                    <span>Sign In / Switch User</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="profile-dropdown-divider"></div>
+
+              <!-- Theme Switcher inside Profile Panel -->
+              <div class="profile-theme-section">
+                <div class="profile-section-title">
+                  <span>Interface Theme</span>
+                  <span class="theme-current-label" style="font-weight: 600; color: var(--accent);">Light</span>
+                </div>
+                <div class="theme-pill-group" role="radiogroup">
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="light" role="radio" aria-checked="true">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+                      <span>Light Theme</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="dark" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                      <span>Dark Theme</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                  <button type="button" class="theme-pill-btn" data-theme-toggle data-theme-mode="system" role="radio" aria-checked="false">
+                    <div class="theme-pill-left">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span>System / Auto</span>
+                    </div>
+                    <svg class="theme-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="profile-dropdown-divider"></div>
+              <a href="login.html" class="profile-nav-item" style="padding: 10px 14px; font-size: 0.8125rem; color: var(--text-muted); display: block;">
+                Sign Out
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
+    <div class="mobile-menu-header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+            <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+          </svg>
+        </span>
+        <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+      </div>
+      <button type="button" class="btn-icon" id="closeMobileMenu" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="products.html" class="mobile-nav-link active">All Products</a></li>
+      <li><a href="events.html" class="mobile-nav-link">Deals &amp; Events</a></li>
+      <li><a href="index.html#categories" class="mobile-nav-link">Shop by Category</a></li>
+      <li><a href="products.html?view=wishlist" class="mobile-nav-link">Saved Wishlist</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About ShopEase</a></li>
+      <li><a href="cart.html" class="mobile-nav-link">View Cart</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Product Detail View (Panel 3) -->
+  <main class="section-spacing" id="detailMainWrap">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="margin-bottom: 24px; font-size: 0.875rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+        <a href="index.html" style="color: var(--text-muted);">Home</a>
+        <span>/</span>
+        <a href="products.html" style="color: var(--text-muted);">Products</a>
+        <span>/</span>
+        <a href="#" id="breadCategory" style="color: var(--text-muted);">Category</a>
+        <span>/</span>
+        <span id="breadProduct" style="color: var(--text-primary); font-weight: 600;">Product</span>
+      </nav>
+
+      <!-- 2-Column Product Detail Layout (Panel 3) -->
+      <div class="product-detail-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+        
+        <!-- Left: Gallery with Vertical 4-Thumb Strip + Main Image (Panel 3) -->
+        <div>
+          <div class="detail-gallery-grid">
+            
+            <!-- Vertical 4-Thumbnail Strip -->
+            <div class="detail-thumb-strip" id="detailThumbStrip">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <!-- Main High-Res Image Box -->
+            <div class="detail-main-img-box">
+              <img id="detailMainImage" src="" alt="Product view" loading="eager">
+            </div>
+
+          </div>
+
+          <!-- Trust Guarantees (Panel 3) -->
+          <div class="detail-trust-pills">
+            <div class="detail-trust-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <span>Free Shipping</span>
+            </div>
+            <div class="detail-trust-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+              <span>7-day Returns</span>
+            </div>
+            <div class="detail-trust-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <span>Secure Payment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Details, Pricing, Specs Bullets, CTA (Panel 3) -->
+        <div>
+          
+          <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 6px;" id="detailBrand">
+            Brand
+          </div>
+
+          <h1 style="font-size: 2rem; font-weight: 850; color: var(--text-primary); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.02em;" id="detailTitle">
+            Product Name
+          </h1>
+
+          <!-- Rating Row -->
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px; font-size: 0.9375rem;">
+            <div style="color: #f59e0b; display: flex; align-items: center; gap: 2px;">
+              <span>★★★★★</span>
+            </div>
+            <span style="font-weight: 700; color: var(--text-primary);" id="detailRating">4.8</span>
+            <span style="color: var(--text-muted);" id="detailReviewsCount">(120 reviews)</span>
+          </div>
+
+          <!-- Price Row -->
+          <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 850; color: var(--text-primary);" id="detailPrice">₹89,990</span>
+            <span style="font-size: 1.125rem; color: var(--text-muted); text-decoration: line-through;" id="detailOrigPrice">₹99,900</span>
+            <span style="font-size: 0.8125rem; font-weight: 700; background-color: var(--error-bg); color: var(--error); padding: 3px 8px; border-radius: var(--radius-xs);" id="detailDiscount">10% OFF</span>
+          </div>
+
+          <!-- Stock Badge -->
+          <div style="margin-bottom: 18px;">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.8125rem; font-weight: 700; color: var(--success); background-color: var(--success-bg); padding: 4px 10px; border-radius: var(--radius-full);">
+              <span style="width: 7px; height: 7px; border-radius: 50%; background-color: var(--success);"></span>
+              In Stock
+            </span>
+          </div>
+
+          <!-- Overview Description -->
+          <p style="font-size: 0.9375rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 22px;" id="detailDescription">
+            Product overview paragraph goes here.
+          </p>
+
+          <!-- Key Bullet Specifications with Checkmarks (Panel 3) -->
+          <div style="background-color: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 24px;">
+            <h4 style="font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-primary); margin-bottom: 12px;">Key Features</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);" id="detailBulletSpecs">
+              <!-- Populated dynamically -->
+            </ul>
+          </div>
+
+          <!-- Quantity Stepper & Actions (Panel 3) -->
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; border: 1px solid var(--border-color); border-radius: var(--radius-sm); overflow: hidden; background-color: var(--bg-surface);">
+              <button type="button" id="qtyMinusBtn" style="width: 38px; height: 42px; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700; color: var(--text-primary); cursor: pointer;">-</button>
+              <span id="qtyDisplay" style="width: 44px; text-align: center; font-size: 1rem; font-weight: 700; color: var(--text-primary);">1</span>
+              <button type="button" id="qtyPlusBtn" style="width: 38px; height: 42px; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700; color: var(--text-primary); cursor: pointer;">+</button>
+            </div>
+
+            <!-- Add to Cart (Panel 3: Dark Button) -->
+            <button type="button" class="btn btn-primary btn-lg" id="detailAddToCartBtn" style="flex: 1;">
+              Add to Cart
+            </button>
+
+            <!-- Buy Now (Panel 3: Outline / Secondary Button) -->
+            <button type="button" class="btn btn-outline btn-lg" id="detailBuyNowBtn" style="flex: 1;">
+              Buy Now
+            </button>
+
+            <!-- Wishlist Heart Button -->
+            <button type="button" class="btn-icon" id="detailWishlistBtn" style="width: 46px; height: 46px;" aria-label="Add to Wishlist">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Fold: Tabs (Description, Specifications, Reviews) (Panel 3) -->
+      <div style="margin-top: 64px;">
+        <div class="detail-tabs-bar" role="tablist">
+          <button type="button" class="detail-tab-btn active" data-detail-tab="tab-desc" role="tab" aria-selected="true">Description</button>
+          <button type="button" class="detail-tab-btn" data-detail-tab="tab-specs" role="tab" aria-selected="false">Specifications</button>
+          <button type="button" class="detail-tab-btn" data-detail-tab="tab-reviews" role="tab" aria-selected="false">Reviews</button>
+        </div>
+
+        <div class="detail-tab-panel active" id="tab-desc" role="tabpanel">
+          <div style="max-width: 800px; color: var(--text-secondary); line-height: 1.7; font-size: 0.9375rem;">
+            <p id="tabDescContent" style="margin-bottom: 16px;">Detailed product description...</p>
+            <p>
+              Engineered with premium materials and rigorous manufacturing quality control, this product is backed by full brand manufacturer warranty and direct official technical support.
+            </p>
+          </div>
+        </div>
+
+        <div class="detail-tab-panel" id="tab-specs" role="tabpanel">
+          <div style="max-width: 800px; background-color: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.875rem;" id="specsTable">
+              <!-- Populated dynamically -->
+            </table>
+          </div>
+        </div>
+
+        <div class="detail-tab-panel" id="tab-reviews" role="tabpanel">
+          <div style="max-width: 800px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text-primary); margin: 0;">Customer Reviews</h3>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 2px 0 0 0;">Verified ratings from authenticated buyers</p>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm" id="toggleReviewFormBtn">Write a Review</button>
+          </div>
+
+          <!-- Review Form (Hidden by default) -->
+          <form id="productReviewForm" style="display: none; max-width: 800px; background-color: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
+            <h4 style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); margin-bottom: 14px;">Share Your Product Experience</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 14px;">
+              <div>
+                <label style="display: block; font-size: 0.8125rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" for="reviewAuthorName">Your Name</label>
+                <input type="text" id="reviewAuthorName" class="newsletter-input" style="width: 100%; box-sizing: border-box;" placeholder="e.g. Kunal Sharma" required>
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8125rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" for="reviewRating">Overall Rating</label>
+                <select id="reviewRating" class="newsletter-input" style="width: 100%; box-sizing: border-box; padding: 8px 12px; background-color: var(--bg-surface); color: var(--text-primary);">
+                  <option value="5">★★★★★ (5 - Excellent)</option>
+                  <option value="4">★★★★☆ (4 - Good)</option>
+                  <option value="3">★★★☆☆ (3 - Average)</option>
+                  <option value="2">★★☆☆☆ (2 - Below Average)</option>
+                  <option value="1">★☆☆☆☆ (1 - Poor)</option>
+                </select>
+              </div>
+            </div>
+            <div style="margin-bottom: 14px;">
+              <label style="display: block; font-size: 0.8125rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" for="reviewTitle">Review Headline</label>
+              <input type="text" id="reviewTitle" class="newsletter-input" style="width: 100%; box-sizing: border-box;" placeholder="e.g. Solid build quality, fast dispatch" required>
+            </div>
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 0.8125rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" for="reviewComment">Detailed Feedback</label>
+              <textarea id="reviewComment" class="newsletter-input" style="width: 100%; box-sizing: border-box; height: 80px; resize: vertical; padding: 10px;" placeholder="Tell us about performance, packaging, and authenticity..." required></textarea>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+              <button type="button" class="btn btn-outline btn-sm" id="cancelReviewBtn">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm" id="submitReviewBtn">Submit Verified Review</button>
+            </div>
+            <div id="reviewSuccessAlert" style="display: none; margin-top: 12px; font-size: 0.8125rem; color: var(--success); font-weight: 600;">✓ Your review has been saved and synchronized with AWS DynamoDB (ShopEaseReviews)!</div>
+          </form>
+
+          <div style="max-width: 800px; display: flex; flex-direction: column; gap: 16px;" id="reviewsContainer">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products Section (Strictly Separated from product gallery) -->
+      <section class="related-products-section" style="margin-top: 72px; padding-top: 48px; border-top: 1px solid var(--border-color);" aria-labelledby="relatedHeading">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 4px; display: block;">You Might Also Like</span>
+            <h2 id="relatedHeading" style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.01em;">Related Products</h2>
+          </div>
+          <a id="relatedViewAllLink" href="products.html" class="btn btn-sm btn-outline" style="font-size: 0.8125rem;">
+            View All &rarr;
+          </a>
+        </div>
+        <div class="products-grid" id="relatedProductsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px;">
+          <!-- Populated dynamically with distinct related products -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Quick Cart Drawer -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop" data-close-cart aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Shopping Cart</h3>
+      <button type="button" class="btn-icon" data-close-cart aria-label="Close cart drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="cart-drawer-body">
+      <div class="cart-drawer-empty" id="cartDrawerEmpty" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <p style="font-weight: 700; margin-bottom: 4px; color: var(--text-primary);">Your cart is currently empty</p>
+      </div>
+      <div id="cartDrawerItems"></div>
+    </div>
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="cart-drawer-subtotal-row">
+        <span class="cart-drawer-subtotal-label">Subtotal</span>
+        <span class="cart-drawer-subtotal-val" id="cartDrawerSubtotal">₹0</span>
+      </div>
+      <div class="cart-drawer-actions">
+        <a href="checkout.html" class="btn btn-primary" style="width: 100%;">Proceed to Checkout</a>
+        <a href="cart.html" class="btn btn-outline" style="width: 100%;">View Full Cart</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Live Search Modal -->
+  <div class="search-backdrop" id="searchBackdrop" aria-hidden="true"></div>
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search catalog">
+    <div class="search-input-group">
+      <svg class="search-icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="search" id="searchModalInput" class="search-input" placeholder="Search products by keyword..." autocomplete="off">
+      <button type="button" class="btn-icon" id="closeSearchModal" aria-label="Close search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="search-results-area" id="searchResults"></div>
+  </div>
+
+  <!-- Standard Footer (Shared) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand footer-brand" aria-label="ShopEase Home">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 7C4.5 5.9 5.4 5 6.5 5h11c1.1 0 2 .9 2 2l-1 12.5c-.08 1.4-1.24 2.5-2.65 2.5H8.15C6.74 22 5.58 20.9 5.5 19.5L4.5 7Z" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M8.5 5V3.5C8.5 2.12 9.62 1 11 1h2c1.38 0 2.5 1.12 2.5 2.5V5"></path>
+                <path d="M14.5 10H10.5a1.75 1.75 0 0 0 0 3.5h3a1.75 1.75 0 0 1 0 3.5H9.5" stroke-width="2.2"></path>
+              </svg>
+            </span>
+            <span class="brand-name">Shop<span class="brand-accent">Ease</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Engineered hardware, audio monitors, performance lifestyle gear, and smart home technology with transparent telemetry and manufacturer warranties.
+          </p>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Shop Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=laptops" class="footer-link">Laptops &amp; Computing</a></li>
+            <li><a href="products.html?category=smartphones" class="footer-link">Smartphones &amp; Watches</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Studio &amp; Wireless Audio</a></li>
+            <li><a href="products.html?category=footwear" class="footer-link">Performance Footwear</a></li>
+            <li><a href="products.html?category=accessories" class="footer-link">Lifestyle Accessories</a></li>
+            <li><a href="products.html?category=watches" class="footer-link">Watches &amp; Wearables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" id="support">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="account.html#orders" class="footer-link">My Orders</a></li>
+            <li><a href="order-tracking.html" class="footer-link">Order Tracking</a></li>
+            <li><a href="shipping-returns.html" class="footer-link">Shipping &amp; Returns</a></li>
+            <li><a href="warranty.html" class="footer-link">Warranty Certification</a></li>
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="support.html" class="footer-link">Support Desk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for hardware releases, firmware updates, and seasonal priority access.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input 
+              type="email" 
+              class="newsletter-input" 
+              placeholder="Enter your work email" 
+              aria-label="Email address for newsletter"
+              required
+            >
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ShopEase Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html" class="footer-legal-link">About Us</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="security.html" class="footer-legal-link">Security Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-service.js"></script>
+  <script src="js/order-service.js"></script>
+  <script src="js/app.js?v=shared-nav-fix-20260916"></script>
+
+  <!-- Interactive Product Detail Page Controller Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function escapeHtml(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function resolveProduct(rawId) {
+        if (!rawId || !window.ShopEaseData) return null;
+        let p = window.ShopEaseData.getProductById(rawId);
+        if (p) return p;
+        p = window.ShopEaseData.getProductById(`prod-${rawId}`);
+        if (p) return p;
+        const clean = String(rawId).toLowerCase().trim();
+        return (window.ShopEaseData.PRODUCTS || []).find(x => 
+          x.id.toLowerCase() === clean || 
+          x.id.replace(/^prod-/, '').toLowerCase() === clean
+        ) || null;
+      }
+
+      const urlParams = new URLSearchParams(window.location.search);
+      let rawId = urlParams.get('id');
+
+      // Default to MacBook Air M2 if no ID provided in URL
+      if (!rawId) {
+        rawId = 'prod-apple-macbook-air-m2';
+      }
+
+      const product = resolveProduct(rawId);
+      const mainContainer = document.getElementById('detailMainWrap');
+
+      if (!product) {
+        if (mainContainer) {
+          mainContainer.innerHTML = `
+            <div class="container" style="padding: 80px 20px; text-align: center;">
+              <div style="font-size: 3.5rem; margin-bottom: 16px;">🔍</div>
+              <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px;">Product Not Found</h1>
+              <p style="color: var(--text-muted); max-width: 480px; margin: 0 auto 28px; line-height: 1.6;">
+                The product identifier "<strong>${escapeHtml(rawId)}</strong>" does not match any items in our catalog.
+              </p>
+              <a href="products.html" class="btn btn-primary btn-lg">Explore Full Catalog</a>
+            </div>
+          `;
+        }
+        return;
+      }
+
+      const formatINR = window.ShopEaseData.formatINR;
+
+      // Track telemetry
+      if (window.ShopEaseEvents) {
+        window.ShopEaseEvents.track('product_viewed', {
+          productId: product.id,
+          name: product.name,
+          category: product.category,
+          price: product.price
+        });
+      }
+
+      // Populate basic info
+      document.title = `${product.name} - ShopEase`;
+      document.getElementById('breadCategory').textContent = product.category;
+      document.getElementById('breadCategory').href = `products.html?category=${product.categoryId || 'all'}`;
+      document.getElementById('breadProduct').textContent = product.name;
+      document.getElementById('detailBrand').textContent = product.brand || product.category;
+      document.getElementById('detailTitle').textContent = product.name;
+      document.getElementById('detailRating').textContent = product.rating;
+      document.getElementById('detailReviewsCount').textContent = `(${product.reviewsCount} reviews)`;
+      document.getElementById('detailPrice').textContent = formatINR(product.price);
+      document.getElementById('detailDescription').textContent = product.description;
+      document.getElementById('tabDescContent').innerHTML = `
+        <p style="margin-bottom: 14px;">${product.fullDescription || product.description}</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; padding: 18px; background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 4px;">Shipping Policy</div>
+            <div style="font-size: 0.875rem; color: var(--text-primary); font-weight: 600;">${product.shippingInformation || 'Free Express Delivery on orders over ₹1,999.'}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 4px;">Returns & Exchange</div>
+            <div style="font-size: 0.875rem; color: var(--text-primary); font-weight: 600;">${product.returnInformation || '30-Day Easy Returns & Hassle-free replacement.'}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 4px;">Warranty</div>
+            <div style="font-size: 0.875rem; color: var(--text-primary); font-weight: 600;">${product.warrantyInformation || (product.category === 'Laptops' ? '2-Year Official Brand Manufacturer Warranty' : (product.category === 'Footwear' ? '6-Month Manufacturer Defect Guarantee' : '1-Year Official Brand Manufacturer Warranty'))}</div>
+          </div>
+        </div>
+      `;
+
+      if (product.originalPrice && product.originalPrice > product.price) {
+        document.getElementById('detailOrigPrice').textContent = formatINR(product.originalPrice);
+        const discountPct = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+        document.getElementById('detailDiscount').textContent = `${discountPct}% OFF`;
+      } else {
+        document.getElementById('detailOrigPrice').style.display = 'none';
+        document.getElementById('detailDiscount').style.display = 'none';
+      }
+
+      // =========================================================================
+      // STRICT PRODUCT GALLERY & THUMBNAIL LOGIC
+      // ONLY load images belonging exclusively to currentProduct.images
+      // NEVER substitute, mix, or pull from other products or category pools
+      // =========================================================================
+      const mainImg = document.getElementById('detailMainImage');
+      const thumbStrip = document.getElementById('detailThumbStrip');
+      const fallbackImg = window.ShopEaseData.getFallbackImage(product.category);
+
+      const galleryImages = (Array.isArray(product.images) && product.images.length > 0)
+        ? product.images
+        : (product.image ? [product.image] : [fallbackImg]);
+
+      mainImg.src = galleryImages[0];
+      mainImg.alt = `${product.name} primary angle`;
+      mainImg.onerror = () => { mainImg.src = fallbackImg; };
+
+      thumbStrip.innerHTML = galleryImages.map((t, idx) => `
+        <button type="button" class="detail-thumb-btn ${idx === 0 ? 'active' : ''}" data-thumb-src="${t}" aria-label="View angle ${idx + 1} of ${escapeHtml(product.name)}">
+          <img src="${t}" alt="${escapeHtml(product.name)} angle ${idx + 1}" onerror="this.src='${fallbackImg}'">
+        </button>
+      `).join('');
+
+      thumbStrip.querySelectorAll('.detail-thumb-btn').forEach(btn => {
+        const swapImg = () => {
+          thumbStrip.querySelectorAll('.detail-thumb-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const src = btn.getAttribute('data-thumb-src');
+          mainImg.src = src;
+        };
+        btn.addEventListener('click', swapImg);
+        btn.addEventListener('mouseenter', swapImg);
+      });
+
+      // Key Bullet Specs with Checkmarks
+      const bulletList = document.getElementById('detailBulletSpecs');
+      const highlights = product.highlights || product.specifications || [];
+
+      if (Array.isArray(highlights) && highlights.length > 0) {
+        bulletList.innerHTML = highlights.slice(0, 5).map(item => `
+          <li style="display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent); font-weight: 800;">✓</span>
+            <span style="color: var(--text-primary); font-weight: 550;">${item}</span>
+          </li>
+        `).join('');
+      } else if (typeof highlights === 'object' && highlights !== null && Object.keys(highlights).length > 0) {
+        bulletList.innerHTML = Object.entries(highlights).slice(0, 5).map(([key, val]) => `
+          <li style="display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent); font-weight: 800;">✓</span>
+            <span style="font-weight: 600; color: var(--text-primary); text-transform: capitalize;">${key}:</span>
+            <span>${val}</span>
+          </li>
+        `).join('');
+      } else {
+        bulletList.innerHTML = `
+          <li>✓ Genuine Manufacturer Warranty</li>
+          <li>✓ Express 48-Hour Dispatch Across India</li>
+          <li>✓ 100% Certified Authentic Hardware</li>
+        `;
+      }
+
+      // Specs Table in Tab
+      const specsTable = document.getElementById('specsTable');
+      const specs = product.specifications || [];
+      if (Array.isArray(specs) && specs.length > 0) {
+        specsTable.innerHTML = specs.map((item, idx) => `
+          <tr style="border-bottom: 1px solid var(--border-subtle);">
+            <th style="padding: 12px 18px; width: 30%; color: var(--text-muted); font-weight: 600; background-color: var(--bg-surface);">Feature ${idx + 1}</th>
+            <td style="padding: 12px 18px; color: var(--text-primary); font-weight: 600;">${item}</td>
+          </tr>
+        `).join('');
+      } else if (typeof specs === 'object' && specs !== null && Object.keys(specs).length > 0) {
+        specsTable.innerHTML = Object.entries(specs).map(([key, val]) => `
+          <tr style="border-bottom: 1px solid var(--border-subtle);">
+            <th style="padding: 12px 18px; width: 35%; text-transform: capitalize; color: var(--text-muted); font-weight: 600; background-color: var(--bg-surface);">${key}</th>
+            <td style="padding: 12px 18px; color: var(--text-primary); font-weight: 600;">${val}</td>
+          </tr>
+        `).join('');
+      } else {
+        specsTable.innerHTML = `<tr><td style="padding: 16px;">Standard hardware specifications apply.</td></tr>`;
+      }
+
+      // Reviews Tab & Dynamic AWS DynamoDB ShopEaseReviews Integration
+      const reviewsContainer = document.getElementById('reviewsContainer');
+      const toggleReviewFormBtn = document.getElementById('toggleReviewFormBtn');
+      const productReviewForm = document.getElementById('productReviewForm');
+      const cancelReviewBtn = document.getElementById('cancelReviewBtn');
+      const reviewSuccessAlert = document.getElementById('reviewSuccessAlert');
+
+      let currentReviews = [
+        { name: 'Kunal M.', rating: 5, date: '2 days ago', title: 'Exceptional performance and build quality', body: 'Delivered within 24 hours. The packaging was completely sealed with original manufacturer tags. Works flawlessly for my dev workflow!' },
+        { name: 'Priya S.', rating: 5, date: '1 week ago', title: 'Authentic product with full warranty registered', body: 'Registered serial number on official website immediately with zero issues. Great value and top-notch customer support.' },
+        { name: 'Vikram R.', rating: 4, date: '2 weeks ago', title: 'Worth every rupee', body: 'Solid hardware, seamless pairing, and pristine condition. Highly recommended for professionals.' }
+      ];
+
+      function renderReviews() {
+        if (!reviewsContainer) return;
+        reviewsContainer.innerHTML = currentReviews.map(r => `
+          <div style="background-color: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <div style="font-weight: 700; color: var(--text-primary);">${escapeHtml(r.name)}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">${escapeHtml(r.date || 'Recently')}</div>
+            </div>
+            <div style="color: #f59e0b; font-size: 0.875rem; margin-bottom: 6px;">${'★'.repeat(Math.max(1, Math.min(5, r.rating || 5)))}</div>
+            <div style="font-weight: 700; font-size: 0.9375rem; color: var(--text-primary); margin-bottom: 4px;">${escapeHtml(r.title)}</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">${escapeHtml(r.body || r.comment || '')}</div>
+          </div>
+        `).join('');
+      }
+
+      renderReviews();
+
+      // Fetch dynamic reviews from AWS DynamoDB (ShopEaseReviews)
+      const apiUrl = (window.SHOPEASE_API_URL || 'https://nxdrpc6yk3.execute-api.us-east-1.amazonaws.com').replace(/\/+$/, '');
+      fetch(`${apiUrl}/reviews?productId=${encodeURIComponent(product.id)}`)
+        .then(res => res.ok ? res.json() : null)
+        .then(data => {
+          if (data && Array.isArray(data.reviews) && data.reviews.length > 0) {
+            const remoteFormatted = data.reviews.map(rv => ({
+              name: rv.name || 'Verified Customer',
+              rating: rv.rating || 5,
+              date: rv.createdAt ? new Date(rv.createdAt).toLocaleDateString('en-IN') : 'Recently',
+              title: rv.title || 'Verified Purchase Review',
+              body: rv.body || rv.comment || ''
+            }));
+            currentReviews = [...remoteFormatted, ...currentReviews];
+            renderReviews();
+          }
+        })
+        .catch(e => console.warn('[ShopEaseReviews] Fetch deferred:', e));
+
+      // Toggle Review Form
+      if (toggleReviewFormBtn && productReviewForm) {
+        toggleReviewFormBtn.addEventListener('click', () => {
+          const isOpen = productReviewForm.style.display === 'block';
+          productReviewForm.style.display = isOpen ? 'none' : 'block';
+          toggleReviewFormBtn.textContent = isOpen ? 'Write a Review' : 'Close Form';
+        });
+      }
+
+      if (cancelReviewBtn && productReviewForm) {
+        cancelReviewBtn.addEventListener('click', () => {
+          productReviewForm.style.display = 'none';
+          if (toggleReviewFormBtn) toggleReviewFormBtn.textContent = 'Write a Review';
+        });
+      }
+
+      // Review Submission to AWS DynamoDB (ShopEaseReviews)
+      if (productReviewForm) {
+        productReviewForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const author = document.getElementById('reviewAuthorName').value.trim();
+          const rating = parseInt(document.getElementById('reviewRating').value, 10) || 5;
+          const title = document.getElementById('reviewTitle').value.trim();
+          const comment = document.getElementById('reviewComment').value.trim();
+
+          if (!author || !comment) return;
+
+          const authUser = window.ShopEaseAuthService ? window.ShopEaseAuthService.getCurrentUser() : null;
+          const reviewPayload = {
+            productId: product.id,
+            userId: authUser ? authUser.id : 'guest',
+            name: author,
+            rating: rating,
+            title: title,
+            comment: comment,
+            body: comment
+          };
+
+          const newLocal = {
+            name: author,
+            rating: rating,
+            date: 'Just now',
+            title: title,
+            body: comment
+          };
+          currentReviews.unshift(newLocal);
+          renderReviews();
+
+          // Sync with AWS DynamoDB (Table: ShopEaseReviews)
+          try {
+            fetch(`${apiUrl}/reviews`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(reviewPayload)
+            }).catch(err => console.warn('[ShopEaseReviews] Submission deferred:', err));
+          } catch (e) {}
+
+          if (reviewSuccessAlert) {
+            reviewSuccessAlert.style.display = 'block';
+            setTimeout(() => {
+              reviewSuccessAlert.style.display = 'none';
+              productReviewForm.reset();
+              productReviewForm.style.display = 'none';
+              if (toggleReviewFormBtn) toggleReviewFormBtn.textContent = 'Write a Review';
+            }, 2500);
+          }
+        });
+      }
+
+      // Quantity Stepper
+      let quantity = 1;
+      const qtyDisplay = document.getElementById('qtyDisplay');
+      document.getElementById('qtyMinusBtn').addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity--;
+          qtyDisplay.textContent = quantity;
+        }
+      });
+      document.getElementById('qtyPlusBtn').addEventListener('click', () => {
+        if (quantity < 10) {
+          quantity++;
+          qtyDisplay.textContent = quantity;
+        }
+      });
+
+      // Add to Cart
+      document.getElementById('detailAddToCartBtn').addEventListener('click', () => {
+        if (window.ShopEaseCart) {
+          window.ShopEaseCart.addToCart(product.id, quantity);
+        }
+      });
+
+      // Buy Now (Adds to cart & directs to checkout)
+      document.getElementById('detailBuyNowBtn').addEventListener('click', () => {
+        if (window.ShopEaseCart) {
+          window.ShopEaseCart.addToCart(product.id, quantity);
+          window.location.href = 'checkout.html';
+        }
+      });
+
+      // Wishlist Toggle
+      const wishBtn = document.getElementById('detailWishlistBtn');
+      const updateWishState = () => {
+        const isWished = window.ShopEaseCart ? window.ShopEaseCart.isInWishlist(product.id) : false;
+        wishBtn.classList.toggle('active', isWished);
+        const svg = wishBtn.querySelector('svg');
+        if (svg) svg.style.fill = isWished ? 'var(--error)' : 'none';
+        if (svg) svg.style.color = isWished ? 'var(--error)' : 'currentColor';
+      };
+      updateWishState();
+
+      wishBtn.addEventListener('click', () => {
+        if (window.ShopEaseCart) {
+          window.ShopEaseCart.toggleWishlist(product.id);
+          updateWishState();
+        }
+      });
+
+      // Interactive Tabs Bar
+      document.querySelectorAll('.detail-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.detail-tab-btn').forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          document.querySelectorAll('.detail-tab-panel').forEach(p => p.classList.remove('active'));
+
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          const panelId = btn.getAttribute('data-detail-tab');
+          const panel = document.getElementById(panelId);
+          if (panel) panel.classList.add('active');
+        });
+      });
+
+      // =========================================================================
+      // DEDICATED RELATED PRODUCTS SECTION (SEPARATE FROM PRODUCT GALLERY)
+      // Displays distinct related products from the same category or brand
+      // =========================================================================
+      const relatedGrid = document.getElementById('relatedProductsGrid');
+      const relatedViewAll = document.getElementById('relatedViewAllLink');
+      if (relatedGrid) {
+        if (relatedViewAll) {
+          relatedViewAll.href = `products.html?category=${product.categoryId || 'all'}`;
+          relatedViewAll.textContent = `View All ${product.category} →`;
+        }
+
+        let relatedList = (window.ShopEaseData.getProductsByCategory(product.categoryId) || [])
+          .filter(p => p.id !== product.id);
+
+        if (relatedList.length === 0) {
+          relatedList = (window.ShopEaseData.PRODUCTS || [])
+            .filter(p => p.id !== product.id && p.brand === product.brand);
+        }
+
+        const displayRelated = relatedList.slice(0, 4);
+        if (displayRelated.length === 0) {
+          const sec = document.querySelector('.related-products-section');
+          if (sec) sec.style.display = 'none';
+        } else {
+          const isWishlisted = (id) => (window.ShopEaseCart ? window.ShopEaseCart.isInWishlist(id) : false);
+          relatedGrid.innerHTML = displayRelated.map(p => {
+            const cardImg = (p.images && p.images.length > 0) ? p.images[0] : (p.image || fallbackImg);
+            const wishActive = isWishlisted(p.id) ? 'active' : '';
+            const discountPct = p.originalPrice ? Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100) : 0;
+            return `
+              <article class="product-card-compact" data-product-id="${p.id}">
+                <button type="button" class="card-wishlist-btn ${wishActive}" data-wishlist-btn data-product-id="${p.id}" aria-label="Save to wishlist" title="Save to Wishlist">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+                ${discountPct > 0 ? `<span class="card-badge badge-sale">${discountPct}% OFF</span>` : (p.badge ? `<span class="card-badge">${escapeHtml(p.badge)}</span>` : '')}
+                
+                <a href="product.html?id=${p.id}" class="card-img-wrap" tabindex="-1">
+                  <img src="${cardImg}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.src='${fallbackImg}'">
+                </a>
+
+                <div class="card-body">
+                  <div class="card-brand">${escapeHtml(p.brand || p.category)}</div>
+                  <h3 class="card-name">
+                    <a href="product.html?id=${p.id}">${escapeHtml(p.name)}</a>
+                  </h3>
+                  
+                  <div class="card-rating-row">
+                    <span class="card-rating-star">★</span>
+                    <span style="font-weight: 700; color: var(--text-primary);">${p.rating}</span>
+                    <span style="color: var(--text-muted); font-size: 0.75rem;">(${p.reviewsCount})</span>
+                  </div>
+
+                  <div class="card-price-row">
+                    <span class="card-price">${formatINR(p.price)}</span>
+                    ${p.originalPrice ? `<span class="card-orig-price">${formatINR(p.originalPrice)}</span>` : ''}
+                  </div>
+
+                  <button type="button" class="card-btn-add" data-add-to-cart data-product-id="${p.id}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+              </article>
+            `;
+          }).join('');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

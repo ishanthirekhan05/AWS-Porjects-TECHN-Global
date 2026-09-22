@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore sample workshops, career fairs, technical sessions, mock interviews, and placement sessions.">
+    <title>Career Events | CareerBridge Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-wrapper">
+            <div class="nav-identity"><a class="brand" href="index.html" aria-label="CareerBridge Pro home"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg><span>CareerBridge <b>Pro</b></span></a><a class="profile-link" href="profile.html" aria-label="View profile"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c.7-3.3 2.9-5 6.5-5s5.8 1.7 6.5 5"></path></svg><span>Profile</span></a></div>
+            <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation" aria-hidden="true">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="guidance.html">Guidance</a></li>
+                    <li><a href="preparation.html">Preparation</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="events.html" aria-current="page">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-actions"><a class="nav-action nav-action--signup" href="auth.html">Create Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container events-page">
+        <section class="events-hero" aria-labelledby="events-title">
+            <div class="page-visual-hero__content">
+                <p class="eyebrow">Learn together</p>
+                <h1 id="events-title">Make room for your next useful conversation.</h1>
+                <p class="intro-section__text">Find workshops, technical sessions, career fairs, mock interviews, and placement sessions that support steady career preparation.</p>
+                <a class="button" href="#event-listing">Browse events</a>
+            </div>
+            <div class="page-visual-hero__illustration">
+                <img src="assets/images/career-guidance.jpg" alt="Students and professionals collaborating at a career workshop">
+            </div>
+        </section>
+
+        <section class="event-listing" id="event-listing" aria-labelledby="event-listing-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Upcoming learning spaces</p>
+                    <h2 id="event-listing-title">Career events and workshops</h2>
+                </div>
+                <p class="data-note">Local sample event data</p>
+            </div>
+            <p class="event-disclaimer">These events are illustrative local sample content. Official event details and registration options will be added when the college provides them.</p>
+
+            <div class="status-message" id="events-loading" role="status" aria-live="polite">
+                <p>Loading sample events...</p>
+            </div>
+            <div class="status-message status-message--error" id="events-error" role="alert" hidden>
+                <h3>Events are unavailable</h3>
+                <p id="events-error-message">Please try again later.</p>
+            </div>
+            <div class="status-message" id="events-empty" role="status" hidden>
+                <h3>No events are available</h3>
+                <p>Check back when official event information is added.</p>
+            </div>
+            <div class="event-grid" id="event-cards" hidden></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="footer-brand"><p class="footer-brand__wordmark"><svg class="brand-mark brand-mark--footer" aria-hidden="true" viewBox="0 0 32 32"><path d="M5 24 12 9l4 10 5-12 6 17"></path><path class="brand-mark__bridge" d="M8 21h16"></path></svg>CareerBridge <b>Pro</b></p><small>Build skills. Find direction.</small></div>
+            <div class="footer-links"><div><h2>Quick links</h2><a href="jobs.html">Jobs</a><a href="guidance.html">Guidance</a><a href="events.html">Events</a></div><div><h2>Resources</h2><a href="preparation.html">Preparation</a><a href="resources.html">Resume resources</a><a href="contact.html">Contact</a></div><div><h2>Support</h2><a href="resources.html">Help Center</a><a href="contact.html">Contact Support</a><a href="resources.html">FAQs</a></div></div>
+        </div>
+        <p class="footer-legal">CareerBridge Pro — Build skills. Find direction. Move forward.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>

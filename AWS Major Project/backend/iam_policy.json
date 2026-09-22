@@ -1,0 +1,52 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ShopEaseDynamoDBAccess",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:PutItem",
+        "dynamodb:GetItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:BatchGetItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:TransactWriteItems",
+        "dynamodb:Query",
+        "dynamodb:Scan"
+      ],
+      "Resource": [
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseOrder",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseOrder/index/*",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseUsers",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseUsers/index/*",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseCart",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseCart/index/*",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseWishlist",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseWishlist/index/*",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseReviews",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseReviews/index/*",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseSupportTickets",
+        "arn:aws:dynamodb:us-east-1:*:table/ShopEaseSupportTickets/index/*"
+      ]
+    },
+    {
+      "Sid": "ShopEaseCloudWatchLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:us-east-1:*:log-group:/aws/lambda/*"
+    },
+    {
+      "Sid": "ShopEasePasswordResetEmail",
+      "Effect": "Allow",
+      "Action": [
+        "ses:SendEmail"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
